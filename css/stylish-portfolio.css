@@ -242,7 +242,7 @@ hr.small {
 .brainhacktitle {
     display: table;
     width: 100%;
-    height: 100px;
+    height: 200px;
     color: #000;
     font-family: 'Comfortaa', cursive;
     background: url(../img/brainhack_title.png) no-repeat center center scroll;
