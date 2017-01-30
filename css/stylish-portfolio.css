@@ -23,6 +23,15 @@ body {
 	color:#337ab7;
 }
 
+.text-vertical-center-title {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    color:#80C75D;
+    font-family: 'Bauman', regular;
+}
+
+
 .text-vertical-center {
     display: table-cell;
     text-align: center;
