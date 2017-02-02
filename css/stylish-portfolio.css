@@ -261,50 +261,105 @@ hr.small {
     -o-background-size: auto;
 }
 
+
+
 .container_logo {
     width:100%;
     float:center;
       text-align: center;
-
-
+	 border-collapse:separate;
 }
-.logo_brainscan {
-    width:339px;
+
+.logo_schulich {
+    width:340px;
     float:center;
-    height:100px;
+    height:150px;
+	background: url(../img/schulich.png) no-repeat center center scroll;
+  vertical-align: middle;
+        display: inline-block
+}
+
+.logo_western {
+    width:380px;
+    float:center;
+    height:150px;
+	background: url(../img/western.png) no-repeat center center scroll;
+  vertical-align: middle;
+        display: inline-block
+}
+
+.logo_robarts {
+    width:280px;
+    float:center;
+    height:150px;
+	background: url(../img/robarts.jpg) no-repeat center center scroll;
+  vertical-align: middle;
+        display: inline-block
+}
+
+
+.logo_brainscan {
+    width:369px;
+    float:center;
+    height:110px;
 	background: url(../img/brainscan.png) no-repeat center center scroll;
   vertical-align: middle;
         display: inline-block
 }
 
 .logo_eplink {
-    width:300px;
+    width:200px;
     float:center;
-    height:212px;
-	background: url(../img/eplink-logo-colour-full-name-underneath.png) no-repeat center center scroll;
+    height:190px;
+	background: url(../img/eplink.png) no-repeat center center scroll;
   vertical-align: middle;
         display: inline-block
 }
 
 .logo_birc {
-    width:288px;
+    width:318px; 
     float:center;
-    height:100px;
+    height:110px;
 	background: url(../img/birc.png) no-repeat center center scroll;
   vertical-align: middle;
         display: inline-block
 }
-.brainhacktitle {
-    display: table;
-    width: 100%;
-    height: 200px;
-    color: #000;
-    font-family: 'Comfortaa', cursive;
-    background: url(../img/brainhack_title.png) no-repeat center center scroll;
-    -webkit-background-size: auto;
-    -moz-background-size: auto;
-    background-size: auto;
-    -o-background-size: auto;
+
+.logo_scinet {
+    width:200px; 
+    float:center;
+    height:110px;
+	background: url(../img/scinet.png) no-repeat center center scroll;
+  vertical-align: middle;
+        display: inline-block
+}
+
+
+.logo_synaptive {
+    width:395px; 
+    float:center;
+    height:110px;
+	background: url(../img/synaptive.png) no-repeat center center scroll;
+  vertical-align: middle;
+        display: inline-block
+}
+
+.logo_soscip {
+    width:260px; 
+    float:center;
+    height:110px;
+	background: url(../img/soscip.png) no-repeat center center scroll;
+  vertical-align: middle;
+        display: inline-block
+}
+
+.logo_westernscience {
+    width:318px; 
+    float:center;
+    height:110px;
+	background: url(../img/western_science.png) no-repeat center center scroll;
+  vertical-align: middle;
+        display: inline-block
 }
 
 
