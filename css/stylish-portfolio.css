@@ -23,6 +23,16 @@ body {
 	color:#337ab7;
 }
 
+.text-vertical-center-title {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    color:#80C75D;
+    font-family: 'Bauman', regular;
+}
+
+
+
 .text-vertical-center {
     display: table-cell;
     text-align: center;
@@ -30,6 +40,18 @@ body {
     color:white;
     font-family: 'Comfortaa', cursive;
 }
+
+
+.text-vertical-center-table {
+    display: table;
+    text-align: center;
+    vertical-align: middle;
+    color:white;
+    font-family: 'Comfortaa', cursive;
+    width: 100%;
+    
+}
+
 
 .text-vertical-center h1 {
     margin: 0;
@@ -229,7 +251,7 @@ hr.small {
 .brainscan {
     display: table;
     width: 100%;
-    height: 300px;
+    height: 200px;
     color: #000;
     font-family: 'Comfortaa', cursive;
     background: url(../img/brainscan.jpg) no-repeat center center scroll;
@@ -238,6 +260,108 @@ hr.small {
     background-size: auto;
     -o-background-size: auto;
 }
+
+
+
+.container_logo {
+    width:100%;
+    float:center;
+      text-align: center;
+	 border-collapse:separate;
+}
+
+.logo_schulich {
+    width:340px;
+    float:center;
+    height:150px;
+	background: url(../img/schulich.png) no-repeat center center scroll;
+  vertical-align: middle;
+        display: inline-block
+}
+
+.logo_western {
+    width:380px;
+    float:center;
+    height:150px;
+	background: url(../img/western.png) no-repeat center center scroll;
+  vertical-align: middle;
+        display: inline-block
+}
+
+.logo_robarts {
+    width:280px;
+    float:center;
+    height:150px;
+	background: url(../img/robarts.jpg) no-repeat center center scroll;
+  vertical-align: middle;
+        display: inline-block
+}
+
+
+.logo_brainscan {
+    width:369px;
+    float:center;
+    height:110px;
+	background: url(../img/brainscan.png) no-repeat center center scroll;
+  vertical-align: middle;
+        display: inline-block
+}
+
+.logo_eplink {
+    width:200px;
+    float:center;
+    height:190px;
+	background: url(../img/eplink.png) no-repeat center center scroll;
+  vertical-align: middle;
+        display: inline-block
+}
+
+.logo_birc {
+    width:318px; 
+    float:center;
+    height:110px;
+	background: url(../img/birc.png) no-repeat center center scroll;
+  vertical-align: middle;
+        display: inline-block
+}
+
+.logo_scinet {
+    width:200px; 
+    float:center;
+    height:110px;
+	background: url(../img/scinet.png) no-repeat center center scroll;
+  vertical-align: middle;
+        display: inline-block
+}
+
+
+.logo_synaptive {
+    width:395px; 
+    float:center;
+    height:110px;
+	background: url(../img/synaptive.png) no-repeat center center scroll;
+  vertical-align: middle;
+        display: inline-block
+}
+
+.logo_soscip {
+    width:260px; 
+    float:center;
+    height:110px;
+	background: url(../img/soscip.png) no-repeat center center scroll;
+  vertical-align: middle;
+        display: inline-block
+}
+
+.logo_westernscience {
+    width:318px; 
+    float:center;
+    height:110px;
+	background: url(../img/western_science.png) no-repeat center center scroll;
+  vertical-align: middle;
+        display: inline-block
+}
+
 
 .location {
     display: table;
