@@ -217,7 +217,7 @@ hr.small {
 /* Services */
 
 .services {
-    padding: 50px 0;
+    padding: 20px 0;
 	font-family: 'Comfortaa', cursive;
 }
 
@@ -307,8 +307,17 @@ hr.small {
         display: inline-block
 }
 
+.logo_ibm {
+    width:270px;
+    float:center;
+    height:180px;
+	background: url(../img/ibm.png) no-repeat center center scroll;
+  vertical-align: middle;
+        display: inline-block
+}
+
 .logo_eplink {
-    width:200px;
+    width:220px;
     float:center;
     height:190px;
 	background: url(../img/eplink.png) no-repeat center center scroll;
@@ -345,7 +354,7 @@ hr.small {
 }
 
 .logo_soscip {
-    width:260px; 
+    width:350px; 
     float:center;
     height:110px;
 	background: url(../img/soscip.png) no-repeat center center scroll;
