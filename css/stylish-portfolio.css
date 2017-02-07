@@ -52,7 +52,15 @@ body {
     
 }
 
-
+.text-vertical-center-table-black {
+    display: table;
+    text-align: center;
+    vertical-align: middle;
+    color:black;
+    font-family: 'Comfortaa', cursive;
+    width: 100%;
+    
+}
 .text-vertical-center h1 {
     margin: 0;
     padding: 0;
