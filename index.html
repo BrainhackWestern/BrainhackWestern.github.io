@@ -199,7 +199,7 @@
 
   		    </div>
         <div class="row top30 col-12" v-else>
-          <div class="col-lg-15 col-md-15 col-sm-12 col-xs-12" v-for="(event, index) in info.schedule">
+          <div class="col-lg-2 mx-auto" v-for="(event, index) in info.schedule">
             <h5 class="dark pt-2 pb-2 pl-2 pr-2 text-center">{{event.date}}</h5>
             <div class="row">
               <div class="col-12" v-for="(value, key) in event.times" :class="key">
@@ -216,7 +216,7 @@
 
               <timetable :id="'day'+index" :data="event"><timetable>
             </div>-->
-          </div>
+        </div>
         </div>
 
 		</div>
