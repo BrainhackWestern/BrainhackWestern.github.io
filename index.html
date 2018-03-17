@@ -166,7 +166,7 @@
       <div class="container">
   			<div class="row text-center top30">
   				<div class="col-12 dark pt-2 pb-2 pl-2 pr-">
-  				    <h1>Schedule</h1>
+  				    <h2>Schedule</h2>
   			    </div>
   			</div>
   			<div class="row top30" v-if="info.scheduleType=='single'">
@@ -199,8 +199,8 @@
 
   		    </div>
         <div class="row top30 col-12" v-else>
-          <div class="scheduleCal col-xs-15" v-for="(event, index) in info.schedule">
-            <h3 class="dark pt-2 pb-2 pl-2 pr-2 text-center">{{event.date}}</h3>
+          <div class="col-lg-15 col-md-15 col-sm-12 col-xs-12" v-for="(event, index) in info.schedule">
+            <h5 class="dark pt-2 pb-2 pl-2 pr-2 text-center">{{event.date}}</h5>
             <div class="row">
               <div class="col-12" v-for="(value, key) in event.times" :class="key">
                 <h5 class="text-center dark pt-2 pb-2 pl-2 pr-2">{{key}}</h5>
