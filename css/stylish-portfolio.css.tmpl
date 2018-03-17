@@ -1,4 +1,4 @@
-#2d0291/*!
+/*!
  * Start Bootstrap - Stylish Portfolio Bootstrap Theme (http://startbootstrap.com)
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
@@ -17,14 +17,10 @@ body {
 }
 
 .text-color-blue {
-	color:#318dde;
+	color:{{color_theme.link_color}};
 }
 .text-color-blue a {
-	color:#318dde;
-}
-
-.text-color-uwo {
-    color:#2d0291;
+	color:{{color_theme.link_color}};
 }
 
 .text-vertical-center {
@@ -32,7 +28,7 @@ body {
     text-align: center;
     vertical-align: middle;
     color:white;
-    font-family: 'Comf007bffortaa', cursive;
+    font-family: 'Comfortaa', cursive;
 }
 
 .text-vertical-center h1 {
@@ -40,42 +36,6 @@ body {
     padding: 0;
     font-size: 4.5em;
     font-weight: 700;
-}
-
-.col-xs-15,
-.col-sm-15,
-.col-md-15,
-.col-lg-15 {
-    position: relative;
-    min-height: 1px;
-    padding-right: 10px;
-    padding-left: 10px;
-}
-
-.col-xs-15 {
-    width: 20%;
-    float: left;
-}
-
-@media (min-width: 768px) {
-.col-sm-15 {
-        width: 20%;
-        float: left;
-    }
-}
-
-@media (min-width: 992px) {
-    .col-md-15 {
-        width: 20%;
-        float: left;
-    }
-}
-
-@media (min-width: 1200px) {
-    .col-lg-15 {
-        width: 20%;
-        float: left;
-    }
 }
 
 /* Custom Button Styles */
@@ -205,8 +165,8 @@ hr.small {
     display: table;
     position: relative;
     width: 100%;
-    height: 100vh;
-    background: url(../img/averagebrain.jpg) no-repeat center center scroll;
+    height: 100%;
+    background: url({{background_img}}) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -270,13 +230,10 @@ hr.small {
 .location {
     display: table;
     width: 100%;
-    height: 200px;
+    height: 400px;
     color: #000;
     font-family: 'Comfortaa', cursive;
-    /*background: url(https://d30y9cdsu7xlg0.cloudfront.net/png/45447-200.png) no-repeat center center scroll;*/
-    background-repeat: no-repeat;
-    background-position: center top 80px;
-    background-size: auto !important;
+    background: url({{location_logo}}) no-repeat center center scroll;
     -webkit-background-size: auto;
     -moz-background-size: auto;
     background-size: auto;
@@ -299,7 +256,7 @@ hr.small {
     height: 400px;
     color: #fff;
     font-family: 'Comfortaa', cursive;
-    background: url(http://country-clone.htl-web.com/files/2014/02/Seoul-South-Korea-Skyline-iStock_50381588_MEDIUM.jpg) no-repeat center center scroll;
+    background: url({{schedule_background_img}}) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -350,7 +307,7 @@ hr.small {
 /* Map */
 
 .map {
-    height: 400px;
+    height: 500px;
 }
 
 .map iframe{
@@ -366,15 +323,15 @@ hr.small {
 /* Footer */
 
 footer {
-    padding: 100px 100;
+    padding: 100px 0;
 }
 
 a {
-    color: #2d0291;
+    color: {{color_theme.background}};
 }
 
 a:focus, a:hover {
-    /*color: #337ab7;*/
+    /*color: #4f2683;*/
     text-decoration: underline;
 }
 
@@ -424,74 +381,10 @@ a:focus, a:hover {
 /* Color Theme*/
 
 .bg-primary {
-  color: #fff;
-  background-color: #2d0291 !important;
+  color: {{color_theme.font}};
+  background-color: {{color_theme.background}};
 }
 
 .text-primary {
-    color: #2d0291 !important;
+    color: {{color_theme.background}};
 }
-
-/*Timetable styling*/
-
-.timetable aside li {
-    padding: 0 15px;
-    background-color: rgba(51, 51, 51, 0.6784313725490196) !important;
-    line-height: 46px;
-}
-
-.timetable ul.room-timeline li:nth-of-type(odd) {
-
-    background-color: rgba(51, 51, 51, 0.6784313725490196) !important;
-}
-
-.timetable ul.room-timeline li {
-    position: relative;
-    background-color: rgba(51, 51, 51, 0.6784313725490196) !important;
-    border-top: #fbfbfb;
-    border-top-style: solid;
-    border-top-width: thin;
-}
-
-.timeBlock {
-  background-color: #e74030d9;
-  margin: 5px;
-  padding: 10px;
-  display: block;
-  border-style: solid;
-  border-radius: 20px;
-  border-color: #e74030d9;
-  word-break:break-word;
-  font-size: 0.9em;
-}
-
-.dark {
-  background-color: rgba(0,0,0,0.8);
-}
-
-.Hackathon .timeBlock {
-  background-color: #2d0291e0;
-  border-color: #2d0291e0;
-}
-
-.CFMM .timeBlock {
-  background-color: #2d0291e0;
-  border-color: #2d0291e0;
-}
-
-.BIDs .timeBlock {
-  background-color: #2d0291e0;
-  border-color: #2d0291e0;
-}
-
-.TBA .timeBlock {
-  background-color: #2d0291e0;
-  border-color: #2d0291e0;
-}
-
-/* Extra small devices (portrait phones, less than 576px)
-@media (max-width: 575.98px) {
-  .scheduleCal{
-    max-width: 75vw;
-  }
-}*/
