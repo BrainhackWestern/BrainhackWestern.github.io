@@ -32,7 +32,7 @@
     "fa_icon": "fa-wechat"}],
     "details": {"costs":"Free! Includes on-site meals, snacks and coffee."},
     "schedule_background_img": "./img/wirb.jpg",
-    "scheduleType": "single",
+    "scheduleType": "double",
     "schedule":  [{"date": "Wed. May 2",
                         "times": {"TBA": [
                                   {"timeStart": [2018,2,5,9,0], "timeEnd": [2018,2,5,10,0], "event": "TBA"}
