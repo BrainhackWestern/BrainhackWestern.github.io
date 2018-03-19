@@ -3,7 +3,7 @@
   "location_main": "Western Interdisciplinary Research Building, Western University",
   "location_details": "6th floor of Western Interdisciplinary Building, Western University",
   "location_site": "London, ON, Canada",
-  "code_of_conduct": "http://www.brainhack.org/code-of-conduct.html",
+  "code_of_conduct": "http://www.brainhack.org/global2018/codeofconduct.html",
   "dates": "May 2-6, 2018",
   "year": "2018",
   "background_img": "./img/averagebrain.jpg",
@@ -17,11 +17,11 @@
   "title_photo_author": "Yiming Xiao",
   "services":[{
     "name": "Share",
-    "desc": "Show your research to other neuroimaging researchers.",
+    "desc": "Show your research to other neuroimagers/neuroscientists.",
     "fa_icon": "fa-share-alt"
     },
   {"name": "Gain Skills",
-    "desc": "Learn how to apply the latest computational tools to you data.",
+    "desc": "Learn how to apply the latest tools to you data.",
     "fa_icon": "fa-graduation-cap"
     },
   {"name":"Get Involved",
