@@ -40,10 +40,10 @@
                             }
                       },
                     {"date": "Thu. May 3",
-                    "times": {"BIDs": [
-                              {"timeStart": [2018,3,5,9,0], "timeEnd": [2018,3,5,12,0], "event": "Reproducible science, brain imaging data structure (BIDs) intro"},
+                    "times": {"Data Standards": [
+                              {"timeStart": [2018,3,5,9,0], "timeEnd": [2018,3,5,12,0], "event": "Reproducible science, brain imaging data structure (BIDS) intro"},
                               {"timeStart": [2018,3,5,12,0], "timeEnd": [2018,3,5,13,0], "event": "Lunch"},
-                              {"timeStart": [2018,3,5,13,0], "timeEnd": [2018,3,5,17,0], "event": "Bids-ifying data / pipelines, applications"}
+                              {"timeStart": [2018,3,5,13,0], "timeEnd": [2018,3,5,17,0], "event": "BIDS-ifying data / pipelines, applications"}
                               ]
                         }
                   },
