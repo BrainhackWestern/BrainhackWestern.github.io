@@ -9,7 +9,7 @@
   "background_img": "./img/averagebrain.jpg",
   "color_theme": {"background": "##0073cf", "font": "#fff", "link_color": "#318dde"},
   "global_brainhack_organizers": [],
-  "registration_link": "",
+  "registration_link": "https://goo.gl/forms/Lfq2c46ltv42O8HO2",
   "slack_link":"https://brainhack-slack-invite.herokuapp.com/",
   "project_submit_link":"https://github.com/BrainhackWestern/BrainhackWestern.github.io/wiki/projects",
   "faq_link":"https://github.com/brainhackwestern/brainhackwestern.github.io/wiki/frequently-asked-questions",
@@ -34,8 +34,15 @@
     "schedule_background_img": "./img/wirb.jpg",
     "scheduleType": "double",
     "schedule":  [{"date": "Wed. May 2",
-                        "times": {"CFMM": [
-                                  {"timeStart": [2018,2,5,9,0], "timeEnd": [2018,2,5,17,0], "event": "MRI Physics. Details to come"}
+                        "times": {"MRI Physics": [
+                                  {"timeStart": [2018,2,5,9,0], "timeEnd": [2018,2,5,10,30], "event": "Introduction to MRI"},
+                                  {"timeStart": [2018,2,5,10,30], "timeEnd": [2018,2,5,12,0], "event":"Image formation + Quantitative MRI"},
+                                  {"timeStart": [2018,2,5,12,0], "timeEnd": [2018,2,5,13,0], "event": "Lunch"},
+                                  {"timeStart": [2018,2,5,13,0], "timeEnd": [2018,2,5,13,45], "event": "Diffusion MRI"},
+                                  {"timeStart": [2018,2,5,13,45], "timeEnd": [2018,2,5,14,30], "event": "Functional MRI"},
+                                  {"timeStart": [2018,2,5,14,30], "timeEnd": [2018,2,5,15,15], "event": "MRS + CEST"},
+                                  {"timeStart": [2018,2,5,15,15], "timeEnd": [2018,2,5,16,0], "event": "Artifacts"},
+                                  {"timeStart": [2018,2,5,16,0], "timeEnd": [2018,2,5,17,0], "event": "3T vs 7T + MR Safety"}
                                   ]
                             }
                       },
