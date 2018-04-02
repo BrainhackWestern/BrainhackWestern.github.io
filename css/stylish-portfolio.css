@@ -370,7 +370,7 @@ a:focus, a:hover {
 .responsive-iframe-container {
     position: relative;
     /*padding-bottom: 100%;*/
-    padding-top: 30px;
+    padding-top: 10px;
     height: 300px;
     overflow: auto;
 }
@@ -438,7 +438,7 @@ a:focus, a:hover {
   border-color: #2d0291e0;
 }
 
-.CFMM .timeBlock {
+.MRI .timeBlock {
   background-color: #2d0291e0;
   border-color: #2d0291e0;
 }

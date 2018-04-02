@@ -1,7 +1,7 @@
 {
   "title": "Brainhack Western 2018",
   "location_main": "Western Interdisciplinary Research Building, Western University",
-  "location_details": "6th floor of Western Interdisciplinary Building, Western University",
+  "location_details": "Western Interdisciplinary Building, Western University",
   "location_site": "London, ON, Canada",
   "code_of_conduct": "http://www.brainhack.org/global2018/codeofconduct.html",
   "dates": "May 2-6, 2018",
@@ -9,7 +9,7 @@
   "background_img": "./img/averagebrain.jpg",
   "color_theme": {"background": "##0073cf", "font": "#fff", "link_color": "#318dde"},
   "global_brainhack_organizers": [],
-  "registration_link": "",
+  "registration_link": "https://goo.gl/forms/Lfq2c46ltv42O8HO2",
   "slack_link":"https://brainhack-slack-invite.herokuapp.com/",
   "project_submit_link":"https://github.com/BrainhackWestern/BrainhackWestern.github.io/wiki/projects",
   "faq_link":"https://github.com/brainhackwestern/brainhackwestern.github.io/wiki/frequently-asked-questions",
@@ -34,32 +34,49 @@
     "schedule_background_img": "./img/wirb.jpg",
     "scheduleType": "double",
     "schedule":  [{"date": "Wed. May 2",
-                        "times": {"TBA": [
-                                  {"timeStart": [2018,2,5,9,0], "timeEnd": [2018,2,5,10,0], "event": "TBA"}
+                        "times": {"MRI Physics": [
+                                  {"timeStart": [2018,2,5,9,0], "timeEnd": [2018,2,5,10,30], "event": "Introduction to MRI"},
+                                  {"timeStart": [2018,2,5,10,30], "timeEnd": [2018,2,5,12,0], "event":"Image formation + Quantitative MRI"},
+                                  {"timeStart": [2018,2,5,12,0], "timeEnd": [2018,2,5,13,0], "event": "Lunch"},
+                                  {"timeStart": [2018,2,5,13,0], "timeEnd": [2018,2,5,13,45], "event": "Diffusion MRI"},
+                                  {"timeStart": [2018,2,5,13,45], "timeEnd": [2018,2,5,14,30], "event": "Functional MRI"},
+                                  {"timeStart": [2018,2,5,14,30], "timeEnd": [2018,2,5,15,15], "event": "MRS + CEST"},
+                                  {"timeStart": [2018,2,5,15,15], "timeEnd": [2018,2,5,16,0], "event": "Artifacts"},
+                                  {"timeStart": [2018,2,5,16,0], "timeEnd": [2018,2,5,17,0], "event": "3T vs 7T + MR Safety"}
                                   ]
                             }
                       },
                     {"date": "Thu. May 3",
-                    "times": {"TBA": [
-                              {"timeStart": [2018,3,5,9,0], "timeEnd": [2018,3,5,10,0], "event": "TBA"}
+                    "times": {"Data Standards": [
+                              {"timeStart": [2018,3,5,9,0], "timeEnd": [2018,3,5,12,0], "event": "Reproducible science, brain imaging data structure (BIDS) intro"},
+                              {"timeStart": [2018,3,5,12,0], "timeEnd": [2018,3,5,13,0], "event": "Lunch"},
+                              {"timeStart": [2018,3,5,13,0], "timeEnd": [2018,3,5,17,0], "event": "BIDS-ifying data / pipelines, applications"}
                               ]
                         }
                   },
                     {"date": "Fri. May 4",
-                    "times": {"TBA": [
-                              {"timeStart": [2018,4,5,9,0], "timeEnd": [2018,4,5,10,0], "event": "TBA"}
+                    "times": {"Hackathon": [
+                              {"timeStart": [2018,4,5,17,0], "timeEnd": [2018,4,5,16,0], "event": "Check-in"},
+                              {"timeStart": [2018,4,5,18,0], "timeEnd": [2018,4,5,19,0], "event": "Welcome  + Intro"},
+                              {"timeStart": [2018,4,5,19,0], "timeEnd": [2018,4,5,21,0], "event": "Social + Project Pitches"}
                               ]
                         }
                   },
                   {"date": "Sat. May 5",
-                   "times": {"TBA": [
-                              {"timeStart": [2018,5,5,9,0], "timeEnd": [2018,5,5,10,0], "event": "TBA"}
+                   "times": {"Hackathon": [
+                              {"timeStart": [2018,5,5,9,0], "timeEnd": [2018,5,5,12,0], "event": "Hacking + Tutorials"},
+                              {"timeStart": [2018,5,5,12,0], "timeEnd": [2018,5,5,13,0], "event": "Lunch + Unconference"},
+                              {"timeStart": [2018,5,5,13,0], "timeEnd": [2018,5,5,16,0], "event" : "Hacking + Tutorials"},
+                              {"timeStart": [2018,5,5,16,0], "timeEnd": [2018,5,5,17,0], "event": "Unconference"}
                               ]
                             }
                   },
                   {"date": "Sun. May 6",
-                   "times": {"TBA": [
-                              {"timeStart": [2018,6,5,9,0], "timeEnd": [2018,6,5,10,0], "event": "TBA"}
+                   "times": {"Hackathon": [
+                              {"timeStart": [2018,6,5,9,0], "timeEnd": [2018,6,5,12,0], "event": "Hacking + Tutorials"},
+                              {"timeStart": [2018,6,5,12,0], "timeEnd": [2018,6,5,13,0], "event": "Lunch + Unconference"},
+                              {"timeStart": [2018,6,5,13,0], "timeEnd": [2018,6,5,15,0], "event": "Hacking + Tutorials"},
+                              {"timeStart": [2018,6,5,15,0], "timeEnd": [2018,6,5,17,0], "event": "Project presentation + Wrap-up"}
                               ]
                             }
                   }
