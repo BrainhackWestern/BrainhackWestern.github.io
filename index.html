@@ -339,7 +339,9 @@
             console.log("tracks", tracks, sched)
             timetable.addLocations(tracks);
             for (var j=0; j<tracks.length; j += 1){
-              trackName = tracks[j]
+              trackName = tracks[j]                              {"timeStart": [2018,3,5,10,0], "timeEnd": [2018,3,5,11,0], "event": "Brain Imaging Data Structure (BIDS)"},
+                              {"timeStart": [2018,3,5,11,0], "timeEnd": [2018,3,5,12,0], "event": "Concept of 'The Standard'"},
+
               trackData = sched.times[tracks[j]]
               console.log("trackName", trackName, trackData)
               for (var k=0; k<trackData.length; k += 1){
