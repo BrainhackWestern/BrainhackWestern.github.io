@@ -74,7 +74,9 @@
                               {"timeStart": [2018,5,5,9,0], "timeEnd": [2018,5,5,12,0], "event": "Hacking + Tutorials"},
                               {"timeStart": [2018,5,5,12,0], "timeEnd": [2018,5,5,13,0], "event": "Lunch + Unconference"},
                               {"timeStart": [2018,5,5,13,0], "timeEnd": [2018,5,5,16,0], "event" : "Hacking + Tutorials"},
-                              {"timeStart": [2018,5,5,16,0], "timeEnd": [2018,5,5,17,0], "event": "Unconference"}
+                              {"timeStart": [2018,5,5,16,0], "timeEnd": [2018,5,5,17,0], "event": "Unconference"},
+                              {"timeStart": [2018,5,5,17,0], "timeEnd": [2018,5,5,18,0], "event": "Dinner"},
+                              {"timeStart": [2018,5,5,18,0], "timeEnd": [2018,5,5,20,0], "event": "Social (location TBA)"}
                               ]
                             }
                   },
