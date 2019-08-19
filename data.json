@@ -5,7 +5,7 @@
   "location_site": "London, ON, Canada",
   "video_conf_link": "https://hangouts.google.com/hangouts/_/ud5f5usolzcy5jy2bqsufjynwee",
   "code_of_conduct": "http://www.brainhack.org/global2019/codeofconduct.html",
-  "dates": "Nov 2019",
+  "dates": "Nov 13 - 15, 2019",
   "year": "2019",
   "background_img": "./img/averagebrain.jpg",
   "color_theme": {"background": "##0073cf", "font": "#fff", "link_color": "#318dde"},
@@ -32,64 +32,61 @@
   {"name":"Be Social",
     "desc":"Meet researchers from a variety of backgrounds.",
     "fa_icon": "fa-wechat"}],
-    "details": {"costs":"Free! Includes on-site meals, snacks and coffee."},
+    "details": {"costs":"$5 - Includes on-site meals, snacks and coffee."},
     "schedule_background_img": "./img/wirb.jpg",
     "scheduleType": "double",
-    "schedule":  [{"date": "Wed. May 2",
-                        "times": {"MRI Physics": [
-                                  {"timeStart": [2018,2,5,9,0], "timeEnd": [2018,2,5,10,30], "event": "Intro to MRI"},
-                                  {"timeStart": [2018,2,5,10,30], "timeEnd": [2018,2,5,12,0], "event":"Image formation + Quantitative MRI"},
-                                  {"timeStart": [2018,2,5,12,0], "timeEnd": [2018,2,5,13,0], "event": "Lunch"},
-                                  {"timeStart": [2018,2,5,13,0], "timeEnd": [2018,2,5,13,45], "event": "Diffusion MRI"},
-                                  {"timeStart": [2018,2,5,13,45], "timeEnd": [2018,2,5,14,30], "event": "Functional MRI"},
-                                  {"timeStart": [2018,2,5,14,30], "timeEnd": [2018,2,5,15,15], "event": "MRS + CEST"},
-                                  {"timeStart": [2018,2,5,15,15], "timeEnd": [2018,2,5,16,0], "event": "Artifacts"},
-                                  {"timeStart": [2018,2,5,16,0], "timeEnd": [2018,2,5,17,0], "event": "3T vs 7T + MR Safety"}
-                                  ]
-                            }
-                      },
-                    {"date": "Thu. May 3",
-                    "times": {"Data Standards": [
-                              {"timeStart": [2018,3,5,9,0], "timeEnd": [2018,3,5,10,0], "event": "Intro to reproducibility & data sharing"},
-                              {"timeStart": [2018,3,5,10,0], "timeEnd": [2018,3,5,11,0], "event": "Brain Imaging Data Structure (BIDS)"},
-                              {"timeStart": [2018,3,5,11,0], "timeEnd": [2018,3,5,12,0], "event": "BIDS Apps"},
-                              {"timeStart": [2018,3,5,12,0], "timeEnd": [2018,3,5,13,0], "event": "Lunch"},
-                              {"timeStart": [2018,3,5,13,0], "timeEnd": [2018,3,5,14,0], "event": "BIDS-ifying your data"},
-                              {"timeStart": [2018,3,5,14,0], "timeEnd": [2018,3,5,15,0], "event": "AutoBIDS & Compute Infrastructure"},
-                              {"timeStart": [2018,3,5,15,0], "timeEnd": [2018,3,5,16,0], "event": "Welcome to Brainhack Western 2018"},
-                              {"timeStart": [2018,3,5,16,0], "timeEnd": [2018,3,5,17,0], "event": "Reproducibility Panel"}
-                              ]
-                        }
-                  },
-                    {"date": "Fri. May 4",
-                    "times": {"Hackathon": [
-                              {"timeStart": [2018,4,5,17,0], "timeEnd": [2018,4,5,18,0], "event": "Check-in"},
-                              {"timeStart": [2018,4,5,17,30], "timeEnd": [2018,4,5,18,30], "event": "Opening remarks"},
-                              {"timeStart": [2018,4,5,18,0], "timeEnd": [2018,4,5,21,0], "event": "Social + Project Pitches"}
-                              ]
-                        }
-                  },
-                  {"date": "Sat. May 5",
-                   "times": {"Hackathon": [
-                              {"timeStart": [2018,5,5,9,0], "timeEnd": [2018,5,5,12,0], "event": "Hacking + Tutorials"},
-                              {"timeStart": [2018,5,5,12,0], "timeEnd": [2018,5,5,13,0], "event": "Lunch + Unconference"},
-                              {"timeStart": [2018,5,5,13,0], "timeEnd": [2018,5,5,16,0], "event" : "Hacking + Tutorials"},
-                              {"timeStart": [2018,5,5,16,0], "timeEnd": [2018,5,5,17,0], "event": "Unconference"},
-                              {"timeStart": [2018,5,5,17,0], "timeEnd": [2018,5,5,18,0], "event": "Dinner"},
-                              {"timeStart": [2018,5,5,18,0], "timeEnd": [2018,5,5,20,0], "event": "Social (location TBA)"}
-                              ]
+    "schedule":  [{"date": "Wednesday, Nov 13",
+                   "times": {"Learn": [
+                                {"timeStart": [2019,13,11,8,0], "timeEnd": [2019,13,11,9,0], "event": "Check-in"},
+                                {"timeStart": [2019,13,11,9,0], "timeEnd": [2019,13,11,10,0], "event": "Welcome + Intro"},
+                                {"timeStart": [2019,13,11,10,0], "timeEnd": [2019,13,11,12,0], "event": "Project Pitches"},
+                                {"timeStart": [2019,13,11,12,0], "timeEnd": [2019,13,11,13,0], "event": "Lunch"},
+                                {"timeStart": [2019,13,11,13,0], "timeEnd": [2019,13,11,16,0], "event": "Intro to Image Manipulation"},
+                                {"timeStart": [2019,13,11,16,0], "timeEnd": [2019,13,11,17,0], "event": "Unconference"}
+                                ],
+                             "Hack": [
+                                 {"timeStart": [2019,13,11,8,0], "timeEnd": [2019,13,11,9,0], "event": "Check-in"},
+                                 {"timeStart": [2019,13,11,9,0], "timeEnd": [2019,13,11,10,0], "event": "Welcome + Intro"},
+                                 {"timeStart": [2019,13,11,10,0], "timeEnd": [2019,13,11,12,0], "event": "Project Pitches"},
+                                 {"timeStart": [2019,13,11,12,0], "timeEnd": [2019,13,11,13,0], "event": "Lunch"},
+                                 {"timeStart": [2019,13,11,13,0], "timeEnd": [2019,13,11,16,0], "event": "Hacking"},
+                                 {"timeStart": [2019,13,11,16,0], "timeEnd": [2019,13,11,17,0], "event": "Unconference"}
+                                ]
                             }
                   },
-                  {"date": "Sun. May 6",
-                   "times": {"Hackathon": [
-                              {"timeStart": [2018,6,5,9,0], "timeEnd": [2018,6,5,12,0], "event": "Hacking + Tutorials"},
-                              {"timeStart": [2018,6,5,12,0], "timeEnd": [2018,6,5,13,0], "event": "Lunch + Unconference"},
-                              {"timeStart": [2018,6,5,13,0], "timeEnd": [2018,6,5,15,0], "event": "Hacking + Tutorials"},
-                              {"timeStart": [2018,6,5,15,0], "timeEnd": [2018,6,5,17,0], "event": "Project presentation + Wrap-up"}
-                              ]
+                  {"date": "Thursday, Nov 14",
+                   "times": {"Learn": [
+                                {"timeStart": [2019,14,11,9,0], "timeEnd": [2019,14,11,12,0], "event": "Intro to Machine Learning"},
+                                {"timeStart": [2019,14,11,12,0], "timeEnd": [2019,14,11,13,0], "event": "Lunch + Unconference"},
+                                {"timeStart": [2019,14,11,13,0], "timeEnd": [2019,14,11,16,0], "event": "TBA"},
+                                {"timeStart": [2019,14,11,16,0], "timeEnd": [2019,14,11,17,0], "event": "Unconference"}
+                                ],
+                             "Hack": [
+                                {"timeStart": [2019,14,11,9,0], "timeEnd": [2019,14,11,12,0], "event": "Hacking"},
+                                {"timeStart": [2019,14,11,12,0], "timeEnd": [2019,14,11,13,0], "event": "Lunch + Unconference"},
+                                {"timeStart": [2019,14,11,13,0], "timeEnd": [2019,14,11,16,0], "event": "Hacking"},
+                                {"timeStart": [2019,14,11,16,0], "timeEnd": [2019,14,11,17,0], "event": "Unconference"}
+                                ]
+                             }
+                  },
+                  {"date": "Friday, Nov 15",
+                   "times": {"Learn": [
+                                {"timeStart": [2019,15,11,9,0], "timeEnd": [2019,15,11,12,0], "event": "Intro to fMRI, Intro to EEG"},
+                                {"timeStart": [2019,15,11,12,0], "timeEnd": [2019,15,11,13,0], "event": "Lunch + Unconference"},
+                                {"timeStart": [2019,15,11,13,0], "timeEnd": [2019,15,11,15,30], "event": "Intro to DTI"},
+                                {"timeStart": [2019,15,11,15,30], "timeEnd": [2019,15,11,17,0], "event": "Project presentations + Wrap-up"},
+                                {"timeStart": [2019,15,11,17,0], "timeEnd": [2019,15,11,21,0], "event": "Social"}
+                                ],
+                             "Hack": [
+                                {"timeStart": [2019,15,11,9,0], "timeEnd": [2019,15,11,12,0], "event": "Hacking"},
+                                {"timeStart": [2019,15,11,12,0], "timeEnd": [2019,15,11,13,0], "event": "Lunch + Unconference"},
+                                {"timeStart": [2019,15,11,13,0], "timeEnd": [2019,15,11,15,30], "event": "Hacking"},
+                                {"timeStart": [2019,15,11,15,30], "timeEnd": [2019,15,11,17,0], "event": "Project presentations + Wrap-up"},
+                                {"timeStart": [2019,15,11,17,0], "timeEnd": [2019,15,11,21,0], "event": "Social"}
+                                ]
                             }
                   }
-                  ],
+              ],
     "location_logo": "",
     "location_name": "TBD",
     "location_url":"http://www.uwo.ca/brainscan/about/the_wirb/index.html",

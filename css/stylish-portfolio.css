@@ -433,24 +433,14 @@ a:focus, a:hover {
   background-color: rgba(0,0,0,0.8);
 }
 
-.Hackathon .timeBlock {
+.Hack .timeBlock {
   background-color: #2d0291e0;
   border-color: #2d0291e0;
 }
 
-.MRI .timeBlock {
-  background-color: #2d0291e0;
-  border-color: #2d0291e0;
-}
-
-.Data .timeBlock {
-  background-color: #2d0291e0;
-  border-color: #2d0291e0;
-}
-
-.TBA .timeBlock {
-  background-color: #2d0291e0;
-  border-color: #2d0291e0;
+.Learn .timeBlock {
+  background-color: #545454e0;
+  border-color: #545454e0;
 }
 
 /* Extra small devices (portrait phones, less than 576px)

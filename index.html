@@ -150,16 +150,15 @@
                 <p><h5>The two days of education provided by the <strong>Centre for Functional and Metabolic Mapping (CFMM)</strong> are targeted at allowing all the researchers at Western to learn more about neuroimaging acquisition and analysis. </br></br>
                      The goal of the hackathon is to bring together researchers and trainees with disparate backgrounds to collaborate on open science projects in neuroimaging and neuroscience. Brainhack projects are pitched on the first night, and attendees will form into teams to work on these projects over the next two days. Tutorial sessions on a variety of topics will be held throughout for attendees to learn new skills.</p>
                      <p>Participants are encouraged to post project ideas to <a v-bind:href="info.project_submit_link" target="_blank">the project page</a>.</p></h5>
-                     <p><h5>We will be hosting preparatory video conferences via Google Hangouts on <strong>Wed, April 18</strong> and <strong>Wed, April 25</strong> at 12pm EST. You can join the video conference <a v-bind:href="info.video_conf_link" target="_blank">here.</a></p></h5><br>
-                    </div>
-					</div>
-          <div class="row text-center">
-            <div class="col-12">
+                 </div>
+			</div>
+            <div class="row text-center">
+                <div class="col-12">
 					<h3>Dates: {{info.dates}}</h3>
 					<h3>Costs: {{info.details.costs}}</h3>
 					<h3>Location: <a href="#map"> {{info.location_details}}</a></h3>
-						</div>
-					</div>
+			    </div>
+		    </div>
 		</div>
 	  </section>
 
@@ -168,7 +167,7 @@
       <div class="container">
   			<div class="row text-center top5">
   				<div class="col-12 dark pt-2 pb-2 pl-2 pr-">
-  				    <h2>Schedule</h2>
+  				    <h2>Tentative Schedule</h2>
   			    </div>
   			</div>
   			<div class="row top30" v-if="info.scheduleType=='single'">
@@ -200,11 +199,11 @@
 
 
   		    </div>
-        <div class="row top5 col-12" v-else>
-          <div class="col-lg-2 mx-auto" v-for="(event, index) in info.schedule">
+        <div class="row top30 col-12" v-else>
+          <div class="scheduleCal col-lg-4" v-for="(event, index) in info.schedule">
             <h5 class="dark pt-2 pb-2 pl-2 pr-2 text-center">{{event.date}}</h5>
             <div class="row">
-              <div class="col-12" v-for="(value, key) in event.times" :class="key">
+              <div class="col-6" v-for="(value, key) in event.times" :class="key">
                 <h5 class="text-center dark pt-2 pb-2 pl-2 pr-2">{{key}}</h5>
                 <div class="row timeBlock" v-for="val in value" :style="{height: (new Date(...val.timeEnd) - new Date(...val.timeStart))/3600000 * 100 +'px'}">
                   <h6>{{moment(new Date(...val.timeStart)).format('h:mm a')}}</h6>
