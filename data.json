@@ -1,7 +1,7 @@
 {
   "title": "Brainhack Western 2019",
-  "location_main": "Western Interdisciplinary Research Building",
-  "location_details": "Western Interdisciplinary Research Building",
+  "location_main": "Laurene O. Paterson Building, Western Science Centre",
+  "location_details": "Laurene O. Paterson Building, Western Science Centre",
   "location_site": "London, ON, Canada",
   "video_conf_link": "https://hangouts.google.com/hangouts/_/ud5f5usolzcy5jy2bqsufjynwee",
   "code_of_conduct": "http://www.brainhack.org/global2019/codeofconduct.html",
@@ -33,7 +33,7 @@
     "desc":"Meet researchers from a variety of backgrounds.",
     "fa_icon": "fa-wechat"}],
     "details": {"costs":"$5 - Includes on-site meals, snacks and coffee."},
-    "schedule_background_img": "./img/wirb.jpg",
+    "schedule_background_img": "./img/2019/wsc.jpg",
     "scheduleType": "double",
     "schedule":  [{"date": "Wednesday, Nov 13",
                    "times": {"Learn": [
@@ -88,11 +88,11 @@
                   }
               ],
     "location_logo": "",
-    "location_name": "Western Interdisciplinary Research Building",
-    "location_url":"http://www.uwo.ca/brainscan/about/the_wirb/index.html",
-    "google_maps_link":"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2917.4361743468585!2d-81.27291314867911!3d43.01120557904622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882eee142ec0c81d%3A0xf10eaddc53cd2ba0!2sWestern+Interdisciplinary+Research+Building!5e0!3m2!1sen!2sca!4v1521214999873",
+    "location_name": "Laurene O. Paterson Building, Western Science Centre",
+    "location_url":"https://wts.uwo.ca/ctg/classrooms/western_science_centre/index.html",
+    "google_maps_link":"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5835.015573574793!2d-81.27768511876373!3d43.00969796659448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882eee16615bacb1%3A0xca35e4a91cbbae27!2sWestern%20Science%20Centre!5e0!3m2!1sen!2sca!4v1567190212135!5m2!1sen!2sca",
     "sponsors": [{"name": "BrainsCAN", "url": "http://www.uwo.ca/brainscan/", "logo":"./img/brainscan_logo.png"},
                  {"name": "Western University", "url": "http://www.uwo.ca", "logo":"./img/western_logo.png"},
                  {"name": "Canadian Open Neuroscience Platform", "url": "http://www.conp.ca", "logo":"./img/conp-pcno-logo.png"}],
-    "organizers": ["Ali Khan", "Marieke Mur", "Olivia Stanley", "Jason Kai", "Suzanne Witt", "Kasey Van Hedger", "Aysha Motala", "Geoffrey Ngo", "Claire Park", "Emma Stewart", "Dimuthu Hemachandra"]
+    "organizers": ["Ali Khan, Marieke Mur", "Olivia Stanley", "Jason Kai", "Suzanne Witt", "Kasey Van Hedger", "Aysha Motala", "Geoffrey Ngo", "Claire Park", "Emma Stewart", "Dimuthu Hemachandra"]
 }
