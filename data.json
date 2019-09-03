@@ -17,7 +17,7 @@
   "title_photo_author": "Yiming Xiao",
   "services":[{
     "name": "Share",
-    "desc": "Show your research to other neuroimagers/neuroscientists.",
+    "desc": "Show your research to others.",
     "fa_icon": "fa-share-alt"
     },
   {"name": "Gain Skills",
