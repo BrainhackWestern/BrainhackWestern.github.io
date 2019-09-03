@@ -66,22 +66,11 @@
     <header id="top" class="header">
         <div class="text-vertical-center text-center">
             <h1>{{info.title}}</h1>
-			<div class="row">
-				<div class="col-12">
-					<h2>{{info.location_main}}</h2>
-                    <h3>{{info.location_details}}</h3>
-				</div>
-		    </div>
             <div class="row">
                 <div class="col-12">
-                    <h2>{{info.location_site}}</h2>
+                    <h2>{{info.location_site}} | {{info.dates}}</h2>
                 </div>
             </div>
-			<div class="row">
-				<div class="col-12">
-					<h2>{{info.dates}}</h2>
-				</div>
-		    </div>
             <br>
 	  <a v-bind:href="info.registration_link" target="_blank" class="btn btn-dark btn-lg top5 left5">Registration now open!</a>
       <a v-bind:href="info.slack_link" target="_blank" class="btn btn-dark btn-lg top5 left5">Join #bhg19-western on Mattermost</a>
