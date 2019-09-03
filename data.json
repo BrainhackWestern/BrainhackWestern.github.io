@@ -5,12 +5,12 @@
   "location_site": "London, ON, Canada",
   "video_conf_link": "https://hangouts.google.com/hangouts/_/ud5f5usolzcy5jy2bqsufjynwee",
   "code_of_conduct": "http://www.brainhack.org/global2019/codeofconduct.html",
-  "dates": "Nov 13 - 15, 2019",
+  "dates": "Nov 13 - 15",
   "year": "2019",
   "background_img": "./img/averagebrain.jpg",
-  "color_theme": {"background": "##0073cf", "font": "#fff", "link_color": "#318dde"},
+  "color_theme": {"background": "#0073cf", "font": "#fff", "link_color": "#318dde"},
   "global_brainhack_organizers": [],
-  "registration_link": "",
+  "registration_link": "https://www.eventbrite.com/e/brainhack-western-2019-tickets-71130257515",
   "slack_link":"https://mattermost.brainhack.org",
   "project_submit_link":"https://github.com/BrainhackWestern/BrainhackWestern.github.io/wiki/projects",
   "tutorial_link":"https://github.com/BrainhackWestern/BrainhackWestern.github.io/wiki/Tutorials",
@@ -94,5 +94,5 @@
     "sponsors": [{"name": "BrainsCAN", "url": "http://www.uwo.ca/brainscan/", "logo":"./img/brainscan_logo.png"},
                  {"name": "Western University", "url": "http://www.uwo.ca", "logo":"./img/western_logo.png"},
                  {"name": "Canadian Open Neuroscience Platform", "url": "http://www.conp.ca", "logo":"./img/conp-pcno-logo.png"}],
-    "organizers": ["Ali Khan, Marieke Mur", "Olivia Stanley", "Jason Kai", "Suzanne Witt", "Kasey Van Hedger", "Aysha Motala", "Geoffrey Ngo", "Claire Park", "Emma Stewart", "Dimuthu Hemachandra"]
+    "organizers": ["Ali Khan, Marieke Mur, Olivia Stanley, Jason Kai", "Suzanne Witt, Kasey Van Hedger, Aysha Motala, Geoffrey Ngo", "Claire Park, Emma Stewart, Dimuthu Hemachandra"]
 }
