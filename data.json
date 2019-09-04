@@ -8,6 +8,7 @@
   "background_img": "./img/averagebrain.jpg",
   "color_theme": {"background": "#0073cf", "font": "#fff", "link_color": "#318dde"},
   "global_brainhack_organizers": [],
+  "travel_link": "https://forms.gle/sECuv6yCFE9Ucmb29",
   "registration_link": "https://www.eventbrite.com/e/brainhack-western-2019-tickets-71130257515",
   "slack_link":"https://mattermost.brainhack.org",
   "project_submit_link":"https://github.com/BrainhackWestern/BrainhackWestern.github.io/wiki/projects",
