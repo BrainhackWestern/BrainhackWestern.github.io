@@ -66,23 +66,14 @@
     <header id="top" class="header">
         <div class="text-vertical-center text-center">
             <h1>{{info.title}}</h1>
-			<div class="row">
-				<div class="col-12">
-					<h2>{{info.location_main}}</h2>
-				</div>
-		    </div>
             <div class="row">
                 <div class="col-12">
-                    <h2>{{info.location_site}}</h2>
+                    <h2>{{info.location_site}} | {{info.dates}}</h2>
                 </div>
             </div>
-			<div class="row">
-				<div class="col-12">
-					<h2>{{info.dates}}</h2>
-				</div>
-		    </div>
             <br>
-	  <a v-bind:href="info.registration_link" target="_blank" class="btn btn-dark btn-lg top5 left5">Registration coming soon!</a>
+	  <a v-bind:href="info.registration_link" target="_blank" class="btn btn-dark btn-lg top5 left5">Registration now open!</a>
+      <a v-bind:href="info.travel_link" target="_blank" class="btn btn-dark btn-lg top5 left5">Travel Awards</a>
       <a v-bind:href="info.slack_link" target="_blank" class="btn btn-dark btn-lg top5 left5">Join #bhg19-western on Mattermost</a>
       <a v-bind:href="info.project_submit_link" target="_blank" class="btn btn-dark btn-lg top5 left5">See Projects</a>
       <a v-bind:href="info.faq_link" target="_blank" class="btn btn-dark btn-lg top5 left5">FAQ</a><br><br>
@@ -148,7 +139,7 @@
         <div class="container">
             <div class="row text-center">
                  <div class="col-12">
-					<p><h3><a v-bind:href="info.registration_link" target="_blank">Registration coming soon!</a></h3></p></br>
+					<p><h3><a v-bind:href="info.registration_link" target="_blank">Registration now open!</a></h3></p></br>
 		    <p><h4>The {{info.title}} is an official satellite event of <a href="http://www.brainhack.org/global2019/" target="_blank">Brainhack Global {{info.year}}.</a></h4></br>
                 <p><h5>The goal of the hackathon is to bring together researchers and trainees with disparate backgrounds to collaborate on open science projects in neuroimaging and neuroscience. Brainhack projects are pitched on the first night, and attendees will form into teams to work on these projects over the next two days. Tutorial sessions on a variety of topics will be held throughout for attendees to learn new skills.</p>
                      <p>Participants are encouraged to post project ideas to <a v-bind:href="info.project_submit_link" target="_blank">the project page</a>.</p></h5>
