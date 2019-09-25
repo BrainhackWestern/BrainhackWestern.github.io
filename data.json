@@ -5,7 +5,7 @@
   "code_of_conduct": "http://www.brainhack.org/global2019/codeofconduct.html",
   "dates": "Nov 13 - 15",
   "year": "2019",
-  "background_img": "./img/averagebrain.jpg",
+  "background_img": "./img/2019/vasculature.png",
   "color_theme": {"background": "#0073cf", "font": "#fff", "link_color": "#318dde"},
   "global_brainhack_organizers": [],
   "travel_link": "https://forms.gle/sECuv6yCFE9Ucmb29",
@@ -14,8 +14,8 @@
   "project_submit_link":"https://github.com/BrainhackWestern/BrainhackWestern.github.io/wiki/projects",
   "tutorial_link":"https://github.com/BrainhackWestern/BrainhackWestern.github.io/wiki/Tutorials",
   "faq_link":"https://github.com/brainhackwestern/brainhackwestern.github.io/wiki/frequently-asked-questions",
-  "title_photo_link": "./img/averagebrain.jpg",
-  "title_photo_author": "Yiming Xiao",
+  "title_photo_link": "https://royhaast.com/",
+  "title_photo_author": "Roy Haast",
   "services":[{
     "name": "Share",
     "desc": "Show your research to others.",
@@ -32,7 +32,7 @@
     "desc":"Meet researchers from a variety of backgrounds.",
     "fa_icon": "fa-wechat"}],
     "details": {"costs":"$5 - Includes on-site meals, snacks and coffee."},
-    "schedule_background_img": "./img/2019/wsc.jpg",
+    "schedule_background_img": "./img/locations/wsc.jpg",
     "scheduleType": "double",
     "schedule":  [{"date": "Wednesday, Nov 13",
                    "times": {"Learn": [
@@ -93,8 +93,8 @@
     "location_details": "School of Mathematics and Statistical Sciences Research Unit",
     "location_url":"https://wts.uwo.ca/ctg/classrooms/western_science_centre/index.html",
     "google_maps_link":"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5835.015573574793!2d-81.27768511876373!3d43.00969796659448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882eee16615bacb1%3A0xca35e4a91cbbae27!2sWestern%20Science%20Centre!5e0!3m2!1sen!2sca!4v1567190212135!5m2!1sen!2sca",
-    "sponsors": [{"name": "BrainsCAN", "url": "http://www.uwo.ca/brainscan/", "logo":"./img/brainscan_logo.png"},
-                 {"name": "Western University", "url": "http://www.uwo.ca", "logo":"./img/western_logo.png"},
-                 {"name": "Canadian Open Neuroscience Platform", "url": "http://www.conp.ca", "logo":"./img/conp-pcno-logo.png"}],
+    "sponsors": [{"name": "BrainsCAN", "url": "http://www.uwo.ca/brainscan/", "logo":"./img/logos/brainscan_logo.png"},
+                 {"name": "Western University", "url": "http://www.uwo.ca", "logo":"./img/logos/western_logo.png"},
+                 {"name": "Canadian Open Neuroscience Platform", "url": "http://www.conp.ca", "logo":"./img/logos/conp-pcno-logo.png"}],
     "organizers": ["Ali Khan, Marieke Mur, Olivia Stanley, Jason Kai", "Suzanne Witt, Kasey Van Hedger, Aysha Motala, Geoffrey Ngo", "Emma Stewart, Justine Clery, Claire Park, Dimuthu Hemachandra", "Geetika Gupta"]
 }
