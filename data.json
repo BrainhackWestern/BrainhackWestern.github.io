@@ -96,5 +96,5 @@
     "sponsors": [{"name": "BrainsCAN", "url": "http://www.uwo.ca/brainscan/", "logo":"./img/logos/brainscan_logo.png"},
                  {"name": "Western University", "url": "http://www.uwo.ca", "logo":"./img/logos/western_logo.png"},
                  {"name": "Canadian Open Neuroscience Platform", "url": "http://www.conp.ca", "logo":"./img/logos/conp-pcno-logo.png"}],
-    "organizers": ["Ali Khan, Marieke Mur, Olivia Stanley, Jason Kai", "Suzanne Witt, Kasey Van Hedger, Aysha Motala, Geoffrey Ngo", "Emma Stewart, Justine Clery, Claire Park, Dimuthu Hemachandra", "Geetika Gupta"]
+    "organizers": ["Ali Khan, Marieke Mur, Olivia Stanley, Jason Kai", "Suzanne Witt, Kasey Van Hedger, Aysha Motala, Geoffrey Ngo", "Emma Stewart, Justine Clery, Claire Park, Dimuthu Hemachandra", "Geetika Gupta, Cat Fleury, Eva Berlot"]
 }
