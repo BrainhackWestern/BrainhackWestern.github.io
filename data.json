@@ -60,13 +60,15 @@
                                 {"timeStart": [2019,14,11,12,0], "timeEnd": [2019,14,11,13,0], "event": "Lunch + Unconference"},
                                 {"timeStart": [2019,14,11,13,0], "timeEnd": [2019,14,11,14,30], "event": "Intro to DTI"},
                                 {"timeStart": [2019,14,11,14,30], "timeEnd": [2019,14,11,16,0], "event": "TBA"},
-                                {"timeStart": [2019,14,11,16,0], "timeEnd": [2019,14,11,17,0], "event": "Unconference"}
+                                {"timeStart": [2019,14,11,16,0], "timeEnd": [2019,14,11,17,0], "event": "Unconference"},
+                                {"timeStart": [2019,14,11,17,0], "timeEnd": [2019,14,11,18,0], "event": "Social"}
                                 ],
                              "Hack": [
                                 {"timeStart": [2019,14,11,9,0], "timeEnd": [2019,14,11,12,0], "event": "Hacking"},
                                 {"timeStart": [2019,14,11,12,0], "timeEnd": [2019,14,11,13,0], "event": "Lunch + Unconference"},
                                 {"timeStart": [2019,14,11,13,0], "timeEnd": [2019,14,11,16,0], "event": "Hacking"},
-                                {"timeStart": [2019,14,11,16,0], "timeEnd": [2019,14,11,17,0], "event": "Unconference"}
+                                {"timeStart": [2019,14,11,16,0], "timeEnd": [2019,14,11,17,0], "event": "Unconference"},
+                                {"timeStart": [2019,14,11,17,0], "timeEnd": [2019,14,11,18,0], "event": "Social"}
                                 ]
                              }
                   },
@@ -75,15 +77,13 @@
                                 {"timeStart": [2019,15,11,9,0], "timeEnd": [2019,15,11,12,0], "event": "Intro to fNIRS"},
                                 {"timeStart": [2019,15,11,12,0], "timeEnd": [2019,15,11,13,0], "event": "Lunch + Unconference"},
                                 {"timeStart": [2019,15,11,13,0], "timeEnd": [2019,15,11,15,30], "event": "TBA"},
-                                {"timeStart": [2019,15,11,15,30], "timeEnd": [2019,15,11,17,0], "event": "Project presentations + Wrap-up"},
-                                {"timeStart": [2019,15,11,17,0], "timeEnd": [2019,15,11,21,0], "event": "Social"}
+                                {"timeStart": [2019,15,11,15,30], "timeEnd": [2019,15,11,17,0], "event": "Project presentations + Wrap-up"}
                                 ],
                              "Hack": [
                                 {"timeStart": [2019,15,11,9,0], "timeEnd": [2019,15,11,12,0], "event": "Hacking"},
                                 {"timeStart": [2019,15,11,12,0], "timeEnd": [2019,15,11,13,0], "event": "Lunch + Unconference"},
                                 {"timeStart": [2019,15,11,13,0], "timeEnd": [2019,15,11,15,30], "event": "Hacking"},
-                                {"timeStart": [2019,15,11,15,30], "timeEnd": [2019,15,11,17,0], "event": "Project presentations + Wrap-up"},
-                                {"timeStart": [2019,15,11,17,0], "timeEnd": [2019,15,11,21,0], "event": "Social"}
+                                {"timeStart": [2019,15,11,15,30], "timeEnd": [2019,15,11,17,0], "event": "Project presentations + Wrap-up"}
                                 ]
                             }
                   }
