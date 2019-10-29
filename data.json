@@ -59,7 +59,7 @@
                                 {"timeStart": [2019,14,11,9,0], "timeEnd": [2019,14,11,12,0], "event": "Intro to Machine Learning"},
                                 {"timeStart": [2019,14,11,12,0], "timeEnd": [2019,14,11,13,0], "event": "Lunch + Unconference"},
                                 {"timeStart": [2019,14,11,13,0], "timeEnd": [2019,14,11,15,30], "event": "Intro to DTI"},
-                                {"timeStart": [2019,14,11,15,30], "timeEnd": [2019,14,11,17,00], "event": "TWINTalks: Blake Richards"},
+                                {"timeStart": [2019,14,11,15,30], "timeEnd": [2019,14,11,17,0], "event": "TWINTalks: Blake Richards"},
                                 {"timeStart": [2019,14,11,17,0], "timeEnd": [2019,14,11,18,0], "event": "Social"}
                                 ],
                              "Hack": [
