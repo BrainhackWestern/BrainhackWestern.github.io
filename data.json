@@ -1,7 +1,7 @@
 {
   "title": "Brainhack Western 2019",
   "location_site": "London, ON, Canada",
-  "video_conf_link": "https://hangouts.google.com/hangouts/_/ud5f5usolzcy5jy2bqsufjynwee",
+  "video_conf_link": "https://westernuniversity.zoom.us/j/940289596",
   "code_of_conduct": "http://www.brainhack.org/global2019/codeofconduct.html",
   "dates": "Nov 13 - 15",
   "year": "2019",
@@ -58,9 +58,9 @@
                    "times": {"Learn": [
                                 {"timeStart": [2019,14,11,9,0], "timeEnd": [2019,14,11,12,0], "event": "Intro to Machine Learning"},
                                 {"timeStart": [2019,14,11,12,0], "timeEnd": [2019,14,11,13,0], "event": "Lunch + Unconference"},
-                                {"timeStart": [2019,14,11,13,0], "timeEnd": [2019,14,11,14,30], "event": "Intro to DTI"},
-                                {"timeStart": [2019,14,11,14,30], "timeEnd": [2019,14,11,16,0], "event": "TBA"},
-                                {"timeStart": [2019,14,11,16,0], "timeEnd": [2019,14,11,17,0], "event": "Unconference"},
+                                {"timeStart": [2019,14,11,13,0], "timeEnd": [2019,14,11,15,30], "event": "Intro to DTI"},
+                                {"timeStart": [2019,14,11,15,30], "timeEnd": [2019,14,11,16,30], "event": "TWINTalks: Blake Richards"},
+                                {"timeStart": [2019,14,11,16,30], "timeEnd": [2019,14,11,17,0], "event": "Unconference"},
                                 {"timeStart": [2019,14,11,17,0], "timeEnd": [2019,14,11,18,0], "event": "Social"}
                                 ],
                              "Hack": [
