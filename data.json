@@ -1,7 +1,7 @@
 {
   "title": "Brainhack Western 2019",
   "location_site": "London, ON, Canada",
-  "video_conf_link": "https://hangouts.google.com/hangouts/_/ud5f5usolzcy5jy2bqsufjynwee",
+  "video_conf_link": "https://westernuniversity.zoom.us/j/940289596",
   "code_of_conduct": "http://www.brainhack.org/global2019/codeofconduct.html",
   "dates": "Nov 13 - 15",
   "year": "2019",
@@ -56,30 +56,33 @@
                   },
                   {"date": "Thursday, Nov 14",
                    "times": {"Learn": [
-                                {"timeStart": [2019,14,11,9,0], "timeEnd": [2019,14,11,12,0], "event": "Intro to Machine Learning"},
-                                {"timeStart": [2019,14,11,12,0], "timeEnd": [2019,14,11,13,0], "event": "Lunch + Unconference"},
-                                {"timeStart": [2019,14,11,13,0], "timeEnd": [2019,14,11,14,30], "event": "Intro to DTI"},
-                                {"timeStart": [2019,14,11,14,30], "timeEnd": [2019,14,11,16,0], "event": "TBA"},
-                                {"timeStart": [2019,14,11,16,0], "timeEnd": [2019,14,11,17,0], "event": "Unconference"},
+                                {"timeStart": [2019,14,11,8,0], "timeEnd": [2019,14,11,10,0], "event": "Breakfast"},
+                                {"timeStart": [2019,14,11,10,0], "timeEnd": [2019,14,11,11,30], "event": "Intro to Deep Learning"},
+                                {"timeStart": [2019,14,11,11,30], "timeEnd": [2019,14,11,12,30], "event": "TBA"},
+                                {"timeStart": [2019,14,11,12,30], "timeEnd": [2019,14,11,13,30], "event": "Lunch + Unconference"},
+                                {"timeStart": [2019,14,11,13,30], "timeEnd": [2019,14,11,15,30], "event": "Deep Learning Practical"},
+                                {"timeStart": [2019,14,11,15,30], "timeEnd": [2019,14,11,17,0], "event": "Intro to DTI"},
                                 {"timeStart": [2019,14,11,17,0], "timeEnd": [2019,14,11,18,0], "event": "Social"}
                                 ],
                              "Hack": [
-                                {"timeStart": [2019,14,11,9,0], "timeEnd": [2019,14,11,12,0], "event": "Hacking"},
-                                {"timeStart": [2019,14,11,12,0], "timeEnd": [2019,14,11,13,0], "event": "Lunch + Unconference"},
-                                {"timeStart": [2019,14,11,13,0], "timeEnd": [2019,14,11,16,0], "event": "Hacking"},
-                                {"timeStart": [2019,14,11,16,0], "timeEnd": [2019,14,11,17,0], "event": "Unconference"},
+                                {"timeStart": [2019,14,11,8,0], "timeEnd": [2019,14,11,10,0], "event": "Breakfast"},
+                                {"timeStart": [2019,14,11,10,0], "timeEnd": [2019,14,11,12,30], "event": "Hacking"},
+                                {"timeStart": [2019,14,11,12,30], "timeEnd": [2019,14,11,13,30], "event": "Lunch + Unconference"},
+                                {"timeStart": [2019,14,11,13,30], "timeEnd": [2019,14,11,17,0], "event": "Hacking"},
                                 {"timeStart": [2019,14,11,17,0], "timeEnd": [2019,14,11,18,0], "event": "Social"}
                                 ]
                              }
                   },
                   {"date": "Friday, Nov 15",
                    "times": {"Learn": [
+                                {"timeStart": [2019,15,11,8,0], "timeEnd": [2019,15,11,9,0], "event": "Breakfast"},
                                 {"timeStart": [2019,15,11,9,0], "timeEnd": [2019,15,11,12,0], "event": "Intro to fNIRS"},
                                 {"timeStart": [2019,15,11,12,0], "timeEnd": [2019,15,11,13,0], "event": "Lunch + Unconference"},
                                 {"timeStart": [2019,15,11,13,0], "timeEnd": [2019,15,11,15,30], "event": "TBA"},
                                 {"timeStart": [2019,15,11,15,30], "timeEnd": [2019,15,11,17,0], "event": "Project presentations + Wrap-up"}
                                 ],
                              "Hack": [
+                                {"timeStart": [2019,15,11,8,0], "timeEnd": [2019,15,11,9,0], "event": "Breakfast"},
                                 {"timeStart": [2019,15,11,9,0], "timeEnd": [2019,15,11,12,0], "event": "Hacking"},
                                 {"timeStart": [2019,15,11,12,0], "timeEnd": [2019,15,11,13,0], "event": "Lunch + Unconference"},
                                 {"timeStart": [2019,15,11,13,0], "timeEnd": [2019,15,11,15,30], "event": "Hacking"},
