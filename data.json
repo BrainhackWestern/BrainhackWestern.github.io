@@ -58,7 +58,7 @@
                    "times": {"Learn": [
                                 {"timeStart": [2019,14,11,8,0], "timeEnd": [2019,14,11,10,0], "event": "Breakfast"},
                                 {"timeStart": [2019,14,11,10,0], "timeEnd": [2019,14,11,11,30], "event": "Intro to Deep Learning"},
-                                {"timeStart": [2019,14,11,11,30], "timeEnd": [2019,14,11,12,30], "event": "TBA"},
+                                {"timeStart": [2019,14,11,11,30], "timeEnd": [2019,14,11,12,30], "event": "TWINtalks: Blake Richards"},
                                 {"timeStart": [2019,14,11,12,30], "timeEnd": [2019,14,11,13,30], "event": "Lunch + Unconference"},
                                 {"timeStart": [2019,14,11,13,30], "timeEnd": [2019,14,11,15,30], "event": "Deep Learning Practical"},
                                 {"timeStart": [2019,14,11,15,30], "timeEnd": [2019,14,11,17,0], "event": "Intro to DTI"},
