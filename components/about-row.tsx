@@ -13,7 +13,7 @@ export const AboutRow = (props: ImageProps) => <>
     <div className="row">
         <div className="col-lg-6 d-flex justify-content-center align-items-start">
             <div className="img">
-                <Image src={props.img} alt="" loader={imageLoader}/>
+                <Image src={props.img} alt="" />
             </div>
         </div>
         <div className="col-lg-6 d-flex flex-column justify-content-center">

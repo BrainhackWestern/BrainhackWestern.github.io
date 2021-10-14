@@ -2,6 +2,8 @@
 const webpack = require('webpack')
 const path = require('path')
 
+const imgLoader = process.env.NEXT_PUBLIC_LOADER || 'default';
+
 module.exports = {
   reactStrictMode: true,
   sassOptions: {
@@ -11,7 +13,8 @@ module.exports = {
     ]
   },
   images: {
-    loader: 'custom'
+    loader: imgLoader,
+    path: "https://brainhack-western.imgix.net/",
   },
   basePath: process.env.NEXT_PUBLIC_URL,
   assetPrefix: process.env.NEXT_PUBLIC_URL,

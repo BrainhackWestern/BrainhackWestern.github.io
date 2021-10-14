@@ -50,7 +50,7 @@ const Home = ({ config }: InferGetStaticPropsType<typeof getStaticProps>) => {
 
       <div className="window d-flex flex-column justify-content-center container-lg">
         <div className="background-img">
-          <Image src={asciiArt} loader={imageLoader}/>
+          <Image src={asciiArt}/>
         </div>
         <div className="row title-col">
           <div className="col-12 col-lg-4 d-flex flex-column align-items-center ">
@@ -90,7 +90,7 @@ const Home = ({ config }: InferGetStaticPropsType<typeof getStaticProps>) => {
           </div>
           <div className="col-lg-6 d-flex justify-content-center">
             <div style={{maxWidth: "300px"}}>
-              <Image src={global_logo} alt="" loader={imageLoader} />
+              <Image src={global_logo} alt=""/>
             </div>
           </div>
         </div>
@@ -109,7 +109,7 @@ const Home = ({ config }: InferGetStaticPropsType<typeof getStaticProps>) => {
           </div>
           <div className="col-lg-6 d-flex justify-content-center">
             <div style={{maxWidth: "300px"}}>
-              <Image src={dollar_signs} alt="" loader={imageLoader} />
+              <Image src={dollar_signs} alt="" />
             </div>
           </div>
         </div>
