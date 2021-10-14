@@ -39,7 +39,7 @@ You should now have a functional development site.
 
 Any changes should be staged before pushing to the main repo. A staging server can be made simply by forking this repository. Generally, all changes should first be pushed to a fork, tested, then merged into the main repository via PR.
 
-In order for the stage to display correctly, you need to update the value of the base path. Open the `.env.production`, and make sure the value of `NEXT_PUBLIC_URL` matches your staging repository name. If it doesn't, set it accordingly. If you forked your staging repository directly from the production repo, this shouldn't need to be changed.
+In order for the stage to display correctly, you need to update the value of the base path. Open [.env.production](.env.production), and make sure the value of `NEXT_PUBLIC_URL` matches your staging repository name. If it doesn't, set it accordingly. If you forked your staging repository directly from the production repo, this shouldn't need to be changed.
 
 Just as with the development site, you need an API key from google to display maps correctly. Ideally, you should create a new key restricted to your github domain. The screen where you generate these keys contains instructions for doing this. Once you have your new key, go to your github repo's settings page and open secrets. Click on New repository secret, put your key into the body, and name it `MAPS_EMBED_API_KEY`.
 
