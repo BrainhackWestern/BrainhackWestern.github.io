@@ -12,7 +12,9 @@ interface ImageProps {
 export const AboutRow = (props: ImageProps) => <>
     <div className="row">
         <div className="col-lg-6 d-flex justify-content-center align-items-start">
-            <Image src={props.img} className="img" alt="" loader={imageLoader}/>
+            <div className="img">
+                <Image src={props.img} alt="" loader={imageLoader}/>
+            </div>
         </div>
         <div className="col-lg-6 d-flex flex-column justify-content-center">
             <h2>{props.title}</h2>

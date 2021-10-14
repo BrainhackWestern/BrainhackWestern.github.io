@@ -10,13 +10,9 @@
     }
 
     .img {
-        display: flex;
-        justify-content: center;
-
-        img {
-            width: 80%;
+        max-width: 80%;
+        > div {
             box-shadow: 0 16px 30px rgb(0, 0, 0, 0.9);
-            display: flex;
             margin: 1.5em 0;
         }
     }
