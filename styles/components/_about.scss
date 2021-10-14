@@ -1,0 +1,22 @@
+@use 'bootstrap/scss/bootstrap' as bootstrap;
+
+.about {
+
+    .row {
+        padding-bottom: 5em;
+    }
+    h2, p {
+        text-align: center;
+    }
+
+    .upvote-img {
+        box-shadow: 0 16px 30px rgb(0, 0, 0, 0.9);
+        display: flex;
+    }
+
+    @include bootstrap.media-breakpoint-up(lg) {
+        h2, p {
+            text-align: right;
+        }
+    }
+}

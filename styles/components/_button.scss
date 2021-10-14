@@ -1,0 +1,22 @@
+@use '../variables' as var;
+@use 'bootstrap/scss/bootstrap' as bootstrap;
+
+.button {
+    display: inline;
+    background-color: var.$highlight;
+    border-radius: 20px;
+    border-width: 0;
+    padding: 1em 4em;
+
+    span {
+        font-size: var.$text_med;
+        color: var.$font-light;
+    }
+
+    @include bootstrap.media-breakpoint-up(xxl) {
+        span {
+            font-size: var.$text_med;
+            color: var.$font-light;
+        }
+    }
+}

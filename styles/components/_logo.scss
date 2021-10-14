@@ -1,0 +1,24 @@
+@use '../variables' as variables;
+@use 'bootstrap/scss/bootstrap.scss' as bootstrap;
+//@use '../../styles/typography' as type;
+
+.logo {
+
+    h1 {
+        text-align: center;
+        margin: 0;
+    }
+
+    .logo-year {
+        color: variables.$highlight;
+        font-size: 8.3rem;
+        font-weight: variables.$weight_light;
+        line-height: 70%;
+    }
+
+    @include bootstrap.media-breakpoint-up(xxl) {
+        .logo-year {
+            font-size: 11.5rem
+        }
+    }
+}

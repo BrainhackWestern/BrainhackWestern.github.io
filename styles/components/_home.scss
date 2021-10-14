@@ -1,0 +1,79 @@
+@use '../variables';
+@use 'bootstrap/scss/bootstrap' as bootstrap;
+
+.app {
+  position: relative;
+  min-height: 100vh;
+  padding: 0 0.5rem;
+  margin: 0;
+  width: 100%;
+  background-color: variables.$background;
+}
+
+.window {
+  height: 100vh;
+}
+
+.background-img {
+  position: absolute;
+  right: 0;
+  top: 5vh;
+  max-height: 95vh;
+  z-index: 0;
+}
+
+@include bootstrap.media-breakpoint-up(xl) {
+  .background-img {
+    max-width: 65%;
+  }
+}
+
+hr {
+  border-width: 1px;
+  border-color: #707070;
+  width: 50%;
+  margin: 3em
+}
+
+.title-col {
+  position: relative;
+  z-index: 1;
+}
+
+h3 {
+  text-align: center;
+}
+
+.white-box {
+  background-color: #FFFFFF;
+  width: 100%;
+  padding: 3em 0;
+
+  p, h2 {
+    color: variables.$font_dark;
+  }
+
+  p {
+    text-align: center;
+    font-size: variables.$body_large;
+  }
+}
+
+.sponsor {
+  max-width: 300px;
+}
+
+.content-space {
+  padding-top: 5em;
+  padding-bottom: 3em
+}
+
+footer {
+  h3 {
+    text-align: left;
+  }
+
+  p {
+    padding-bottom: 2em;
+  }
+}

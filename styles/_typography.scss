@@ -1,0 +1,55 @@
+@use 'bootstrap/scss/bootstrap' as bootstrap;
+@use 'variables';
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", Segoe UI, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: variables.$font_family_body;
+    font-size: variables.$body_norm;
+    color: variables.$font-light
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: variables.$font_family_heading;
+    font-weight: variables.$weight_normal;
+    color: variables.$font-light;
+}
+
+h1 {
+    font-size: variables.$text_large;
+}
+
+h2 {
+    font-size: variables.$text_large;
+}
+
+h3 {
+    font-size: variables.$text_med;
+}
+
+@include bootstrap.media-breakpoint-up(xxl) {
+    h1 {
+        font-size: variables.$text_xlarge;
+    }
+    h3 {
+        font-size: variables.$text_med;
+    }
+}
+
