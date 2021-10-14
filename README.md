@@ -1,34 +1,46 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## Updating Data
 
-First, run the development server:
+Most data for the site is stored in the [config.yaml](config.yaml) file. Values here can be updated directly on github by clicking the pencil icon at the top of the file. Once you've made changes, they can be saved through a Pull Request.
 
-```bash
-npm run dev
-# or
-yarn dev
+## Running a dev server
+
+First, clone this repository:
+
+```
+git clone https://github.com/pvandyken/brainhack_western_test_site.git brainhack
+cd brainhack
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ensure you have node installed on your system. See [here for installers](https://nodejs.org/en/download/). Then, install npm dependencies:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```
+npm install
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Start the server with:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```
+npm run dev
+```
 
-## Learn More
+The site can be accessed at `localhost:3000`.
 
-To learn more about Next.js, take a look at the following resources:
+In order for the google maps inset to work on your local machine, you will need a Google API key. You get this by following [Google's instructions](https://developers.google.com/maps/documentation/embed/map-generator#create-project). Once you have your key, run the following in the top level directory of the site to create an env file:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+echo "NEXT_PUBLIC_MAPS_EMBED_API_KEY=[your key here]" > .env.local
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+You should now have a functional development site.
 
-## Deploy on Vercel
+## Staging
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Any changes should be staged before pushing to the main repo. A staging server can be made simply by forking this repository. Generally, all changes should first be pushed to a fork, tested, then merged into the main repository via PR.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+In order for the stage to display correctly, you need to update the value of the base path. Open the `.env.production`, and make sure the value of `NEXT_PUBLIC_URL` matches your staging repository name. If it doesn't, set it accordingly. If you forked your staging repository directly from the production repo, this shouldn't need to be changed.
+
+Just as with the development site, you need an API key from google to display maps correctly. Ideally, you should create a new key restricted to your github domain. The screen where you generate these keys contains instructions for doing this. Once you have your new key, go to your github repo's settings page and open secrets. Click on New repository secret, put your key into the body, and name it `MAPS_EMBED_API_KEY`.
+
+After pushing, give a few minutes for Github Actions to generate the site. You can view its progress by looking at the Actions page in your github repo. Once its finished, you can access the site by going to Settings, selecting Pages, and clicking on the link provided.

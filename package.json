@@ -7,8 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "gh-build": "rm -rf node_modules/.cache && next build && next export && touch out/.nojekyll",
-    "stage": "git push stage stage:master"
+    "gh-build": "rm -rf node_modules/.cache && next build && next export && touch out/.nojekyll"
   },
   "dependencies": {
     "bootstrap": "^5.1.1",
