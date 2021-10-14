@@ -42,6 +42,10 @@ hr {
 .title-col {
   position: relative;
   z-index: 1;
+
+  .button {
+    align-self: center;
+  }
 }
 
 h3 {
