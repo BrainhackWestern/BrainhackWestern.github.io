@@ -13,6 +13,6 @@ module.exports = {
   images: {
     loader: 'custom'
   },
-  basePath: process.env.PUBLIC_URL,
-  assetPrefix: process.env.PUBLIC_URL,
+  basePath: process.env.NEXT_PUBLIC_URL,
+  assetPrefix: process.env.NEXT_PUBLIC_URL,
 }

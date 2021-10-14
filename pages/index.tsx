@@ -1,11 +1,14 @@
+import path from 'path'
+import { promises as fs } from 'fs'
+
 import type { InferGetStaticPropsType, NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import path from 'path'
-import { promises as fs } from 'fs'
-import yaml from 'js-yaml'
 
+import yaml from 'js-yaml'
 import Obfuscate from 'react-obfuscate'
+
+import { imageLoader, basePath } from '../utils/image-loader'
 
 import { SiteConfig } from '../interfaces/site-config'
 
@@ -32,14 +35,8 @@ export const getStaticProps = async () => {
   };
 }
 
-const basePath = process.env.PUBLIC_URL || '';
 
 const Home = ({ config }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  asciiArt.src = basePath + asciiArt.src;
-  upvote.src = basePath + upvote.src;
-  learn_skillz.src = basePath + learn_skillz.src;
-  global_logo.src = basePath + global_logo.src;
-  dollar_signs.src = basePath + dollar_signs.src;
   return (
     <div className="app">
       <Head>
@@ -53,7 +50,7 @@ const Home = ({ config }: InferGetStaticPropsType<typeof getStaticProps>) => {
 
       <div className="window d-flex flex-column justify-content-center container-lg">
         <div className="background-img">
-          <img src={asciiArt.src} />
+          <Image src={asciiArt} loader={imageLoader}/>
         </div>
         <div className="row title-col">
           <div className="col-12 col-lg-4 d-flex flex-column align-items-center ">
@@ -93,7 +90,7 @@ const Home = ({ config }: InferGetStaticPropsType<typeof getStaticProps>) => {
           </div>
           <div className="col-lg-6 d-flex justify-content-center">
             <div style={{maxWidth: "300px"}}>
-              <img src={global_logo.src} alt=""/>
+              <Image src={global_logo} alt="" loader={imageLoader} />
             </div>
           </div>
         </div>
@@ -112,7 +109,7 @@ const Home = ({ config }: InferGetStaticPropsType<typeof getStaticProps>) => {
           </div>
           <div className="col-lg-6 d-flex justify-content-center">
             <div style={{maxWidth: "300px"}}>
-              <img src={dollar_signs.src} />
+              <Image src={dollar_signs} alt="" loader={imageLoader} />
             </div>
           </div>
         </div>
