@@ -16,9 +16,10 @@
 
 .background-img {
   position: absolute;
+  width: 100%;
+  max-width: 980px;
   right: 0;
   top: 5vh;
-  max-height: 95vh;
   z-index: 0;
 }
 
@@ -28,7 +29,7 @@ img {
 
 @include bootstrap.media-breakpoint-up(xl) {
   .background-img {
-    max-width: 65%;
+    width: 65%;
   }
 }
 

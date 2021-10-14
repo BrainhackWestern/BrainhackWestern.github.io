@@ -50,7 +50,7 @@ const Home = ({ config }: InferGetStaticPropsType<typeof getStaticProps>) => {
 
       <div className="window d-flex flex-column justify-content-center container-lg">
         <div className="background-img">
-          <Image src={asciiArt}/>
+          <Image src={asciiArt} layout="responsive" />
         </div>
         <div className="row title-col">
           <div className="col-12 col-lg-4 d-flex flex-column align-items-center ">
