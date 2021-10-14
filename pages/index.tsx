@@ -124,11 +124,26 @@ const Home = ({ config }: InferGetStaticPropsType<typeof getStaticProps>) => {
 
       <div className="content-space container-lg">
         <div className="row">
-          <div className="col-lg-6 d-flex flex-column justify-content-between align-items-start">
+          <div className="col-lg-4 d-flex flex-column justify-content-start align-items-start">
             <h2>Location</h2>
+            <address>
+              <a href={config.location.url} title={config.location.name}>{config.location.name}</a>
+              <br />
+              {config.location.street}
+              <br />
+              {config.location.city}, {config.location.province}
+            </address>
           </div>
-          <div className="col-lg-6 d-flex flex-column justify-content-between align-items-start">
-            <p>Map to go here</p>
+          <div className="col-lg-8 d-flex flex-column justify-content-start align-items-start">
+            <iframe
+              className="map-frame"
+              width="600"
+              height="450"
+              style={{border: 0}}
+              loading="lazy"
+              allowFullScreen
+              src={`https://www.google.com/maps/embed/v1/place?q=place_id:${config.location.maps_id}&key=${process.env.NEXT_PUBLIC_MAPS_EMBED_API_KEY}`}
+            ></iframe> 
           </div>
         </div>
       </div>

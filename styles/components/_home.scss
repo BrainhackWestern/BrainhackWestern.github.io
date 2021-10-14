@@ -70,11 +70,18 @@ h3 {
 .sponsor {
   max-width: 80%;
   margin: 2em;
+
+  @include bootstrap.media-breakpoint-up(lg) {
+      max-width: 300px;
+  }
 }
 
-@include bootstrap.media-breakpoint-up(lg) {
-  .sponsor {
-    max-width: 300px;
+.map-frame {
+  width: 100%;
+  height: 20em;
+
+  @include bootstrap.media-breakpoint-up(lg) {
+    height: 35em;
   }
 }
 

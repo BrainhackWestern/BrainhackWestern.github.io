@@ -1,3 +1,10 @@
+location:
+  name: Western Interdisciplinary Research Building
+  street: Perth Dr
+  city: London
+  province: "ON"
+  url: "https://www.uwo.ca/bmi/about/wirb.html"
+  maps_id: ChIJCVSloavvLogR82_w3v729s0
 organizers:
   - Ali Khan Marieke Mur
   - Olivia Stanley

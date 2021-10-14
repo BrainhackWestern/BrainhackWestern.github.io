@@ -21,8 +21,18 @@ export interface SponsorConfig {
     url: string;
 }
 
+interface LocationConfig {
+    name: string;
+    street: string;
+    city: string;
+    province: string;
+    url: string;
+    maps_id: string;
+}
+
 export interface SiteConfig {
     schedule: ScheduleConfig;
     sponsors: SponsorConfig[];
     organizers: string[];
+    location: LocationConfig;
 }
