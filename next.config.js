@@ -2,7 +2,19 @@
 const webpack = require('webpack')
 const path = require('path')
 
-const imgLoader = process.env.NEXT_PUBLIC_LOADER || 'default';
+const imgLoader = () => {
+  const loader = process.env.NEXT_PUBLIC_LOADER || 'default';
+  if (loader === "default") {
+    return {
+      loader: "default"
+    }
+  } else {
+    return {
+      loader: loader,
+      path: "https://brainhack-western.imgix.net/"
+    }
+  }
+}
 
 module.exports = {
   reactStrictMode: true,
@@ -12,10 +24,7 @@ module.exports = {
       path.join(__dirname, 'node_modules')
     ]
   },
-  images: {
-    loader: imgLoader,
-    path: "https://brainhack-western.imgix.net/",
-  },
+  images: imgLoader(),
   basePath: process.env.NEXT_PUBLIC_URL,
   assetPrefix: process.env.NEXT_PUBLIC_URL,
 }

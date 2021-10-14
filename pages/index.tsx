@@ -50,7 +50,7 @@ const Home = ({ config }: InferGetStaticPropsType<typeof getStaticProps>) => {
 
       <div className="window d-flex flex-column justify-content-center container-lg">
         <div className="background-img">
-          <Image src={asciiArt} layout="responsive" />
+          <Image src={asciiArt} />
         </div>
         <div className="row title-col">
           <div className="col-12 col-lg-4 d-flex flex-column align-items-center ">
@@ -101,7 +101,7 @@ const Home = ({ config }: InferGetStaticPropsType<typeof getStaticProps>) => {
           <div className="col-lg-6 d-flex flex-column justify-content-between align-items-start">
             <div>
               <h2>Cost: $15</h2>
-              <p>Includes on-site meals and snacks!</p>
+              <p>Includes on-site meals, snacks, and coffee!</p>
             </div>
             <Button>
               Register

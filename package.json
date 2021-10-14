@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "gh-build": "rm -rf node_modules/.cache && next build && next export && touch out/.nojekyll",
-    "deploy": "npm run gh-build && git subtree split --prefix out -b gh-pages && git push -f origin gh-pages:gh-pages && git branch -D gh-pages && rm -rf out"
+    "deploy": "npm run gh-build && git stash && git add -f out && git commit -m 'Deploying' && git subtree split --prefix out -b gh-pages && git push -f origin gh-pages:gh-pages && git branch -D gh-pages && git reset HEAD~1 && git stash pop && rm -rf out"
   },
   "dependencies": {
     "bootstrap": "^5.1.1",

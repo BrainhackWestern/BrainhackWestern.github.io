@@ -16,8 +16,10 @@
 
 .background-img {
   position: absolute;
-  width: 100%;
+  overflow: hidden;
+  max-height: 95vh;
   max-width: 980px;
+  width: 100%;
   right: 0;
   top: 5vh;
   z-index: 0;
