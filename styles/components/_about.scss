@@ -9,9 +9,16 @@
         text-align: center;
     }
 
-    .upvote-img {
-        box-shadow: 0 16px 30px rgb(0, 0, 0, 0.9);
+    .img {
         display: flex;
+        justify-content: center;
+
+        img {
+            width: 80%;
+            box-shadow: 0 16px 30px rgb(0, 0, 0, 0.9);
+            display: flex;
+            margin: 1.5em 0;
+        }
     }
 
     @include bootstrap.media-breakpoint-up(lg) {

@@ -3,17 +3,19 @@
 
 .button {
     display: inline;
+    align-self: center;
     background-color: var.$highlight;
     border-radius: 20px;
     border-width: 0;
     padding: 1em 4em;
 
     span {
-        font-size: var.$text_med;
+        font-size: var.$body_large;
         color: var.$font-light;
     }
 
-    @include bootstrap.media-breakpoint-up(xxl) {
+    @include bootstrap.media-breakpoint-up(lg) {
+        align-self: flex-start;
         span {
             font-size: var.$text_med;
             color: var.$font-light;

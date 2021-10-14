@@ -1,6 +1,6 @@
 import type { InferGetStaticPropsType, NextPage } from 'next'
 import Head from 'next/head'
-import Image from "next/image"
+import Image from 'next/image'
 import path from 'path'
 import { promises as fs } from 'fs'
 import yaml from 'js-yaml'
@@ -11,7 +11,7 @@ import { SiteConfig } from '../interfaces/site-config'
 
 import asciiArt from "../public/img/ascii_art_cropped.png"
 import upvote from "../public/img/upvote.png"
-import learn_skillz from "../public/img/learn_skillz.png"
+import learn_skillz from "../public/img/learn_skillz_cropped.png"
 import global_logo from "../public/img/global_logo.png"
 import dollar_signs from "../public/img/dollar_signs.png"
 
@@ -32,7 +32,14 @@ export const getStaticProps = async () => {
   };
 }
 
+const basePath = process.env.PUBLIC_URL || '';
+
 const Home = ({ config }: InferGetStaticPropsType<typeof getStaticProps>) => {
+  asciiArt.src = basePath + asciiArt.src;
+  upvote.src = basePath + upvote.src;
+  learn_skillz.src = basePath + learn_skillz.src;
+  global_logo.src = basePath + global_logo.src;
+  dollar_signs.src = basePath + dollar_signs.src;
   return (
     <div className="app">
       <Head>
@@ -46,7 +53,7 @@ const Home = ({ config }: InferGetStaticPropsType<typeof getStaticProps>) => {
 
       <div className="window d-flex flex-column justify-content-center container-lg">
         <div className="background-img">
-          <Image src={asciiArt} />
+          <img src={asciiArt.src} />
         </div>
         <div className="row title-col">
           <div className="col-12 col-lg-4 d-flex flex-column align-items-center ">
@@ -86,7 +93,7 @@ const Home = ({ config }: InferGetStaticPropsType<typeof getStaticProps>) => {
           </div>
           <div className="col-lg-6 d-flex justify-content-center">
             <div style={{maxWidth: "300px"}}>
-              <Image src={global_logo} alt=""/>
+              <img src={global_logo.src} alt=""/>
             </div>
           </div>
         </div>
@@ -105,7 +112,7 @@ const Home = ({ config }: InferGetStaticPropsType<typeof getStaticProps>) => {
           </div>
           <div className="col-lg-6 d-flex justify-content-center">
             <div style={{maxWidth: "300px"}}>
-              <Image src={dollar_signs} />
+              <img src={dollar_signs.src} />
             </div>
           </div>
         </div>
@@ -136,7 +143,7 @@ const Home = ({ config }: InferGetStaticPropsType<typeof getStaticProps>) => {
             config.sponsors.map(sponsor =>
               <div key={sponsor.name} className="col-lg-4">
                 <a href={sponsor.url} title={sponsor.name} target="_blank" rel="noreferrer">
-                  <img className="sponsor" src={sponsor.img} alt={sponsor.name}/>
+                  <img className="sponsor" src={basePath + sponsor.img} alt={sponsor.name}/>
                 </a>
               </div>
             )

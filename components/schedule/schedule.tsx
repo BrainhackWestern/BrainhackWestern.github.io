@@ -93,7 +93,7 @@ export class Schedule extends Component<ScheduleProps, ScheduleState> {
                         </div>
                     ))
                 }
-                <div className="days d-flex flex-column flex-lg-row justify-content-start justify-content-lg-center align-items-center align-items-lg-start">
+                <div className="days d-flex flex-column flex-lg-row justify-content-start justify-content-lg-center align-items-end align-items-lg-start">
                     {days}
                 </div>
             </div>

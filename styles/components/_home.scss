@@ -22,6 +22,10 @@
   z-index: 0;
 }
 
+img {
+  width: 100%
+}
+
 @include bootstrap.media-breakpoint-up(xl) {
   .background-img {
     max-width: 65%;
@@ -60,7 +64,14 @@ h3 {
 }
 
 .sponsor {
-  max-width: 300px;
+  max-width: 80%;
+  margin: 2em;
+}
+
+@include bootstrap.media-breakpoint-up(lg) {
+  .sponsor {
+    max-width: 300px;
+  }
 }
 
 .content-space {
