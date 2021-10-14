@@ -1,0 +1,28 @@
+name: Deploy
+on:
+  push:
+    branches:
+      - master
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16
+          cache: 'npm'
+      - run: npm install
+      - name: Build App
+        run: npm run gh-build
+        env:
+          NEXT_PUBLIC_MAPS_EMBED_API_KEY: ${{ secrets.MAPS_EMBED_API_KEY }}
+      - name: Push git subdirectory as branch
+        uses: s0/git-publish-subdir-action@v2.5.0
+        env:
+          REPO: self
+          BRANCH: gh-pages
+          FOLDER: out
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SQUASH_HISTORY: true
+

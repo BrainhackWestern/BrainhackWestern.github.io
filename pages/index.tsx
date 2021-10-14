@@ -101,7 +101,7 @@ const Home = ({ config }: InferGetStaticPropsType<typeof getStaticProps>) => {
           <div className="col-lg-6 d-flex flex-column justify-content-between align-items-start">
             <div>
               <h2>Cost: $15</h2>
-              <p>Includes on-site meals and snacks</p>
+              <p>Includes on-site meals and snacks!</p>
             </div>
             <Button>
               Register
