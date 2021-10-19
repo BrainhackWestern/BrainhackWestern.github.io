@@ -109,7 +109,7 @@ const Home = ({ config }: InferGetStaticPropsType<typeof getStaticProps>) => {
               <h2>Cost: $15</h2>
               <p>Includes on-site meals, snacks, and coffee!</p>
             </div>
-            <RegisterButton status="unopened"></RegisterButton>
+            <RegisterButton alignment='left' status="unopened"></RegisterButton>
           </div>
           <div className="col-lg-6 d-flex justify-content-center">
             <div style={{maxWidth: "300px"}}>

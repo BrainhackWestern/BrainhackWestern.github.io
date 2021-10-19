@@ -5,7 +5,7 @@
 
 .msg-card {
     @include mixins.shadow;
-    align-self: center;
+    text-align: center;
     background-color: var.$background600;
     border-style: solid;
     border-color: var.$highlight;
@@ -19,7 +19,6 @@
     }
 
     @include bootstrap.media-breakpoint-up(lg) {
-        align-self: flex-start;
         span {
             font-size: var.$body_large;
             color: var.$font-light;
