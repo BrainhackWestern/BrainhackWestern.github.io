@@ -1,8 +1,9 @@
 @use '../variables' as variables;
 @use 'bootstrap/scss/bootstrap.scss' as bootstrap;
-//@use '../../styles/typography' as type;
 
 .logo {
+
+    background-color: variables.$background-transparent;
 
     h1 {
         text-align: center;
