@@ -17,6 +17,7 @@ import upvote from "../public/img/upvote.png"
 import learn_skillz from "../public/img/learn_skillz_cropped.png"
 import global_logo from "../public/img/global_logo.png"
 import dollar_signs from "../public/img/dollar_signs.png"
+import hack from "../public/img/hack.png"
 
 import { Logo } from '../components/logo'
 import { Button } from '../components/button'
@@ -74,12 +75,18 @@ const Home = ({ config }: InferGetStaticPropsType<typeof getStaticProps>) => {
           </p>
       </WhiteBox>
 
-      <div className="container-lg about content-space">
+      <div id="about" className="container-lg about content-space">
         <AboutRow img={upvote} imgClass="upvote-img" title="Pitch your project">
           Submit your project ideas online, then pitch them to your fellow attendees to recruit others to your team.
         </AboutRow>
-        <AboutRow img={learn_skillz} title="Learn new skills">
+        <AboutRow img={learn_skillz} title="Learn new skills" reverse={true}>
           Attend tutorials to learn new neuroscience tools and techniques from the experts.
+          <br />
+          <br />
+          Come back soon to see what tuorials will be offered!
+        </AboutRow >
+        <AboutRow img={hack} title="Hack!!">
+          Solve real-world problems while sharpening your skills!
         </AboutRow>
       </div>
 

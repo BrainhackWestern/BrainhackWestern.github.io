@@ -7,18 +7,25 @@ interface ImageProps {
     img: StaticImageData;
     title: string;
     children: React.ReactNode;
+    reverse?: boolean;
 }
 
-export const AboutRow = (props: ImageProps) => <>
-    <div className="row">
-        <div className="col-lg-6 d-flex justify-content-center align-items-start">
+export const AboutRow = (props: ImageProps) => {
+    const alignClass = props.reverse ? "about_align_right" : "about_align_left"
+    const content = [
+        <div key="image" className="col-lg-6 d-flex justify-content-center align-items-start">
             <div className="img">
                 <Image src={props.img} alt="" />
             </div>
+        </div>,
+        <div key="description" className="col-lg-6 d-flex flex-column justify-content-center">
+            <h2 className={alignClass}>{props.title}</h2>
+            <p className={alignClass}>{props.children}</p>
         </div>
-        <div className="col-lg-6 d-flex flex-column justify-content-center">
-            <h2>{props.title}</h2>
-            <p>{props.children}</p>
+    ]
+    return (
+        <div className="row">
+            {props.reverse ? content.reverse() : content}
         </div>
-    </div>
-</>
+    )
+}
