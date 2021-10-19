@@ -37,7 +37,7 @@ sponsors:
     name: CONP-PCNO
     url: "https://conp.ca"
 schedule:
-  show: true
+  show: false
   startTime: 8
   endTime: 18
   days:
