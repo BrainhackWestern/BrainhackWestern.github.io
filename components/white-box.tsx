@@ -1,9 +1,10 @@
 interface WhiteBoxProps {
-    children: React.ReactNode
+    className?: string;
+    children: React.ReactNode;
 }
 
 export const WhiteBox = (props: WhiteBoxProps) => (
-    <div className="white-box">
+    <div className={"white-box " + props.className}>
         <div className="container-lg">
             <div className="col">
                 {props.children}

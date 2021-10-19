@@ -155,14 +155,14 @@ const Home = ({ config }: InferGetStaticPropsType<typeof getStaticProps>) => {
         </div>
       </div>
 
-      <WhiteBox>
+      <WhiteBox className="sponsor-row">
         <h2 id="sponsors">Sponsors</h2>
         <div className="row d-flex align-items-center">
           {
             config.sponsors.map(sponsor =>
-              <div key={sponsor.name} className="col-lg-4">
+              <div key={sponsor.name} className="col-lg-4 sponsor">
                 <a href={sponsor.url} title={sponsor.name} target="_blank" rel="noreferrer">
-                  <img className="sponsor" src={basePath + sponsor.img} alt={sponsor.name}/>
+                  <img  src={basePath + sponsor.img} alt={sponsor.name}/>
                 </a>
               </div>
             )

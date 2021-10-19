@@ -1,0 +1,16 @@
+@use 'bootstrap/scss/bootstrap' as bootstrap;
+
+
+.sponsor {
+    text-align: center;
+    max-width: 80%;
+
+    img {
+        max-width: 400px;
+        margin: 2em;
+        
+        @include bootstrap.media-breakpoint-up(lg) {
+            max-width: 300px;
+        }
+    }
+}
