@@ -1,4 +1,5 @@
 @use 'bootstrap/scss/bootstrap' as bootstrap;
+@use '../mixins';
 
 .about {
 
@@ -13,7 +14,7 @@
     .img {
         max-width: 80%;
         > div {
-            box-shadow: 0 16px 30px rgb(0, 0, 0, 0.9);
+            @include mixins.shadow;
             margin: 1.5em 0;
         }
     }
