@@ -24,6 +24,7 @@ import { Button } from '../components/button'
 import { WhiteBox } from '../components/white-box'
 import { AboutRow } from '../components/about-row'
 import { Schedule } from '../components/schedule/schedule'
+import { RegisterButton } from '../components/register-button'
 
 export const getStaticProps = async () => {
   const configFile = path.join(process.cwd(), 'config.yaml');
@@ -62,9 +63,7 @@ const Home = ({ config }: InferGetStaticPropsType<typeof getStaticProps>) => {
           </div>
           <div className="col-12 col-lg-8 d-flex flex-column align-items-center justify-content-center">
             <div className="flex-lg-fill"></div>
-            <Button>
-              Register Now
-            </Button>
+            <RegisterButton status="unopened" />
           </div>
         </div>
       </div>
@@ -110,9 +109,7 @@ const Home = ({ config }: InferGetStaticPropsType<typeof getStaticProps>) => {
               <h2>Cost: $15</h2>
               <p>Includes on-site meals, snacks, and coffee!</p>
             </div>
-            <Button>
-              Register
-            </Button>
+            <RegisterButton status="unopened"></RegisterButton>
           </div>
           <div className="col-lg-6 d-flex justify-content-center">
             <div style={{maxWidth: "300px"}}>
