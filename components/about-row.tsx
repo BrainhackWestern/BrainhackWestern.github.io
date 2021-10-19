@@ -1,6 +1,5 @@
 import Image from "next/image"
-
-import { imageLoader } from "../utils/image-loader"
+import useScreenSize from "../services/screen-size/use"
 
 interface ImageProps {
     imgClass?: string;
@@ -11,6 +10,7 @@ interface ImageProps {
 }
 
 export const AboutRow = (props: ImageProps) => {
+    const { state: { largeScreen } } = useScreenSize();
     const alignClass = props.reverse ? "about_align_right" : "about_align_left"
     const content = [
         <div key="image" className="col-lg-6 d-flex justify-content-center align-items-start">
@@ -25,7 +25,7 @@ export const AboutRow = (props: ImageProps) => {
     ]
     return (
         <div className="row">
-            {props.reverse ? content.reverse() : content}
+            {props.reverse && largeScreen ? content.reverse() : content}
         </div>
     )
 }

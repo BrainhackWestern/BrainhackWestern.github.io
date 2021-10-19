@@ -4,7 +4,7 @@
 .about {
 
     .row {
-        padding-bottom: 5em;
+        padding-bottom: 4em;
     }
     
     h2, p {
@@ -13,9 +13,9 @@
 
     .img {
         max-width: 80%;
+        margin: 3em;
         > div {
             @include mixins.shadow;
-            margin: 1.5em 0;
         }
     }
 
