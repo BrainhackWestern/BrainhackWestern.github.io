@@ -16,7 +16,7 @@ jobs:
       - name: Update env for production
         env:
           REPO_NAME: ${{ github.event.repository.name }}
-        run: "[[ $REPO_NAME == 'BrainhackWestern/BrainhackWestern.github.io' ]] && echo NEXT_PUBLIC_URL='' > .env.production.local"
+        run: "([[ $REPO_NAME == 'BrainhackWestern/BrainhackWestern.github.io' ]] && echo NEXT_PUBLIC_URL='' > .env.production.local) || exit 0"
       - name: Build App
         run: npm run gh-build
       - name: Push git subdirectory as branch
