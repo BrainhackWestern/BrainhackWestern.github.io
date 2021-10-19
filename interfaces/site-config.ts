@@ -10,6 +10,7 @@ interface ScheduleDay {
 }
 
 export interface ScheduleConfig {
+    show: boolean;
     startTime: number;
     endTime: number;
     days: ScheduleDay[]

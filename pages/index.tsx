@@ -115,14 +115,17 @@ const Home = ({ config }: InferGetStaticPropsType<typeof getStaticProps>) => {
         </div>
       </div>
 
-      <div className="content-space">
+
+      {config.schedule.show &&
+      <div id="schedule" className="content-space">
         <div className="container-lg">
           <h2>Schedule</h2>
         </div>
         <Schedule config={config.schedule} lineHeight={100}/>
       </div>
+      }
 
-      <div className="content-space container-lg">
+      <div id="location" className="content-space container-lg">
         <div className="row">
           <div className="col-lg-4 d-flex flex-column justify-content-start align-items-start">
             <h2>Location</h2>
@@ -149,7 +152,7 @@ const Home = ({ config }: InferGetStaticPropsType<typeof getStaticProps>) => {
       </div>
 
       <WhiteBox>
-        <h2>Sponsors</h2>
+        <h2 id="sponsors">Sponsors</h2>
         <div className="row d-flex align-items-center">
           {
             config.sponsors.map(sponsor =>
