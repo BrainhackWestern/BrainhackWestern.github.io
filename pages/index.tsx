@@ -119,7 +119,7 @@ const Home = ({ config }: InferGetStaticPropsType<typeof getStaticProps>) => {
         </div>
       </div>
 
-      <TutorialList config={config.tutorials}/>
+      <TutorialList config={config.tutorials} show={config.displaySections.tutorial}/>
       
       <Schedule config={config.schedule} lineHeight={100}/>
 

@@ -124,16 +124,18 @@
                     "items": {
                         "properties": {
                             "name": {
+                                "description": "Optional name for the tutorial block: e.g. Morning",
                                 "type": "string"
                             },
                             "options": {
+                                "description": "List of possible Tutorials available in the block",
                                 "items": {
                                     "$ref": "#/definitions/TutorialInfo"
                                 },
                                 "type": "array"
                             },
                             "time": {
-                                "description": "Time of the tutorial",
+                                "description": "Time of the tutorial block",
                                 "pattern": "^\\d\\d?\\:\\d\\d$",
                                 "type": "string"
                             }
@@ -152,15 +154,19 @@
         "TutorialInfo": {
             "properties": {
                 "description": {
+                    "description": "Description of the tutorial. Supports markdown, including bold, italics, code,\nurls, and lists.",
                     "type": "string"
                 },
                 "id": {
+                    "description": "Unique ID for the tutorial. This can be used for linking via #id",
                     "type": "string"
                 },
                 "image": {
+                    "description": "Relative url to the image for the tutorial. Image should be saved under public.\nThe url does not include public. For instance, if the image is saved at\n[Project]/public/img/tutorial-pic.png, enter \"/img/tutorial-pic.png\".\n\nImage should be saved with square dimensions larger than 250x250px",
                     "type": "string"
                 },
                 "name": {
+                    "description": "Tutorial name to be printed on the site",
                     "type": "string"
                 }
             },
@@ -169,6 +175,20 @@
     },
     "description": "Config interface for Brainhack. Contains\nall the information needed to display the site",
     "properties": {
+        "displaySections": {
+            "description": "Allows turning specific sections of the website off. This is useful if\nthe content for these parts is not fully ready.",
+            "properties": {
+                "schedule": {
+                    "description": "Display the schedule",
+                    "type": "boolean"
+                },
+                "tutorial": {
+                    "description": "Display the list of tutorials",
+                    "type": "boolean"
+                }
+            },
+            "type": "object"
+        },
         "location": {
             "$ref": "#/definitions/LocationConfig"
         },

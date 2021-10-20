@@ -37,4 +37,20 @@ export interface SiteConfig {
     organizers: string[];
     location: LocationConfig;
     tutorials: TutorialDay[];
+
+    /**
+     * Allows turning specific sections of the website off. This is useful if
+     * the content for these parts is not fully ready.
+     */
+    displaySections: {
+        /**
+         * Display the list of tutorials
+         */
+        tutorial: boolean;
+
+        /**
+         * Display the schedule
+         */
+        schedule: boolean;
+    }
 }

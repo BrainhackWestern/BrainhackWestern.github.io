@@ -4,11 +4,12 @@ import formatDate from "../../lib/format-date";
 import { Tutorial } from "./tutorial";
 
 interface TutorialListProps {
-    config: TutorialDay[]
+    config: TutorialDay[];
+    show: boolean;
 }
 
   
-export const TutorialList = ({ config }: TutorialListProps) => {
+export const TutorialList = ({ config, show }: TutorialListProps) => {
 
     // Calculate the total number of tutorials
     const numTutorials = config.flatMap(day => 
@@ -28,7 +29,7 @@ export const TutorialList = ({ config }: TutorialListProps) => {
         "right"
     ]
 
-    return (
+    return show ?
         <div id="tutorials" className="content-space container-lg">
             <h2>Tutorials</h2>
             {
@@ -53,6 +54,7 @@ export const TutorialList = ({ config }: TutorialListProps) => {
                     </div>
                 )
             }
-        </div>
-    )
+        </div> :
+        <></>
+    
 }
