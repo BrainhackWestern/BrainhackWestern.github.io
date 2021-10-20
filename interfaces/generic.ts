@@ -1,8 +1,11 @@
+/**
+ * @additionalProperties false
+ */
 export interface BasicDate {
     /**
-        * @maximum 31
-        * @minimum 0
-        */
+    * @maximum 31
+    * @minimum 0
+    */
     day: number;
 
     /**

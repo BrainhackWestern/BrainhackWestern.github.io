@@ -1,5 +1,8 @@
 import { BasicDate } from "./generic";
 
+/**
+ * @additionalProperties false
+ */
 export interface TutorialInfo {
     /**
      * Tutorial name to be printed on the site
@@ -27,6 +30,9 @@ export interface TutorialInfo {
     id: string;
 }
 
+/**
+ * @additionalProperties false
+ */
 export interface TutorialDay extends BasicDate {
     tutorialTimes: {
         /**

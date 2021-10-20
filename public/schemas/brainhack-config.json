@@ -3,6 +3,7 @@
     "additionalProperties": false,
     "definitions": {
         "LocationConfig": {
+            "additionalProperties": false,
             "properties": {
                 "city": {
                     "type": "string"
@@ -29,6 +30,7 @@
             "type": "object"
         },
         "ScheduleConfig": {
+            "additionalProperties": false,
             "properties": {
                 "days": {
                     "items": {
@@ -55,6 +57,7 @@
             "type": "object"
         },
         "ScheduleDay": {
+            "additionalProperties": false,
             "properties": {
                 "day": {
                     "maximum": 31,
@@ -62,6 +65,7 @@
                     "type": "number"
                 },
                 "events": {
+                    "additionalProperties": false,
                     "items": {
                         "properties": {
                             "duration": {
@@ -95,6 +99,7 @@
             "type": "object"
         },
         "SponsorConfig": {
+            "additionalProperties": false,
             "properties": {
                 "img": {
                     "type": "string"
@@ -109,6 +114,7 @@
             "type": "object"
         },
         "TutorialDay": {
+            "additionalProperties": false,
             "properties": {
                 "day": {
                     "maximum": 31,
@@ -152,6 +158,7 @@
             "type": "object"
         },
         "TutorialInfo": {
+            "additionalProperties": false,
             "properties": {
                 "description": {
                     "description": "Description of the tutorial. Supports markdown, including bold, italics, code,\nurls, and lists.",

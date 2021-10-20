@@ -1,6 +1,13 @@
 import { BasicDate } from "./generic";
 
+
+/**
+ * @additionalProperties false
+ */
 interface ScheduleDay extends BasicDate {
+    /**
+     * @additionalProperties false
+     */
     events: {
         name: string;
 
@@ -18,6 +25,9 @@ interface ScheduleDay extends BasicDate {
     }[];
 }
 
+/**
+ * @additionalProperties false
+ */
 export interface ScheduleConfig {
     show: boolean;
 

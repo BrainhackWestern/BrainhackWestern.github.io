@@ -1,13 +1,18 @@
 import { ScheduleConfig } from "./schedule";
 import { TutorialDay } from "./tutorial";
 
+/**
+ * @additionalProperties false
+ */
 interface SponsorConfig {
     img: string;
     name: string;
     url: string;
 }
 
-
+/**
+ * @additionalProperties false
+ */
 interface LocationConfig {
     name: string;
     street: string;
