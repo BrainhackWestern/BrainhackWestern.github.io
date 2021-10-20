@@ -82,7 +82,7 @@ const Home = ({ config }: InferGetStaticPropsType<typeof getStaticProps>) => {
           Attend tutorials to learn new neuroscience tools and techniques from the experts.
           <br />
           <br />
-          Come back soon to see what tuorials will be offered!
+          <Button target="#tutorials">View Tutorials</Button>
         </AboutRow >
         <AboutRow img={hack} title="Hack!!">
           Solve real-world problems while sharpening your skills!
