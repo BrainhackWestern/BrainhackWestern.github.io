@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "build": "npm run schema-gen && next build",
     "schema-gen": "npx typescript-json-schema ./tsconfig.json SiteConfig -o public/schemas/brainhack-config.json",
     "lint": "next lint",
     "gh-build": "rm -rf node_modules/.cache && next build && next export && touch out/.nojekyll",
