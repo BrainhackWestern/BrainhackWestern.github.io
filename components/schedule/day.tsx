@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import formatDate from "../../lib/format-date";
 import { Event } from "./event";
 
 interface DayProps {
@@ -12,36 +13,8 @@ interface DayProps {
 }
 
 export const Day = (props: DayProps) => {
-    const days = [
-        "Sunday",
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday"
-    ];
 
-    const months = [
-        "Jan",
-        "Feb",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "Aug",
-        "Sep",
-        "Oct",
-        "Nov",
-        "Dec"
-    ];
-
-    const dayName = days[props.date.getDay()];
-    const month = months[props.date.getMonth()];
-    const date = props.date.getDate();
-    const dateString = `${dayName}, ${month} ${date}`;
-
+    const dateString = formatDate(props.date);
     const events = props.events.map((event, i) => {
         return <Event key={i} name={event.name} time={event.time} duration={event.duration} lineHeight={props.lineHeight} gap={10} />
     });
