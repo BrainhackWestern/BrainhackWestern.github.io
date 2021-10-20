@@ -1,5 +1,5 @@
-@use 'bootstrap/scss/bootstrap' as bootstrap;
-@use 'variables';
+@use "bootstrap/scss/bootstrap" as bootstrap;
+@use "variables";
 
 html,
 body {
@@ -17,39 +17,43 @@ a {
   box-sizing: border-box;
 }
 
-
 body {
-    padding: 0;
-    margin: 0;
-    font-family: variables.$font_family_body;
-    font-size: variables.$body_norm;
-    color: variables.$font-light
+  padding: 0;
+  margin: 0;
+  font-family: variables.$font_family_body;
+  font-size: variables.$body_norm;
+  color: variables.$font-light;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: variables.$font_family_heading;
-    font-weight: variables.$weight_normal;
-    color: variables.$font-light;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: variables.$font_family_heading;
+  font-weight: variables.$weight_normal;
+  color: variables.$font-light;
 }
 
 h1 {
-    font-size: variables.$text_large;
+  font-size: variables.$text_large;
 }
 
 h2 {
-    font-size: variables.$text_large;
+  font-size: variables.$text_large;
 }
 
 h3 {
-    font-size: variables.$text_med;
+  font-size: variables.$text_med;
 }
 
 @include bootstrap.media-breakpoint-up(xxl) {
-    h1 {
-        font-size: variables.$text_xlarge;
-    }
+  h1 {
+    font-size: variables.$text_xlarge;
+  }
 }
 
 a {
-    color: variables.$highlight;
+  color: variables.$highlight;
 }

@@ -1,25 +1,24 @@
-@use '../variables' as variables;
-@use 'bootstrap/scss/bootstrap.scss' as bootstrap;
+@use "../variables" as variables;
+@use "bootstrap/scss/bootstrap.scss" as bootstrap;
 
 .logo {
+  background-color: variables.$background-transparent;
 
-    background-color: variables.$background-transparent;
+  h1 {
+    text-align: center;
+    margin: 0;
+  }
 
-    h1 {
-        text-align: center;
-        margin: 0;
-    }
+  .logo-year {
+    color: variables.$highlight;
+    font-size: 8.3rem;
+    font-weight: variables.$weight_light;
+    line-height: 70%;
+  }
 
+  @include bootstrap.media-breakpoint-up(xxl) {
     .logo-year {
-        color: variables.$highlight;
-        font-size: 8.3rem;
-        font-weight: variables.$weight_light;
-        line-height: 70%;
+      font-size: 11.5rem;
     }
-
-    @include bootstrap.media-breakpoint-up(xxl) {
-        .logo-year {
-            font-size: 11.5rem
-        }
-    }
+  }
 }
