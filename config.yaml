@@ -118,14 +118,16 @@ tutorials:
     tutorialTimes:
       - name: Afternoon
         options:
-          - name: Working with MRI Data in Python
+          - id: python
+            name: Working with MRI Data in Python
             image: /img/python.png
             description: |
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
               tempor incididunt ut labore et dolore magna aliqua. Enim diam vulputate ut
               pharetra sit amet aliquam id. Donec ac odio tempor orci dapibus ultrices
               in iaculis. Sit amet cursus sit amet dictum sit amet justo.
-          - name: Introduction to Datalad
+          - id: datalad
+            name: Introduction to Datalad
             image: /img/datalad.png
             description: |
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -138,14 +140,16 @@ tutorials:
     tutorialTimes:
       - name: Morning
         options:
-          - name: Introduction to fMRI
+          - id: frmi
+            name: Introduction to fMRI
             image: /img/fmri.png
             description: |
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
               tempor incididunt ut labore et dolore magna aliqua. Enim diam vulputate ut
               pharetra sit amet aliquam id. Donec ac odio tempor orci dapibus ultrices
               in iaculis. Sit amet cursus sit amet dictum sit amet justo.
-          - name: Introduction to Meta-analyses for Neuroimaging Data
+          - id: meta-analysis
+            name: Introduction to Meta-analyses for Neuroimaging Data
             image: /img/review.png
             description: |
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -154,7 +158,8 @@ tutorials:
               in iaculis. Sit amet cursus sit amet dictum sit amet justo.
       - name: Afternoon
         options:
-          - name: Introduction to fNIRS
+          - id: fnirs
+            name: Introduction to fNIRS
             image: /img/fnirs.png
             description: |
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -167,14 +172,16 @@ tutorials:
     tutorialTimes:
       - name: Morning
         options:
-          - name: Machine Learning
+          - id: machine-learning
+            name: Machine Learning
             image: /img/machine-learning.png
             description: |
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
               tempor incididunt ut labore et dolore magna aliqua. Enim diam vulputate ut
               pharetra sit amet aliquam id. Donec ac odio tempor orci dapibus ultrices
               in iaculis. Sit amet cursus sit amet dictum sit amet justo.
-          - name: Introduction to Deep Learning
+          - id: deep-learning
+            name: Introduction to Deep Learning
             image: /img/deep-learn.png
             description: |
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod

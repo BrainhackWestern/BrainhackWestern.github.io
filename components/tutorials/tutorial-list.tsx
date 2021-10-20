@@ -53,7 +53,7 @@ export const TutorialList = ({ config }: TutorialListProps) => {
                                 time.options
                             ).map((tutorial, i) => 
                                 <Tutorial
-                                    key={tutorial.name}
+                                    key={tutorial.id}
                                     config={tutorial}
                                     color={colors.next().value as string}
                                     side={sides[i % 2]}

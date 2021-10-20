@@ -128,18 +128,7 @@
                             },
                             "options": {
                                 "items": {
-                                    "properties": {
-                                        "description": {
-                                            "type": "string"
-                                        },
-                                        "image": {
-                                            "type": "string"
-                                        },
-                                        "name": {
-                                            "type": "string"
-                                        }
-                                    },
-                                    "type": "object"
+                                    "$ref": "#/definitions/TutorialInfo"
                                 },
                                 "type": "array"
                             },
@@ -156,6 +145,23 @@
                 "year": {
                     "minimum": 0,
                     "type": "number"
+                }
+            },
+            "type": "object"
+        },
+        "TutorialInfo": {
+            "properties": {
+                "description": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "image": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
                 }
             },
             "type": "object"

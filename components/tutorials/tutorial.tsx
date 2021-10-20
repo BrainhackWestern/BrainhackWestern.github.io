@@ -33,7 +33,7 @@ export const Tutorial = (props: TutorialProps) => {
     ]
 
     return (
-        <div className="tutorial">
+        <div id={props.config.id} className="tutorial">
             <div className="d-flex" style={{justifyContent: reverse ? "flex-end" : "flex-start"}}>
                 <div className="tutorial-header" style={headerStyle}>
                     <h3>{props.config.name}</h3>

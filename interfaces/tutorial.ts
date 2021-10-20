@@ -4,6 +4,7 @@ export interface TutorialInfo {
     name: string;
     description: string;
     image: string;
+    id: string;
 }
 
 export interface TutorialDay extends BasicDate {
