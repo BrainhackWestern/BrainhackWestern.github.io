@@ -139,7 +139,7 @@ tutorials:
       - name: Morning
         options:
           - name: Introduction to fMRI
-            image: /img/frmi.png
+            image: /img/fmri.png
             description: |
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
               tempor incididunt ut labore et dolore magna aliqua. Enim diam vulputate ut

@@ -25,6 +25,7 @@ import { WhiteBox } from '../components/white-box'
 import { AboutRow } from '../components/about-row'
 import { Schedule } from '../components/schedule/schedule'
 import { RegisterButton } from '../components/register-button'
+import { TutorialList } from '../components/tutorials/tutorial-list'
 
 export const getStaticProps = async () => {
   const configFile = path.join(process.cwd(), 'config.yaml');
@@ -117,6 +118,8 @@ const Home = ({ config }: InferGetStaticPropsType<typeof getStaticProps>) => {
           </div>
         </div>
       </div>
+
+      <TutorialList config={config.tutorials}/>
       
       <Schedule config={config.schedule} lineHeight={100}/>
 
