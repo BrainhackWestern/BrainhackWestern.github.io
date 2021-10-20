@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=./public/schemas/brainhack-config.json
 displaySections:
-  tutorial: true
+  tutorial: false
 location:
   name: Western Interdisciplinary Research Building
   street: Perth Dr
