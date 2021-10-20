@@ -22,6 +22,10 @@ export const Tutorial = (props: TutorialProps) => {
         textAlign: reverse ? "left" : "right",
     }
 
+    const description = props.config.description ? 
+        props.config.description :
+        "Description coming soon!"
+
     const data = [
         <div key="image" className="col-12 col-lg tutorial-img">
             <Image
@@ -31,7 +35,7 @@ export const Tutorial = (props: TutorialProps) => {
             />
         </div>,
         <div key="description" className="col-12 col-lg flex-grow-1">
-            <ReactMarkdown remarkPlugins={[remarkGfm]}>{props.config.description}</ReactMarkdown>
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>{description}</ReactMarkdown>
         </div>
     ]
 

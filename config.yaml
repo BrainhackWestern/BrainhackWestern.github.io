@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=./public/schemas/brainhack-config.json
 displaySections:
-  tutorial: false
+  tutorial: true
 location:
   name: Western Interdisciplinary Research Building
   street: Perth Dr
@@ -133,11 +133,6 @@ tutorials:
           - id: datalad
             name: Introduction to Datalad
             image: /img/datalad.png
-            description: |
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Enim diam vulputate ut
-              pharetra sit amet aliquam id. Donec ac odio tempor orci dapibus ultrices
-              in iaculis. Sit amet cursus sit amet dictum sit amet justo.
   - day: 2
     month: 12
     year: 2021
@@ -159,11 +154,6 @@ tutorials:
           - id: meta-analysis
             name: Introduction to Meta-analyses for Neuroimaging Data
             image: /img/review.png
-            description: |
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Enim diam vulputate ut
-              pharetra sit amet aliquam id. Donec ac odio tempor orci dapibus ultrices
-              in iaculis. Sit amet cursus sit amet dictum sit amet justo.
       - name: Afternoon
         options:
           - id: fnirs
@@ -189,11 +179,6 @@ tutorials:
           - id: machine-learning
             name: Machine Learning
             image: /img/machine-learning.png
-            description: |
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Enim diam vulputate ut
-              pharetra sit amet aliquam id. Donec ac odio tempor orci dapibus ultrices
-              in iaculis. Sit amet cursus sit amet dictum sit amet justo.
           - id: deep-learning
             name: Introduction to Deep Learning
             image: /img/deep-learn.png

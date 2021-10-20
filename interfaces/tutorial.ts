@@ -13,7 +13,7 @@ export interface TutorialInfo {
      * Description of the tutorial. Supports markdown, including bold, italics, code,
      * urls, and lists.
      */
-    description: string;
+    description?: string;
 
     /**
      * Relative url to the image for the tutorial. Image should be saved under public.
