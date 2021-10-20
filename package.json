@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "schema-gen": "npx typescript-json-schema ./tsconfig.json SiteConfig -o public/schemas/brainhack-config.json",
     "lint": "next lint",
     "gh-build": "rm -rf node_modules/.cache && next build && next export && touch out/.nojekyll",
     "deploy": "npm run gh-build && git stash && git add -f out && git commit -m 'Deploying' && git subtree split --prefix out -b gh-pages && git push -f origin gh-pages:gh-pages && git branch -D gh-pages && git reset HEAD~1 && git stash pop && rm -rf out"
@@ -16,7 +17,9 @@
     "next": "11.1.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-markdown": "^7.0.1",
     "react-obfuscate": "^3.6.8",
+    "remark-gfm": "^3.0.0",
     "sass": "^1.42.1",
     "ts-debounce": "^3.0.0"
   },

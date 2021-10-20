@@ -1,4 +1,6 @@
 import Image from "next/image";
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import { CSSProperties } from "react";
 import { TutorialInfo } from "../../interfaces/tutorial";
 import useScreenSize from "../../services/screen-size/use";
@@ -28,7 +30,7 @@ export const Tutorial = (props: TutorialProps) => {
             />
         </div>,
         <div key="description" className="col-12 col-lg flex-grow-1">
-            <p>{props.config.description}</p>
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>{props.config.description}</ReactMarkdown>
         </div>
     ]
 
