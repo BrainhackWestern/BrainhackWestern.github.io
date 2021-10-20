@@ -1,13 +1,16 @@
 @use '../variables' as var;
 @use 'bootstrap/scss/bootstrap' as bootstrap;
 
-.button {
+@mixin button($size) {
     display: inline;
     align-self: center;
     background-color: var.$highlight;
-    border-radius: 20px;
-    border-width: 0;
-    padding: 1em 4em;
+    border-style: solid;
+    border-color: var.$highlight;
+    border-radius: 10px;
+    border-width: 5px;
+    padding: 0.5em 2em;
+    transition: background-color 0.2s;
 
     span {
         font-size: var.$body_large;
@@ -17,8 +20,20 @@
     @include bootstrap.media-breakpoint-up(lg) {
         align-self: flex-start;
         span {
-            font-size: var.$text_med;
-            color: var.$font-light;
+            font-size: $size;
         }
     }
+
+    &:hover {
+        background-color: var.$background500;
+    }
+}
+
+.button {
+    @include button(var.$body_norm);
+}
+
+.large-button {
+    @include button(var.$text_med);
+
 }
