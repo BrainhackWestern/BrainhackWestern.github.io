@@ -1,5 +1,4 @@
 import { Component } from "react";
-import { ScheduleConfig } from '../../interfaces/site-config'
 import { Day } from "./day";
 import { debounce } from 'ts-debounce';
 
