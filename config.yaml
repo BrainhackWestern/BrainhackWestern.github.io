@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=./public/schemas/brainhack-config.json
 location:
   name: Western Interdisciplinary Research Building
   street: Perth Dr
@@ -110,3 +111,75 @@ schedule:
     - name: Project presentations & Wrap-up
       time: "15:30"
       duration: "1:30"
+tutorials:
+  - day: 1
+    month: 12
+    year: 2021
+    tutorialTimes:
+      - name: Afternoon
+        options:
+          - name: Working with MRI Data in Python
+            image: /img/python.png
+            description: |
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Enim diam vulputate ut
+              pharetra sit amet aliquam id. Donec ac odio tempor orci dapibus ultrices
+              in iaculis. Sit amet cursus sit amet dictum sit amet justo.
+          - name: Introduction to Datalad
+            image: /img/datalad.png
+            description: |
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Enim diam vulputate ut
+              pharetra sit amet aliquam id. Donec ac odio tempor orci dapibus ultrices
+              in iaculis. Sit amet cursus sit amet dictum sit amet justo.
+  - day: 2
+    month: 12
+    year: 2021
+    tutorialTimes:
+      - name: Morning
+        options:
+          - name: Introduction to fMRI
+            image: /img/frmi.png
+            description: |
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Enim diam vulputate ut
+              pharetra sit amet aliquam id. Donec ac odio tempor orci dapibus ultrices
+              in iaculis. Sit amet cursus sit amet dictum sit amet justo.
+          - name: Introduction to Meta-analyses for Neuroimaging Data
+            image: /img/review.png
+            description: |
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Enim diam vulputate ut
+              pharetra sit amet aliquam id. Donec ac odio tempor orci dapibus ultrices
+              in iaculis. Sit amet cursus sit amet dictum sit amet justo.
+      - name: Afternoon
+        options:
+          - name: Introduction to fNIRS
+            image: /img/fnirs.png
+            description: |
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Enim diam vulputate ut
+              pharetra sit amet aliquam id. Donec ac odio tempor orci dapibus ultrices
+              in iaculis. Sit amet cursus sit amet dictum sit amet justo.
+  - day: 3
+    month: 12
+    year: 2021
+    tutorialTimes:
+      - name: Morning
+        options:
+          - name: Machine Learning
+            image: /img/machine-learning.png
+            description: |
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Enim diam vulputate ut
+              pharetra sit amet aliquam id. Donec ac odio tempor orci dapibus ultrices
+              in iaculis. Sit amet cursus sit amet dictum sit amet justo.
+          - name: Introduction to Deep Learning
+            image: /img/deep-learn.png
+            description: |
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Enim diam vulputate ut
+              pharetra sit amet aliquam id. Donec ac odio tempor orci dapibus ultrices
+              in iaculis. Sit amet cursus sit amet dictum sit amet justo.
+    
+    

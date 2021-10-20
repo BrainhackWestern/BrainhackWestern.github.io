@@ -1,0 +1,193 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "additionalProperties": false,
+    "definitions": {
+        "LocationConfig": {
+            "properties": {
+                "city": {
+                    "type": "string"
+                },
+                "maps_id": {
+                    "description": "Map ID from Google Maps Embed API, as in: \n...?q=place_id:<MAP ID>&key=...",
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "province": {
+                    "description": "Two letter province code",
+                    "pattern": "^[A-Z][A-Z]$",
+                    "type": "string"
+                },
+                "street": {
+                    "type": "string"
+                },
+                "url": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "ScheduleConfig": {
+            "properties": {
+                "days": {
+                    "items": {
+                        "$ref": "#/definitions/ScheduleDay"
+                    },
+                    "type": "array"
+                },
+                "endTime": {
+                    "description": "Last hour to display on the schedule (in 24hr time).\nEvents falling after this will be clipped.",
+                    "maximum": 23,
+                    "minimum": 0,
+                    "type": "number"
+                },
+                "show": {
+                    "type": "boolean"
+                },
+                "startTime": {
+                    "description": "First hour to display on the schedule (in 24hr time).",
+                    "maximum": 23,
+                    "minimum": 0,
+                    "type": "number"
+                }
+            },
+            "type": "object"
+        },
+        "ScheduleDay": {
+            "properties": {
+                "day": {
+                    "maximum": 31,
+                    "minimum": 0,
+                    "type": "number"
+                },
+                "events": {
+                    "items": {
+                        "properties": {
+                            "duration": {
+                                "description": "Length of the event",
+                                "pattern": "^\\d\\d?\\:\\d\\d$",
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "time": {
+                                "description": "Time of the event (in 24hr time)",
+                                "pattern": "^\\d\\d?\\:\\d\\d$",
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "month": {
+                    "maximum": 12,
+                    "minimum": 0,
+                    "type": "number"
+                },
+                "year": {
+                    "minimum": 0,
+                    "type": "number"
+                }
+            },
+            "type": "object"
+        },
+        "SponsorConfig": {
+            "properties": {
+                "img": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "url": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "TutorialDay": {
+            "properties": {
+                "day": {
+                    "maximum": 31,
+                    "minimum": 0,
+                    "type": "number"
+                },
+                "month": {
+                    "maximum": 12,
+                    "minimum": 0,
+                    "type": "number"
+                },
+                "tutorialTimes": {
+                    "items": {
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "options": {
+                                "items": {
+                                    "properties": {
+                                        "description": {
+                                            "type": "string"
+                                        },
+                                        "image": {
+                                            "type": "string"
+                                        },
+                                        "name": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                "type": "array"
+                            },
+                            "time": {
+                                "description": "Time of the tutorial",
+                                "pattern": "^\\d\\d?\\:\\d\\d$",
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "year": {
+                    "minimum": 0,
+                    "type": "number"
+                }
+            },
+            "type": "object"
+        }
+    },
+    "description": "Config interface for Brainhack. Contains\nall the information needed to display the site",
+    "properties": {
+        "location": {
+            "$ref": "#/definitions/LocationConfig"
+        },
+        "organizers": {
+            "items": {
+                "type": "string"
+            },
+            "type": "array"
+        },
+        "schedule": {
+            "$ref": "#/definitions/ScheduleConfig"
+        },
+        "sponsors": {
+            "items": {
+                "$ref": "#/definitions/SponsorConfig"
+            },
+            "type": "array"
+        },
+        "tutorials": {
+            "items": {
+                "$ref": "#/definitions/TutorialDay"
+            },
+            "type": "array"
+        }
+    },
+    "type": "object"
+}
+
