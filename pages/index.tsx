@@ -47,7 +47,6 @@ const Home = ({ config }: InferGetStaticPropsType<typeof getStaticProps>) => {
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"/>
-
       </Head>
 
       <div className="window d-flex flex-column justify-content-center container-lg">
@@ -118,16 +117,8 @@ const Home = ({ config }: InferGetStaticPropsType<typeof getStaticProps>) => {
           </div>
         </div>
       </div>
-
-
-      {config.schedule.show &&
-      <div id="schedule" className="content-space">
-        <div className="container-lg">
-          <h2>Schedule</h2>
-        </div>
-        <Schedule config={config.schedule} lineHeight={100}/>
-      </div>
-      }
+      
+      <Schedule config={config.schedule} lineHeight={100}/>
 
       <div id="location" className="content-space container-lg">
         <div className="row">

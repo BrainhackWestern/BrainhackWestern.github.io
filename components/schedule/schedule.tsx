@@ -79,25 +79,31 @@ export class Schedule extends Component<ScheduleProps, ScheduleState> {
         const scheduleMultiplier = this.state.largeScreen ? 0 : 1;
         const scheduleHeight = (numLines + 1) * lineHeight;
 
-        return <>
-            <div className="schedule" style={{height: scheduleHeight * Math.max(1, numDays * scheduleMultiplier)}}>
-                {
-                    [...Array(numDays).keys()].filter(i => {
-                        return !i || !this.state.largeScreen
-                    }).map(i => (
-                        <div key={i} className="hour-lines" style={{
-                            height: scheduleHeight,
-                            top: scheduleHeight * i
-                        }}>
-                            {hourLines}
-                        </div>
-                    ))
-                }
-                <div className="days d-flex flex-column flex-lg-row justify-content-start justify-content-lg-center align-items-end align-items-lg-start">
-                    {days}
+        return this.props.config.show &&
+            <div id="schedule" className="content-space">
+                <div className="container-lg">
+                    <h2>Schedule</h2>
                 </div>
-            </div>
+                <div className="schedule" style={{height: scheduleHeight * Math.max(1, numDays * scheduleMultiplier)}}>
+                    {
+                        [...Array(numDays).keys()].filter(i => {
+                            return !i || !this.state.largeScreen
+                        }).map(i => (
+                            <div key={i} className="hour-lines" style={{
+                                height: scheduleHeight,
+                                top: scheduleHeight * i
+                            }}>
+                                {hourLines}
+                            </div>
+                        ))
+                    }
+                    <div className="days d-flex flex-column flex-lg-row justify-content-start justify-content-lg-center align-items-end align-items-lg-start">
+                        {days}
+                    </div>
+                </div>
+            </div> 
+            
 
-        </>
+        
     }
 }
