@@ -1,3 +1,6 @@
+import { ScheduleConfig } from "./schedule";
+import { TutorialDay } from "./tutorial";
+
 interface SponsorConfig {
     img: string;
     name: string;

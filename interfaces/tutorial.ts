@@ -1,10 +1,12 @@
-interface Tutorial {
+import { BasicDate } from "./generic";
+
+export interface TutorialInfo {
     name: string;
     description: string;
     image: string;
 }
 
-interface TutorialDay extends BasicDate {
+export interface TutorialDay extends BasicDate {
     tutorialTimes: {
         name?: string;
 
@@ -13,6 +15,6 @@ interface TutorialDay extends BasicDate {
          * @pattern ^\d\d?\:\d\d$
          */
         time?: string;
-        options: Tutorial[];
+        options: TutorialInfo[];
     }[];
 }

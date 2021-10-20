@@ -1,9 +1,10 @@
 import Image from "next/image";
 import { CSSProperties } from "react";
+import { TutorialInfo } from "../../interfaces/tutorial";
 import useScreenSize from "../../services/screen-size/use";
 
 interface TutorialProps {
-    config: Tutorial;
+    config: TutorialInfo;
     color: string;
     side: "left" | "right"
 }

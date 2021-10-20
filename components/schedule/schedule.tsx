@@ -1,6 +1,7 @@
 import { Component } from "react";
 import { Day } from "./day";
 import { debounce } from 'ts-debounce';
+import { ScheduleConfig } from "../../interfaces/schedule";
 
 
 interface ScheduleProps {

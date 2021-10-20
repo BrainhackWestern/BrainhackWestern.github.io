@@ -1,4 +1,4 @@
-interface BasicDate {
+export interface BasicDate {
     /**
         * @maximum 31
         * @minimum 0

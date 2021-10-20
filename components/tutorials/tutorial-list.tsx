@@ -1,3 +1,4 @@
+import { TutorialDay } from "../../interfaces/tutorial";
 import formatDate from "../../lib/format-date";
 import { Tutorial } from "./tutorial";
 
