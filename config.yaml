@@ -122,10 +122,12 @@ tutorials:
             name: Working with MRI Data in Python
             image: /img/python.png
             description: |
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Enim diam vulputate ut
-              pharetra sit amet aliquam id. Donec ac odio tempor orci dapibus ultrices
-              in iaculis. Sit amet cursus sit amet dictum sit amet justo.
+              This tutorial will teach one to manipulate and transform neuroimaging data
+              using Python with commonly used. First, an understanding of how MRI data
+              is represented in Python will be discussed followed by hands-on tasks such
+              as basic manipulation of neuroimaging MRI data. All content will be
+              performed using Jupyter notebooks in the spirit of reproducible and open
+              science!
           - id: datalad
             name: Introduction to Datalad
             image: /img/datalad.png
@@ -144,10 +146,14 @@ tutorials:
             name: Introduction to fMRI
             image: /img/fmri.png
             description: |
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Enim diam vulputate ut
-              pharetra sit amet aliquam id. Donec ac odio tempor orci dapibus ultrices
-              in iaculis. Sit amet cursus sit amet dictum sit amet justo.
+              In this tutorial, minimally preprocessing of functional data using
+              `fmriprep` will be discussed and the steps the tool performs. Following
+              preprocessing, the data will be cleaned and made workable through motion
+              cleaning and dimensionality reduction. The final component of the
+              tutorials involves functional connectivity analysis. All content will be
+              performed using Jupyter notebooks in the spirit of reproducible and open
+              science! It is recommended (though not required) to attend the
+              [Working with MRI Data in Python](#python) tutorial.
           - id: meta-analysis
             name: Introduction to Meta-analyses for Neuroimaging Data
             image: /img/review.png
@@ -162,10 +168,16 @@ tutorials:
             name: Introduction to fNIRS
             image: /img/fnirs.png
             description: |
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Enim diam vulputate ut
-              pharetra sit amet aliquam id. Donec ac odio tempor orci dapibus ultrices
-              in iaculis. Sit amet cursus sit amet dictum sit amet justo.
+              In this session, you will get an overview of fNIRS (functional
+              near-infrared spectroscopy), and see a live demonstration of fNIRS data
+              acquisition and analysis. fNIRS is a relatively new neuroimaging method,
+              that has gained in popularity over the last 20 years. fNIRS uses an array
+              of light sensors on the surface of the scalp to detected oxygenated and
+              deoxygenated bloodflow in cortex. fNIRS is low-cost, minimally invasive,
+              offers reasonable spatial and temporal resolution, and is easily combined
+              with other neuroimaging methods. In this session, we’ll discuss fNRIS
+              methodology and applications, as well as the current state of affairs for
+              fNIRS analysis.
   - day: 3
     month: 12
     year: 2021
@@ -184,9 +196,19 @@ tutorials:
             name: Introduction to Deep Learning
             image: /img/deep-learn.png
             description: |
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Enim diam vulputate ut
-              pharetra sit amet aliquam id. Donec ac odio tempor orci dapibus ultrices
-              in iaculis. Sit amet cursus sit amet dictum sit amet justo.
+              This tutorial will be broken up into a theoretical (~1hr) and practical
+              component (~2hr). The theoretical component will provide:
+                1) A basic overview of neural networks (NNs) and backpropagation, 
+                2) An overview of several key NN architectures including convolutional 
+                   and recurrent networks, 
+                3) An open discussion of active areas of NN research. 
+
+              The practical component of this tutorial will focus on hands-on experience
+              with Tensorflow. Topics will include 
+                1) Organization of code into classes, functions, and the Tensorgraph, 
+                2) Examples of dense and convolutional networks for real problems using 
+                   high-level Tensorflow tools such as built-in Keras functions, 
+                3) An open session for exploring and adapting existing NNs or for 
+                   helping attendees build their own networks.
     
     
