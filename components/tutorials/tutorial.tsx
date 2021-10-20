@@ -14,6 +14,7 @@ interface TutorialProps {
 export const Tutorial = (props: TutorialProps) => {
     const { state: { largeScreen }} = useScreenSize();
 
+    // We put things in reverse if right side is indicated, but only on large screens
     const reverse = props.side === "right" && largeScreen;
 
     const headerStyle: CSSProperties = {

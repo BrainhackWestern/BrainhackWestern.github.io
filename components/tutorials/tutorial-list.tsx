@@ -1,4 +1,5 @@
 import { TutorialDay } from "../../interfaces/tutorial";
+import { colorGradient, colorIterator } from "../../lib/color-tools";
 import formatDate from "../../lib/format-date";
 import { Tutorial } from "./tutorial";
 
@@ -6,33 +7,22 @@ interface TutorialListProps {
     config: TutorialDay[]
 }
 
-function colorIterator() {
-    const colors = [
-        "#AC4CFF",
-        "#951AFF",
-        "#7B00E6",
-        "#6000B4",
-        "#440082",
-        "#290050",
-        "#100020"
-    ]
-    let nextIndex = 0
-    return {
-      next: function() {
-        return nextIndex < colors.length ? {
-          value: colors[nextIndex++],
-          done: false
-        } : {
-          done: true
-        };
-      }
-    };
-  }
   
 export const TutorialList = ({ config }: TutorialListProps) => {
 
-    const colors = colorIterator();
+    // Calculate the total number of tutorials
+    const numTutorials = config.flatMap(day => 
+        day.tutorialTimes
+    ).flatMap(time =>
+        time.options
+    ).length
 
+    // Generate a gradient of colors between light and dark purple with one
+    // color for each gradient. This list is passed to colorIterator, which returns
+    // one color each time it's .next() method is called
+    const colors = colorIterator(colorGradient("#AC4CFF", "#100020", numTutorials));
+
+    // Left is first so that even tutorials (index % 2) will be on the left side
     const sides: ("left" | "right")[] = [
         "left",
         "right"
