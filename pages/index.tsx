@@ -1,16 +1,15 @@
 import path from 'path'
 import { promises as fs } from 'fs'
 
-import type { InferGetStaticPropsType, NextPage } from 'next'
+
+import type { InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 
 import yaml from 'js-yaml'
 import Obfuscate from 'react-obfuscate'
 
-import { imageLoader, basePath } from '../utils/image-loader'
-
-import { SiteConfig } from '../interfaces/site-config'
+import { basePath } from '../utils/image-loader'
 
 import asciiArt from "../public/img/ascii_art_cropped.png"
 import upvote from "../public/img/upvote.png"
@@ -20,6 +19,7 @@ import dollar_signs from "../public/img/dollar_signs.png"
 import hack from "../public/img/hack.png"
 import main_logo from "../public/img/logo_2021_light.png"
 
+import { SiteConfig } from '../interfaces/site-config'
 import { Logo } from '../components/logo'
 import { Button } from '../components/button'
 import { WhiteBox } from '../components/white-box'
@@ -52,10 +52,10 @@ const Home = ({ config, calendar }: InferGetStaticPropsType<typeof getStaticProp
       <Head>
         <title>Brainhack Western 2021</title>
         <meta name="description" content="Western Brainhack brings together researchers and trainees of all backgrounds to collaborate on open science projects in neuroimaging and neuroscience." />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="preconnect" href="https://fonts.googleapis.com"/>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"/>
       </Head>
+
+      
+
 
       <div className="window d-flex flex-column justify-content-center container-lg">
         <div className="background-img">
