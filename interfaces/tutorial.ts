@@ -12,6 +12,8 @@ export interface TutorialInfo {
     /**
      * Description of the tutorial. Supports markdown, including bold, italics, code,
      * urls, and lists.
+     * 
+     * @default "Description coming soon!"
      */
     description?: string;
 

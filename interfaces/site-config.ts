@@ -5,8 +5,25 @@ import { TutorialDay } from "./tutorial";
  * @additionalProperties false
  */
 interface SponsorConfig {
+    /**
+     * Url to the image for the sponsor. Image should be saved under /public.
+     * The url does not include public. For instance, if the image is saved at
+     * [Project]/public/img/tutorial-pic.png, enter "/img/tutorial-pic.png".
+     * 
+     * Image should be saved with square dimensions larger than 250x250px
+     */
     img: string;
+
+    /**
+     * Name of the sponsor to be printed
+     */
     name: string;
+
+    /**
+     * Url for the sponsors website
+     * 
+     * @pattern ^http[s]?:\/\/(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+$
+     */
     url: string;
 }
 
@@ -46,16 +63,21 @@ export interface SiteConfig {
     /**
      * Allows turning specific sections of the website off. This is useful if
      * the content for these parts is not fully ready.
+     * @additionalProperties false
      */
     displaySections: {
         /**
          * Display the list of tutorials
+         * 
+         * @default true
          */
-        tutorial: boolean;
+        tutorial?: boolean;
 
         /**
          * Display the schedule
+         * 
+         * @default true
          */
-        schedule: boolean;
+        schedule?: boolean;
     }
 }

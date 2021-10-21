@@ -3,19 +3,25 @@
  */
 export interface BasicDate {
     /**
-    * @maximum 31
-    * @minimum 0
-    */
+     * Day of the month
+     * 
+     * @maximum 31
+     * @minimum 1
+     */
     day: number;
 
     /**
-    * @maximum 12
-    * @minimum 0
-    */
+     * Month of the year
+     * 
+     * @maximum 12
+     * @minimum 1
+     */
     month: number;
 
     /**
-    * @minimum 0
-    */
+     * Year
+     * 
+     * @minimum 0
+     */
     year: number;
 }
