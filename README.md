@@ -4,6 +4,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 Most data for the site is stored in the [config.yaml](config.yaml) file. Values here can be updated directly on github by clicking the pencil icon at the top of the file. Once you've made changes, they can be saved through a Pull Request.
 
+If you edit the config file on a local IDE, you can take advantage of the JSON schema powered by [yaml-language-server](https://github.com/redhat-developer/yaml-language-server). This provides you intellisense and linting. The language server is available as an extension for many editors, including VSCode, Atom, Sublime, etc.
+
 ## Running a dev server
 
 First, clone this repository:
