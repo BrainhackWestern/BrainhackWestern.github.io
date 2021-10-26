@@ -174,14 +174,23 @@ const Home = ({ config }: InferGetStaticPropsType<typeof getStaticProps>) => {
 
       <footer>
         <div className="content-space container-lg">
-          <h3>Organizers</h3>
+          
           <div className="row">
-            <div className="col-lg-6 d-flex flex-column justify-content-between align-items-start">
+            <div className="col-lg-6 d-flex flex-column justify-content-start align-items-start">
+              
+              <h3>Organizers</h3>
               <p className="organizers">
                 {
                   config.organizers.join(", ")
                 }
               </p>
+            </div>
+            <div className="col-lg-6 d-flex flex-column justify-content-between align-items-center">
+                <p>
+                  <a href="https://twitter.com/TwitterDev?ref_src=twsrc%5Etfw" className="twitter-follow-button" data-dnt="true" data-show-count="false">Follow @TwitterDev</a><script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
+                  <br />
+                  <a className="twitter-timeline" data-width="400" data-height="500" data-dnt="true" data-theme="dark" href="https://twitter.com/TwitterDev?ref_src=twsrc%5Etfw">Tweets by TwitterDev</a> <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
+                </p>
             </div>
           </div>
           <h3>Contact</h3>
