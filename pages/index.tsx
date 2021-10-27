@@ -50,7 +50,7 @@ const Home = ({ config, calendar }: InferGetStaticPropsType<typeof getStaticProp
     <div className="app">
       <Head>
         <title>Brainhack Western 2021</title>
-        <meta name="description" content="Landing page for Brainhack Western 2021" />
+        <meta name="description" content="Western Brainhack brings together researchers and trainees of all backgrounds to collaborate on open science projects in neuroimaging and neuroscience." />
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"/>
