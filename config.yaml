@@ -112,7 +112,7 @@ schedule:
       color: red
     - name: Hacking
       time: "9:00"
-      duration: "2:00"
+      duration: "3:00"
       color: red
     
   - day: 3
@@ -139,7 +139,7 @@ schedule:
       duration: "1:30"
     - name: Hacking
       time: "9:00"
-      duration: "2:00"
+      duration: "3:00"
       color: red
     - name: Hacking
       time: "13:30"

@@ -199,9 +199,9 @@ const Home = ({ config, calendar }: InferGetStaticPropsType<typeof getStaticProp
             </div>
             <div className="col-lg-6 d-flex flex-column justify-content-between align-items-center">
                 <p>
-                  <a href="https://twitter.com/TwitterDev?ref_src=twsrc%5Etfw" className="twitter-follow-button" data-dnt="true" data-show-count="false">Follow @TwitterDev</a><script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
+                  <a href="https://twitter.com/brainhackUWO?ref_src=twsrc%5Etfw" className="twitter-follow-button" data-dnt="true" data-show-count="false">Follow brainhackUWO</a><script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
                   <br />
-                  <a className="twitter-timeline" data-width="400" data-height="500" data-dnt="true" data-theme="dark" href="https://twitter.com/TwitterDev?ref_src=twsrc%5Etfw">Tweets by TwitterDev</a> <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
+                  <a className="twitter-timeline" data-width="400" data-height="500" data-dnt="true" data-theme="dark" href="https://twitter.com/brainhackUWO?ref_src=twsrc%5Etfw">Tweets by brainhackUWO</a> <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
                 </p>
             </div>
           </div>
