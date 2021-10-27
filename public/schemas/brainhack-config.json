@@ -68,7 +68,7 @@
                 },
                 "events": {
                     "additionalProperties": false,
-                    "description": "List of events to be held on this day. Care should be taken that the times\ndo not overlap: there is currently no support for this and it will cause\nissues with the display.",
+                    "description": "List of events to be held on this day. Care should be taken that the times\ndo not overlap: their is currently no support for this and it will cause\nissues with the display.",
                     "items": {
                         "properties": {
                             "color": {
@@ -215,6 +215,9 @@
     },
     "description": "Config interface for Brainhack. Contains\nall the information needed to display the site",
     "properties": {
+        "cost": {
+            "type": "number"
+        },
         "displaySections": {
             "additionalProperties": false,
             "description": "Allows turning specific sections of the website off. This is useful if\nthe content for these parts is not fully ready.",
