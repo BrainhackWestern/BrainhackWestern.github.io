@@ -18,6 +18,7 @@ import learn_skillz from "../public/img/learn_skillz_cropped.png"
 import global_logo from "../public/img/global_logo.png"
 import dollar_signs from "../public/img/dollar_signs.png"
 import hack from "../public/img/hack.png"
+import main_logo from "../public/img/logo_2021_light.png"
 
 import { Logo } from '../components/logo'
 import { Button } from '../components/button'
@@ -62,7 +63,9 @@ const Home = ({ config, calendar }: InferGetStaticPropsType<typeof getStaticProp
         </div>
         <div className="row title-col">
           <div className="col-12 col-lg-4 d-flex flex-column align-items-center ">
-            <Logo/>
+            <div className="logo">
+              <Image src={main_logo} width={280} height={186} />
+            </div>
             <hr/>
             <h3>London, ON</h3>
             <h3>Dec 1-3</h3>
