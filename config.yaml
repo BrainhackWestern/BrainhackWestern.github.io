@@ -2,6 +2,7 @@
 displaySections:
   tutorial: true
   schedule: true
+cost: 5
 location:
   name: Western Interdisciplinary Research Building
   street: Perth Dr
