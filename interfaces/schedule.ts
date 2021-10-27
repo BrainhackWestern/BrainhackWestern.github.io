@@ -7,7 +7,7 @@ import { BasicDate } from "./generic";
 interface ScheduleDay extends BasicDate {
     /**
      * List of events to be held on this day. Care should be taken that the times
-     * do not overlap: their is currently no support for this and it will cause
+     * do not overlap: there is currently no support for this and it will cause
      * issues with the display.
      * 
      * @additionalProperties false
@@ -26,6 +26,16 @@ interface ScheduleDay extends BasicDate {
          * @pattern ^\d\d?\:\d\d$
          */
         duration: string;
+
+        /**
+         * Change the color from the default purple. Accepts any valid css color string
+         */
+        color?: string;
+
+        /**
+        * Optional id to link tutorial to a listing in the tutorial section
+        */
+        id?: string
     }[];
 }
 
@@ -55,4 +65,17 @@ export interface ScheduleConfig {
      * events.
      */
     days: ScheduleDay[];
+
+    
+}
+
+export interface LayeredDay {
+    day: number;
+    month: number;
+    year: number;
+    events: {
+        name: string;
+        time: string;
+        duration: string;
+    }[][]
 }

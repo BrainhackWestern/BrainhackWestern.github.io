@@ -129,7 +129,7 @@ const Home = ({ config }: InferGetStaticPropsType<typeof getStaticProps>) => {
         show={config.displaySections.tutorial ?? true }
       />
       
-      <Schedule config={config.schedule} lineHeight={100}/>
+      <Schedule config={config.schedule} lineHeight={100} show={config.displaySections.schedule ?? true}/>
 
       <div id="location" className="content-space container-lg">
         <div className="row">

@@ -5,10 +5,13 @@ import { Event } from "./event";
 interface DayProps {
     date: Date;
     lineHeight: number;
+    startTime: number;
     events: {
         name: string;
         time: string;
         duration: string;
+        color?: string;
+        id?: string;
     }[]
 }
 
@@ -16,12 +19,25 @@ export const Day = (props: DayProps) => {
 
     const dateString = formatDate(props.date);
     const events = props.events.map((event, i) => {
-        return <Event key={i} name={event.name} time={event.time} duration={event.duration} lineHeight={props.lineHeight} gap={10} />
+        return <Event
+            key={i} 
+            name={event.name}
+            time={event.time}
+            dayStartTime={props.startTime}
+            duration={event.duration}
+            lineHeight={props.lineHeight}
+            gap={10}
+            color={event.color}
+            id={event.id}
+        />
     });
 
     return (
         <div className="day-col">
-            <div className="day-name d-flex flex-column justify-content-end" style={{height: props.lineHeight}}>
+            <div 
+                className="day-name d-flex flex-column justify-content-end" 
+                style={{height: props.lineHeight}}
+            >
                 <h3>{dateString}</h3>
             </div>
             <div className="events">
