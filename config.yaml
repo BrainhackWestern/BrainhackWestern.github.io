@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=./public/schemas/brainhack-config.json
+# yaml-language-server: $schema=../brainhack/public/schemas/brainhack-config.json
 displaySections:
   tutorial: true
   schedule: true
@@ -43,7 +43,7 @@ sponsors:
 schedule:
   show: false
   startTime: 8
-  endTime: 18
+  endTime: 17
   days:
   - day: 1
     month: 12
@@ -55,6 +55,10 @@ schedule:
     - name: Welcome & Project Pitches
       time: "9:00"
       duration: "1:30"
+    - name: Hacking
+      time: "10:30"
+      duration: "1:30"
+      color: red
     - name: Lunch
       time: "12:00"
       duration: "1:30"
@@ -63,11 +67,17 @@ schedule:
       duration: "1:00"
       color: "#1f331e"
       id: python
+      priority: 1
     - name: Intro to Datalad
       time: "14:30"
       duration: "1:30"
       color: "#1f331e"
       id: datalad
+      priority: 1
+    - name: Hacking
+      time: "13:30"
+      duration: "2:30"
+      color: red
   - day: 2
     month: 12
     year: 2021
@@ -80,11 +90,13 @@ schedule:
       duration: "1:30"
       color: "#1f331e"
       id: frmi
+      priority: 1
     - name: Introduction to Meta-analyses
       time: "10:30"
       duration: "1:30"
       color: "#1f331e"
       id: meta-analysis
+      priority: 1
     - name: Lunch
       time: "12:00"
       duration: "1:30"
@@ -93,6 +105,16 @@ schedule:
       duration: "2:30"
       color: "#1f331e"
       id: fnirs
+      priority: 1
+    - name: Hacking
+      time: "13:30"
+      duration: "2:30"
+      color: red
+    - name: Hacking
+      time: "9:00"
+      duration: "2:00"
+      color: red
+    
   - day: 3
     month: 12
     year: 2021
@@ -105,14 +127,24 @@ schedule:
       duration: "1:30"
       color: "#1f331e"
       id: machine-learning
+      priority: 1
     - name: Intro to Deep Learning
       time: "10:30"
       duration: "1:30"
       color: "#1f331e"
       id: deep-learning
+      priority: 1
     - name: Lunch
       time: "12:00"
       duration: "1:30"
+    - name: Hacking
+      time: "9:00"
+      duration: "2:00"
+      color: red
+    - name: Hacking
+      time: "13:30"
+      duration: "1:00"
+      color: red
     - name: Project presentations & Wrap-up
       time: "14:30"
       duration: "1:30"

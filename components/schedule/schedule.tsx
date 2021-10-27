@@ -1,25 +1,21 @@
-import { Component } from "react";
 import { Day } from "./day";
-import { debounce } from 'ts-debounce';
-import { ScheduleConfig } from "../../interfaces/schedule";
-import useScreenSize from "../../services/screen-size/use";
+import { ScheduleConfig, ScheduleDay } from "../../interfaces/schedule";
+import useScreenSize, { screenSizes } from "../../services/screen-size/use";
 
 
 interface ScheduleProps {
     lineHeight: number;
     config: ScheduleConfig;
     show: boolean;
-}
-
-interface ScheduleState {
-    largeScreen: boolean
+    calendar: ScheduleDay[];
 }
 
 type TimeCode = "AM" | "PM"
 
 
 export const Schedule = (props: ScheduleProps) => {
-    const { state: { largeScreen } } = useScreenSize();
+    const { state: { screenSize } } = useScreenSize();
+    const largeScreen = screenSize >= screenSizes['xl']
     const lineHeight = props.lineHeight;
     const config = props.config;
     const startTimeCode: TimeCode = config.startTime < 12 ? "AM" : "PM";
@@ -51,7 +47,12 @@ export const Schedule = (props: ScheduleProps) => {
 
     const numLines = hourLines.length;
 
-    const days = config.days.map(day => {
+    const numDays = props.calendar.length;
+
+    const scheduleMultiplier = largeScreen ? 0 : 1;
+    const scheduleHeight = (numLines + 1) * lineHeight;
+
+    const days = props.calendar.map(day => {
         const date = new Date(day.year, day.month - 1, day.day)
         return <Day
             key={date.toString()}
@@ -59,13 +60,11 @@ export const Schedule = (props: ScheduleProps) => {
             startTime={config.startTime}
             lineHeight={lineHeight}
             events={day.events}
+            height={scheduleHeight}
         />
     })
 
-    const numDays = days.length;
-
-    const scheduleMultiplier = largeScreen ? 0 : 1;
-    const scheduleHeight = (numLines + 1) * lineHeight;
+    
 
     return props.show ?
         <div id="schedule" className="content-space">
@@ -85,7 +84,19 @@ export const Schedule = (props: ScheduleProps) => {
                         </div>
                     ))
                 }
-                <div className="days d-flex flex-column flex-lg-row justify-content-start justify-content-lg-center align-items-end align-items-lg-start">
+                <div 
+                    className={[
+                        "days",
+                        "d-flex",
+                        "flex-column",
+                        "flex-xl-row",
+                        "justify-content-start",
+                        "justify-content-xl-center",
+                        "align-items-end",
+                        "align-items-sm-center",
+                        "align-items-xl-start"
+                    ].join(" ")}
+                >
                     {days}
                 </div>
             </div>

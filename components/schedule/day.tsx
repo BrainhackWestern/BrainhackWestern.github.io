@@ -6,12 +6,15 @@ interface DayProps {
     date: Date;
     lineHeight: number;
     startTime: number;
+    height: number;
     events: {
         name: string;
         time: string;
         duration: string;
         color?: string;
         id?: string;
+        widthFactor?: number;
+        position?: number;
     }[]
 }
 
@@ -26,14 +29,16 @@ export const Day = (props: DayProps) => {
             dayStartTime={props.startTime}
             duration={event.duration}
             lineHeight={props.lineHeight}
-            gap={10}
+            widthFactor={event.widthFactor ?? 1}
+            position={event.position ?? 0}
+            padding={10}
             color={event.color}
             id={event.id}
         />
     });
 
     return (
-        <div className="day-col">
+        <div className="day-col" style={{height: props.height}}>
             <div 
                 className="day-name d-flex flex-column justify-content-end" 
                 style={{height: props.lineHeight}}

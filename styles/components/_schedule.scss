@@ -29,7 +29,8 @@
     position: relative;
 
     .day-col {
-      max-width: 250px;
+      max-width: 80%;
+      width: 300px;
       margin: 0 0.5em;
     }
 
@@ -48,8 +49,6 @@
 
     .event {
       position: absolute;
-      left: 0;
-      right: 0;
       background-color: #2d1e33;
       padding: 0.5em;
       box-shadow: 0px 16px 40px rgb(0, 0, 0, 0.8);

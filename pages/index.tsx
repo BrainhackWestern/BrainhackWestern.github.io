@@ -26,20 +26,26 @@ import { AboutRow } from '../components/about-row'
 import { Schedule } from '../components/schedule/schedule'
 import { RegisterButton } from '../components/register-button'
 import { TutorialList } from '../components/tutorials/tutorial-list'
+import { ScheduleDay } from '../interfaces/schedule'
 
 export const getStaticProps = async () => {
   const configFile = path.join(process.cwd(), 'config.yaml');
   const config_data = await fs.readFile(configFile, 'utf-8');
   const config = await yaml.load(config_data) as SiteConfig;
+
+  const calendarFile = path.join(process.cwd(), 'calendar.json');
+  const calendarData = await fs.readFile(calendarFile, 'utf-8');
+  const calendar = await JSON.parse(calendarData) as ScheduleDay[];
   return {
       props: {
         config,
+        calendar,
       }
   };
 }
 
 
-const Home = ({ config }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const Home = ({ config, calendar }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <div className="app">
       <Head>
@@ -124,13 +130,19 @@ const Home = ({ config }: InferGetStaticPropsType<typeof getStaticProps>) => {
         </div>
       </div>
 
+      <Schedule
+        config={config.schedule}
+        calendar={calendar}
+        lineHeight={100}
+        show={config.displaySections.schedule ?? true}
+      />
+
       <TutorialList 
         config={config.tutorials}
         show={config.displaySections.tutorial ?? true }
       />
       
-      <Schedule config={config.schedule} lineHeight={100} show={config.displaySections.schedule ?? true}/>
-
+      
       <div id="location" className="content-space container-lg">
         <div className="row">
           <div className="col-lg-4 d-flex flex-column justify-content-start align-items-start">

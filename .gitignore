@@ -14,6 +14,7 @@
 # production
 /build
 /out
+calendar.json
 
 # misc
 .DS_Store
