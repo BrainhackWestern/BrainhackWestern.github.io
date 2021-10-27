@@ -3,7 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { CSSProperties } from "react";
 import { TutorialInfo } from "../../interfaces/tutorial";
-import useScreenSize from "../../services/screen-size/use";
+import useScreenSize, { screenSizes } from "../../services/screen-size/use";
 
 interface TutorialProps {
     config: TutorialInfo;
@@ -12,7 +12,8 @@ interface TutorialProps {
 }
 
 export const Tutorial = (props: TutorialProps) => {
-    const { state: { largeScreen }} = useScreenSize();
+    const { state: { screenSize }} = useScreenSize();
+    const largeScreen = screenSize >= screenSizes['lg']
 
     // We put things in reverse if right side is indicated, but only on large screens
     const reverse = props.side === "right" && largeScreen;
