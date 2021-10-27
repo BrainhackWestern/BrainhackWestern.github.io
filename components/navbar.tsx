@@ -1,10 +1,16 @@
+import logo from "../public/img/brainhack_logo.png"
 import Link from "next/link"
+import Image from "next/dist/client/image"
 
 export const NavBar = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
             <div className="container-fluid">
-                <a href="/" className="navbar-brand">Brainhack</a>
+                <Link href="/">
+                    <a className="navbar-brand">
+                        <Image src={logo} width={58} height={40}></Image>
+                    </a>
+                </Link>
             <button
                 className="navbar-toggler"
                 type="button"
@@ -18,16 +24,22 @@ export const NavBar = () => {
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav">
-                <li className="nav-item">
-                    <a href="/" className="nav-link active" aria-current="page">Home</a>
-                </li>
-                </ul>
-                <ul className="navbar-nav">
-                <li className="nav-item">
-                    <Link href="/FAQ">
-                        <a className="nav-link">FAQ</a>
-                    </Link>
-                </li>
+                    <li className="nav-item">
+                        <a href="#about" className="nav-link">About</a>
+                    </li>
+                    <li className="nav-item">
+                        <a href="#schedule" className="nav-link">Schedule</a>
+                    </li>
+                    <li className="nav-item">
+                        <a href="#tutorials" className="nav-link">Tutorials</a>
+                    </li>
+                    <li className="nav-item">
+                        <a href="#location" className="nav-link">Location</a>
+                    </li>
+                    <li className="nav-item">
+                        <a href="https://github.com/BrainhackWestern/BrainhackWestern.github.io/wiki/Frequently-Asked-Questions" className="nav-link">FAQ</a>
+                    </li>
+                    
                 </ul>
             </div>
             

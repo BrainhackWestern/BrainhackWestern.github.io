@@ -10,6 +10,14 @@
   background-color: variables.$background;
 }
 
+.navbar-dark {
+  background-color: variables.$background600;
+
+  @include bootstrap.media-breakpoint-up(lg) {
+    background-color: variables.$background-transparent;
+  }
+}
+
 .window {
   height: 100vh;
 }

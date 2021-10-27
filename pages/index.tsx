@@ -21,6 +21,7 @@ import main_logo from "../public/img/logo_2021_light.png"
 
 import { SiteConfig } from '../interfaces/site-config'
 import { Logo } from '../components/logo'
+import { NavBar } from '../components/navbar'
 import { Button } from '../components/button'
 import { WhiteBox } from '../components/white-box'
 import { AboutRow } from '../components/about-row'
@@ -53,6 +54,8 @@ const Home = ({ config, calendar }: InferGetStaticPropsType<typeof getStaticProp
         <title>Brainhack Western 2021</title>
         <meta name="description" content="Western Brainhack brings together researchers and trainees of all backgrounds to collaborate on open science projects in neuroimaging and neuroscience." />
       </Head>
+
+      <NavBar/>
 
       
 
