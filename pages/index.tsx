@@ -211,7 +211,7 @@ const Home = ({ config, calendar }: InferGetStaticPropsType<typeof getStaticProp
                 </p>
             </div>
           </div>
-          <h3>Contact</h3>
+          <h3 id="contact">Contact</h3>
           <Obfuscate email="brainhack.western@gmail.com"/>
           <p className="copyright">Copyright © 2021 Brainhack Western</p>
         </div>
