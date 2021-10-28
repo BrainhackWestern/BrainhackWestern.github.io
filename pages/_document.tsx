@@ -1,4 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
+import { basePath } from '../utils/image-loader'
 
 class MyDocument extends Document {
   render() {
@@ -12,7 +13,7 @@ class MyDocument extends Document {
               href="https://fonts.googleapis.com/css2?family=Montserrat&family=Quicksand:wght@300;400;700&display=swap"
               rel="stylesheet"
           />
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href={`${basePath}/favicon.ico`} />
         </Head>
         <body>
           <Main />
