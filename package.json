@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm run schema-gen && next build",
+    "build": "next build",
     "schema-gen": "npx typescript-json-schema ./tsconfig.json SiteConfig --required -o public/schemas/brainhack-config.json",
     "lint": "next lint",
     "compile-calendar": "wget https://github.com/pvandyken/overlapping-events/releases/download/latest/calendar_stack.sh && chmod +x calendar_stack.sh && ./calendar_stack.sh config.yaml -o calendar.json && rm ./calendar_stack.sh",
