@@ -5,8 +5,31 @@ on:
       - master
       - main
 jobs:
-  report:
+  check-yaml:
     runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: fabasoad/yaml-json-xml-converter-action@main
+        id: jsonyaml
+        with:
+          path: 'config.yaml'
+          from: 'yaml'
+          to: 'json'
+      - name: Save yaml schema
+        run: echo '${{ steps.jsonyaml.outputs.data }}' > config.json 
+      - name: Validate JSON
+        uses: docker://orrosenblatt/validate-json-action:latest
+        with:
+          entrypoint: node
+          args: /service/lib/main.js
+        env:
+          INPUT_SCHEMA: "./public/schemas/brainhack-config.json"
+          INPUT_JSONS: "./config.json"
+
+      
+  deploy:
+    runs-on: ubuntu-latest
+    needs: check-yaml
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2

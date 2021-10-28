@@ -27,6 +27,14 @@
                     "type": "string"
                 }
             },
+            "required": [
+                "city",
+                "maps_id",
+                "name",
+                "province",
+                "street",
+                "url"
+            ],
             "type": "object"
         },
         "ScheduleConfig": {
@@ -55,6 +63,12 @@
                     "type": "number"
                 }
             },
+            "required": [
+                "days",
+                "endTime",
+                "show",
+                "startTime"
+            ],
             "type": "object"
         },
         "ScheduleDay": {
@@ -68,7 +82,7 @@
                 },
                 "events": {
                     "additionalProperties": false,
-                    "description": "List of events to be held on this day. Care should be taken that the times\ndo not overlap: their is currently no support for this and it will cause\nissues with the display.",
+                    "description": "List of events to be held on this day. Care should be taken that the times\ndo not overlap: there is currently no support for this and it will cause\nissues with the display.",
                     "items": {
                         "properties": {
                             "color": {
@@ -105,6 +119,11 @@
                                 "type": "number"
                             }
                         },
+                        "required": [
+                            "duration",
+                            "name",
+                            "time"
+                        ],
                         "type": "object"
                     },
                     "type": "array"
@@ -121,6 +140,12 @@
                     "type": "number"
                 }
             },
+            "required": [
+                "day",
+                "events",
+                "month",
+                "year"
+            ],
             "type": "object"
         },
         "SponsorConfig": {
@@ -140,6 +165,11 @@
                     "type": "string"
                 }
             },
+            "required": [
+                "img",
+                "name",
+                "url"
+            ],
             "type": "object"
         },
         "TutorialDay": {
@@ -177,6 +207,9 @@
                                 "type": "string"
                             }
                         },
+                        "required": [
+                            "options"
+                        ],
                         "type": "object"
                     },
                     "type": "array"
@@ -187,6 +220,12 @@
                     "type": "number"
                 }
             },
+            "required": [
+                "day",
+                "month",
+                "tutorialTimes",
+                "year"
+            ],
             "type": "object"
         },
         "TutorialInfo": {
@@ -210,6 +249,11 @@
                     "type": "string"
                 }
             },
+            "required": [
+                "id",
+                "image",
+                "name"
+            ],
             "type": "object"
         }
     },
@@ -260,6 +304,15 @@
             "type": "array"
         }
     },
+    "required": [
+        "cost",
+        "displaySections",
+        "location",
+        "organizers",
+        "schedule",
+        "sponsors",
+        "tutorials"
+    ],
     "type": "object"
 }
 
