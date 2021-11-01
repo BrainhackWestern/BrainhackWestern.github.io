@@ -37,12 +37,14 @@ export const NavBar = () => {
                         <a href="#location" className="nav-link">Location</a>
                     </li>
                     <li className="nav-item">
+                        <a href="https://github.com/BrainhackWestern/BrainhackWestern.github.io/wiki/Projects" className="nav-link">Projects</a>
+                    </li>
+                    <li className="nav-item">
                         <a href="https://github.com/BrainhackWestern/BrainhackWestern.github.io/wiki/Frequently-Asked-Questions" className="nav-link">FAQ</a>
                     </li>
                     <li className="nav-item">
                         <a href="https://brainhack.org/code-of-conduct.html" className="nav-link">Code of Conduct</a>
                     </li>
-                    
                 </ul>
             </div>
             

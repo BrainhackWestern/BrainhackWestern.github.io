@@ -57,9 +57,6 @@ const Home = ({ config, calendar }: InferGetStaticPropsType<typeof getStaticProp
 
       <NavBar/>
 
-      
-
-
       <div className="window d-flex flex-column justify-content-center container-lg">
         <div className="background-img">
           <Image src={asciiArt} />
@@ -92,6 +89,9 @@ const Home = ({ config, calendar }: InferGetStaticPropsType<typeof getStaticProp
       <div id="about" className="container-lg about content-space">
         <AboutRow img={upvote} imgClass="upvote-img" title="Pitch your project">
           Submit your project ideas online, then pitch them to your fellow attendees to recruit others to your team.
+          <br />
+          <br />
+          <Button target="https://github.com/BrainhackWestern/BrainhackWestern.github.io/wiki/Projects">View Project Proposals</Button>
         </AboutRow>
         <AboutRow img={learn_skillz} title="Learn new skills" reverse={true}>
           Attend tutorials to learn new neuroscience tools and techniques from the experts.
@@ -102,7 +102,6 @@ const Home = ({ config, calendar }: InferGetStaticPropsType<typeof getStaticProp
             <Button target="#tutorials">View Tutorials</Button> :
             "Check back soon to see what tutorials will be offered!"
           }
-          
         </AboutRow >
         <AboutRow img={hack} title="Hack!!">
           Solve real-world problems while sharpening your skills!
