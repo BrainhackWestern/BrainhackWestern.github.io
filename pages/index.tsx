@@ -112,7 +112,9 @@ const Home = ({ config, calendar }: InferGetStaticPropsType<typeof getStaticProp
       <WhiteBox>
         <div className="row d-flex align-items-center">
           <div className="col-lg-6">
-            <p>Brainhack Western 2021 is an official satellite event of Brainhack Global</p>
+            <p>
+              Brainhack Western 2021 is an official satellite event of <a href="https://brainhack.org/index.html" title="Brainhack Global">Brainhack Global</a>
+            </p>
           </div>
           <div className="col-lg-6 d-flex justify-content-center">
             <div style={{maxWidth: "300px"}}>
