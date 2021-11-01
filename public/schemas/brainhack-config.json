@@ -259,9 +259,6 @@
     },
     "description": "Config interface for Brainhack. Contains\nall the information needed to display the site",
     "properties": {
-        "cost": {
-            "type": "number"
-        },
         "displaySections": {
             "additionalProperties": false,
             "description": "Allows turning specific sections of the website off. This is useful if\nthe content for these parts is not fully ready.",
@@ -288,6 +285,29 @@
             },
             "type": "array"
         },
+        "registration": {
+            "properties": {
+                "cost": {
+                    "type": "number"
+                },
+                "status": {
+                    "enum": [
+                        "closed",
+                        "open",
+                        "unopened"
+                    ],
+                    "type": "string"
+                },
+                "url": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "cost",
+                "status"
+            ],
+            "type": "object"
+        },
         "schedule": {
             "$ref": "#/definitions/ScheduleConfig"
         },
@@ -305,10 +325,10 @@
         }
     },
     "required": [
-        "cost",
         "displaySections",
         "location",
         "organizers",
+        "registration",
         "schedule",
         "sponsors",
         "tutorials"

@@ -59,7 +59,12 @@ export interface SiteConfig {
     organizers: string[];
     location: LocationConfig;
     tutorials: TutorialDay[];
-    cost: number;
+
+    registration: {
+        url?: string;
+        cost: number;
+        status: "unopened" | "open" | "closed";
+    }
 
     /**
      * Allows turning specific sections of the website off. This is useful if

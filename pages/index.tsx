@@ -75,7 +75,10 @@ const Home = ({ config, calendar }: InferGetStaticPropsType<typeof getStaticProp
           </div>
           <div className="col-12 col-lg-8 d-flex flex-column align-items-center justify-content-center">
             <div className="flex-lg-fill"></div>
-            <RegisterButton status="unopened" />
+            <RegisterButton  
+              status={config.registration.status}
+              url={config.registration.url} 
+            />
           </div>
         </div>
       </div>
@@ -123,10 +126,14 @@ const Home = ({ config, calendar }: InferGetStaticPropsType<typeof getStaticProp
         <div className="row">
           <div className="col-lg-6 d-flex flex-column justify-content-between align-items-start">
             <div>
-              <h2>Cost: ${config.cost}</h2>
+              <h2>Cost: ${config.registration.cost}</h2>
               <p>Includes on-site meals, snacks, and coffee!</p>
             </div>
-            <RegisterButton alignment='left' status="unopened"></RegisterButton>
+            <RegisterButton
+              alignment='left' 
+              status={config.registration.status}
+              url={config.registration.url}
+            />
           </div>
           <div className="col-lg-6 d-flex justify-content-center">
             <div style={{maxWidth: "300px"}}>
