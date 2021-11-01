@@ -56,6 +56,12 @@ hr {
 
   .button {
     align-self: center;
+    margin-top: 2em;
+
+    span {
+      font-size: variables.$text_med;
+    }
+    
   }
 }
 
