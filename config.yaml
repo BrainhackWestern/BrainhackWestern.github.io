@@ -225,8 +225,12 @@ tutorials:
       - name: Morning
         options:
           - id: machine-learning
-            name: Machine Learning
+            name: Introduction to Machine Learning
             image: /img/machine-learning.png
+            description: |
+              This tutorial will define the basic concepts of machine learning followed
+              by an introduction to the general blocks of a machine learning pipeline using
+              an example neural dataset.
           - id: deep-learning
             name: Introduction to Deep Learning
             image: /img/deep-learn.png
