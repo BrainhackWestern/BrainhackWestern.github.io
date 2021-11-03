@@ -172,6 +172,14 @@ tutorials:
           - id: datalad
             name: Introduction to Datalad
             image: /img/datalad.png
+            description: |
+              DataLad, “a free and open-source data management system for everyone,” is a 
+              powerful tool for obtaining data, managing your own research data, and 
+              exposing your data to others. This tutorial will start by introducing the 
+              basics of DataLad, then we’ll use it to download some open data that may be 
+              useful for a Brainhack project. We’ll process that data and use DataLad to 
+              keep track of the resulting derivatives, and show how to make that data available 
+              to collaborators.
   - day: 2
     month: 12
     year: 2021
