@@ -48,6 +48,8 @@ jobs:
           else
             echo Running on stage
           fi
+      - name: install pipx
+        run: python -m pip install pipx
       - name: Build App
         run: npm run gh-build
       - name: Push git subdirectory as branch

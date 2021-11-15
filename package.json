@@ -7,7 +7,7 @@
     "build": "next build",
     "schema-gen": "npx typescript-json-schema ./tsconfig.json SiteConfig --required -o public/schemas/brainhack-config.json",
     "lint": "next lint",
-    "compile-calendar": "wget https://github.com/pvandyken/overlapping-events/releases/download/latest/calendar_stack.sh && chmod +x calendar_stack.sh && ./calendar_stack.sh config.yaml -o calendar.json && rm ./calendar_stack.sh",
+    "compile-calendar": "pipx run --spec git+https://github.com/pvandyken/overlapping-events.git calendar-stack config.yaml -o calendar.json",
     "gh-build": "npm run compile-calendar && rm -rf node_modules/.cache && next build && next export && touch out/.nojekyll",
     "deploy": "npm run gh-build && git stash && git add -f out && git commit -m 'Deploying' && git subtree split --prefix out -b gh-pages && git push -f origin gh-pages:gh-pages && git branch -D gh-pages && git reset HEAD~1 && git stash pop && rm -rf out"
   },
