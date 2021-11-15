@@ -118,7 +118,13 @@ schedule:
       time: "9:00"
       duration: "3:00"
       color: red
-    
+    - name: "Diversity in Academia"
+      time: "12:30"
+      duration: "1:00"
+      color: blue
+      link: "https://github.com/BrainhackWestern/BrainhackWestern.github.io/wiki/Lunch-and-Learn#winrepo"
+
+
   - day: 3
     month: 12
     year: 2021
