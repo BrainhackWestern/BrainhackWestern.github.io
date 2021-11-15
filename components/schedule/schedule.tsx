@@ -64,7 +64,7 @@ export const Schedule = (props: ScheduleProps) => {
         />
     })
 
-    
+
 
     return props.show ?
         <div id="schedule" className="content-space">
@@ -84,7 +84,7 @@ export const Schedule = (props: ScheduleProps) => {
                         </div>
                     ))
                 }
-                <div 
+                <div
                     className={[
                         "days",
                         "d-flex",
@@ -101,8 +101,4 @@ export const Schedule = (props: ScheduleProps) => {
                 </div>
             </div>
         </div> : null
-        
-
-        
-
 }

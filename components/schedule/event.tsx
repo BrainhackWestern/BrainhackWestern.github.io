@@ -7,13 +7,14 @@ interface EventProps {
     widthFactor: number;
     position: number;
     padding: number;
-    id?: string;
+    link?: string;
     color?: string;
 }
 
 const colorLookup = {
     green: "#1f331e",
-    red: "#440101"
+    red: "#440101",
+    blue: "#071f4d"
 }
 
 export const Event = (props: EventProps) => {
@@ -21,7 +22,7 @@ export const Event = (props: EventProps) => {
     const top = props.lineHeight * (toMin(props.time) - props.dayStartTime);
     const background = props.color ? {
         backgroundColor: props.color in colorLookup
-            ? colorLookup[props.color as "green" | "red"] 
+            ? colorLookup[props.color as "green" | "red"]
             : props.color
     } : {}
 
@@ -32,7 +33,7 @@ export const Event = (props: EventProps) => {
 
     const leftPadding = left ? 2 : 0;
     const rightPadding = right ? 2 : 0;
-    
+
     const el = (
         <div
             className="event"
@@ -46,10 +47,14 @@ export const Event = (props: EventProps) => {
         >
             <p className="event-name">{props.name}</p>
             <p className="event-time">{to12Hr(props.time)}</p>
+            {
+                props.link ? <p className="event-more-info">more info</p> : null
+            }
+
         </div>
     )
 
-    return props.id ? <a href={`#${props.id}`}>{el}</a> : el
+    return props.link ? <a href={props.link}>{el}</a> : el
 }
 
 const proportionalPosition = (position: number, width: number) => {

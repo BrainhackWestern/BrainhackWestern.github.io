@@ -62,5 +62,15 @@
     .event-time {
       font-size: var.$body_small;
     }
+
+    .event-more-info {
+      position: absolute;
+      bottom: 0.2rem;
+      right: 0.5rem;
+      margin: 0;
+
+      font-size: var.$body_tiny;
+      font-style: italic;
+    }
   }
 }

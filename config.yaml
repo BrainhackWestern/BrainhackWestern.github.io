@@ -70,13 +70,13 @@ schedule:
       time: "13:30"
       duration: "1:00"
       color: "#1f331e"
-      id: python
+      link: "#python"
       priority: 1
     - name: Intro to Datalad
       time: "14:30"
       duration: "1:30"
       color: "#1f331e"
-      id: datalad
+      link: "#datalad"
       priority: 1
     - name: Hacking
       time: "13:30"
@@ -93,13 +93,13 @@ schedule:
       time: "9:00"
       duration: "1:30"
       color: "#1f331e"
-      id: frmi
+      link: "#frmi"
       priority: 1
     - name: Introduction to Meta-analyses
       time: "10:30"
       duration: "1:30"
       color: "#1f331e"
-      id: meta-analysis
+      link: "#meta-analysis"
       priority: 1
     - name: Lunch
       time: "12:00"
@@ -108,7 +108,7 @@ schedule:
       time: "13:30"
       duration: "2:30"
       color: "#1f331e"
-      id: fnirs
+      link: "#fnirs"
       priority: 1
     - name: Hacking
       time: "13:30"
@@ -130,13 +130,13 @@ schedule:
       time: "9:00"
       duration: "1:30"
       color: "#1f331e"
-      id: machine-learning
+      link: "#machine-learning"
       priority: 1
     - name: Intro to Deep Learning
       time: "10:30"
       duration: "1:30"
       color: "#1f331e"
-      id: deep-learning
+      link: "#deep-learning"
       priority: 1
     - name: Lunch
       time: "12:00"
@@ -173,12 +173,12 @@ tutorials:
             name: Introduction to Datalad
             image: /img/datalad.png
             description: |
-              DataLad, “a free and open-source data management system for everyone,” is a 
-              powerful tool for obtaining data, managing your own research data, and 
-              exposing your data to others. This tutorial will start by introducing the 
-              basics of DataLad, then we’ll use it to download some open data that may be 
-              useful for a Brainhack project. We’ll process that data and use DataLad to 
-              keep track of the resulting derivatives, and show how to make that data available 
+              DataLad, “a free and open-source data management system for everyone,” is a
+              powerful tool for obtaining data, managing your own research data, and
+              exposing your data to others. This tutorial will start by introducing the
+              basics of DataLad, then we’ll use it to download some open data that may be
+              useful for a Brainhack project. We’ll process that data and use DataLad to
+              keep track of the resulting derivatives, and show how to make that data available
               to collaborators.
   - day: 2
     month: 12
@@ -194,8 +194,8 @@ tutorials:
               underlying contrast mechanism, scanning, task design, standard
               preprocessing steps, basic processing, and results interpretation.
               The overview will shift to cover the BIDS app, fMRIPrep. Various
-              ways to run fMRIPrep will be shown, however, due to time constraints, 
-              fMRIPrep will not be run in real time. Time will be spent discussing 
+              ways to run fMRIPrep will be shown, however, due to time constraints,
+              fMRIPrep will not be run in real time. Time will be spent discussing
               the output of fMRIPrep, including going through a real output report.
           - id: meta-analysis
             name: Introduction to Meta-analyses for Neuroimaging Data
@@ -204,8 +204,8 @@ tutorials:
               Meta-analyses of neuroimaging data are a good way to get started with
               understanding neuroimaging and task-based neural processing. This tutorial
               will cover the various aspects of designing a meta-analysis and some of the more
-              popular methods, including both topic- and contrast-based meta-analyses and 
-              coordinate- and image-based meta-analyses. Some hands-on work with the 
+              popular methods, including both topic- and contrast-based meta-analyses and
+              coordinate- and image-based meta-analyses. Some hands-on work with the
               python-based tool NiMARE with a sample dataset will be included to help
               attendees appreciate some of the nuances between the various types of
               meta-analyses.
@@ -223,7 +223,7 @@ tutorials:
               offers reasonable spatial and temporal resolution, and is easily combined
               with other neuroimaging methods. In this session, we’ll discuss fNRIS
               methodology and applications, as well as the current state of affairs for
-              fNIRS analysis. There will be a live-demonstration of the fNIRS system, 
+              fNIRS analysis. There will be a live-demonstration of the fNIRS system,
               as well as some hands-on experience with analyzing fNRIS data using
               the Matlab-based toolbox, Homer.
   - day: 3
@@ -243,12 +243,10 @@ tutorials:
             name: Introduction to Deep Learning
             image: /img/deep-learn.png
             description: |
-              This tutorial will start with a brief introduction and then focus on 
-              hands-on experience with Tensorflow. Topics will include 
-                1) Organization of code into classes, functions, and the Tensorgraph, 
-                2) Examples of dense and convolutional networks for real problems using 
-                   high-level Tensorflow tools such as built-in Keras functions, 
-                3) An open session for exploring and adapting existing NNs or for 
+              This tutorial will start with a brief introduction and then focus on
+              hands-on experience with Tensorflow. Topics will include
+                1) Organization of code into classes, functions, and the Tensorgraph,
+                2) Examples of dense and convolutional networks for real problems using
+                   high-level Tensorflow tools such as built-in Keras functions,
+                3) An open session for exploring and adapting existing NNs or for
                    helping attendees build their own networks.
-    
-    

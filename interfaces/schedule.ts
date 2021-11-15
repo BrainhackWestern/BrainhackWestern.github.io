@@ -33,9 +33,10 @@ export interface ScheduleDay extends BasicDate {
         color?: string;
 
         /**
-        * Optional id to link tutorial to a listing in the tutorial section
+        * Optional link. Use '#link' to link to an id on the page, otherwise use an
+        * absolute url
         */
-        id?: string;
+        link?: string;
 
         /**
          * Used to control where the event appears when mutliple events are stacked

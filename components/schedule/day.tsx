@@ -12,7 +12,7 @@ interface DayProps {
         time: string;
         duration: string;
         color?: string;
-        id?: string;
+        link?: string;
         widthFactor?: number;
         position?: number;
     }[]
@@ -33,7 +33,7 @@ export const Day = (props: DayProps) => {
             position={event.position ?? 0}
             padding={10}
             color={event.color}
-            id={event.id}
+            link={event.link}
         />
     });
 
