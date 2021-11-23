@@ -13,6 +13,7 @@ interface DayProps {
         duration: string;
         color?: string;
         link?: string;
+        room?: string | string[];
         widthFactor?: number;
         position?: number;
     }[]
@@ -23,7 +24,7 @@ export const Day = (props: DayProps) => {
     const dateString = formatDate(props.date);
     const events = props.events.map((event, i) => {
         return <Event
-            key={i} 
+            key={i}
             name={event.name}
             time={event.time}
             dayStartTime={props.startTime}
@@ -34,6 +35,7 @@ export const Day = (props: DayProps) => {
             padding={10}
             color={event.color}
             link={event.link}
+            room={event.room}
         />
     });
 

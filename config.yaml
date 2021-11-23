@@ -56,32 +56,45 @@ schedule:
     - name: Breakfast
       time: "8:00"
       duration: "1:00"
+      room: WIRB 4190
     - name: Welcome & Project Pitches
       time: "9:00"
       duration: "1:30"
+      room:
+        - WIRB 1170
+        - Zoom Room 1
     - name: Hacking
       time: "10:30"
       duration: "1:30"
       color: red
+      room: WIRB 1130
     - name: Lunch
       time: "12:00"
       duration: "1:30"
+      room: WIRB 4190
     - name: MRI Data in Python
       time: "13:30"
       duration: "1:00"
       color: "#1f331e"
       link: "#python"
       priority: 1
+      room:
+        - WIRB 1110
+        - Zoom Room 1
     - name: Intro to Datalad
       time: "14:30"
       duration: "1:30"
       color: "#1f331e"
       link: "#datalad"
       priority: 1
+      room:
+        - WIRB 1160
+        - Zoom Room 2
     - name: Hacking
       time: "13:30"
       duration: "2:30"
       color: red
+      room: WIRB 4190
   - day: 2
     month: 12
     year: 2021
@@ -89,41 +102,57 @@ schedule:
     - name: Breakfast
       time: "8:00"
       duration: "1:00"
+      room: WIRB 4190
     - name: fMRI/fMRIPrep
       time: "9:00"
       duration: "1:30"
       color: "#1f331e"
       link: "#frmi"
       priority: 1
+      room:
+        - WIRB 1170
+        - Zoom Room 1
     - name: Introduction to Meta-analyses
       time: "10:30"
       duration: "1:30"
       color: "#1f331e"
       link: "#meta-analysis"
       priority: 1
+      room:
+        - WIRB 4190
+        - Zoom Room 2
     - name: Lunch
       time: "12:00"
       duration: "1:30"
+      room: WIRB 4190
     - name: Intro to fNIRS
       time: "13:30"
       duration: "2:30"
       color: "#1f331e"
       link: "#fnirs"
       priority: 1
+      room:
+        - WIRB 1110
+        - Zoom Room 1
     - name: Hacking
       time: "13:30"
       duration: "2:30"
       color: red
+      room:
+        - NSC 1 (9:00-12:00)
+        - WIRB 1160 (10:30-12:00)
     - name: Hacking
       time: "9:00"
       duration: "3:00"
       color: red
+      room:
+        - WIRB 4190 (1:30-2:30)
+        - VAC 100 (1:30-4:00)
     - name: "Diversity in Academia"
       time: "12:30"
-      duration: "1:00"
+      duration: "0:45"
       color: blue
       link: "https://github.com/BrainhackWestern/BrainhackWestern.github.io/wiki/Lunch-and-Learn#winrepo"
-
 
   - day: 3
     month: 12
@@ -132,32 +161,49 @@ schedule:
     - name: Breakfast
       time: "8:00"
       duration: "1:00"
+      room: WIRB 4190
     - name: Intro to Machine Learning
       time: "9:00"
       duration: "1:30"
       color: "#1f331e"
       link: "#machine-learning"
       priority: 1
+      room:
+        - WIRB 1130
+        - Zoom Room 1
     - name: Intro to Deep Learning
       time: "10:30"
       duration: "1:30"
       color: "#1f331e"
       link: "#deep-learning"
       priority: 1
+      room:
+        - WIRB 1130
+        - Zoom Room 2
     - name: Lunch
       time: "12:00"
       duration: "1:30"
+      room: WIRB 4190
     - name: Hacking
       time: "9:00"
       duration: "3:00"
       color: red
+      room:
+        - WIRB 4190 (9:30-12:00)
+        - VAC 100 (9:00-12:00)
     - name: Hacking
       time: "13:30"
       duration: "1:00"
       color: red
+      room:
+        - WIRB 4190 (1:30-2:00)
+        - VAC 100 (1:30-2:30)
     - name: Project presentations & Wrap-up
       time: "14:30"
       duration: "1:30"
+      room:
+        - VAC 100
+        - Zoom Room 1
 tutorials:
   - day: 1
     month: 12

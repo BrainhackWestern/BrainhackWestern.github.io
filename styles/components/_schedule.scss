@@ -30,7 +30,7 @@
 
     .day-col {
       max-width: 80%;
-      width: 300px;
+      width: 320px;
       margin: 0 0.5em;
     }
 
@@ -55,12 +55,19 @@
     }
 
     .event-name {
-      font-size: var.$body_norm;
+      font-size: var.$body_small;
+      font-weight: var.$weight_bold;
       margin-bottom: 0;
     }
 
     .event-time {
       font-size: var.$body_small;
+      margin-bottom: 0;
+    }
+
+    .event-room {
+      font-size: var.$body_small;
+      height: 1.5em;
     }
 
     .event-more-info {

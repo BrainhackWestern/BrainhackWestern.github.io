@@ -147,16 +147,15 @@ const Home = ({ config, calendar }: InferGetStaticPropsType<typeof getStaticProp
       <Schedule
         config={config.schedule}
         calendar={calendar}
-        lineHeight={100}
+        lineHeight={120}
         show={config.displaySections.schedule ?? true}
       />
 
-      <TutorialList 
+      <TutorialList
         config={config.tutorials}
         show={config.displaySections.tutorial ?? true }
       />
-      
-      
+
       <div id="location" className="content-space container-lg">
         <div className="row">
           <div className="col-lg-4 d-flex flex-column justify-content-start align-items-start">

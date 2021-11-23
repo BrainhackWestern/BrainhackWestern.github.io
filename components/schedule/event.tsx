@@ -9,6 +9,7 @@ interface EventProps {
     padding: number;
     link?: string;
     color?: string;
+    room?: string | string[];
 }
 
 const colorLookup = {
@@ -34,6 +35,8 @@ export const Event = (props: EventProps) => {
     const leftPadding = left ? 2 : 0;
     const rightPadding = right ? 2 : 0;
 
+    const room_str = props.room ? getRoomStr(props.room) : null;
+
     const el = (
         <div
             className="event"
@@ -47,6 +50,10 @@ export const Event = (props: EventProps) => {
         >
             <p className="event-name">{props.name}</p>
             <p className="event-time">{to12Hr(props.time)}</p>
+            {
+                room_str ? <p className="event-room">{room_str}</p>: null
+            }
+
             {
                 props.link ? <p className="event-more-info">more info</p> : null
             }
@@ -72,4 +79,27 @@ const to12Hr = (time: string) => {
     const hrMin = time.split(":");
     const hr = (Number(hrMin[0]) - 1) % 12 + 1;
     return `${hr}:${hrMin[1]}`;
+}
+
+const getRoomStr = (room: string | string[]) => {
+    if (room instanceof Array) {
+        return join_br(room);
+    }
+    return <>{room}</>;
+}
+
+const join_br = (items: string[]) => {
+    const firstline = items[0];
+    const rest = items.slice(1);
+    return (
+        <>
+            {firstline}
+            {rest.map(line => (
+                <>
+                    <br />
+                    {line}
+                </>
+            ))}
+        </>
+    )
 }
