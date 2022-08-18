@@ -21,6 +21,20 @@ Ensure you have node installed on your system. See [here for installers](https:/
 npm install
 ```
 
+Next you'll need to compile the calendar. This step requires, which, if necessary, can be installed using
+
+```bash
+pip install --user pipx
+```
+
+Once installed, run
+
+```bash
+npm run compile-calendar
+```
+
+Note that if you update the calendar, the above command must be run again.
+
 Start the server with:
 
 ```
