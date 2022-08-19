@@ -14,8 +14,11 @@
   "dependencies": {
     "bootstrap": "^5.1.3",
     "color-interpolate": "^1.0.5",
+    "email-validator": "^2.0.4",
     "js-yaml": "^4.1.0",
+    "lodash": "^4.17.21",
     "next": "^12.2.5",
+    "nodemailer": "^6.7.8",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-markdown": "^7.0.1",
@@ -25,6 +28,7 @@
     "ts-debounce": "^3.0.0"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.183",
     "@types/bootstrap": "^5.1.6",
     "@types/color": "^3.0.2",
     "@types/js-yaml": "^4.0.3",

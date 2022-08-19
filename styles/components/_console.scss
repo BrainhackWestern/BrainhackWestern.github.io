@@ -1,0 +1,41 @@
+@use "../variables" as var;
+@use "../mixins";
+@use "bootstrap/scss/bootstrap" as bootstrap;
+
+.console {
+    background-color: #141414;
+    font-family: 'Consolas';
+    padding: 1em;
+    font-size: var.$body_norm;
+
+    @include bootstrap.media-breakpoint-up(lg) {
+        font-size: var.$body_large;
+    }
+
+    .blue {
+        color: #4A90E2;
+    }
+
+    .green {
+        color: #7ED321
+    }
+
+    .red {
+        color: #D0021B
+    }
+
+    .yellow {
+        color: #F8E71C
+    }
+
+}
+
+.signup-form {
+    display: inline;
+
+    input {
+        all: unset;
+        color: white;
+        background: inherit;
+    }
+}

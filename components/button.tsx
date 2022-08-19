@@ -11,7 +11,9 @@ export const Button = (props: WhiteBoxProps) => {
                 window.location.href=props.target;
             }
         }}>
-            <span>{props.children}</span>
+            <div className="inner">
+                <span>{props.children}</span>
+            </div>
         </button>
     )
 }

@@ -4,29 +4,31 @@
 .app {
   position: relative;
   min-height: 100vh;
-  padding: 0 0.5rem;
   margin: 0;
   width: 100%;
+  // background: linear-gradient(95deg, #00051f 0%, #00102b 53%, #14001e 100%);
   background-color: variables.$background;
 }
 
-.navbar-dark {
-  background-color: variables.$background600;
-
-  @include bootstrap.media-breakpoint-up(lg) {
-    background-color: variables.$background-transparent;
-  }
-}
 
 .window {
   height: 100vh;
+  padding: 2em;
+}
+
+.splash {
+  position: relative;
+  background: radial-gradient(ellipse 200% 100% at 50% 100%, #240051  0%, #68CDFF 32%, #dbffe9 85%);
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  background-size: 100% 100%;
 }
 
 .background-img {
   position: absolute;
   overflow: hidden;
   max-height: 95vh;
-  max-width: 980px;
+  max-width: 1300px;
   width: 100%;
   right: 0;
   top: 5vh;
@@ -70,7 +72,7 @@ h3 {
 }
 
 .white-box {
-  background-color: #ffffff;
+  background-color: variables.$background_light;
   width: 100%;
   padding: 3em 0;
 

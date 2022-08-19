@@ -1,0 +1,24 @@
+@use "../variables" as var;
+@use "../mixins";
+@use "bootstrap/scss/bootstrap" as bootstrap;
+
+.navbar {
+
+    $navbar_hidden: rgb(240, 240, 240, 0);
+    $navbar_visible: rgb(240, 240, 240, 1);
+    background-color: $navbar_hidden;
+    transition: background-color 0.25s;
+    &.navbar-white {
+    background-color: $navbar_visible;
+    }
+
+    
+    .navbar-dark {
+    background-color: var.$background_light;
+
+        @include bootstrap.media-breakpoint-up(lg) {
+            background-color: var.$background-transparent;
+        }
+    }
+
+}

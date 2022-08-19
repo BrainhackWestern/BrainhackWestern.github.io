@@ -1,16 +1,17 @@
-$background: #1e1e1e;
 $highlight: #9f30ff;
-$background_light: #f9f9f9;
-
+$background0: #f0f0f0;
 $background100: #a5a5a5;
 $background200: #787878;
 $background300: #4b4b4b;
-$background400: $background;
+$background400: #1e1e1e;
 $background500: #1b1b1b;
 $background600: #151515;
 $background700: #0f0f0f;
 $background800: #090909;
 $background900: #030303;
+
+$background_light: $background0;
+$background: $background400;
 
 $background-transparent: rgba(30, 30, 30, 0.7);
 

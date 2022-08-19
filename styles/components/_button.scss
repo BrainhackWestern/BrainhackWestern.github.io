@@ -1,17 +1,41 @@
 @use "../variables" as var;
 @use "bootstrap/scss/bootstrap" as bootstrap;
 
+$button_background: linear-gradient(90deg, rgba(12,110,100,1) 0%, rgba(44,76,129,1) 53%, rgba(132,10,171,1) 100%);
+
+@mixin pseudoblock($offset) {
+  content: '';
+  display: block;
+  position: absolute;
+  top: $offset;
+  bottom: $offset;
+  left: $offset;
+  right: $offset;
+}
+
+@mixin transition_bounds($time) {
+  transition: top $time, bottom $time, left $time, right $time;
+}
 @mixin button($size) {
+  position: relative;
   display: inline;
   align-self: center;
-  background-color: var.$highlight;
-  border-style: solid;
-  border-color: var.$highlight;
-  border-radius: 10px;
-  border-width: 5px;
-  padding: 0.5em 2em;
-  transition: background-color 0.2s;
+  border: none;
+  background: none;
+  padding: 0;
 
+  .inner {
+    position: relative;
+    background: rgb(12,110,100);
+    background: $button_background;
+    border-style: solid;
+    // border-color: var.$highlight;
+    border-radius: 10px;
+    border-width: 0px;
+    padding: 0.7em 2em;
+
+    z-index: 3;
+  }
   span {
     font-size: var.$body_large;
     color: var.$font-light;
@@ -23,10 +47,38 @@
       font-size: $size;
     }
   }
-
-  &:hover {
-    background-color: var.$background500;
+  &::before {
+    @include pseudoblock(0em);
+    background: var.$background;
+    z-index: 2;
+    border-radius: 10px;
+    @include transition_bounds((0.15s))
   }
+
+  &::after {
+    @include pseudoblock(0em);
+    background: $button_background;
+    z-index: 1;
+    border-radius: 14px;
+    @include transition_bounds((0.20s))
+    // background-color: var.$background500;
+  }
+
+  &:hover::before {
+    @include pseudoblock(-0.2em);
+    background: var.$background;
+    z-index: 2;
+    border-radius: 10px;
+  }
+
+  &:hover::after {
+    @include pseudoblock(-0.5em);
+    background: $button_background;
+    z-index: 1;
+    border-radius: 14px;
+    // background-color: var.$background500;
+  }
+
 }
 
 .button {

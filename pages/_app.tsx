@@ -2,6 +2,7 @@ import '../styles/globals.scss'
 import type { AppProps } from 'next/app'
 import ScreenSizeProvider from '../services/screen-size/provider'
 import { useEffect } from 'react';
+import ScrollPositionProvider from '../services/scroll-position/provider';
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -10,9 +11,11 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, []);
   
   return (
-    <ScreenSizeProvider>
-      <Component {...pageProps} />
-    </ScreenSizeProvider>
+    <ScrollPositionProvider>
+      <ScreenSizeProvider>
+        <Component {...pageProps} />
+      </ScreenSizeProvider>
+    </ScrollPositionProvider>
   )
 }
 export default MyApp

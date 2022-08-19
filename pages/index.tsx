@@ -11,13 +11,13 @@ import Obfuscate from 'react-obfuscate'
 
 import { basePath } from '../utils/image-loader'
 
-import asciiArt from "../public/img/ascii_art_cropped.png"
+import brainNetwork from "../public/img/splash-brain-network.png"
 import upvote from "../public/img/upvote.png"
 import learn_skillz from "../public/img/learn_skillz_cropped.png"
 import global_logo from "../public/img/global_logo.png"
 import dollar_signs from "../public/img/dollar_signs.png"
 import hack from "../public/img/hack.png"
-import main_logo from "../public/img/logo_2021_light.png"
+import main_logo from "../public/img/2022-splash-logo.png"
 
 import { SiteConfig } from '../interfaces/site-config'
 import { Logo } from '../components/logo'
@@ -55,27 +55,30 @@ const Home = ({ config, calendar }: InferGetStaticPropsType<typeof getStaticProp
         <meta name="description" content="Western Brainhack brings together researchers and trainees of all backgrounds to collaborate on open science projects in neuroimaging and neuroscience." />
       </Head>
 
-      <NavBar/>
+      <NavBar displaySections={config.displaySections}/>
 
-      <div className="window d-flex flex-column justify-content-center container-lg">
-        <div className="background-img">
-          <Image src={asciiArt} />
-        </div>
-        <div className="row title-col">
-          <div className="col-12 col-lg-4 d-flex flex-column align-items-center ">
-            <div className="logo">
-              <Image src={main_logo} width={280} height={186} />
-            </div>
-            <hr/>
-            <h3>London, ON</h3>
-            <h3>Dec 1-3</h3>
+      <div className="splash">
+        <div className="window d-flex flex-row justify-content-start container-fluid">
+          <div className="background-img">
+            <Image src={brainNetwork} />
           </div>
-          <div className="col-12 col-lg-8 d-flex flex-column align-items-center justify-content-center">
-            <div className="flex-lg-fill"></div>
-            <RegisterButton  
-              status={config.registration.status}
-              url={config.registration.url} 
-            />
+          <div className="col-12 col-lg-4 d-flex flex-column justify-content-end title-col">
+            <div className="flex-fill"></div>
+            <div className="flex-fill"></div>
+            <div className="row-2">
+              <RegisterButton
+                status={config.registration.status}
+                url={config.registration.url} 
+              />
+            </div>
+            <div className="row-2 flex-fill"></div>
+            <div className="row-4 d-flex flex-column align-items-center justify-content-end">
+              {/* <h3>London, ON</h3>
+              <h3>Dec 1-3</h3> */}
+              <div className="logo">
+                <Image src={main_logo} width={406} height={186} />
+              </div>
+            </div>
           </div>
         </div>
       </div>

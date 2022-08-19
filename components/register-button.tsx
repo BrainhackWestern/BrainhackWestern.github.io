@@ -1,5 +1,9 @@
+import { useState } from "react";
 import { Button } from "./button"
+import { Console } from "./console";
+import EmailForm from "./email-form";
 import { MsgCard } from "./msg-card"
+import { UpdatesSignup } from "./updates-signup";
 
 interface RegisterButtonProps {
     status: "unopened" | "open" | "closed";
@@ -8,12 +12,16 @@ interface RegisterButtonProps {
 }
 
 export const RegisterButton = (props: RegisterButtonProps) => {
+    const [ validEmail, setValidEmail ] = useState(true);
+    const [ submittedEmail, setSubmittedEmail ] = useState(false);
+    const [ submissionError, setSubmissionError ] = useState(false);
     const alignClass = (
-        props.alignment == "left" ? 
-            "align-self-lg-start" : 
+        props.alignment == "left" ?
+            "align-self-lg-start" :
             "align-self-lg-center"
     ) + " align-self-center";
-    
+
+
     return (
         <div className={alignClass}>
             {
@@ -26,9 +34,7 @@ export const RegisterButton = (props: RegisterButtonProps) => {
                         )
                     } else if (props.status === "unopened") {
                         return(
-                            <MsgCard>
-                                Registration opens soon!
-                            </MsgCard>
+                            <UpdatesSignup/>
                         )
                     } else {
                         return (

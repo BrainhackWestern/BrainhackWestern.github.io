@@ -1,11 +1,11 @@
 # yaml-language-server: $schema=public/schemas/brainhack-config.json
 displaySections:
-  tutorial: true
-  schedule: true
+  tutorial: false
+  schedule: false
 registration:
   cost: 5
   url: https://www.eventbrite.ca/e/brainhack-western-2021-tickets-200482477487
-  status: closed
+  status: unopened
 location:
   name: Western Interdisciplinary Research Building
   street: Perth Dr
@@ -16,24 +16,9 @@ location:
 organizers:
   - Ali Khan
   - Suzanne Witt
-  - Dimunthu Henadeerage Don
   - Tristan Kuehn
-  - Aidasadat Tafreshi
-  - Priya Kalra
-  - Charlotte Liang
-  - Aria Fallah
-  - Liam Bilbie
-  - Matthew Little
-  - Azadeh Jafari
-  - Esmin Unaran
-  - Derrick Xiang
-  - Aishwarya Pathak
-  - Sam Mestern
-  - Farah Mushtaha
   - Peter Van Dyken
-  - Naila Rahman
-  - Brandon Hu
-  - Aysha Motala
+  - Alaa Taha
 sponsors:
   - img: "/img/brainscan_logo.png"
     name: Brainscan
