@@ -1,4 +1,5 @@
-import Image, { StaticImageData } from "next/image"
+import { StaticImageData } from "next/image"
+import Image from "./image"
 import useScreenSize, { screenSizes } from "../services/screen-size/use"
 
 interface ImageProps {

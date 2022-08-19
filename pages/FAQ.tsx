@@ -3,7 +3,7 @@ import { promises as fs } from 'fs'
 
 import type { InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
+import Image from '../components/image'
 import Link from 'next/link'
 
 import yaml from 'js-yaml'

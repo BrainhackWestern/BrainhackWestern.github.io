@@ -1,6 +1,6 @@
 import logo from "../public/img/brainhack_logo.png";
 import Link from "next/link";
-import Image from "next/dist/client/image";
+import Image from "./image";
 import useScrollPosition from "../services/scroll-position/use";
 import { getStaticProps } from "../pages/FAQ";
 import { useState } from "react";

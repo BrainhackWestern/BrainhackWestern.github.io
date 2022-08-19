@@ -4,7 +4,6 @@ import { promises as fs } from 'fs'
 
 import type { InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 
 import yaml from 'js-yaml'
 import Obfuscate from 'react-obfuscate'
@@ -19,6 +18,7 @@ import dollar_signs from "../public/img/dollar_signs.png"
 import hack from "../public/img/hack.png"
 import main_logo from "../public/img/2022-splash-logo.png"
 
+import Image from '../components/image'
 import { SiteConfig } from '../interfaces/site-config'
 import { Logo } from '../components/logo'
 import { NavBar } from '../components/navbar'

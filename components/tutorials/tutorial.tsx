@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "../image";
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { CSSProperties } from "react";
