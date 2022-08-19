@@ -2,15 +2,13 @@ import logo from "../public/img/brainhack_logo.png";
 import Link from "next/link";
 import Image from "./image";
 import useScrollPosition from "../services/scroll-position/use";
-import { getStaticProps } from "../pages/FAQ";
+import { DisplaySections } from "../interfaces/site-config"
 import { useState } from "react";
 
 interface NavBarProps {
-  displaySections: {
-    tutorial?: boolean;
-    schedule?: boolean;
-  };
+  displaySections: DisplaySections;
 }
+
 export const NavBar = ({ displaySections }: NavBarProps) => {
   const {
     state: { scrollPosition },

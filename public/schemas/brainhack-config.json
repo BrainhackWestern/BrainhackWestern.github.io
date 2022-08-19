@@ -94,8 +94,8 @@
                                 "pattern": "^\\d\\d?\\:\\d\\d$",
                                 "type": "string"
                             },
-                            "id": {
-                                "description": "Optional id to link tutorial to a listing in the tutorial section",
+                            "link": {
+                                "description": "Optional link. Use '#link' to link to an id on the page, otherwise use an\nabsolute url",
                                 "type": "string"
                             },
                             "name": {
@@ -108,6 +108,20 @@
                             "priority": {
                                 "description": "Used to control where the event appears when mutliple events are stacked\nside by side. Higher priority events appear closer to the left.",
                                 "type": "number"
+                            },
+                            "room": {
+                                "anyOf": [
+                                    {
+                                        "items": {
+                                            "type": "string"
+                                        },
+                                        "type": "array"
+                                    },
+                                    {
+                                        "type": "string"
+                                    }
+                                ],
+                                "description": "Optional string or list of strings listing the rooms."
                             },
                             "time": {
                                 "description": "Time of the event (in 24hr time)",
@@ -271,6 +285,11 @@
                 "tutorial": {
                     "default": true,
                     "description": "Display the list of tutorials",
+                    "type": "boolean"
+                },
+                "twitterFeed": {
+                    "default": true,
+                    "description": "Display the twitter feed",
                     "type": "boolean"
                 }
             },
