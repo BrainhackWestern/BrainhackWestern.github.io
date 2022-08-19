@@ -6,6 +6,7 @@
       "dom.iterable",
       "esnext"
     ],
+    "typeRoots": ["env.d.ts"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,

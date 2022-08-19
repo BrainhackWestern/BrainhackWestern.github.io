@@ -4,9 +4,9 @@ const path = require('path')
 
 const imgLoader = () => {
   const loader = process.env.NEXT_PUBLIC_LOADER || 'default';
-  if (loader === "default") {
+  if (["default", "custom"].includes(loader)) {
     return {
-      loader: "default"
+      loader: loader
     }
   } else {
     return {
