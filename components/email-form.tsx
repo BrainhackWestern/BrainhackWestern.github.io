@@ -19,11 +19,11 @@ export default function EmailForm(props: SignupFormProps) {
 
     const onSubmit = (event: FormEvent) => {
         event.preventDefault();
-        props.setWaiting(true);
         if (!validate(email)) {
             props.setValidity(false);
             return;
         }
+        props.setWaiting(true);
         props.setValidity(true);
         setTimeout(() => {
             const data = {
