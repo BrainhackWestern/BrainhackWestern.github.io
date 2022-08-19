@@ -11,7 +11,7 @@ const imgLoader = () => {
   } else {
     return {
       loader: loader,
-      path: "https://brainhack-western.imgix.net/"
+      path: process.env.NEXT_IMAGE_LOADER_URL
     }
   }
 }
