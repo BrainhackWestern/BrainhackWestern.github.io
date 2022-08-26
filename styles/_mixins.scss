@@ -1,3 +1,13 @@
 @mixin shadow {
   box-shadow: 0 16px 30px rgb(0, 0, 0, 0.9);
 }
+
+@mixin pseudoblock($offset) {
+  content: '';
+  display: block;
+  position: absolute;
+  top: $offset;
+  bottom: $offset;
+  left: $offset;
+  right: $offset;
+}

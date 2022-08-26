@@ -118,3 +118,25 @@ footer {
     font-size: variables.$body_small;
   }
 }
+
+article {
+  h1 {
+    padding: 2em 0em 1em 0em
+  }
+  h1::before {
+    content: "#";
+    display: inline;
+    color: variables.$highlight
+  }
+  h3 {
+    display: inline-block;
+    text-align: left;
+    background: variables.$highlight_dark;
+    padding: 0.5em 1em;
+    font-size: variables.$body_large;
+  }
+
+  section {
+    margin-bottom: 2em;
+  }
+}

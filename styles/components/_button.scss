@@ -1,17 +1,9 @@
 @use "../variables" as var;
 @use "bootstrap/scss/bootstrap" as bootstrap;
+@use "../mixins" as mixins;
 
 $button_background: linear-gradient(90deg, rgba(12,110,100,1) 0%, rgba(44,76,129,1) 53%, rgba(132,10,171,1) 100%);
 
-@mixin pseudoblock($offset) {
-  content: '';
-  display: block;
-  position: absolute;
-  top: $offset;
-  bottom: $offset;
-  left: $offset;
-  right: $offset;
-}
 
 @mixin transition_bounds($time) {
   transition: top $time, bottom $time, left $time, right $time;
@@ -48,7 +40,7 @@ $button_background: linear-gradient(90deg, rgba(12,110,100,1) 0%, rgba(44,76,129
     }
   }
   &::before {
-    @include pseudoblock(0em);
+    @include mixins.pseudoblock(0em);
     background: var.$background;
     z-index: 2;
     border-radius: 10px;
@@ -56,7 +48,7 @@ $button_background: linear-gradient(90deg, rgba(12,110,100,1) 0%, rgba(44,76,129
   }
 
   &::after {
-    @include pseudoblock(0em);
+    @include mixins.pseudoblock(0em);
     background: $button_background;
     z-index: 1;
     border-radius: 14px;
@@ -65,14 +57,14 @@ $button_background: linear-gradient(90deg, rgba(12,110,100,1) 0%, rgba(44,76,129
   }
 
   &:hover::before {
-    @include pseudoblock(-0.2em);
+    @include mixins.pseudoblock(-0.2em);
     background: var.$background;
     z-index: 2;
     border-radius: 10px;
   }
 
   &:hover::after {
-    @include pseudoblock(-0.5em);
+    @include mixins.pseudoblock(-0.5em);
     background: $button_background;
     z-index: 1;
     border-radius: 14px;

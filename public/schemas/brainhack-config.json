@@ -2,6 +2,89 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "additionalProperties": false,
     "definitions": {
+        "DisplaySections": {
+            "additionalProperties": false,
+            "description": "Allows turning specific sections of the website off. This is useful if\nthe content for these parts is not fully ready.",
+            "properties": {
+                "schedule": {
+                    "default": true,
+                    "description": "Display the schedule",
+                    "type": "boolean"
+                },
+                "tutorial": {
+                    "default": true,
+                    "description": "Display the list of tutorials",
+                    "type": "boolean"
+                },
+                "twitterFeed": {
+                    "default": true,
+                    "description": "Display the twitter feed",
+                    "type": "boolean"
+                }
+            },
+            "type": "object"
+        },
+        "EmbeddedForm": {
+            "properties": {
+                "embedTag": {
+                    "description": "The embedding tag copied from the site",
+                    "type": "string"
+                },
+                "hidden": {
+                    "default": false,
+                    "description": "Whether the form should be viewable (vs returning form not found)",
+                    "type": "boolean"
+                },
+                "shortTitle": {
+                    "description": "Short version of the title to be used in links",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "The friendly title that will appear at the top of the form",
+                    "type": "string"
+                },
+                "type": {
+                    "enum": [
+                        "cognito"
+                    ],
+                    "type": "string"
+                }
+            },
+            "required": [
+                "embedTag",
+                "shortTitle",
+                "title",
+                "type"
+            ],
+            "type": "object"
+        },
+        "Event": {
+            "description": "Basic info about the event",
+            "properties": {
+                "year": {
+                    "type": "number"
+                }
+            },
+            "required": [
+                "year"
+            ],
+            "type": "object"
+        },
+        "FAQ": {
+            "properties": {
+                "answer": {
+                    "type": "string"
+                },
+                "question": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "answer",
+                "question"
+            ],
+            "type": "object"
+        },
         "LocationConfig": {
             "additionalProperties": false,
             "properties": {
@@ -9,7 +92,7 @@
                     "type": "string"
                 },
                 "maps_id": {
-                    "description": "Map ID from Google Maps Embed API, as in: \n...?q=place_id:<MAP ID>&key=...",
+                    "description": "Map ID from Google Maps Embed API, as in:\n...?q=place_id:<MAP ID>&key=...",
                     "type": "string"
                 },
                 "name": {
@@ -274,24 +357,20 @@
     "description": "Config interface for Brainhack. Contains\nall the information needed to display the site",
     "properties": {
         "displaySections": {
-            "additionalProperties": false,
-            "description": "Allows turning specific sections of the website off. This is useful if\nthe content for these parts is not fully ready.",
-            "properties": {
-                "schedule": {
-                    "default": true,
-                    "description": "Display the schedule",
-                    "type": "boolean"
-                },
-                "tutorial": {
-                    "default": true,
-                    "description": "Display the list of tutorials",
-                    "type": "boolean"
-                },
-                "twitterFeed": {
-                    "default": true,
-                    "description": "Display the twitter feed",
-                    "type": "boolean"
-                }
+            "$ref": "#/definitions/DisplaySections"
+        },
+        "event": {
+            "$ref": "#/definitions/Event"
+        },
+        "faq": {
+            "items": {
+                "$ref": "#/definitions/FAQ"
+            },
+            "type": "array"
+        },
+        "forms": {
+            "additionalProperties": {
+                "$ref": "#/definitions/EmbeddedForm"
             },
             "type": "object"
         },
@@ -341,10 +420,15 @@
                 "$ref": "#/definitions/TutorialDay"
             },
             "type": "array"
+        },
+        "twitterUrl": {
+            "description": "twitter Url link for embedded feed",
+            "type": "string"
         }
     },
     "required": [
         "displaySections",
+        "event",
         "location",
         "organizers",
         "registration",

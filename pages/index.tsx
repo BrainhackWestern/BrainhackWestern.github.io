@@ -1,11 +1,5 @@
-import path from "path";
-import { promises as fs } from "fs";
-
 import type { InferGetStaticPropsType } from "next";
 import Head from "next/head";
-
-import yaml from "js-yaml";
-import Obfuscate from "react-obfuscate";
 
 import { basePath } from "../utils/image-loader";
 
@@ -18,8 +12,6 @@ import hack from "../public/img/hack.png";
 import main_logo from "../public/img/2022-splash-logo.png";
 
 import Image from "../components/image";
-import { SiteConfig } from "../interfaces/site-config";
-import { Logo } from "../components/logo";
 import { NavBar } from "../components/navbar";
 import { Button } from "../components/button";
 import { WhiteBox } from "../components/white-box";
@@ -27,16 +19,13 @@ import { AboutRow } from "../components/about-row";
 import { Schedule } from "../components/schedule/schedule";
 import { RegisterButton } from "../components/register-button";
 import { TutorialList } from "../components/tutorials/tutorial-list";
-import { ScheduleDay } from "../interfaces/schedule";
+import Footer, { getFooterProps } from "../components/footer";
+import { readCalendar, readConfig } from "../utils/data";
 
 export const getStaticProps = async () => {
-  const configFile = path.join(process.cwd(), "config.yaml");
-  const config_data = await fs.readFile(configFile, "utf-8");
-  const config = (await yaml.load(config_data)) as SiteConfig;
+  const config = await readConfig();
+  const calendar = await readCalendar();
 
-  const calendarFile = path.join(process.cwd(), "calendar.json");
-  const calendarData = await fs.readFile(calendarFile, "utf-8");
-  const calendar = (await JSON.parse(calendarData)) as ScheduleDay[];
   return {
     props: {
       config,
@@ -52,14 +41,14 @@ const Home = ({
   return (
     <div className="app">
       <Head>
-        <title>Brainhack Western 2021</title>
+        <title>Brainhack Western {config.event.year}</title>
         <meta
           name="description"
           content="Western Brainhack brings together researchers and trainees of all backgrounds to collaborate on open science projects in neuroimaging and neuroscience."
         />
       </Head>
 
-      <NavBar displaySections={config.displaySections} />
+      <NavBar displaySections={config.displaySections} splashMode={true} />
 
       <div className="splash">
         <div className="window d-flex flex-row justify-content-start container-fluid">
@@ -127,7 +116,8 @@ const Home = ({
         <div className="row d-flex align-items-center">
           <div className="col-lg-6">
             <p>
-              Brainhack Western 2021 is an official satellite event of{" "}
+              Brainhack Western {config.event.year} is an official satellite
+              event of{" "}
               <a
                 href="https://brainhack.org/index.html"
                 title="Brainhack Global"
@@ -223,54 +213,7 @@ const Home = ({
         </div>
       </WhiteBox>
 
-      <footer>
-        <div className="content-space container-lg">
-          <div className="row">
-            <div className="col-lg-6 d-flex flex-column justify-content-start align-items-start">
-              <h3>Organizers</h3>
-              <p className="organizers">{config.organizers.join(", ")}</p>
-            </div>
-            {config.displaySections.twitterFeed ? (
-              <div className="col-lg-6 d-flex flex-column justify-content-between align-items-center">
-                <p>
-                  <a
-                    href="https://twitter.com/brainhackUWO?ref_src=twsrc%5Etfw"
-                    className="twitter-follow-button"
-                    data-dnt="true"
-                    data-show-count="false"
-                  >
-                    Follow brainhackUWO
-                  </a>
-                  <script
-                    async
-                    src="https://platform.twitter.com/widgets.js"
-                    charSet="utf-8"
-                  ></script>
-                  <br />
-                  <a
-                    className="twitter-timeline"
-                    data-width="400"
-                    data-height="500"
-                    data-dnt="true"
-                    data-theme="dark"
-                    href="https://twitter.com/brainhackUWO?ref_src=twsrc%5Etfw"
-                  >
-                    Tweets by brainhackUWO
-                  </a>{" "}
-                  <script
-                    async
-                    src="https://platform.twitter.com/widgets.js"
-                    charSet="utf-8"
-                  ></script>
-                </p>
-              </div>
-            ) : null}
-          </div>
-          <h3 id="contact">Contact</h3>
-          <Obfuscate email="brainhack.western@gmail.com" />
-          <p className="copyright">Copyright © 2022 Brainhack Western</p>
-        </div>
-      </footer>
+      <Footer {...getFooterProps(config)} />
     </div>
   );
 };

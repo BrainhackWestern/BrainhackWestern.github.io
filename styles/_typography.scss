@@ -1,6 +1,8 @@
 @use "bootstrap/scss/bootstrap" as bootstrap;
 @use "variables";
 
+$monospace: 'Fira Mono', monospace;
+
 html,
 body {
   padding: 0;
@@ -48,12 +50,12 @@ h3 {
   font-size: variables.$text_med;
 }
 
-@include bootstrap.media-breakpoint-up(xxl) {
-  h1 {
-    font-size: variables.$text_xlarge;
-  }
-}
+// @include bootstrap.media-breakpoint-up(xxl) {
+//   h1 {
+//     font-size: variables.$text_xlarge;
+//   }
+// }
 
 a {
-  color: variables.$highlight;
+  color: variables.$highlight_light;
 }

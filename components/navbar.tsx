@@ -2,14 +2,15 @@ import logo from "../public/img/brainhack_logo.png";
 import Link from "next/link";
 import Image from "./image";
 import useScrollPosition from "../services/scroll-position/use";
-import { DisplaySections } from "../interfaces/site-config"
+import { DisplaySections } from "../interfaces/site-config";
 import { useState } from "react";
 
 interface NavBarProps {
   displaySections: DisplaySections;
+  splashMode?: boolean;
 }
 
-export const NavBar = ({ displaySections }: NavBarProps) => {
+export const NavBar = ({ displaySections, splashMode }: NavBarProps) => {
   const {
     state: { scrollPosition },
   } = useScrollPosition();
@@ -17,8 +18,10 @@ export const NavBar = ({ displaySections }: NavBarProps) => {
 
   return (
     <nav
-      className={`navbar navbar-expand-lg fixed-top navbar-light ${
-        scrollPosition > 0 || open ? "navbar-white" : ""
+      className={`navbar navbar-expand-lg navbar-light ${
+        splashMode ? "fixed-top" : "sticky-top"
+      } ${
+        !splashMode || scrollPosition > 0 || open ? "navbar-white" : ""
       }`}
     >
       <div className="container-fluid">
@@ -42,26 +45,26 @@ export const NavBar = ({ displaySections }: NavBarProps) => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a href="#about" className="nav-link">
+              <a href="/#about" className="nav-link">
                 About
               </a>
             </li>
             {displaySections.schedule ?? true ? (
               <li className="nav-item">
-                <a href="#schedule" className="nav-link">
+                <a href="/#schedule" className="nav-link">
                   Schedule
                 </a>
               </li>
             ) : null}
             {displaySections.tutorial ?? true ? (
               <li className="nav-item">
-                <a href="#tutorials" className="nav-link">
+                <a href="/#tutorials" className="nav-link">
                   Tutorials
                 </a>
               </li>
             ) : null}
             <li className="nav-item">
-              <a href="#location" className="nav-link">
+              <a href="/#location" className="nav-link">
                 Location
               </a>
             </li>
@@ -75,7 +78,7 @@ export const NavBar = ({ displaySections }: NavBarProps) => {
             </li>
             <li className="nav-item">
               <a
-                href="https://github.com/BrainhackWestern/BrainhackWestern.github.io/wiki/Frequently-Asked-Questions"
+                href="/FAQ"
                 className="nav-link"
               >
                 FAQ

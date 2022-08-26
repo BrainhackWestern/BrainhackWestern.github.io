@@ -1,8 +1,71 @@
 # yaml-language-server: $schema=public/schemas/brainhack-config.json
+event:
+  year: 2022
 displaySections:
   tutorial: false
   schedule: false
   twitterFeed: false
+faq:
+  - question: What is a "Brainhack"?
+    answer: |
+      Brainhack is an academically oriented hackathon which connects researchers from
+      across many different disciplines to work together on innovative projects related
+      to neuroscience. For more details and examples of past Brainhack projects click
+      [here](https://gigascience.biomedcentral.com/articles/10.1186/s13742-016-0121-x).
+  - question: Who can participate?
+    answer: |
+      Any students (undergraduate/graduate), post-docs, staff, faculty, or clinicians
+      with an interest in coding, neuroscience or neuroimaging are encouraged to
+      participate.
+  - question: Will the event be in-person or virtual?
+    answer: |
+      Brainhack Western 2021 will be hybrid. All tutorials will be held simultaneously
+      in-person and on Zoom. Project groups will also be encouraged to ensure both
+      on-site and off-site members can fully participate in the "hacking".
+  - question: |
+      I am interested in attending a specific tutorial in-person. How do I do that?
+    answer: |
+      In keeping with current Western University guidelines, there will be room
+      occupancy limits for tutorials. As part of registration, attendees will be able to
+      select which tutorials they wish to attend in-person. We will do our best to make
+      sure that all attendees who meet the registration deadline and select specific
+      tutorials to attend in-person will be able to do so. Those who fail to select
+      tutorials will be accommodated if there is room. All tutorials will be available
+      to view live over Zoom.
+  - question: What COVID-19 rules and restrictions will be in place?
+    answer: |
+      Brainhack Western 2021 will be following all Western University campus rules
+      regarding COVID-19. This includes mandatory COVID-19 vaccination for anyone coming
+      on campus and masking and physical distancing when inside campus buildings.
+  - question: How much does it cost?
+    answer: The cost of the event is $5 CAD!
+  - question: Is it possible to attend if I am not affiliated with Western University?
+    answer: |
+      Unfortunately, due to COVID-19, we are unable to accommodate off-site participants
+      attending in-person. If you wish to attend Brainhack Western 2021 and are not
+      affiliated with Western University or any of its affiliates, you are more than
+      welcome to register and attend virtually.
+  - question: Will there be food?
+    answer: |
+      Yes! For on-site attendees, breakfast, lunch, snacks, non-alcoholic beverages, and
+      coffee will be provided throughout the event. Please indicate any dietary
+      restrictions when you register. Also, to cut down on waste, please bring your own
+      coffee mug and/or water bottle.
+  - question: What should I bring?
+    answer: |
+      Please bring your own laptop, cables, chargers, USB sticks, and some form of
+      identification (e.g. Student card or Driver's licence). Also bring anything else
+      you may need to work on your project (hardware, datasets etc.).
+  - question: What if I don't know how to code?
+    answer: |
+      Learning is an important component of a Brainhack. There will be tutorials and
+      experts around to answer questions.
+forms:
+  registration:
+    type: cognito
+    title: Brainhack 2022 Registration
+    shortTitle: Registration
+    embedTag: <script src="https://www.cognitoforms.com/f/seamless.js" data-key="dKVrRkF3yk6PnoRpFF7XGg" data-form="3"></script>
 registration:
   cost: 5
   url: https://www.eventbrite.ca/e/brainhack-western-2021-tickets-200482477487

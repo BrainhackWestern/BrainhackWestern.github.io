@@ -1,3 +1,4 @@
+import { EmbeddedForm } from "./form";
 import { ScheduleConfig } from "./schedule";
 import { TutorialDay } from "./tutorial";
 
@@ -74,6 +75,19 @@ export interface DisplaySections {
    */
   twitterFeed?: boolean;
 }
+
+export interface FAQ {
+  question: string
+  answer: string
+}
+
+/**
+ * Basic info about the event
+ */
+export interface Event {
+  year: number
+}
+
 /**
  * Config interface for Brainhack. Contains
  * all the information needed to display the site
@@ -81,11 +95,25 @@ export interface DisplaySections {
  * @additionalProperties false
  */
 export interface SiteConfig {
+  event: Event
   schedule: ScheduleConfig;
   sponsors: SponsorConfig[];
   organizers: string[];
   location: LocationConfig;
   tutorials: TutorialDay[];
+
+  forms?: {
+    /**
+     * Mapping where each key is unique identifier for the form and each value is the
+     * form metadata
+     */
+    [key: string]: EmbeddedForm;
+  }
+
+  /**
+   * twitter Url link for embedded feed
+   */
+  twitterUrl?: string
 
   registration: {
     url?: string;
@@ -93,5 +121,11 @@ export interface SiteConfig {
     status: "unopened" | "open" | "closed";
   };
 
+  faq?: FAQ[]
+
   displaySections: DisplaySections;
+}
+
+export interface ExpandedConfig extends SiteConfig {
+  currentYear: number
 }

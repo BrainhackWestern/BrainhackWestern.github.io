@@ -1,35 +1,14 @@
 @use "../variables" as var;
-@use "../mixins";
+@use "../mixins" as mixins;
+@use "../typography" as type;
 @use "bootstrap/scss/bootstrap" as bootstrap;
 
-.console {
-    background-color: #141414;
-    font-family: 'Consolas';
-    padding: 1em;
-    font-size: var.$body_norm;
-
-    @include bootstrap.media-breakpoint-up(lg) {
-        font-size: var.$body_large;
-    }
-
-    .blue {
-        color: #4A90E2;
-    }
-
-    .green {
-        color: #7ED321
-    }
-
-    .red {
-        color: #D0021B
-    }
-
-    .yellow {
-        color: #F8E71C
-    }
-
-}
-
+$console_blue:#4A90E2;
+$console_green: #7ED321;
+$console_red: #D0021B;
+$console_yellow: #F8E71C;
+$console_purple: #AE81FF;
+$console_light_white: #979797;
 .signup-form {
     display: inline;
 
@@ -37,5 +16,293 @@
         all: unset;
         color: white;
         background: inherit;
+    }
+}
+.spacer {
+    height: 10em;
+}
+
+.back-card {
+    background-color: #0000008a;
+    padding: 0;
+    h1 {
+        color: var.$font_light;
+        background-color: var.$highlight_dark;
+        padding: 0.5em;
+        margin: 0;
+
+        @include bootstrap.media-breakpoint-up(md) {
+            padding: 1em 2em;
+        }
+
+        @include bootstrap.media-breakpoint-up(lg) {
+            padding: 1em 2em 1.5em 2em;
+        }
+    }
+}
+
+.overlap-up {
+    position: relative;
+    @include bootstrap.media-breakpoint-up(lg) {
+        box-shadow: 0px 20px 100px black;
+        top: -2em;
+    }
+
+}
+.console, #registration-form {
+    background-color: #272822;
+    font-family: type.$monospace;
+    padding: 1em;
+    font-size: var.$body_norm;
+    max-width: 800px;
+
+    @include bootstrap.media-breakpoint-up(md) {
+        box-shadow: 0px 20px 100px black;
+
+    }
+
+    @include bootstrap.media-breakpoint-up(lg) {
+        box-shadow: 0px 20px 100px black;
+    }
+
+    .blue {
+        color: $console_blue;
+    }
+
+    .green {
+        color: $console_green;
+    }
+
+    .red {
+        color: $console_red;
+    }
+
+    .yellow {
+        color: $console_yellow;
+    }
+
+
+
+    h1 {
+        font-size: var.$body_large;
+        font-family: type.$monospace;
+        color: $console_purple;
+    }
+    h1::before {
+        content: "# ";
+        display: inline;
+    }
+
+    h2 {
+        color: $console_purple;
+        font-size: var.$body_large;
+        font-family: type.$monospace;
+    }
+    h2::before {
+        content: "## ";
+        display: inline;
+    }
+
+    h3 {
+        color: $console_purple;
+        font-size: var.$body_large;
+        font-family: type.$monospace;
+        text-align: left;
+    }
+    h3::before {
+        content: "### ";
+        display: inline;
+    }
+
+
+    legend {
+        color: $console_yellow;
+    }
+
+    .cog-label {
+        color: $console_yellow;
+    }
+
+    .el-input {
+        // position: relative;
+        input {
+            all: unset;
+            color: white;
+            background: inherit;
+            width: unset;
+            &::placeholder {
+                color: $console_light_white;
+                font-style: italic;
+            }
+            &:placeholder-shown {
+                border-left: 10px solid $console_light_white;
+            }
+        }
+
+        &::before {
+            content: "➔ ";
+            display: inline;
+            color: $console_green;
+        }
+
+        &:focus-within::before {
+            color: $console_purple;
+        }
+
+        // &::after {
+        //     @include mixins.pseudoblock(0);
+        //     content: '\00a0\00a0▮';
+        // }
+        // &:focus::after {
+        //     content: '';
+        // }
+    }
+
+    .el-textarea {
+        textarea {
+            border: unset;
+            color: white;
+            background: inherit;
+            &::placeholder {
+                color: grey;
+                font-style: italic;
+            }
+            &:placeholder-shown {
+                border: 1px dashed $console_light_white;
+
+            }
+            &:focus-visible {
+                outline: unset;
+                border: 1px dashed $console_purple
+            }
+        }
+
+        &::before {
+            content: "➔";
+            display: inline;
+            color: $console_green;
+            margin-right: 0.5em;
+        }
+        &:focus-within {
+            &::before {
+                color: $console_purple;
+            }
+        }
+    }
+
+    .el-radio {
+        .el-radio__input {
+            visibility: hidden;
+            width: 0;
+            display: inline-block;
+        }
+        &__label input {
+            visibility: unset;
+            width: unset;
+        }
+        &::before {
+            content: '☐ ';
+            display: inline;
+        }
+        &.is-checked::before {
+            content: '▣ ';
+            display: inline;
+            color: $console_green;
+        }
+
+        &__label {
+            color: $console_blue;
+        }
+        &:focus {
+            border: unset;
+        }
+        &:focus-visible {
+            outline: unset;
+            .el-radio__label {
+                color: white;
+            }
+            &::before {
+                color: $console_purple
+            }
+
+        }
+    }
+
+    .el-checkbox {
+        &__input {
+            position: relative;
+            display: block;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+        }
+        // input:focus {
+        //     all: unset;
+        // }
+        &__label input {
+            display: inline;
+        }
+        &__label::before {
+            content: '▢ ';
+            display: inline;
+            color: white;
+        }
+        &__label::before {
+            content: '▢ ';
+            display: inline;
+            color: white;
+        }
+        &.is-checked .el-checkbox__label::before {
+            content: '▣ ';
+            display: inline;
+            color: $console_green;
+        }
+        &:focus-within {
+            .el-checkbox__label {
+                color: white;
+                &::before {
+                    color: $console_purple;
+                }
+            }
+
+        }
+
+        &__label {
+            color: $console_blue;
+        }
+    }
+
+    .el-button {
+        border: unset;
+        background: inherit;
+        color: $console_green;
+
+        &::before {
+            content: '>>>';
+            display: inline;
+        }
+
+        &:hover, &:focus-visible {
+            outline: unset;
+            color: $console_purple;
+
+            &:before {
+                color:$console_green;
+            }
+
+            &:after {
+                content: '⏎';
+                display: inline;
+
+            }
+        }
+        // &:hover::after, &:focus-visible::after {
+        //     color: $console_purple;
+        // }
+    }
+    .cog-error-message {
+        color: $console_red;
+        background-color: inherit;
+        font-size: var.$body_norm;
     }
 }

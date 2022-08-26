@@ -1,35 +1,54 @@
-import path from 'path'
-import { promises as fs } from 'fs'
+import path from "path";
+import { promises as fs } from "fs";
 
-import type { InferGetStaticPropsType } from 'next'
-import Head from 'next/head'
-import Image from '../components/image'
-import Link from 'next/link'
+import type { InferGetStaticPropsType } from "next";
+import Head from "next/head";
 
-import yaml from 'js-yaml'
-import { SiteConfig } from '../interfaces/site-config'
+import { NavBar } from "../components/navbar";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import { readConfig } from "../utils/data";
+import Footer, { getFooterProps } from "../components/footer";
 
 export const getStaticProps = async () => {
-    const configFile = path.join(process.cwd(), 'config.yaml');
-    const config_data = await fs.readFile(configFile, 'utf-8');
-    const config = await yaml.load(config_data) as SiteConfig;
-    return {
-        props: {
-          config,
-        }
-    };
-  }
+  const config = await readConfig();
+  return {
+    props: {
+      config,
+    },
+  };
+};
 
-const FaqPage = ({ config }: InferGetStaticPropsType<typeof getStaticProps>) => {
-    return (
-        <div className="app">
-            <Head>
-            <title>FAQ - Brainhack Western 2021</title>
-            <meta name="description" content="Frequently asked Questions for Brainhack Western" />
-            </Head>
+const FaqPage = ({
+  config,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
+  return (
+    <div className="app">
+      <Head>
+        <title>FAQ - Brainhack Western {config.event.year}</title>
+        <meta
+          name="description"
+          content="Frequently asked Questions for Brainhack Western"
+        />
+      </Head>
+      <NavBar displaySections={config.displaySections} />
+      <article className="container-lg">
+        <h1>FAQ</h1>
+        {config.faq?.map((faq) => {
+          return (
+            <section>
+              <h3>{faq.question}</h3>
+              <ReactMarkdown className="console" remarkPlugins={[remarkGfm]}>
+                {faq.answer}
+              </ReactMarkdown>
+            </section>
+          );
+        })}
+      </article>
+      <Footer {...getFooterProps(config)}/>
+    </div>
 
-        </div>
-    )
-}
+  );
+};
 
-export default FaqPage
+export default FaqPage;
