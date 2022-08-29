@@ -20,9 +20,7 @@ export const NavBar = ({ displaySections, splashMode }: NavBarProps) => {
     <nav
       className={`navbar navbar-expand-lg navbar-light ${
         splashMode ? "fixed-top" : "sticky-top"
-      } ${
-        !splashMode || scrollPosition > 0 || open ? "navbar-white" : ""
-      }`}
+      } ${!splashMode || scrollPosition > 0 || open ? "navbar-white" : ""}`}
     >
       <div className="container-fluid">
         <Link href="/">
@@ -45,52 +43,43 @@ export const NavBar = ({ displaySections, splashMode }: NavBarProps) => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a href="/#about" className="nav-link">
-                About
-              </a>
+              <Link href="/#about">
+                <a className="nav-link">About</a>
+              </Link>
             </li>
             {displaySections.schedule ?? true ? (
               <li className="nav-item">
-                <a href="/#schedule" className="nav-link">
-                  Schedule
-                </a>
+                <Link href="/#schedule">
+                  <a className="nav-link">Schedule</a>
+                </Link>
               </li>
             ) : null}
             {displaySections.tutorial ?? true ? (
               <li className="nav-item">
-                <a href="/#tutorials" className="nav-link">
-                  Tutorials
-                </a>
+                <Link href="/#tutorials">
+                  <a className="nav-link">Tutorials</a>
+                </Link>
               </li>
             ) : null}
             <li className="nav-item">
-              <a href="/#location" className="nav-link">
-                Location
-              </a>
+              <Link href="/#location">
+                <a className="nav-link">Location</a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a
-                href="https://github.com/BrainhackWestern/BrainhackWestern.github.io/wiki/Projects"
-                className="nav-link"
-              >
-                Projects
-              </a>
+              <Link href="https://github.com/BrainhackWestern/BrainhackWestern.github.io/wiki/Projects">
+                <a className="nav-link">Projects</a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a
-                href="/FAQ"
-                className="nav-link"
-              >
-                FAQ
-              </a>
+              <Link href="/FAQ">
+                <a className="nav-link">FAQ</a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a
-                href="https://brainhack.org/code-of-conduct.html"
-                className="nav-link"
-              >
-                Code of Conduct
-              </a>
+              <Link href="https://brainhack.org/code-of-conduct.html">
+                <a className="nav-link">Code of Conduct</a>
+              </Link>
             </li>
           </ul>
         </div>
