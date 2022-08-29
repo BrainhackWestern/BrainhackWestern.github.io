@@ -16,7 +16,11 @@ jobs:
           from: 'yaml'
           to: 'json'
       - name: Save yaml schema
-        run: echo '${{ steps.jsonyaml.outputs.data }}' > config.json
+        uses: DamianReeves/write-file-action@master
+        with:
+          path: config.json
+          contents: ${{ steps.jsonyaml.outputs.data }}
+          write-mode: overwrite
       - name: Validate JSON
         uses: docker://orrosenblatt/validate-json-action:latest
         with:
