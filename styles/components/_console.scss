@@ -27,7 +27,7 @@ $console_light_white: #979797;
     padding: 0;
     h1 {
         color: var.$font_light;
-        background-color: var.$highlight_dark;
+        background: linear-gradient(100deg, var.$highlight-dark 20%, #004a8c);
         padding: 0.5em;
         margin: 0;
 

@@ -1,6 +1,3 @@
-import path from "path";
-import { promises as fs } from "fs";
-
 import type { InferGetStaticPropsType } from "next";
 import Head from "next/head";
 
@@ -36,7 +33,7 @@ const FaqPage = ({
         <h1>FAQ</h1>
         {config.faq?.map((faq) => {
           return (
-            <section>
+            <section key={faq.question}>
               <h3>{faq.question}</h3>
               <ReactMarkdown className="console" remarkPlugins={[remarkGfm]}>
                 {faq.answer}
