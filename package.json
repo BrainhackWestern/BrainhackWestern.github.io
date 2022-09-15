@@ -5,26 +5,33 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "schema-gen": "npx typescript-json-schema ./tsconfig.json SiteConfig --required -o public/schemas/brainhack-config.json",
     "lint": "next lint",
-    "gh-build": "rm -rf node_modules/.cache && next build && next export && touch out/.nojekyll",
+    "compile-calendar": "pipx run --spec git+https://github.com/pvandyken/overlapping-events.git calendar-stack config.yaml -o calendar.json",
+    "gh-build": "npm run compile-calendar && rm -rf node_modules/.cache && next build && next export && touch out/.nojekyll",
     "deploy": "npm run gh-build && git stash && git add -f out && git commit -m 'Deploying' && git subtree split --prefix out -b gh-pages && git push -f origin gh-pages:gh-pages && git branch -D gh-pages && git reset HEAD~1 && git stash pop && rm -rf out"
   },
   "dependencies": {
-    "bootstrap": "^5.1.1",
+    "bootstrap": "^5.1.3",
+    "color-interpolate": "^1.0.5",
     "js-yaml": "^4.1.0",
     "next": "11.1.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-markdown": "^7.0.1",
     "react-obfuscate": "^3.6.8",
+    "remark-gfm": "^3.0.0",
     "sass": "^1.42.1",
     "ts-debounce": "^3.0.0"
   },
   "devDependencies": {
+    "@types/bootstrap": "^5.1.6",
+    "@types/color": "^3.0.2",
     "@types/js-yaml": "^4.0.3",
     "@types/react": "17.0.27",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.2",
-    "typescript": "4.4.3"
+    "typescript": "4.4.3",
+    "typescript-json-schema": "^0.51.0"
   }
 }

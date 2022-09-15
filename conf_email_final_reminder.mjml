@@ -1,0 +1,147 @@
+<mjml>
+    <mj-head>
+        <mj-font
+            name="Quicksand"
+            href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400" 
+        />
+        <mj-font
+            name="Montserrat"
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400" 
+        />
+    </mj-head>
+  <mj-body background-color="#1e1e1e">
+    <mj-section  text-align="center">
+        <mj-column>
+            <mj-image  width="200px" src="https://brainhack-western.imgix.net/img/brainhack_logo.png?w=200&exp=1"></mj-image>
+            <mj-text
+                font-family="Quicksand"
+                font-size="48px"
+                color="#f9f9f9"
+                padding-bottom="50px"
+                align="center"
+            >
+                Last day for workshop registration
+            </mj-text>
+
+
+            <mj-text
+                font-family="Montserrat"
+                color="#f9f9f9"
+                font-size="16px"
+                line-height="200%"
+            >
+                We're still waiting for your response to the attendance form.
+                Please select one of the following options and complete the linked form.
+                It will only take a few minutes!
+                <br><br>
+                Note that if the form is not filled by the deadline, you will not be eligible for in-person attendence (we'll still hope to see you online, though!).
+                The deadline for completion is <b>November 20, 11:59PM.</b>
+            </mj-text>
+            <mj-divider
+                border-color="#f9f9f9"
+                border-width="1px"
+            >
+            </mj-divider>
+        </mj-column>
+    </mj-section>
+    <mj-section>
+        <mj-column>
+            <mj-text
+                font-family="Montserrat"
+                color="#f9f9f9"
+                font-size="16px"
+                line-height="200%"
+                align="center"
+            >
+                How will you be attending?
+            </mj-text>
+        </mj-column>
+    </mj-section>
+    <mj-section>
+        <mj-column>
+            <mj-button
+                font-family="Montserrat"
+                color="#f9f9f9"
+                font-size="16px"
+                line-height="200%"
+                background-color="#9f30ff"
+                href="{{InPersonLink}}"
+            >
+                In person
+            </mj-button>
+        </mj-column>
+        <mj-column>
+            <mj-button
+                font-family="Montserrat"
+                color="#f9f9f9"
+                font-size="16px"
+                line-height="200%"
+                background-color="#9f30ff"
+                href="{{OnlineLink}}"
+            >
+                Online
+            </mj-button>
+        </mj-column>
+    </mj-section>
+    <mj-section>
+        <mj-column>
+            <mj-text
+                font-family="Montserrat"
+                color="#f9f9f9"
+                font-size="12px"
+                line-height="200%"
+            >
+                Alternatively, copy/paste one of the following link into your browser.
+                <br>
+                In person: {{InPersonLink}}
+                <br>
+                Online: {{OnlineLink}}
+                <br><br>
+                The above links were uniquely generated for your registration.
+                Please don't forward this email.
+            </mj-text>
+            
+        </mj-column>
+    </mj-section>
+    <mj-section padding="0" padding-top="10px">
+        <mj-column>
+            <mj-divider
+                border-color="#f9f9f9"
+                border-width="1px"
+            >
+            </mj-divider>
+        </mj-column>
+    </mj-section>
+    <mj-section>
+    
+        <mj-column>
+            <mj-image  
+                width="100px" 
+                align="left"
+                src="https://brainhack-western.imgix.net/img/brainhack_logo.png?w=200&exp=1"
+            ></mj-image>
+        </mj-column>
+        <mj-column vertical-align="middle">
+            <mj-text
+                font-family="Montserrat"
+                color="#f9f9f9"
+                font-size="11px"
+                line-height="200%"
+                align="right"
+            >
+                <a href="https://brainhackwestern.github.io/">https://brainhackwestern.github.io/</a>
+                
+            </mj-text>
+            <mj-text
+                font-family="Montserrat"
+                color="#f9f9f9"
+                font-size="11px"
+                line-height="200%"
+                align="right"
+            >
+                Copyright © 2021 Brainhack Western
+            </mj-text>
+        </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

@@ -2,10 +2,10 @@ import { createContext, Dispatch, SetStateAction } from 'react';
 
 export interface ScreenSizeProviderType {
     state: {
-        largeScreen: boolean;
+        screenSize: number;
     }
     actions: {
-        setLargeScreen: Dispatch<SetStateAction<boolean>> 
+        setScreenSize: Dispatch<SetStateAction<number>> 
     }
 }
 

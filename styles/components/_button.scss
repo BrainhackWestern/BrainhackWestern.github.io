@@ -1,24 +1,38 @@
-@use '../variables' as var;
-@use 'bootstrap/scss/bootstrap' as bootstrap;
+@use "../variables" as var;
+@use "bootstrap/scss/bootstrap" as bootstrap;
+
+@mixin button($size) {
+  display: inline;
+  align-self: center;
+  background-color: var.$highlight;
+  border-style: solid;
+  border-color: var.$highlight;
+  border-radius: 10px;
+  border-width: 5px;
+  padding: 0.5em 2em;
+  transition: background-color 0.2s;
+
+  span {
+    font-size: var.$body_large;
+    color: var.$font-light;
+  }
+
+  @include bootstrap.media-breakpoint-up(lg) {
+    align-self: flex-start;
+    span {
+      font-size: $size;
+    }
+  }
+
+  &:hover {
+    background-color: var.$background500;
+  }
+}
 
 .button {
-    display: inline;
-    align-self: center;
-    background-color: var.$highlight;
-    border-radius: 20px;
-    border-width: 0;
-    padding: 1em 4em;
+  @include button(var.$body_norm);
+}
 
-    span {
-        font-size: var.$body_large;
-        color: var.$font-light;
-    }
-
-    @include bootstrap.media-breakpoint-up(lg) {
-        align-self: flex-start;
-        span {
-            font-size: var.$text_med;
-            color: var.$font-light;
-        }
-    }
+.large-button {
+  @include button(var.$text_med);
 }

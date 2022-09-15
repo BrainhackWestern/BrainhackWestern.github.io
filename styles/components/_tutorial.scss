@@ -1,0 +1,36 @@
+@use "../variables" as var;
+
+.tutorial-day {
+  max-width: 920px;
+  margin: 0 auto;
+  margin-bottom: 1em;
+
+  h3 {
+    font-size: var.$body_large;
+  }
+
+  .tutorial-day-name {
+    font-weight: var.$weight_bold;
+    text-align: left;
+  }
+}
+
+.tutorial {
+  .tutorial-header {
+    padding: 1em;
+    max-width: 550px;
+    width: 100%;
+
+    h3 {
+      text-align: inherit;
+    }
+  }
+
+  .row {
+    padding: 1em 0;
+  }
+
+  .tutorial-img {
+    max-width: 250px;
+  }
+}

@@ -4,6 +4,7 @@ import { MsgCard } from "./msg-card"
 interface RegisterButtonProps {
     status: "unopened" | "open" | "closed";
     alignment?: "left" | "center";
+    url?: string;
 }
 
 export const RegisterButton = (props: RegisterButtonProps) => {
@@ -17,9 +18,9 @@ export const RegisterButton = (props: RegisterButtonProps) => {
         <div className={alignClass}>
             {
                 (() => {
-                    if (props.status === "open") {
+                    if (props.status === "open" && props.url !== undefined) {
                         return (
-                            <Button>
+                            <Button target={props.url}>
                                 Register Now
                             </Button>
                         )

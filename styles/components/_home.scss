@@ -1,5 +1,5 @@
-@use '../variables';
-@use 'bootstrap/scss/bootstrap' as bootstrap;
+@use "../variables";
+@use "bootstrap/scss/bootstrap" as bootstrap;
 
 .app {
   position: relative;
@@ -8,6 +8,14 @@
   margin: 0;
   width: 100%;
   background-color: variables.$background;
+}
+
+.navbar-dark {
+  background-color: variables.$background600;
+
+  @include bootstrap.media-breakpoint-up(lg) {
+    background-color: variables.$background-transparent;
+  }
 }
 
 .window {
@@ -26,7 +34,7 @@
 }
 
 img {
-  width: 100%
+  width: 100%;
 }
 
 @include bootstrap.media-breakpoint-up(xl) {
@@ -39,7 +47,7 @@ hr {
   border-width: 1px;
   border-color: #707070;
   width: 50%;
-  margin: 3em
+  margin: 3em;
 }
 
 .title-col {
@@ -48,6 +56,12 @@ hr {
 
   .button {
     align-self: center;
+    margin-top: 2em;
+
+    span {
+      font-size: variables.$text_med;
+    }
+    
   }
 }
 
@@ -56,11 +70,12 @@ h3 {
 }
 
 .white-box {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   width: 100%;
   padding: 3em 0;
 
-  p, h2 {
+  p,
+  h2 {
     color: variables.$font_dark;
   }
 
@@ -81,7 +96,7 @@ h3 {
 
 .content-space {
   padding-top: 5em;
-  padding-bottom: 3em
+  padding-bottom: 3em;
 }
 
 footer {

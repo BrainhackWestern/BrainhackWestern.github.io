@@ -1,31 +1,31 @@
-@use 'bootstrap/scss/bootstrap' as bootstrap;
-@use '../mixins';
+@use "bootstrap/scss/bootstrap" as bootstrap;
+@use "../mixins";
 
 .about {
+  .row {
+    padding-bottom: 4em;
+  }
 
-    .row {
-        padding-bottom: 4em;
+  h2,
+  p {
+    text-align: center;
+  }
+
+  .img {
+    max-width: 80%;
+    margin: 3em;
+    > div {
+      @include mixins.shadow;
     }
-    
-    h2, p {
-        text-align: center;
+  }
+
+  @include bootstrap.media-breakpoint-up(lg) {
+    .about_align_right {
+      text-align: right;
     }
 
-    .img {
-        max-width: 80%;
-        margin: 3em;
-        > div {
-            @include mixins.shadow;
-        }
+    .about_align_left {
+      text-align: left;
     }
-
-    @include bootstrap.media-breakpoint-up(lg) {
-        .about_align_right {
-            text-align: right;
-        }
-
-        .about_align_left {
-            text-align: left;
-        }
-    }
+  }
 }

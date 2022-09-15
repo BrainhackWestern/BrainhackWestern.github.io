@@ -14,11 +14,13 @@
 # production
 /build
 /out
+calendar.json
 
 # misc
 .DS_Store
 *.pem
 .vscode
+*.swp
 
 # debug
 npm-debug.log*

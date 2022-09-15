@@ -1,12 +1,16 @@
 import '../styles/globals.scss'
 import type { AppProps } from 'next/app'
 import ScreenSizeProvider from '../services/screen-size/provider'
-import { Responsive } from '../components/util/responsive'
+import { useEffect } from 'react';
 
 function MyApp({ Component, pageProps }: AppProps) {
+  useEffect(() => {
+    // @ts-ignore
+    import("bootstrap/dist/js/bootstrap");
+  }, []);
+  
   return (
     <ScreenSizeProvider>
-      <Responsive />
       <Component {...pageProps} />
     </ScreenSizeProvider>
   )

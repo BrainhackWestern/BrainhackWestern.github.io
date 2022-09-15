@@ -1,3 +1,11 @@
+# yaml-language-server: $schema=public/schemas/brainhack-config.json
+displaySections:
+  tutorial: true
+  schedule: true
+registration:
+  cost: 5
+  url: https://www.eventbrite.ca/e/brainhack-western-2021-tickets-200482477487
+  status: closed
 location:
   name: Western Interdisciplinary Research Building
   street: Perth Dr
@@ -39,58 +47,113 @@ sponsors:
 schedule:
   show: false
   startTime: 8
-  endTime: 18
+  endTime: 17
   days:
   - day: 1
     month: 12
     year: 2021
     events:
-    - name: Check-in
+    - name: Breakfast
       time: "8:00"
       duration: "1:00"
-    - name: Welcome & Intro
+      room: WIRB 4190
+    - name: Welcome & Project Pitches
       time: "9:00"
-      duration: "1:00"
-    - name: Project Pitches
-      time: "10:00"
-      duration: "2:00"
+      duration: "1:30"
+      room:
+        - WIRB 1170
+        - Zoom Room 1
+    - name: Hacking
+      time: "10:30"
+      duration: "1:30"
+      color: red
+      room: WIRB 1130
     - name: Lunch
       time: "12:00"
-      duration: "1:00"
-    - name: Intro to Image Manipulation
-      time: "13:00"
       duration: "1:30"
-    - name: Intro to fMRI and EEG
-      time: "14:30"
-      duration: "2:00"
-    - name: Unconference
-      time: "16:30"
+      room: WIRB 4190
+    - name: MRI Data in Python
+      time: "13:30"
       duration: "1:00"
+      color: "#1f331e"
+      link: "#python"
+      priority: 1
+      room:
+        - WIRB 1110
+        - Zoom Room 1
+    - name: Intro to Datalad
+      time: "14:30"
+      duration: "1:30"
+      color: "#1f331e"
+      link: "#datalad"
+      priority: 1
+      room:
+        - WIRB 1160
+        - Zoom Room 2
+    - name: Hacking
+      time: "13:30"
+      duration: "2:30"
+      color: red
+      room: WIRB 4190
   - day: 2
     month: 12
     year: 2021
     events:
     - name: Breakfast
       time: "8:00"
-      duration: "2:00"
-    - name: Intro to Deep Learning
-      time: "10:00"
+      duration: "1:00"
+      room: WIRB 4190
+    - name: fMRI/fMRIPrep
+      time: "9:00"
       duration: "1:30"
-    - name: "TWINtalks: Blake Richards"
-      time: "11:30"
-      duration: "1:00"
-    - name: Lunch & Unconference
-      time: "12:30"
-      duration: "1:00"
-    - name: Deep Learning Practical
+      color: "#1f331e"
+      link: "#frmi"
+      priority: 1
+      room:
+        - WIRB 1170
+        - Zoom Room 1
+    - name: Introduction to Meta-analyses
+      time: "10:30"
+      duration: "1:30"
+      color: "#1f331e"
+      link: "#meta-analysis"
+      priority: 1
+      room:
+        - WIRB 4190
+        - Zoom Room 2
+    - name: Lunch
+      time: "12:00"
+      duration: "1:30"
+      room: WIRB 4190
+    - name: Intro to fNIRS
       time: "13:30"
-      duration: "2:00"
-    - name: Intro to DTI
-      time: "15:30"
-      duration: "1:30"
-    - name: Social
-      time: "17:00"
-      duration: "1:00"
+      duration: "2:30"
+      color: "#1f331e"
+      link: "#fnirs"
+      priority: 1
+      room:
+        - WIRB 1110
+        - Zoom Room 1
+    - name: Hacking
+      time: "13:30"
+      duration: "2:30"
+      color: red
+      room:
+        - WIRB 4190 (1:30-2:30)
+        - VAC 100 (1:30-4:00)
+    - name: Hacking
+      time: "9:00"
+      duration: "3:00"
+      color: red
+      room:
+        - NSC 1 (9:00-12:00)
+        - WIRB 1160 (10:30-12:00)
+    - name: "Diversity in Academia"
+      time: "12:30"
+      duration: "0:45"
+      color: blue
+      link: "https://github.com/BrainhackWestern/BrainhackWestern.github.io/wiki/Lunch-and-Learn#winrepo"
+
   - day: 3
     month: 12
     year: 2021
@@ -98,15 +161,144 @@ schedule:
     - name: Breakfast
       time: "8:00"
       duration: "1:00"
-    - name: Intro to fNIRS
+      room: WIRB 4190
+    - name: Intro to Machine Learning
+      time: "9:00"
+      duration: "1:30"
+      color: "#1f331e"
+      link: "#machine-learning"
+      priority: 1
+      room:
+        - WIRB 1130
+        - Zoom Room 1
+    - name: Intro to Deep Learning
+      time: "10:30"
+      duration: "1:30"
+      color: "#1f331e"
+      link: "#deep-learning"
+      priority: 1
+      room:
+        - WIRB 1130
+        - Zoom Room 2
+    - name: Lunch
+      time: "12:00"
+      duration: "1:30"
+      room: WIRB 4190
+    - name: Hacking
       time: "9:00"
       duration: "3:00"
-    - name: Lunch & Unconference
-      time: "12:00"
+      color: red
+      room:
+        - WIRB 4190 (9:30-12:00)
+        - VAC 100 (9:00-12:00)
+    - name: Hacking
+      time: "13:30"
       duration: "1:00"
-    - name: TBA
-      time: "13:00"
-      duration: "2:30"
+      color: red
+      room:
+        - WIRB 4190 (1:30-2:00)
+        - VAC 100 (1:30-2:30)
     - name: Project presentations & Wrap-up
-      time: "15:30"
+      time: "14:30"
       duration: "1:30"
+      room:
+        - VAC 100
+        - Zoom Room 1
+tutorials:
+  - day: 1
+    month: 12
+    year: 2021
+    tutorialTimes:
+      - name: Afternoon
+        options:
+          - id: python
+            name: Working with MRI Data in Python
+            image: /img/python.png
+            description: |
+              This tutorial will teach one to manipulate and transform neuroimaging data
+              using Python with commonly used. First, an understanding of how MRI data
+              is represented in Python will be discussed followed by hands-on tasks such
+              as basic manipulation of neuroimaging MRI data. All content will be
+              performed using Jupyter notebooks in the spirit of reproducible and open
+              science!
+          - id: datalad
+            name: Introduction to Datalad
+            image: /img/datalad.png
+            description: |
+              DataLad, “a free and open-source data management system for everyone,” is a
+              powerful tool for obtaining data, managing your own research data, and
+              exposing your data to others. This tutorial will start by introducing the
+              basics of DataLad, then we’ll use it to download some open data that may be
+              useful for a Brainhack project. We’ll process that data and use DataLad to
+              keep track of the resulting derivatives, and show how to make that data available
+              to collaborators.
+  - day: 2
+    month: 12
+    year: 2021
+    tutorialTimes:
+      - name: Morning
+        options:
+          - id: frmi
+            name: Introduction to fMRI and fMRIPrep
+            image: /img/fmri.png
+            description: |
+              This tutorial will start with an overview of fMRI, including the
+              underlying contrast mechanism, scanning, task design, standard
+              preprocessing steps, basic processing, and results interpretation.
+              The overview will shift to cover the BIDS app, fMRIPrep. Various
+              ways to run fMRIPrep will be shown, however, due to time constraints,
+              fMRIPrep will not be run in real time. Time will be spent discussing
+              the output of fMRIPrep, including going through a real output report.
+          - id: meta-analysis
+            name: Introduction to Meta-analyses for Neuroimaging Data
+            image: /img/review.png
+            description: |
+              Meta-analyses of neuroimaging data are a good way to get started with
+              understanding neuroimaging and task-based neural processing. This tutorial
+              will cover the various aspects of designing a meta-analysis and some of the more
+              popular methods, including both topic- and contrast-based meta-analyses and
+              coordinate- and image-based meta-analyses. Some hands-on work with the
+              python-based tool NiMARE with a sample dataset will be included to help
+              attendees appreciate some of the nuances between the various types of
+              meta-analyses.
+      - name: Afternoon
+        options:
+          - id: fnirs
+            name: Introduction to fNIRS
+            image: /img/fnirs.png
+            description: |
+              In this session, you will get an overview of fNIRS (functional
+              near-infrared spectroscopy). fNIRS is a relatively new neuroimaging method,
+              that has gained in popularity over the last 20 years. fNIRS uses an array
+              of light sensors on the surface of the scalp to detected oxygenated and
+              deoxygenated bloodflow in cortex. fNIRS is low-cost, minimally invasive,
+              offers reasonable spatial and temporal resolution, and is easily combined
+              with other neuroimaging methods. In this session, we’ll discuss fNRIS
+              methodology and applications, as well as the current state of affairs for
+              fNIRS analysis. There will be a live-demonstration of the fNIRS system,
+              as well as some hands-on experience with analyzing fNRIS data using
+              the Matlab-based toolbox, Homer.
+  - day: 3
+    month: 12
+    year: 2021
+    tutorialTimes:
+      - name: Morning
+        options:
+          - id: machine-learning
+            name: Introduction to Machine Learning
+            image: /img/machine-learning.png
+            description: |
+              This tutorial will define the basic concepts of machine learning followed
+              by an introduction to the general blocks of a machine learning pipeline using
+              an example neural dataset.
+          - id: deep-learning
+            name: Introduction to Deep Learning
+            image: /img/deep-learn.png
+            description: |
+              This tutorial will start with a brief introduction and then focus on
+              hands-on experience with Tensorflow. Topics will include
+                1) Organization of code into classes, functions, and the Tensorgraph,
+                2) Examples of dense and convolutional networks for real problems using
+                   high-level Tensorflow tools such as built-in Keras functions,
+                3) An open session for exploring and adapting existing NNs or for
+                   helping attendees build their own networks.

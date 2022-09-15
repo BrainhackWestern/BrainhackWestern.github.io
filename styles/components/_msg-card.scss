@@ -1,28 +1,27 @@
-@use '../variables' as var;
-@use '../mixins';
-@use 'bootstrap/scss/bootstrap' as bootstrap;
-
+@use "../variables" as var;
+@use "../mixins";
+@use "bootstrap/scss/bootstrap" as bootstrap;
 
 .msg-card {
-    @include mixins.shadow;
-    text-align: center;
-    background-color: var.$background600;
-    border-style: solid;
-    border-color: var.$highlight;
-    border-radius: 10px;
-    border-width: 5px;
-    padding: 1em 4em;
-    margin: 1em 0;
+  @include mixins.shadow;
+  text-align: center;
+  background-color: var.$background600;
+  border-style: solid;
+  border-color: var.$highlight;
+  border-radius: 10px;
+  border-width: 5px;
+  padding: 1em 4em;
+  margin: 1em 0;
 
+  span {
+    font-size: var.$body_large;
+    color: var.$font-light;
+  }
+
+  @include bootstrap.media-breakpoint-up(lg) {
     span {
-        font-size: var.$body_large;
-        color: var.$font-light;
+      font-size: var.$body_large;
+      color: var.$font-light;
     }
-
-    @include bootstrap.media-breakpoint-up(lg) {
-        span {
-            font-size: var.$body_large;
-            color: var.$font-light;
-        }
-    }
+  }
 }
