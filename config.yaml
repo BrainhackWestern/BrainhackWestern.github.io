@@ -87,12 +87,12 @@ sponsors:
   - img: "/img/brainscan_logo.png"
     name: Brainscan
     url: "https://brainscan.uwo.ca"
-  - img: "/img/western_logo.png"
-    name: Western University
-    url: "https://www.uwo.ca"
-  - img: "/img/conp-pcno-logo.png"
-    name: CONP-PCNO
-    url: "https://conp.ca"
+  # - img: "/img/western_logo.png"
+  #   name: Western University
+  #   url: "https://www.uwo.ca"
+  # - img: "/img/conp-pcno-logo.png"
+  #   name: CONP-PCNO
+  #   url: "https://conp.ca"
 schedule:
   show: false
   startTime: 8

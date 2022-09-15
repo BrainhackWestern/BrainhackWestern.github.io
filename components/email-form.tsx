@@ -25,23 +25,22 @@ export default function EmailForm(props: SignupFormProps) {
         }
         props.setWaiting(true);
         props.setValidity(true);
-        setTimeout(() => {
-            const data = {
-                email: email
-            }
-            console.log("Submitting!");
-            clearStatuses();
-            props.setSubmitted(true);
-        }, 5000)
-        // fetch("/api/email-signup", {
-        //     method: 'POST',
-        //     headers: { 'Content-Type': 'application/json' },
-        //     body: JSON.stringify(data),
-        // }).then(reponse => {
+        const data = {
+            email: email
+        }
+        fetch("https://hook.us1.make.com/hrdtv28jy9i55havi84l6db2xc1ieyol", {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data),
+        }).then(reponse => {
+            clearStatuses()
+            props.setSubmitted(true)
 
-        // }).catch(reason => {
+        }).catch(reason => {
+            clearStatuses()
+            props.setError(true)
 
-        // });
+        });
     };
 
     return (
