@@ -16,6 +16,7 @@
     "color-interpolate": "^1.0.5",
     "email-validator": "^2.0.4",
     "hypertag": "^0.0.6",
+    "image-size": "^1.0.2",
     "js-yaml": "^4.1.0",
     "lodash": "^4.17.21",
     "next": "^12.2.5",

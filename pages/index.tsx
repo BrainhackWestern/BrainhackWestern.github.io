@@ -53,7 +53,7 @@ const Home = ({
       <div className="splash">
         <div className="window d-flex flex-row justify-content-start container-fluid">
           <div className="background-img">
-            <Image src={brainNetwork} />
+            <Image src={brainNetwork} alt="" />
           </div>
           <div className="col-12 col-lg-4 d-flex flex-column justify-content-end title-col">
             <div className="flex-fill"></div>
@@ -62,6 +62,7 @@ const Home = ({
               <RegisterButton
                 status={config.registration.status}
                 url={config.registration.url}
+                emailSignupTarget={config.registration.emailSignupTarget}
               />
             </div>
             <div className="row-2 flex-fill"></div>
@@ -69,7 +70,12 @@ const Home = ({
               {/* <h3>London, ON</h3>
               <h3>Dec 1-3</h3> */}
               <div className="logo">
-                <Image src={main_logo} width={406} height={186} />
+                <Image
+                  src={main_logo}
+                  width={406}
+                  height={186}
+                  alt="Western Brainhack 2022"
+                />
               </div>
             </div>
           </div>
@@ -145,6 +151,7 @@ const Home = ({
               alignment="left"
               status={config.registration.status}
               url={config.registration.url}
+              emailSignupTarget={config.registration.emailSignupTarget}
             />
           </div>
           <div className="col-lg-6 d-flex justify-content-center">
@@ -206,7 +213,12 @@ const Home = ({
                 target="_blank"
                 rel="noreferrer"
               >
-                <img src={basePath + sponsor.img} alt={sponsor.name} />
+                <Image
+                  src={basePath + sponsor.img}
+                  width={sponsor.dims.width}
+                  height={sponsor.dims.height}
+                  alt={sponsor.name}
+                />
               </a>
             </div>
           ))}

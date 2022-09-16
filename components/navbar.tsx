@@ -25,7 +25,7 @@ export const NavBar = ({ displaySections, splashMode }: NavBarProps) => {
       <div className="container-fluid">
         <Link href="/">
           <a className="navbar-brand">
-            <Image src={logo} width={58} height={40}></Image>
+            <Image src={logo} width={58} height={40} alt="Home"></Image>
           </a>
         </Link>
         <button

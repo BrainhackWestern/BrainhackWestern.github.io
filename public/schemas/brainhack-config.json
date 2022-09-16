@@ -384,9 +384,15 @@
             "type": "array"
         },
         "registration": {
+            "additionalProperties": false,
+            "description": "Data pertaining to registration and costs",
             "properties": {
                 "cost": {
                     "type": "number"
+                },
+                "emailSignupTarget": {
+                    "description": "Url of a webhook (e.g. from make.com) to send data from the email signup form\nThis form is used in place of the registration button when registration status\nis set to \"unopened\". The webhook should be configured to take JSON data with a\nsingle field: \"email\"",
+                    "type": "string"
                 },
                 "status": {
                     "enum": [
@@ -397,6 +403,7 @@
                     "type": "string"
                 },
                 "url": {
+                    "description": "Url of the registration form",
                     "type": "string"
                 }
             },

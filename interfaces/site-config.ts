@@ -77,15 +77,15 @@ export interface DisplaySections {
 }
 
 export interface FAQ {
-  question: string
-  answer: string
+  question: string;
+  answer: string;
 }
 
 /**
  * Basic info about the event
  */
 export interface Event {
-  year: number
+  year: number;
 }
 
 /**
@@ -95,7 +95,7 @@ export interface Event {
  * @additionalProperties false
  */
 export interface SiteConfig {
-  event: Event
+  event: Event;
   schedule: ScheduleConfig;
   sponsors: SponsorConfig[];
   organizers: string[];
@@ -108,24 +108,39 @@ export interface SiteConfig {
      * form metadata
      */
     [key: string]: EmbeddedForm;
-  }
+  };
 
   /**
    * twitter Url link for embedded feed
    */
-  twitterUrl?: string
+  twitterUrl?: string;
 
+  /**
+   * Data pertaining to registration and costs
+   *
+   * @additionalProperties false
+   */
   registration: {
+    /**
+     * Url of the registration form
+     */
     url?: string;
     cost: number;
     status: "unopened" | "open" | "closed";
+    /**
+     * Url of a webhook (e.g. from make.com) to send data from the email signup form
+     * This form is used in place of the registration button when registration status is
+     * set to "unopened". The webhook should be configured to take POSTed JSON data with
+     * a single field: "email"
+     */
+    emailSignupTarget?: string;
   };
 
-  faq?: FAQ[]
+  faq?: FAQ[];
 
   displaySections: DisplaySections;
 }
 
 export interface ExpandedConfig extends SiteConfig {
-  currentYear: number
+  currentYear: number;
 }
