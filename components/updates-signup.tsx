@@ -1,15 +1,12 @@
-import {
-  MutableRefObject,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import { MutableRefObject, useEffect, useRef, useState } from "react";
 import EmailForm from "./email-form";
 
 export const UpdatesSignup = ({ target }: { target: string }) => {
   const [validEmail, setValidEmail] = useState(true);
   const [submittedEmail, setSubmittedEmail] = useState(false);
-  const [submissionError, setSubmissionError] = useState(false);
+  const [submissionError, setSubmissionError] = useState<
+    "local" | "server" | null
+  >(null);
   const [waiting, setWaiting] = useState(false);
   const loader: MutableRefObject<null | HTMLSpanElement> = useRef(null);
   const loadingInterval = useRef(0);
@@ -24,6 +21,13 @@ export const UpdatesSignup = ({ target }: { target: string }) => {
       window.clearInterval(loadingInterval.current);
     }
   });
+
+  const errorMessages = {
+    local: "Email could not be submitted: unable to reach server",
+    server:
+      "Email could not be submitted: internal server error. Please try again later",
+  };
+
   return (
     <>
       <span>Get notified when registration opens:</span>
@@ -52,7 +56,7 @@ export const UpdatesSignup = ({ target }: { target: string }) => {
       {submissionError ? (
         <>
           <br />
-          <span className="red">Email could not be submitted at this time</span>
+          <span className="red">{errorMessages[submissionError]}</span>
         </>
       ) : null}
       {waiting ? (

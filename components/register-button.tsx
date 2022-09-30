@@ -1,6 +1,6 @@
 import { Button } from "./button";
-import { Console } from "./console";
 import { MsgCard } from "./msg-card";
+import { Console } from "./console"
 import { UpdatesSignup } from "./updates-signup";
 
 interface RegisterButtonProps {

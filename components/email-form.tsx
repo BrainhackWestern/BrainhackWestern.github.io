@@ -4,7 +4,7 @@ import { validate } from "email-validator";
 interface SignupFormProps {
   setValidity: Dispatch<boolean>;
   setSubmitted: Dispatch<boolean>;
-  setError: Dispatch<boolean>;
+  setError: Dispatch<"server" | "local" | null>;
   setWaiting: Dispatch<boolean>;
   target: string;
 }
@@ -15,7 +15,7 @@ export default function EmailForm(props: SignupFormProps) {
   const clearStatuses = () => {
     props.setWaiting(false);
     props.setSubmitted(false);
-    props.setError(false);
+    props.setError(null);
   };
 
   const onSubmit = (event: FormEvent) => {
@@ -29,18 +29,22 @@ export default function EmailForm(props: SignupFormProps) {
     const data = {
       email: email,
     };
-    fetch("https://hook.us1.make.com/hrdtv28jy9i55havi84l6db2xc1ieyol", {
+    fetch(props.target, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
     })
-      .then((reponse) => {
+      .then((response) => {
         clearStatuses();
-        props.setSubmitted(true);
+        if (response.ok) {
+          props.setSubmitted(true);
+        } else {
+          props.setError("server");
+        }
       })
-      .catch((reason) => {
+      .catch((_) => {
         clearStatuses();
-        props.setError(true);
+        props.setError("local");
       });
   };
 

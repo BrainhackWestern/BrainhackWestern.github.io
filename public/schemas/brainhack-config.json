@@ -391,7 +391,7 @@
                     "type": "number"
                 },
                 "emailSignupTarget": {
-                    "description": "Url of a webhook (e.g. from make.com) to send data from the email signup form\nThis form is used in place of the registration button when registration status\nis set to \"unopened\". The webhook should be configured to take JSON data with a\nsingle field: \"email\"",
+                    "description": "Url of a webhook (e.g. from make.com) to send data from the email signup form\nThis form is used in place of the registration button when registration status is\nset to \"unopened\". The webhook should be configured to take POSTed JSON data with\na single field: \"email\"",
                     "type": "string"
                 },
                 "status": {
