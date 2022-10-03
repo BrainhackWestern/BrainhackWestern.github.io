@@ -4,7 +4,8 @@ event:
 displaySections:
   tutorial: false
   schedule: false
-  twitterFeed: false
+  twitterFeed: true
+twitterUrl: https://twitter.com/uwobrainhack
 faq:
   - question: What is a "Brainhack"?
     answer: |
