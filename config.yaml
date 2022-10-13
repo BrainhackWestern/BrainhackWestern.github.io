@@ -270,12 +270,15 @@ tutorials:
       FANBIDS is a collection of guidelines and MATLAB utilities that extends
       the benefits of BIDS to fNIRS data at every stage of processing. The
       framework is not tied to any single toolbox and aims to eventually
-      facilitate cross-toolbox interactions. The primary benefits include (1)
-      producing file structures that are intuitive, descriptive, and portable,
-      (2) scaling well to large datasets, and (3) promoting an ecosystem of
-      widely compatible tools. Two fully functional example tools will be
-      presented: cardiac-based channel screening and a figure generation module.
-      A workflow manager that applies the framework will also be shown.
+      facilitate cross-toolbox interactions. The primary benefits include:
+
+      1. Producing file structures that are intuitive, descriptive, and portable
+      2. Scaling well to large datasets
+      3. Promoting an ecosystem of widely compatible tools
+
+      Two fully functional example tools will be presented: cardiac-based channel
+      screening and a figure generation module. A workflow manager that applies the
+      framework will also be shown.
   - id: eeg
     name: The Brain in Time
     image: /img/eeg.png
@@ -291,7 +294,7 @@ tutorials:
     organizer: Suzanne Witt
     description: |
       Meta-analyses of neuroimaging data are a good way to get started with
-      understanding neuroimaging and task-based neural processing, as well as,
+      understanding neuroimaging and task-based neural processing, as well as
       answer research questions that may not be easily addressed with by
       traditional data collection. This tutorial will cover the various aspects
       of designing a meta-analysis and some of the more popular methods,
@@ -299,7 +302,7 @@ tutorials:
       image-based meta-analyses. Some hands-on work with the python-based tool
       NiMARE with a sample dataset will be included to help attendees appreciate
       some of the nuances between the various types of meta-analyses. A new,
-      web-driven all-in-one meta-analysis toolbox will also be introduced.
+      web-driven, all-in-one meta-analysis toolbox will also be introduced.
   - id: git
     name: Demystifying Git
     image: /img/git-logo.png
@@ -359,25 +362,23 @@ tutorials:
       - Luke Stark
       - Dan Lizotte
     description: |
-      Come hear both psychology and data science faculty discuss the
-      implications of a recently published paper, Cross-ethnicity/race
-      generalization failure of behavioral prediction from rest-state functional
-      connectivity ([DOI:
-      10.1126/sciadv.abj1812](https://doi.org/10.1126/sciadv.abj1812)). This
-      paper addresses how machine learning algorithms may increase, rather than
-      alleviate, bias and unfairness against equity deserving populations. Learn
-      why collecting diverse study populations is important for the
-      generalizability of results and how naively applying machine learning
-      algorithms to large datasets may lead to the perpetuation of unfair biases
-      against minority populations. Also, learn about inherent biases that may
-      exist in many commonly used measurement techniques and tools.
+      Come hear both psychology and data science faculty discuss the implications of a
+      recently published paper, _Cross-ethnicity/race generalization failure of
+      behavioral prediction from rest-state functional connectivity_
+      ([DOI:10.1126/sciadv.abj1812](https://doi.org/10.1126/sciadv.abj1812)). This paper
+      addresses how machine learning algorithms may increase, rather than alleviate,
+      bias and unfairness against equity-deserving populations. Learn why collecting
+      diverse study populations is important for the generalizability of results and how
+      naively applying machine learning algorithms to large datasets may lead to the
+      perpetuation of unfair biases against minority populations. Also, learn about
+      inherent biases that may exist in many commonly used measurement techniques and
+      tools.
   - id: mri
     name: A Brief Introduction to MRI
     image: /img/fmri.png
     organizer: Brad Karat
     description: |
-      This tutorial will provide a basic introduction to MRI. We will cover
-      where the MRI signal is originating from, what are the different
-      contrasts, basic pulse sequences for acquiring an image, how to
-      reconstruct and visualize an image from DICOM to NIFTI, and unique MRI
-      contrasts such as diffusion or functional imaging.
+      This tutorial will provide a basic introduction to MRI. We will cover where the
+      MRI signal is originating from, what are the different contrasts, basic pulse
+      sequences for acquiring an image, how to reconstruct and visualize an image from
+      DICOM to NIFTI, and unique MRI contrasts such as diffusion or functional imaging.
