@@ -7,7 +7,7 @@ import useScreenSize, { screenSizes } from "../../services/screen-size/use";
 
 interface TutorialProps {
   config: TutorialInfo;
-  color: string;
+  color: string[];
   side: "left" | "right";
 }
 
@@ -19,9 +19,10 @@ export const Tutorial = (props: TutorialProps) => {
 
   // We put things in reverse if right side is indicated, but only on large screens
   const reverse = props.side === "right" && largeScreen;
+  const grad = !reverse ? props.color.slice().reverse() : props.color;
 
   const headerStyle: CSSProperties = {
-    backgroundColor: props.color,
+    background: `linear-gradient(100deg, ${grad[0]} , ${grad[1]})`,
     textAlign: reverse ? "left" : "right",
   };
 
@@ -30,11 +31,31 @@ export const Tutorial = (props: TutorialProps) => {
     : "Description coming soon!";
 
   const data = [
-    <div key="image" className="col-12 col-lg tutorial-img">
-      <Image src={props.config.image} width={250} height={250} alt="" />
-    </div>,
-    <div key="description" className="col-12 col-lg flex-grow-1">
+    props.config.image ? (
+      <div key="image" className="col-12 col-lg tutorial-img">
+        <Image src={props.config.image} width={250} height={250} alt="" />
+      </div>
+    ) : null,
+    <div key="description" className="col-12 col-lg flex-grow-1 console">
       <ReactMarkdown remarkPlugins={[remarkGfm]}>{description}</ReactMarkdown>
+      {props.config.organizer ? (
+        <div>
+          <span className="green">Organizer: </span>
+          <span>{props.config.organizer}</span>
+        </div>
+      ) : null}
+      {props.config.panelists ? (
+        <div>
+          <span className="blue">Panelists: </span>
+          <br />
+          {props.config.panelists.map((panelist) => (
+            <>
+              <span>&nbsp;&nbsp;- {panelist}</span>
+              <br />
+            </>
+          ))}
+        </div>
+      ) : null}
     </div>,
   ];
 

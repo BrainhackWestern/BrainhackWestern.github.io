@@ -12,7 +12,7 @@ export interface TutorialInfo {
     /**
      * Description of the tutorial. Supports markdown, including bold, italics, code,
      * urls, and lists.
-     * 
+     *
      * @default "Description coming soon!"
      */
     description?: string;
@@ -21,15 +21,25 @@ export interface TutorialInfo {
      * Relative url to the image for the tutorial. Image should be saved under public.
      * The url does not include public. For instance, if the image is saved at
      * [Project]/public/img/tutorial-pic.png, enter "/img/tutorial-pic.png".
-     * 
+     *
      * Image should be saved with square dimensions larger than 250x250px
      */
-    image: string;
+    image?: string;
 
     /**
      * Unique ID for the tutorial. This can be used for linking via #id
      */
     id: string;
+
+    /**
+     * Organizer or presenter of the workshop
+     */
+    organizer?: string;
+
+    /**
+     * List of workshop panelists
+     */
+    panelists?: string[];
 }
 
 /**
@@ -51,6 +61,6 @@ export interface TutorialDay extends BasicDate {
         /**
          * List of possible Tutorials available in the block
          */
-        options: TutorialInfo[];
+        options: string[];
     }[];
 }

@@ -16,13 +16,16 @@
 }
 
 .tutorial {
+  margin: 1em 0 3em 0;
+
   .tutorial-header {
-    padding: 1em;
+    padding: 1em 2em 1em 2em;
     max-width: 550px;
     width: 100%;
 
     h3 {
       text-align: inherit;
+      margin: 0;
     }
   }
 

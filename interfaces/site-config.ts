@@ -1,6 +1,6 @@
 import { EmbeddedForm } from "./form";
 import { ScheduleConfig } from "./schedule";
-import { TutorialDay } from "./tutorial";
+import { TutorialInfo } from "./tutorial";
 
 /**
  * @additionalProperties false
@@ -100,7 +100,7 @@ export interface SiteConfig {
   sponsors: SponsorConfig[];
   organizers: string[];
   location: LocationConfig;
-  tutorials: TutorialDay[];
+  tutorials: TutorialInfo[];
 
   forms?: {
     /**

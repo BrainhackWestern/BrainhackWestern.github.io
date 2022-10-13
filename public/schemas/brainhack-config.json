@@ -269,62 +269,6 @@
             ],
             "type": "object"
         },
-        "TutorialDay": {
-            "additionalProperties": false,
-            "properties": {
-                "day": {
-                    "description": "Day of the month",
-                    "maximum": 31,
-                    "minimum": 1,
-                    "type": "number"
-                },
-                "month": {
-                    "description": "Month of the year",
-                    "maximum": 12,
-                    "minimum": 1,
-                    "type": "number"
-                },
-                "tutorialTimes": {
-                    "items": {
-                        "properties": {
-                            "name": {
-                                "description": "Optional name for the tutorial block: e.g. Morning",
-                                "type": "string"
-                            },
-                            "options": {
-                                "description": "List of possible Tutorials available in the block",
-                                "items": {
-                                    "$ref": "#/definitions/TutorialInfo"
-                                },
-                                "type": "array"
-                            },
-                            "time": {
-                                "description": "Time of the tutorial block",
-                                "pattern": "^\\d\\d?\\:\\d\\d$",
-                                "type": "string"
-                            }
-                        },
-                        "required": [
-                            "options"
-                        ],
-                        "type": "object"
-                    },
-                    "type": "array"
-                },
-                "year": {
-                    "description": "Year",
-                    "minimum": 0,
-                    "type": "number"
-                }
-            },
-            "required": [
-                "day",
-                "month",
-                "tutorialTimes",
-                "year"
-            ],
-            "type": "object"
-        },
         "TutorialInfo": {
             "additionalProperties": false,
             "properties": {
@@ -344,11 +288,21 @@
                 "name": {
                     "description": "Tutorial name to be printed on the site",
                     "type": "string"
+                },
+                "organizer": {
+                    "description": "Organizer or presenter of the workshop",
+                    "type": "string"
+                },
+                "panelists": {
+                    "description": "List of workshop panelists",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
                 }
             },
             "required": [
                 "id",
-                "image",
                 "name"
             ],
             "type": "object"
@@ -424,7 +378,7 @@
         },
         "tutorials": {
             "items": {
-                "$ref": "#/definitions/TutorialDay"
+                "$ref": "#/definitions/TutorialInfo"
             },
             "type": "array"
         },

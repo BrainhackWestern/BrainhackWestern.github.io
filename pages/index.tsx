@@ -170,7 +170,7 @@ const Home = ({
       />
 
       <TutorialList
-        config={config.tutorials}
+        tutorials={config.tutorials}
         show={config.displaySections.tutorial ?? true}
       />
 
