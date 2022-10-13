@@ -1,4 +1,5 @@
 import Image from "../image";
+import { basePath } from "../../utils/image-loader";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { CSSProperties } from "react";

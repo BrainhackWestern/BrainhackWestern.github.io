@@ -214,7 +214,7 @@ const Home = ({
                 rel="noreferrer"
               >
                 <Image
-                  src={basePath + sponsor.img}
+                  src={sponsor.img}
                   width={sponsor.dims.width}
                   height={sponsor.dims.height}
                   alt={sponsor.name}
