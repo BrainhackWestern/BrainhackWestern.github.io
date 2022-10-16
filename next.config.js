@@ -15,8 +15,14 @@ const imgLoader = () => {
     }
   }
 }
+const {
+  createVanillaExtractPlugin
+} = require('@vanilla-extract/next-plugin');
+const withVanillaExtract = createVanillaExtractPlugin();
 
-module.exports = {
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   reactStrictMode: true,
   sassOptions: {
     includePaths: [
@@ -28,3 +34,5 @@ module.exports = {
   basePath: process.env.NEXT_PUBLIC_URL,
   assetPrefix: process.env.NEXT_PUBLIC_URL,
 }
+
+module.exports = withVanillaExtract(nextConfig);

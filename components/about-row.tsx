@@ -1,6 +1,7 @@
 import { StaticImageData } from "next/image"
 import Image from "./image"
 import useScreenSize, { screenSizes } from "../services/screen-size/use"
+import styles from "../styles/vanilla/about.css"
 
 interface ImageProps {
     imgClass?: string;
@@ -13,14 +14,14 @@ interface ImageProps {
 export const AboutRow = (props: ImageProps) => {
     const { state: { screenSize } } = useScreenSize();
     const largeScreen = screenSize >= screenSizes['lg']
-    const alignClass = props.reverse ? "about_align_right" : "about_align_left"
+    const alignClass = props.reverse ? styles.alignRight : styles.alignLeft
     const content = [
-        <div key="image" className="col-lg-6 d-flex justify-content-center align-items-start">
-            <div className="img">
+        <div key="image" className={styles.imgWrapper}>
+            <div className={styles.img}>
                 <Image src={props.img} alt="" />
             </div>
         </div>,
-        <div key="description" className="col-lg-6 d-flex flex-column justify-content-center">
+        <div key="description" className={styles.description}>
             <h2 className={alignClass}>{props.title}</h2>
             <p className={alignClass}>{props.children}</p>
         </div>

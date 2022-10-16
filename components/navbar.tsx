@@ -4,6 +4,7 @@ import Image from "./image";
 import useScrollPosition from "../services/scroll-position/use";
 import { DisplaySections } from "../interfaces/site-config";
 import { useState } from "react";
+import style from "../styles/vanilla/navbar.css";
 
 interface NavBarProps {
   displaySections: DisplaySections;
@@ -18,9 +19,9 @@ export const NavBar = ({ displaySections, splashMode }: NavBarProps) => {
 
   return (
     <nav
-      className={`navbar navbar-expand-lg navbar-light ${
-        splashMode ? "fixed-top" : "sticky-top"
-      } ${!splashMode || scrollPosition > 0 || open ? "navbar-white" : ""}`}
+      className={`${style.navbar} ${splashMode ? "fixed-top" : "sticky-top"} ${
+        !splashMode || scrollPosition > 0 || open ? style.navbarWhite : ""
+      }`}
     >
       <div className="container-fluid">
         <Link href="/">

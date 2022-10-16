@@ -1,7 +1,6 @@
 import type { InferGetStaticPropsType } from "next";
 import Head from "next/head";
 
-import { basePath } from "../utils/image-loader";
 
 import brainNetwork from "../public/img/splash-brain-network.png";
 import upvote from "../public/img/upvote.png";
@@ -21,6 +20,7 @@ import { RegisterButton } from "../components/register-button";
 import { TutorialList } from "../components/tutorials/tutorial-list";
 import Footer, { getFooterProps } from "../components/footer";
 import { readCalendar, readConfig } from "../utils/data";
+import styles from "../styles/globals.css";
 
 export const getStaticProps = async () => {
   const config = await readConfig();
@@ -39,23 +39,27 @@ const Home = ({
   calendar,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
-    <div className="app">
+    <div className={styles.home.app}>
       <Head>
         <title>Brainhack Western {config.event.year}</title>
         <meta
           name="description"
-          content="Western Brainhack brings together researchers and trainees of all backgrounds to collaborate on open science projects in neuroimaging and neuroscience."
+          content={
+            "Western Brainhack brings together researchers and trainees of all " +
+            "backgrounds to collaborate on open science projects in neuroimaging and " +
+            "neuroscience."
+          }
         />
       </Head>
 
       <NavBar displaySections={config.displaySections} splashMode={true} />
 
-      <div className="splash">
-        <div className="window d-flex flex-row justify-content-start container-fluid">
-          <div className="background-img">
+      <div className={styles.home.splash}>
+        <div className={styles.home.window}>
+          <div className={styles.home.backgroundImg}>
             <Image src={brainNetwork} alt="" />
           </div>
-          <div className="col-12 col-lg-4 d-flex flex-column justify-content-end title-col">
+          <div className={styles.home.titleCol.container}>
             <div className="flex-fill"></div>
             <div className="flex-fill"></div>
             <div className="row-2">
@@ -63,12 +67,11 @@ const Home = ({
                 status={config.registration.status}
                 url={config.registration.url}
                 emailSignupTarget={config.registration.emailSignupTarget}
+                className={styles.home.titleCol.button}
               />
             </div>
             <div className="row-2 flex-fill"></div>
             <div className="row-4 d-flex flex-column align-items-center justify-content-end">
-              {/* <h3>London, ON</h3>
-              <h3>Dec 1-3</h3> */}
               <div className="logo">
                 <Image
                   src={main_logo}
@@ -90,7 +93,7 @@ const Home = ({
         </p>
       </WhiteBox>
 
-      <div id="about" className="container-lg about content-space">
+      <div id="about" className={styles.about.container}>
         <AboutRow img={upvote} imgClass="upvote-img" title="Pitch your project">
           Submit your project ideas online, then pitch them to your fellow
           attendees to recruit others to your team.
@@ -123,7 +126,7 @@ const Home = ({
           <div className="col-lg-6">
             <p>
               Brainhack Western {config.event.year} is an official satellite
-              event of{" "}
+              event of&nbsp;
               <a
                 href="https://brainhack.org/index.html"
                 title="Brainhack Global"
@@ -140,7 +143,7 @@ const Home = ({
         </div>
       </WhiteBox>
 
-      <div className="content-space container-lg">
+      <div className={`${styles.home.contentSpace} container-lg`}>
         <div className="row">
           <div className="col-lg-6 d-flex flex-column justify-content-between align-items-start">
             <div>
@@ -204,14 +207,15 @@ const Home = ({
 
       <WhiteBox className="sponsor-row">
         <h2 id="sponsors">Sponsors</h2>
-        <div className="row d-flex align-items-center">
+        <div className="row d-flex justify-content-center justify-content-lg-start align-items-center">
           {config.sponsors.map((sponsor) => (
-            <div key={sponsor.name} className="col-lg-4 sponsor">
+            <div key={sponsor.name} className={styles.sponsor.sponsor}>
               <a
                 href={sponsor.url}
                 title={sponsor.name}
                 target="_blank"
                 rel="noreferrer"
+                className={styles.sponsor.sponsorLink}
               >
                 <Image
                   src={sponsor.img}

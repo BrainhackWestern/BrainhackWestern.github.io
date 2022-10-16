@@ -1,10 +1,11 @@
 import Image from "../image";
-import { basePath } from "../../utils/image-loader";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { CSSProperties } from "react";
 import { TutorialInfo } from "../../interfaces/tutorial";
 import useScreenSize, { screenSizes } from "../../services/screen-size/use";
+
+import style from "../../styles/vanilla/tutorial.css"
 
 interface TutorialProps {
   config: TutorialInfo;
@@ -33,11 +34,11 @@ export const Tutorial = (props: TutorialProps) => {
 
   const data = [
     props.config.image ? (
-      <div key="image" className="col-12 col-lg tutorial-img">
+      <div key="image" className={style.img}>
         <Image src={props.config.image} width={250} height={250} alt="" />
       </div>
     ) : null,
-    <div key="description" className="col-12 col-lg flex-grow-1 console">
+    <div key="description" className={style.description}>
       <ReactMarkdown remarkPlugins={[remarkGfm]}>{description}</ReactMarkdown>
       {props.config.organizer ? (
         <div>
@@ -61,16 +62,16 @@ export const Tutorial = (props: TutorialProps) => {
   ];
 
   return (
-    <div id={props.config.id} className="tutorial">
+    <div id={props.config.id} className={style.tutorial}>
       <div
         className="d-flex"
         style={{ justifyContent: reverse ? "flex-end" : "flex-start" }}
       >
-        <div className="tutorial-header" style={headerStyle}>
+        <div className={style.tutorialHeader} style={headerStyle}>
           <h3>{props.config.name}</h3>
         </div>
       </div>
-      <div className="row align-items-center justify-content-center">
+      <div className={style.row}>
         {reverse ? data.reverse() : data}
       </div>
     </div>

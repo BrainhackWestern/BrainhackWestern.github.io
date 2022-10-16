@@ -1,13 +1,14 @@
 import { Button } from "./button";
 import { MsgCard } from "./msg-card";
-import { Console } from "./console"
+import { Console } from "./console";
 import { UpdatesSignup } from "./updates-signup";
 
 interface RegisterButtonProps {
   status: "unopened" | "open" | "closed";
   alignment?: "left" | "center";
   url?: string;
-  emailSignupTarget?: string
+  emailSignupTarget?: string;
+  className?: string;
 }
 
 export const RegisterButton = (props: RegisterButtonProps) => {
@@ -20,7 +21,11 @@ export const RegisterButton = (props: RegisterButtonProps) => {
     <div className={alignClass}>
       {(() => {
         if (props.status === "open" && props.url !== undefined) {
-          return <Button target={props.url}>Register Now</Button>;
+          return (
+            <Button className={props.className} target={props.url}>
+              Register Now
+            </Button>
+          );
         } else if (props.status === "unopened") {
           return (
             <Console>
