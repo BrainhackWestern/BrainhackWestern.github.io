@@ -1,6 +1,6 @@
-import Obfuscate from "react-obfuscate";
+import Obfuscate from 'react-obfuscate';
 
-import { ExpandedConfig, SiteConfig } from "../interfaces/site-config";
+import { ExpandedConfig, SiteConfig } from '../interfaces/site-config';
 
 interface FooterProps {
   organizers: string[];
@@ -14,7 +14,7 @@ export const getFooterProps = (config: ExpandedConfig) => {
     organizers: config.organizers,
     twitterUrl: config.twitterUrl,
     displayTwitter: config.displaySections.twitterFeed ?? true,
-    year: config.currentYear,
+    year: config.currentYear
   };
 };
 
@@ -25,7 +25,7 @@ export const Footer = (props: FooterProps) => {
         <div className="row">
           <div className="col-lg-6 d-flex flex-column justify-content-start align-items-start">
             <h3>Organizers</h3>
-            <p className="organizers">{props.organizers.join(", ")}</p>
+            <p className="organizers">{props.organizers.join(', ')}</p>
           </div>
           {props.displayTwitter && props.twitterUrl ? (
             <div className="col-lg-6 d-flex flex-column justify-content-between align-items-center">
@@ -37,7 +37,7 @@ export const Footer = (props: FooterProps) => {
                   href={props.twitterUrl}
                 >
                   Tweets by UWOBrainhack
-                </a>{" "}
+                </a>{' '}
                 <script
                   async
                   src="https://platform.twitter.com/widgets.js"
