@@ -1,16 +1,18 @@
-import React, { Dispatch, FormEvent, useState } from "react";
-import { validate } from "email-validator";
+import { validate } from 'email-validator';
+import React, { Dispatch, FormEvent, useState } from 'react';
+
+const TEST = true;
 
 interface SignupFormProps {
   setValidity: Dispatch<boolean>;
   setSubmitted: Dispatch<boolean>;
-  setError: Dispatch<"server" | "local" | null>;
+  setError: Dispatch<'server' | 'local' | null>;
   setWaiting: Dispatch<boolean>;
   target: string;
 }
 
 export default function EmailForm(props: SignupFormProps) {
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState('');
 
   const clearStatuses = () => {
     props.setWaiting(false);
@@ -27,25 +29,32 @@ export default function EmailForm(props: SignupFormProps) {
     props.setWaiting(true);
     props.setValidity(true);
     const data = {
-      email: email,
+      email: email
     };
-    fetch(props.target, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    })
-      .then((response) => {
+    if (TEST) {
+      setTimeout(() => {
         clearStatuses();
-        if (response.ok) {
-          props.setSubmitted(true);
-        } else {
-          props.setError("server");
-        }
+        props.setSubmitted(true);
+      }, 5000);
+    } else {
+      fetch(props.target, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
       })
-      .catch((_) => {
-        clearStatuses();
-        props.setError("local");
-      });
+        .then((response) => {
+          clearStatuses();
+          if (response.ok) {
+            props.setSubmitted(true);
+          } else {
+            props.setError('server');
+          }
+        })
+        .catch((_) => {
+          clearStatuses();
+          props.setError('local');
+        });
+    }
   };
 
   return (

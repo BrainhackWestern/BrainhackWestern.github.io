@@ -1,3 +1,4 @@
+import { isString } from "lodash";
 import NextImage, { ImageLoader, ImageProps } from "next/image";
 import { basePath } from "../utils/image-loader";
 
@@ -5,9 +6,6 @@ const nonOptimizedLoader: ImageLoader = ({ src }) => {
   return src;
 };
 
-const isString = (item: any): item is string => {
-  return typeof item === "string" || item instanceof String;
-};
 
 const Image =
   process.env.NEXT_PUBLIC_LOADER == "custom"

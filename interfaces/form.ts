@@ -22,4 +22,8 @@ export interface EmbeddedForm {
    * @default false
    */
   hidden?: boolean
+
+  prefillMappings?: {
+    [param: string]: string
+  }
 }

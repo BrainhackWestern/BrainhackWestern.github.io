@@ -35,6 +35,12 @@
                     "description": "Whether the form should be viewable (vs returning form not found)",
                     "type": "boolean"
                 },
+                "prefillMappings": {
+                    "additionalProperties": {
+                        "type": "string"
+                    },
+                    "type": "object"
+                },
                 "shortTitle": {
                     "description": "Short version of the title to be used in links",
                     "type": "string"
@@ -290,8 +296,18 @@
                     "type": "string"
                 },
                 "organizer": {
-                    "description": "Organizer or presenter of the workshop",
-                    "type": "string"
+                    "anyOf": [
+                        {
+                            "items": {
+                                "type": "string"
+                            },
+                            "type": "array"
+                        },
+                        {
+                            "type": "string"
+                        }
+                    ],
+                    "description": "Organizer or presenter of the workshop"
                 },
                 "panelists": {
                     "description": "List of workshop panelists",

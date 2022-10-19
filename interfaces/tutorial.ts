@@ -34,7 +34,7 @@ export interface TutorialInfo {
     /**
      * Organizer or presenter of the workshop
      */
-    organizer?: string;
+    organizer?: string | string[];
 
     /**
      * List of workshop panelists

@@ -74,6 +74,8 @@ forms:
     title: Brainhack 2022 Registration
     shortTitle: Registration
     embedTag: <script src="https://www.cognitoforms.com/f/seamless.js" data-key="dKVrRkF3yk6PnoRpFF7XGg" data-form="3"></script>
+    prefillMappings:
+      id: Calculations.VolunteerCode
 registration:
   cost: 5
   url: https://www.eventbrite.ca/e/brainhack-western-2021-tickets-200482477487
@@ -83,8 +85,8 @@ location:
   name: Western Interdisciplinary Research Building
   street: Perth Dr
   city: London
-  province: "ON"
-  url: "https://www.uwo.ca/bmi/about/wirb.html"
+  province: 'ON'
+  url: 'https://www.uwo.ca/bmi/about/wirb.html'
   maps_id: ChIJCVSloavvLogR82_w3v729s0
 organizers:
   - Ali Khan
@@ -93,9 +95,9 @@ organizers:
   - Peter Van Dyken
   - Alaa Taha
 sponsors:
-  - img: "/img/brainscan_logo.png"
+  - img: '/img/brainscan_logo.png'
     name: Brainscan
-    url: "https://brainscan.uwo.ca"
+    url: 'https://brainscan.uwo.ca'
   # - img: "/img/western_logo.png"
   #   name: Western University
   #   url: "https://www.uwo.ca"
@@ -112,45 +114,45 @@ schedule:
       year: 2021
       events:
         - name: Breakfast
-          time: "8:00"
-          duration: "1:00"
+          time: '8:00'
+          duration: '1:00'
           room: WIRB 4190
         - name: Welcome & Project Pitches
-          time: "9:00"
-          duration: "1:30"
+          time: '9:00'
+          duration: '1:30'
           room:
             - WIRB 1170
             - Zoom Room 1
         - name: Hacking
-          time: "10:30"
-          duration: "1:30"
+          time: '10:30'
+          duration: '1:30'
           color: red
           room: WIRB 1130
         - name: Lunch
-          time: "12:00"
-          duration: "1:30"
+          time: '12:00'
+          duration: '1:30'
           room: WIRB 4190
         - name: MRI Data in Python
-          time: "13:30"
-          duration: "1:00"
-          color: "#1f331e"
-          link: "#python"
+          time: '13:30'
+          duration: '1:00'
+          color: '#1f331e'
+          link: '#python'
           priority: 1
           room:
             - WIRB 1110
             - Zoom Room 1
         - name: Intro to Datalad
-          time: "14:30"
-          duration: "1:30"
-          color: "#1f331e"
-          link: "#datalad"
+          time: '14:30'
+          duration: '1:30'
+          color: '#1f331e'
+          link: '#datalad'
           priority: 1
           room:
             - WIRB 1160
             - Zoom Room 2
         - name: Hacking
-          time: "13:30"
-          duration: "2:30"
+          time: '13:30'
+          duration: '2:30'
           color: red
           room: WIRB 4190
     - day: 2
@@ -158,107 +160,107 @@ schedule:
       year: 2021
       events:
         - name: Breakfast
-          time: "8:00"
-          duration: "1:00"
+          time: '8:00'
+          duration: '1:00'
           room: WIRB 4190
         - name: fMRI/fMRIPrep
-          time: "9:00"
-          duration: "1:30"
-          color: "#1f331e"
-          link: "#frmi"
+          time: '9:00'
+          duration: '1:30'
+          color: '#1f331e'
+          link: '#frmi'
           priority: 1
           room:
             - WIRB 1170
             - Zoom Room 1
         - name: Introduction to Meta-analyses
-          time: "10:30"
-          duration: "1:30"
-          color: "#1f331e"
-          link: "#meta-analysis"
+          time: '10:30'
+          duration: '1:30'
+          color: '#1f331e'
+          link: '#meta-analysis'
           priority: 1
           room:
             - WIRB 4190
             - Zoom Room 2
         - name: Lunch
-          time: "12:00"
-          duration: "1:30"
+          time: '12:00'
+          duration: '1:30'
           room: WIRB 4190
         - name: Intro to fNIRS
-          time: "13:30"
-          duration: "2:30"
-          color: "#1f331e"
-          link: "#fnirs"
+          time: '13:30'
+          duration: '2:30'
+          color: '#1f331e'
+          link: '#fnirs'
           priority: 1
           room:
             - WIRB 1110
             - Zoom Room 1
         - name: Hacking
-          time: "13:30"
-          duration: "2:30"
+          time: '13:30'
+          duration: '2:30'
           color: red
           room:
             - WIRB 4190 (1:30-2:30)
             - VAC 100 (1:30-4:00)
         - name: Hacking
-          time: "9:00"
-          duration: "3:00"
+          time: '9:00'
+          duration: '3:00'
           color: red
           room:
             - NSC 1 (9:00-12:00)
             - WIRB 1160 (10:30-12:00)
-        - name: "Diversity in Academia"
-          time: "12:30"
-          duration: "0:45"
+        - name: 'Diversity in Academia'
+          time: '12:30'
+          duration: '0:45'
           color: blue
-          link: "https://github.com/BrainhackWestern/BrainhackWestern.github.io/wiki/Lunch-and-Learn#winrepo"
+          link: 'https://github.com/BrainhackWestern/BrainhackWestern.github.io/wiki/Lunch-and-Learn#winrepo'
 
     - day: 3
       month: 12
       year: 2021
       events:
         - name: Breakfast
-          time: "8:00"
-          duration: "1:00"
+          time: '8:00'
+          duration: '1:00'
           room: WIRB 4190
         - name: Intro to Machine Learning
-          time: "9:00"
-          duration: "1:30"
-          color: "#1f331e"
-          link: "#machine-learning"
+          time: '9:00'
+          duration: '1:30'
+          color: '#1f331e'
+          link: '#machine-learning'
           priority: 1
           room:
             - WIRB 1130
             - Zoom Room 1
         - name: Intro to Deep Learning
-          time: "10:30"
-          duration: "1:30"
-          color: "#1f331e"
-          link: "#deep-learning"
+          time: '10:30'
+          duration: '1:30'
+          color: '#1f331e'
+          link: '#deep-learning'
           priority: 1
           room:
             - WIRB 1130
             - Zoom Room 2
         - name: Lunch
-          time: "12:00"
-          duration: "1:30"
+          time: '12:00'
+          duration: '1:30'
           room: WIRB 4190
         - name: Hacking
-          time: "9:00"
-          duration: "3:00"
+          time: '9:00'
+          duration: '3:00'
           color: red
           room:
             - WIRB 4190 (9:30-12:00)
             - VAC 100 (9:00-12:00)
         - name: Hacking
-          time: "13:30"
-          duration: "1:00"
+          time: '13:30'
+          duration: '1:00'
           color: red
           room:
             - WIRB 4190 (1:30-2:00)
             - VAC 100 (1:30-2:30)
         - name: Project presentations & Wrap-up
-          time: "14:30"
-          duration: "1:30"
+          time: '14:30'
+          duration: '1:30'
           room:
             - VAC 100
             - Zoom Room 1
@@ -304,7 +306,7 @@ tutorials:
       some of the nuances between the various types of meta-analyses. A new,
       web-driven, all-in-one meta-analysis toolbox will also be introduced.
   - id: git
-    name: Demystifying Git
+    name: Demystifying Git and Github
     image: /img/git-logo.png
     organizer: Suzanne Witt
     description: |
@@ -382,3 +384,36 @@ tutorials:
       MRI signal is originating from, what are the different contrasts, basic pulse
       sequences for acquiring an image, how to reconstruct and visualize an image from
       DICOM to NIFTI, and unique MRI contrasts such as diffusion or functional imaging.
+  - id: behaviour
+    name: Modern Realities of Behavioural Research
+    organizer:
+    - Priya Kalra
+    - Anthony Cruz
+    description: |
+      This tutorial will cover the basics of behavioral data collection and analysis in
+      neuroscience-adjacent fields such as cognitive psychology. The session will
+      provide a broad overview of the topic, ranging from basics of behavioral
+      experiment design, stimulus presentation, and data collection and analysis, to
+      emerging data analysis techniques and online data collection. Throughout, the
+      software options available for each step will be briefly discussed. No previous
+      knowledge or experience is expected.
+  - id: anat
+    name: 'Neuroanatomy for Researchers: a Focus on Surgical Targets'
+    organizer: Alaa Taha
+    image: "/img/afids.png"
+    description: |
+      In this tutorial, we will begin with a basic introduction to neuroanatomy then
+      briefly discuss the hippocampus, basal ganglia structures, midbrain, and
+      relatively uncharted zona incerta. Taking on a clinical lens, we will explore how
+      these structures could be crucial targets during functional neurosurgical
+      procedures.
+
+      We end our tutorial with 3 mini-software demo stations:
+
+      1. Learning neuroanatomy using an open and validated anatomical fiducial framework
+        ([AFIDs](https://validator.afids.io/))
+      2. Reviewing introduced anatomy in the context of a surgical case using a virtual
+        reality headset
+      3. Applying our functional neuroanatomy knowledge to plan a surgical case using a
+        fully open-source software
+        ([trajectoryGuide](https://trajectoryguide.greydongilmore.com/)).
