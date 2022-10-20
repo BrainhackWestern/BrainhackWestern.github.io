@@ -258,7 +258,16 @@ $console_light_white: #979797;
   }
 
   .cog-rating-scale {
+    td:last-child .el-radio {
+      border-right: none;
+    }
+
     .el-radio {
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      border-right: 1px dashed grey;
+
       &::before {
         content: '○';
         display: inline;
@@ -275,6 +284,7 @@ $console_light_white: #979797;
       }
       &:focus {
         border: unset;
+        border-right: 1px dashed grey;
       }
       &:focus-visible {
         outline: unset;
