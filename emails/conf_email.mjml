@@ -37,11 +37,11 @@
             >
                 We're so excited for you to join us at this year's Brainhack!
                 <br><br>
-                You'll find your registration details attached to this email.
-                You'll receive another email containing your receipt.
-                Check the <a href="https://brainhackwestern.github.io">brainhack
-                website</a> (https://brainhackwestern.github.io) for event and schedule
-                updates.
+                You'll find your registration details and receipt attached to this
+                email. You'll also receive another email from Stripe confirming your
+                payment. Check the <a
+                href="https://brainhackwestern.github.io">brainhack website</a>
+                (https://brainhackwestern.github.io) for event and schedule updates.
             </mj-text>
             <mj-divider
                 border-color="#f9f9f9"
