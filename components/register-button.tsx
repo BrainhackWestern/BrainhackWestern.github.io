@@ -22,7 +22,7 @@ export const RegisterButton = (props: RegisterButtonProps) => {
       {(() => {
         if (props.status === "open" && props.url !== undefined) {
           return (
-            <Button className={props.className} target={props.url}>
+            <Button className={`${props.className} large-button`} target={props.url}>
               Register Now
             </Button>
           );

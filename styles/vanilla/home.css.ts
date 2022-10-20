@@ -71,12 +71,12 @@ const titleCol = {
     "d-flex",
     "flex-column",
     "justify-content-end",
+    "align-items-center",
   ]),
 
   button: style([
     {
       alignSelf: "center",
-      marginTop: "2em",
       fontSize: textSize.heading.md,
     },
   ]),

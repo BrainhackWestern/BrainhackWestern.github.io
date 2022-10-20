@@ -6,31 +6,32 @@ $button_background: linear-gradient(90deg, rgba(12,110,100,1) 0%, rgba(44,76,129
 
 
 @mixin transition_bounds($time) {
-  transition: top $time, bottom $time, left $time, right $time;
+  transition: top $time, bottom $time, left $time, right $time, border-width $time / 2;
 }
+
 @mixin button($size) {
   position: relative;
-  display: inline;
+  display: inline-block;
   align-self: center;
   border: none;
   background: none;
   padding: 0;
+  // background: $button_background;
+  // border-radius: 10px;
 
   .inner {
     position: relative;
-    background: rgb(12,110,100);
-    background: $button_background;
+    display: flex;
     border-style: solid;
-    // border-color: var.$highlight;
-    border-radius: 10px;
     border-width: 0px;
-    padding: 0.7em 2em;
-
+    padding: 0.5em 2em;
     z-index: 3;
   }
+
   span {
     font-size: var.$body_large;
     color: var.$font-light;
+    vertical-align: middle;
   }
 
   @include bootstrap.media-breakpoint-up(lg) {
@@ -39,38 +40,33 @@ $button_background: linear-gradient(90deg, rgba(12,110,100,1) 0%, rgba(44,76,129
       font-size: $size;
     }
   }
+
   &::before {
-    @include mixins.pseudoblock(0em);
+    @include mixins.pseudoblock(50%);
     background: var.$background;
     z-index: 2;
     border-radius: 10px;
-    @include transition_bounds((0.15s))
+    @include transition_bounds((0.15s));
   }
 
   &::after {
     @include mixins.pseudoblock(0em);
     background: $button_background;
     z-index: 1;
-    border-radius: 14px;
+    border-radius: 15px;
     @include transition_bounds((0.20s))
-    // background-color: var.$background500;
   }
 
   &:hover::before {
-    @include mixins.pseudoblock(-0.2em);
-    background: var.$background;
-    z-index: 2;
-    border-radius: 10px;
+    @include mixins.pseudoblock(0%);
   }
 
   &:hover::after {
-    @include mixins.pseudoblock(-0.5em);
+    @include mixins.pseudoblock(-5px);
     background: $button_background;
     z-index: 1;
     border-radius: 14px;
-    // background-color: var.$background500;
   }
-
 }
 
 .button {
@@ -78,5 +74,5 @@ $button_background: linear-gradient(90deg, rgba(12,110,100,1) 0%, rgba(44,76,129
 }
 
 .large-button {
-  @include button(var.$text_med);
+  @include button(var.$body_large);
 }
