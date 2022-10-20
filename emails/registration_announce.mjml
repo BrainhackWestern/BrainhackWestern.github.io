@@ -41,6 +41,7 @@
                 href="https://brainhackwestern.github.io">Brainhack Website</a>
                 (https://brainhackwestern.github.io)
             </mj-text>
+            <mj-spacer height="50px" />
             <mj-button
                 background-color="#9f30ff"
                 font-size="24px"
@@ -50,7 +51,6 @@
                 Register Now
             </mj-button>
             <mj-text
-                align="center"
                 font-family="Montserrat, Verdana, sans-serif"
                 color="#f9f9f9"
                 font-size="12px"
