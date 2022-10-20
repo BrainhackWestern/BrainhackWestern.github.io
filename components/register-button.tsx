@@ -1,42 +1,43 @@
-import { Button } from "./button";
-import { MsgCard } from "./msg-card";
-import { Console } from "./console";
-import { UpdatesSignup } from "./updates-signup";
+import { Registration } from '../interfaces/site-config';
+import { Button } from './button';
+import { Console } from './console';
+import { MsgCard } from './msg-card';
+import { UpdatesSignup } from './updates-signup';
 
 interface RegisterButtonProps {
-  status: "unopened" | "open" | "closed";
-  alignment?: "left" | "center";
-  url?: string;
-  emailSignupTarget?: string;
+  settings: Registration;
+  alignment?: 'left' | 'center';
   className?: string;
 }
 
 export const RegisterButton = (props: RegisterButtonProps) => {
+  const settings = props.settings;
   const alignClass =
-    (props.alignment == "left"
-      ? "align-self-lg-start"
-      : "align-self-lg-center") + " align-self-center";
+    props.alignment == 'left' ? 'align-self-lg-start' : 'align-self-lg-center';
 
   return (
     <div className={alignClass}>
       {(() => {
-        if (props.status === "open" && props.url !== undefined) {
+        if (settings.status === 'open' && settings.url !== undefined) {
           return (
-            <Button className={`${props.className} large-button`} target={props.url}>
+            <Button
+              className={`${props.className} large-button`}
+              target={settings.url}
+            >
               Register Now
             </Button>
           );
-        } else if (props.status === "unopened") {
+        } else if (settings.status === 'unopened') {
           return (
             <Console>
               <span className="blue"># Coming soon</span>
               <br />
               <span>Nov 30 - Dec 2</span>
-              {props.emailSignupTarget ? (
+              {settings.emailSignupTarget ? (
                 <>
                   <br />
                   <br />
-                  <UpdatesSignup target={props.emailSignupTarget} />
+                  <UpdatesSignup target={settings.emailSignupTarget} />
                 </>
               ) : null}
             </Console>

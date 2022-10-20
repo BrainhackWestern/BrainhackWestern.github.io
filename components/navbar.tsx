@@ -1,26 +1,34 @@
-import logo from "../public/img/brainhack_logo.png";
-import Link from "next/link";
-import Image from "./image";
-import useScrollPosition from "../services/scroll-position/use";
-import { DisplaySections } from "../interfaces/site-config";
-import { useState } from "react";
-import style from "../styles/vanilla/navbar.css";
+import { useState } from 'react';
+
+import Link from 'next/link';
+
+import { DisplaySections } from '../interfaces/site-config';
+import logo from '../public/img/brainhack_logo.png';
+import useScrollPosition from '../services/scroll-position/use';
+import style from '../styles/vanilla/navbar.css';
+import { getFooterProps } from './footer';
+import Image from './image';
 
 interface NavBarProps {
   displaySections: DisplaySections;
   splashMode?: boolean;
+  registrationButton?: React.ReactChild | null;
 }
 
-export const NavBar = ({ displaySections, splashMode }: NavBarProps) => {
+export const NavBar = ({
+  displaySections,
+  splashMode,
+  registrationButton
+}: NavBarProps) => {
   const {
-    state: { scrollPosition },
+    state: { scrollPosition }
   } = useScrollPosition();
   const [open, setOpen] = useState(false);
 
   return (
     <nav
-      className={`${style.navbar} ${splashMode ? "fixed-top" : "sticky-top"} ${
-        !splashMode || scrollPosition > 0 || open ? style.navbarWhite : ""
+      className={`${style.navbar} ${splashMode ? 'fixed-top' : 'sticky-top'} ${
+        !splashMode || scrollPosition > 0 || open ? style.navbarWhite : ''
       }`}
     >
       <div className="container-fluid">
@@ -42,7 +50,7 @@ export const NavBar = ({ displaySections, splashMode }: NavBarProps) => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav">
+          <ul className="navbar-nav me-auto">
             <li className="nav-item">
               <Link href="/#about">
                 <a className="nav-link">About</a>
@@ -83,6 +91,15 @@ export const NavBar = ({ displaySections, splashMode }: NavBarProps) => {
               </Link>
             </li>
           </ul>
+          <span
+            className={`${style.registerBtn} ${
+              !splashMode || scrollPosition > 0 || open
+                ? ''
+                : style.registerBtnHide
+            }`}
+          >
+            {registrationButton ?? null}
+          </span>
         </div>
       </div>
     </nav>

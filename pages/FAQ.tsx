@@ -1,23 +1,25 @@
-import type { InferGetStaticPropsType } from "next";
-import Head from "next/head";
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
-import { NavBar } from "../components/navbar";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
-import { readConfig } from "../utils/data";
-import Footer, { getFooterProps } from "../components/footer";
+import type { InferGetStaticPropsType } from 'next';
+import Head from 'next/head';
+
+import Footer, { getFooterProps } from '../components/footer';
+import { NavBar } from '../components/navbar';
+import { RegisterButton } from '../components/register-button';
+import { readConfig } from '../utils/data';
 
 export const getStaticProps = async () => {
   const config = await readConfig();
   return {
     props: {
-      config,
-    },
+      config
+    }
   };
 };
 
 const FaqPage = ({
-  config,
+  config
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <div className="app">
@@ -28,7 +30,14 @@ const FaqPage = ({
           content="Frequently asked Questions for Brainhack Western"
         />
       </Head>
-      <NavBar displaySections={config.displaySections} />
+      <NavBar
+        displaySections={config.displaySections}
+        registrationButton={
+          config.registration.status === 'open' ? (
+            <RegisterButton settings={config.registration} />
+          ) : null
+        }
+      />
       <article className="container-lg">
         <h1>FAQ</h1>
         {config.faq?.map((faq) => {
@@ -42,9 +51,8 @@ const FaqPage = ({
           );
         })}
       </article>
-      <Footer {...getFooterProps(config)}/>
+      <Footer {...getFooterProps(config)} />
     </div>
-
   );
 };
 

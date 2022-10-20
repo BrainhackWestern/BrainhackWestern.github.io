@@ -1,26 +1,24 @@
-import type { InferGetStaticPropsType } from "next";
-import Head from "next/head";
+import type { InferGetStaticPropsType } from 'next';
+import Head from 'next/head';
 
-
-import brainNetwork from "../public/img/splash-brain-network.png";
-import upvote from "../public/img/upvote.png";
-import learn_skillz from "../public/img/learn_skillz_cropped.png";
-import global_logo from "../public/img/global_logo.png";
-import dollar_signs from "../public/img/dollar_signs.png";
-import hack from "../public/img/hack.png";
-import main_logo from "../public/img/2022-splash-logo.png";
-
-import Image from "../components/image";
-import { NavBar } from "../components/navbar";
-import { Button } from "../components/button";
-import { WhiteBox } from "../components/white-box";
-import { AboutRow } from "../components/about-row";
-import { Schedule } from "../components/schedule/schedule";
-import { RegisterButton } from "../components/register-button";
-import { TutorialList } from "../components/tutorials/tutorial-list";
-import Footer, { getFooterProps } from "../components/footer";
-import { readCalendar, readConfig } from "../utils/data";
-import styles from "../styles/globals.css";
+import { AboutRow } from '../components/about-row';
+import { Button } from '../components/button';
+import Footer, { getFooterProps } from '../components/footer';
+import Image from '../components/image';
+import { NavBar } from '../components/navbar';
+import { RegisterButton } from '../components/register-button';
+import { Schedule } from '../components/schedule/schedule';
+import { TutorialList } from '../components/tutorials/tutorial-list';
+import { WhiteBox } from '../components/white-box';
+import main_logo from '../public/img/2022-splash-logo.png';
+import dollar_signs from '../public/img/dollar_signs.png';
+import global_logo from '../public/img/global_logo.png';
+import hack from '../public/img/hack.png';
+import learn_skillz from '../public/img/learn_skillz_cropped.png';
+import brainNetwork from '../public/img/splash-brain-network.png';
+import upvote from '../public/img/upvote.png';
+import styles from '../styles/globals.css';
+import { readCalendar, readConfig } from '../utils/data';
 
 export const getStaticProps = async () => {
   const config = await readConfig();
@@ -29,14 +27,14 @@ export const getStaticProps = async () => {
   return {
     props: {
       config,
-      calendar,
-    },
+      calendar
+    }
   };
 };
 
 const Home = ({
   config,
-  calendar,
+  calendar
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <div className={styles.home.app}>
@@ -45,14 +43,22 @@ const Home = ({
         <meta
           name="description"
           content={
-            "Western Brainhack brings together researchers and trainees of all " +
-            "backgrounds to collaborate on open science projects in neuroimaging and " +
-            "neuroscience."
+            'Western Brainhack brings together researchers and trainees of all ' +
+            'backgrounds to collaborate on open science projects in neuroimaging and ' +
+            'neuroscience.'
           }
         />
       </Head>
 
-      <NavBar displaySections={config.displaySections} splashMode={true} />
+      <NavBar
+        displaySections={config.displaySections}
+        splashMode={true}
+        registrationButton={
+          config.registration.status === 'open' ? (
+            <RegisterButton settings={config.registration} />
+          ) : null
+        }
+      />
 
       <div className={styles.home.splash}>
         <div className={styles.home.window}>
@@ -64,10 +70,9 @@ const Home = ({
             <div className="flex-fill"></div>
             <div className="row-2">
               <RegisterButton
-                status={config.registration.status}
-                url={config.registration.url}
-                emailSignupTarget={config.registration.emailSignupTarget}
+                settings={config.registration}
                 className={styles.home.titleCol.button}
+                alignment="center"
               />
             </div>
             <div className="row-2 flex-fill"></div>
@@ -100,9 +105,9 @@ const Home = ({
           <br />
           <br />
           <Button target="https://github.com/BrainhackWestern/BrainhackWestern.github.io/blob/2021/wiki/Projects2021.md">
-            {config.registration.status === "unopened"
-              ? "View Previous Project Proposals"
-              : "View Project Proposals"}
+            {config.registration.status === 'unopened'
+              ? 'View Previous Project Proposals'
+              : 'View Project Proposals'}
           </Button>
         </AboutRow>
         <AboutRow img={learn_skillz} title="Learn new skills" reverse={true}>
@@ -113,7 +118,7 @@ const Home = ({
           {config.displaySections.tutorial ? (
             <Button target="#tutorials">View Tutorials</Button>
           ) : (
-            "Check back soon to see what tutorials will be offered!"
+            'Check back soon to see what tutorials will be offered!'
           )}
         </AboutRow>
         <AboutRow img={hack} title="Hack!!">
@@ -136,7 +141,7 @@ const Home = ({
             </p>
           </div>
           <div className="col-lg-6 d-flex justify-content-center">
-            <div style={{ maxWidth: "300px" }}>
+            <div style={{ maxWidth: '300px' }}>
               <Image src={global_logo} alt="" />
             </div>
           </div>
@@ -150,15 +155,10 @@ const Home = ({
               <h2>Cost: ${config.registration.cost}</h2>
               <p>Includes on-site meals, snacks, and coffee!</p>
             </div>
-            <RegisterButton
-              alignment="left"
-              status={config.registration.status}
-              url={config.registration.url}
-              emailSignupTarget={config.registration.emailSignupTarget}
-            />
+            <RegisterButton settings={config.registration} alignment="center" />
           </div>
           <div className="col-lg-6 d-flex justify-content-center">
-            <div style={{ maxWidth: "300px" }}>
+            <div style={{ maxWidth: '300px' }}>
               <Image src={dollar_signs} alt="" />
             </div>
           </div>

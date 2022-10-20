@@ -14,7 +14,17 @@ const navbarWhite = style({
   backgroundColor: "rgba(240, 240, 240, 1)",
 });
 
+const registerBtn = style({
+  opacity: 1,
+  transition: 'opacity 0.25s',
+})
+const registerBtnHide = style({
+  opacity: 0
+})
+
 export default {
   navbar,
   navbarWhite,
+  registerBtn,
+  registerBtnHide,
 };

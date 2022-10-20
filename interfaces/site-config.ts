@@ -89,6 +89,27 @@ export interface Event {
 }
 
 /**
+ * Settings pertaining to registration forms and status
+ * 
+ * @additionalProperties false
+ */
+export interface Registration {
+  /**
+   * Url of the registration form
+   */
+  url?: string;
+  cost: number;
+  status: "unopened" | "open" | "closed";
+  /**
+   * Url of a webhook (e.g. from make.com) to send data from the email signup
+   * form This form is used in place of the registration button when
+   * registration status is set to "unopened". The webhook should be configured
+   * to take POSTed JSON data with a single field: "email"
+   */
+  emailSignupTarget?: string;
+}
+
+/**
  * Config interface for Brainhack. Contains
  * all the information needed to display the site
  *
@@ -115,26 +136,7 @@ export interface SiteConfig {
    */
   twitterUrl?: string;
 
-  /**
-   * Data pertaining to registration and costs
-   *
-   * @additionalProperties false
-   */
-  registration: {
-    /**
-     * Url of the registration form
-     */
-    url?: string;
-    cost: number;
-    status: "unopened" | "open" | "closed";
-    /**
-     * Url of a webhook (e.g. from make.com) to send data from the email signup form
-     * This form is used in place of the registration button when registration status is
-     * set to "unopened". The webhook should be configured to take POSTed JSON data with
-     * a single field: "email"
-     */
-    emailSignupTarget?: string;
-  };
+  registration: Registration
 
   faq?: FAQ[];
 
