@@ -79,7 +79,7 @@ forms:
 registration:
   cost: 5
   url: /forms/registration
-  status: open
+  status: unopened
   emailSignupTarget: https://hook.us1.make.com/hrdtv28jy9i55havi84l6db2xc1ieyol
 location:
   name: Western Interdisciplinary Research Building
