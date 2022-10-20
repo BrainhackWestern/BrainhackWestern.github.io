@@ -1,0 +1,133 @@
+<mjml>
+    <mj-head>
+        <mj-preview>Brainhack Western 2022 Registration Confirmation</mj-preview>
+        <mj-font 
+            name="Quicksand"
+            href="https://fonts.googleapis.com/css?family=Montserrat" 
+        />
+        <mj-font 
+            name="Montserrat"
+            href="https://fonts.googleapis.com/css?family=Quicksand" 
+        />
+    </mj-head>
+  <mj-body background-color="#1e1e1e">
+    <mj-section  text-align="center">
+        <mj-column>
+            <mj-image
+                width="200px"
+                src="https://brainhack-western.imgix.net/img/brainhack_logo.png?w=200&exp=1"
+            >
+            </mj-image>
+            <mj-text 
+                font-family="Quicksand, Verdana, sans-serif"
+                font-size="32px"
+                color="#f9f9f9"
+                padding-bottom="50px"
+                align="center"
+            >
+                Registration Confirmed
+            </mj-text>
+
+
+            <mj-text
+                font-family="Montserrat, Verdana, sans-serif"
+                color="#f9f9f9"
+                font-size="16px"
+                line-height="200%"
+            >
+                We're so excited for you to join us at this year's Brainhack!
+                <br><br>
+                You'll find your registration details attached to this email.
+                You'll receive another email containing your receipt.
+                Check the <a href="https://brainhackwestern.github.io">brainhack
+                website</a> (https://brainhackwestern.github.io) for event and schedule
+                updates.
+            </mj-text>
+            <mj-divider
+                border-color="#f9f9f9"
+                border-width="1px"
+            >
+            </mj-divider>
+        </mj-column>
+    </mj-section>
+    <mj-section padding="0" padding-top="10px">
+        <mj-column>
+            <mj-text 
+                font-family="Quicksand, Verdana, sans-serif"
+                font-size="24px"
+                color="#f9f9f9"
+            >
+                Event Details
+            </mj-text>
+            <mj-table
+                color="#f9f9f9"
+                font-size="16px"
+                font-family="Montserrat, Verdana, sans-serif"
+                cellpadding="10px"
+            >
+                <tr>
+                    <td>Start:</td>
+                    <td>Wednesday, Nov 30 - 8:00 am</td>
+                </tr>
+                <tr>
+                    <td>End:</td>
+                    <td>Friday, Dec 2 - 4:30 pm</td>
+                </tr>
+                <tr>
+                    <td>Location</td>
+                    <td>
+                        <a href="https://goo.gl/maps/K4x8kgaK4d14rUkq6">
+                            Western Interdisciplinary Research Building
+                        </a>
+                        <br />
+                        <span style="font-size: 10px">
+                            https://goo.gl/maps/K4x8kgaK4d14rUkq6
+                        </span>
+                    </td>
+                </tr>
+
+            </mj-table>
+        </mj-column>
+    </mj-section>
+    <mj-section padding="0" padding-top="10px">
+        <mj-column>
+            <mj-divider
+                border-color="#f9f9f9"
+                border-width="1px"
+            >
+            </mj-divider>
+        </mj-column>
+    </mj-section>
+    <mj-section>
+    
+        <mj-column>
+            <mj-image  
+                width="100px" 
+                align="left"
+                src="https://brainhack-western.imgix.net/img/brainhack_logo.png?w=200&exp=1"
+            ></mj-image>
+        </mj-column>
+        <mj-column vertical-align="middle">
+            <mj-text
+                font-family="Montserrat, Verdana, sans-serif"
+                color="#f9f9f9"
+                font-size="11px"
+                line-height="200%"
+                align="right"
+            >
+                <a href="https://brainhackwestern.github.io/">https://brainhackwestern.github.io/</a>
+                
+            </mj-text>
+            <mj-text
+                font-family="Montserrat, Verdana, sans-serif"
+                color="#f9f9f9"
+                font-size="11px"
+                line-height="200%"
+                align="right"
+            >
+                Copyright © 2022 Brainhack Western
+            </mj-text>
+        </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
