@@ -13,7 +13,7 @@ const background = {
 
 export const colors = {
   hightlight: "#b157ff",
-  highlightDark: '#b156ff',
+  highlightDark: '#830bab',
   highlightLight: '#b157ff',
 
   background,
@@ -29,6 +29,7 @@ export const colors = {
 export const textSize = {
   base: 16,
   heading: {
+    xl: "4.5rem",
     lg: "3.5rem",
     md: "2.5rem",
     sm: "2rem",

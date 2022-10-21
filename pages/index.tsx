@@ -5,6 +5,7 @@ import { AboutRow } from '../components/about-row';
 import { Button } from '../components/button';
 import Footer, { getFooterProps } from '../components/footer';
 import Image from '../components/image';
+import { MsgCard } from '../components/msg-card';
 import { NavBar } from '../components/navbar';
 import { RegisterButton } from '../components/register-button';
 import { Schedule } from '../components/schedule/schedule';
@@ -68,15 +69,15 @@ const Home = ({
           <div className={styles.home.titleCol.container}>
             <div className="flex-fill"></div>
             <div className="flex-fill"></div>
-            <div className="row-2">
+            <div>
               <RegisterButton
                 settings={config.registration}
                 className={styles.home.titleCol.button}
                 alignment="center"
               />
             </div>
-            <div className="row-2 flex-fill"></div>
-            <div className="row-4 d-flex flex-column align-items-center justify-content-end">
+            <div className="flex-fill"></div>
+            <div className="d-flex flex-column align-items-center justify-content-end">
               <div className="logo">
                 <Image
                   src={main_logo}
@@ -84,6 +85,7 @@ const Home = ({
                   height={186}
                   alt="Western Brainhack 2022"
                 />
+                <div className={styles.logo.dates}>Nov 30 - Dec 2</div>
               </div>
             </div>
           </div>
