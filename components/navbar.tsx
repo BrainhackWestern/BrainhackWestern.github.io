@@ -76,7 +76,7 @@ export const NavBar = ({
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="https://github.com/BrainhackWestern/BrainhackWestern.github.io/blob/2021/wiki/Projects2021.md">
+              <Link href="https://github.com/BrainhackWestern/BrainhackWestern.github.io/wiki/Projects">
                 <a className="nav-link">Projects</a>
               </Link>
             </li>

@@ -106,7 +106,7 @@ const Home = ({
           attendees to recruit others to your team.
           <br />
           <br />
-          <Button target="https://github.com/BrainhackWestern/BrainhackWestern.github.io/blob/2021/wiki/Projects2021.md">
+          <Button target="https://github.com/BrainhackWestern/BrainhackWestern.github.io/wiki/Projects">
             {config.registration.status === 'unopened'
               ? 'View Previous Project Proposals'
               : 'View Project Proposals'}
