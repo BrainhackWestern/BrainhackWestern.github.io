@@ -11,9 +11,6 @@ const dates = style({
   color: colors.fontLight,
 })
 
-globalStyle(`${dates} span`, {
-})
-
 export default {
   dates,
 }

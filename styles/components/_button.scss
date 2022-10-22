@@ -31,14 +31,14 @@ $button_background: linear-gradient(90deg, rgba(12,110,100,1) 0%, rgba(44,76,129
   span {
     font-size: var.$body_large;
     color: var.$font-light;
-    vertical-align: middle;
+  // vertical-align: middle;
   }
 
   @include bootstrap.media-breakpoint-up(lg) {
     align-self: flex-start;
-    span {
-      font-size: $size;
-    }
+    // span {
+    font-size: $size;
+    // }
   }
 
   &::before {
