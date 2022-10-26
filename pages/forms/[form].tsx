@@ -1,6 +1,7 @@
 import CognitoForm from '@tylermenezes/cognitoforms-react';
 import { findIndex } from 'lodash';
 import { merge, set } from 'lodash';
+import styles from "../../styles/globals.css"
 
 import type { InferGetStaticPropsType } from 'next';
 import ErrorPage from 'next/error';
@@ -119,7 +120,7 @@ const GenericForm = ({
   );
 
   return (
-    <div className="app">
+    <div className={styles.home.app}>
       <Head>
         <title>{formData.shortTitle} - Brainhack Western 2022</title>
         <meta
@@ -127,7 +128,7 @@ const GenericForm = ({
           content="Frequently asked Questions for Brainhack Western"
         />
       </Head>
-      <div className="splash">
+      <div className={styles.home.splash}>
         <NavBar
           displaySections={config.displaySections}
           splashMode={!smallScreen}

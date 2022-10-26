@@ -10,6 +10,12 @@ const app = style({
   backgroundColor: colors.backgroundMain,
 });
 
+const center = style([
+  {
+    textAlign: 'center'
+  }
+])
+
 const window = style([
   "d-flex",
   "flex-row",
@@ -77,7 +83,7 @@ const titleCol = {
   button: style([
     {
       alignSelf: "center",
-      fontSize: textSize.heading.md,
+      fontSize: textSize.heading.sm,
     },
   ]),
 };
@@ -108,4 +114,5 @@ export default {
   titleCol,
   mapFrame,
   contentSpace,
+  center,
 };

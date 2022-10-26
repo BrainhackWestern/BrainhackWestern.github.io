@@ -5,7 +5,6 @@ import { AboutRow } from '../components/about-row';
 import { Button } from '../components/button';
 import Footer, { getFooterProps } from '../components/footer';
 import Image from '../components/image';
-import { MsgCard } from '../components/msg-card';
 import { NavBar } from '../components/navbar';
 import { RegisterButton } from '../components/register-button';
 import { Schedule } from '../components/schedule/schedule';
@@ -19,7 +18,7 @@ import learn_skillz from '../public/img/learn_skillz_cropped.png';
 import brainNetwork from '../public/img/splash-brain-network.png';
 import upvote from '../public/img/upvote.png';
 import styles from '../styles/globals.css';
-import { readCalendar, readConfig, linkScheduleEvents } from '../utils/data';
+import { linkScheduleEvents, readCalendar, readConfig } from '../utils/data';
 
 export const getStaticProps = async () => {
   const config = await readConfig();
@@ -27,16 +26,16 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      config: await linkScheduleEvents(await readCalendar(config)),
+      config: await linkScheduleEvents(await readCalendar(config))
       // calendar
     }
   };
 };
 
 const Home = ({
-  config,
-  // calendar
-}: InferGetStaticPropsType<typeof getStaticProps>) => {
+  config
+}: // calendar
+InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <div className={styles.home.app}>
       <Head>
@@ -118,7 +117,9 @@ const Home = ({
           <br />
           <br />
           {config.displaySections.tutorial ? (
-            <Button target="#tutorials">View Tutorials</Button>
+            <div className={styles.home.center}>
+              <Button target="#tutorials">View Tutorials</Button>
+            </div>
           ) : (
             'Check back soon to see what tutorials will be offered!'
           )}
@@ -179,7 +180,7 @@ const Home = ({
         show={config.displaySections.tutorial ?? true}
       />
 
-      <div id="location" className="content-space container-lg">
+      <div id="location" className={`${styles.home.contentSpace} container-lg`}>
         <div className="row">
           <div className="col-lg-4 d-flex flex-column justify-content-start align-items-start">
             <h2>Location</h2>
@@ -195,7 +196,7 @@ const Home = ({
           </div>
           <div className="col-lg-8 d-flex flex-column justify-content-start align-items-start">
             <iframe
-              className="map-frame"
+              className={styles.home.mapFrame}
               width="600"
               height="450"
               style={{ border: 0 }}
@@ -207,7 +208,7 @@ const Home = ({
         </div>
       </div>
 
-      <WhiteBox className="sponsor-row">
+      <WhiteBox>
         <h2 id="sponsors">Sponsors</h2>
         <div className="row d-flex justify-content-center justify-content-lg-start align-items-center">
           {config.sponsors.map((sponsor) => (

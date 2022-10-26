@@ -1,6 +1,7 @@
 import { Day } from "./day";
-import { GenericEvent, ScheduleConfig, ScheduleDay } from "../../interfaces/schedule";
+import { GenericEvent, ScheduleConfig } from "../../interfaces/schedule";
 import useScreenSize, { screenSizes } from "../../services/screen-size/use";
+import style from "../../styles/globals.css"
 
 
 interface ScheduleProps {
@@ -68,7 +69,7 @@ export const Schedule = (props: ScheduleProps) => {
 
 
     return props.show ?
-        <div id="schedule" className="content-space">
+        <div id="schedule" className={style.home.contentSpace}>
             <div className="container-lg">
                 <h2>Schedule</h2>
             </div>

@@ -1,7 +1,9 @@
 import { TutorialDay, TutorialInfo } from "../../interfaces/tutorial";
 import { newColorGradient, iterator } from "../../lib/color-tools";
 import formatDate from "../../lib/format-date";
+import style from "../../styles/vanilla/tutorial.css"
 import { Tutorial } from "./tutorial";
+import globalStyles from "../../styles/globals.css"
 
 interface TutorialListProps {
   tutorials: TutorialInfo[];
@@ -25,9 +27,9 @@ export const TutorialList = ({
   const sides: ("left" | "right")[] = ["left", "right"];
 
   return show ? (
-    <div id="tutorials" className="content-space container-lg">
+    <div id="tutorials" className={`${globalStyles.home.contentSpace} container-lg`}>
       <h2>Tutorials</h2>
-      <div className="tutorial-day">
+      <div className={style.tutorialDay}>
         {
           // Right now we don't distinguish between morning and
           // afternoon tutorials, so we merge all the tutorials

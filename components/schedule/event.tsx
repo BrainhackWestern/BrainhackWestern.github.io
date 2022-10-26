@@ -32,8 +32,8 @@ export const Event = (props: EventProps) => {
     const left = proportionalPosition(position, widthFactor);
     const right = proportionalPosition(widthFactor - (1 + position), widthFactor);
 
-    const leftPadding = left ? 2 : 0;
-    const rightPadding = right ? 2 : 0;
+    const leftPadding = left ? 1 : 0;
+    const rightPadding = right ? 1 : 0;
 
     const room_str = props.room ? getRoomStr(props.room) : null;
 

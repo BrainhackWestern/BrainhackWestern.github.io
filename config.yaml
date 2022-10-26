@@ -253,6 +253,11 @@ schedule:
           priority: 1
           room:
             - WIRB 1160
+        - name: Anatomy Drop-in Demos
+          time: '10:30'
+          duration: '1:30'
+          color: '#1f331e'
+          room: WIRB 1130
         - name: Lunch
           time: '12:00'
           duration: '1:30'

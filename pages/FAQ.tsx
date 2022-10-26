@@ -1,5 +1,6 @@
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import style from '../styles/globals.css'
 
 import type { InferGetStaticPropsType } from 'next';
 import Head from 'next/head';
@@ -22,7 +23,7 @@ const FaqPage = ({
   config
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
-    <div className="app">
+    <div className={style.home.app}>
       <Head>
         <title>FAQ - Brainhack Western {config.event.year}</title>
         <meta
@@ -38,7 +39,7 @@ const FaqPage = ({
           ) : null
         }
       />
-      <article className="container-lg">
+      <article className={`container-lg ${style.content.content}`}>
         <h1>FAQ</h1>
         {config.faq?.map((faq) => {
           return (
