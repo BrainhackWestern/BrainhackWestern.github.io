@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { GenericEvent } from "../../interfaces/schedule";
 import formatDate from "../../lib/format-date";
 import { Event } from "./event";
 
@@ -7,16 +7,7 @@ interface DayProps {
     lineHeight: number;
     startTime: number;
     height: number;
-    events: {
-        name: string;
-        time: string;
-        duration: string;
-        color?: string;
-        link?: string;
-        room?: string | string[];
-        widthFactor?: number;
-        position?: number;
-    }[]
+    events: GenericEvent[]
 }
 
 export const Day = (props: DayProps) => {

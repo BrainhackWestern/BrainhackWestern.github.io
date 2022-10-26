@@ -21,6 +21,7 @@ calendar.json
 *.pem
 .vscode
 *.swp
+.venv
 
 # debug
 npm-debug.log*

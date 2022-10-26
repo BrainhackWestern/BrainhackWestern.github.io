@@ -9,7 +9,9 @@
     "lint": "next lint",
     "compile-calendar": "pipx run --spec git+https://github.com/pvandyken/overlapping-events.git calendar-stack config.yaml -o calendar.json",
     "gh-build": "npm run compile-calendar && rm -rf node_modules/.cache && next build && next export && touch out/.nojekyll",
-    "deploy": "npm run gh-build && git stash && git add -f out && git commit -m 'Deploying' && git subtree split --prefix out -b gh-pages && git push -f origin gh-pages:gh-pages && git branch -D gh-pages && git reset HEAD~1 && git stash pop && rm -rf out"
+    "deploy": "npm run gh-build && git stash && git add -f out && git commit -m 'Deploying' && git subtree split --prefix out -b gh-pages && git push -f origin gh-pages:gh-pages && git branch -D gh-pages && git reset HEAD~1 && git stash pop && rm -rf out",
+    "preinstall": "python3 --version | grep -Eq '[\\w\\s]*3\\.(8|9|10)\\.[0-9]+' || (echo 'Must have python 3.8, 3.9, or 3.10 installed and active' && exit 1)",
+    "postinstall": "([ -d .venv ] || python3 -m venv .venv) && .venv/bin/python -m pip install ../overlapping-events"
   },
   "dependencies": {
     "@tylermenezes/cognitoforms-react": "github:pvandyken/cognitoforms-react",

@@ -1,3 +1,3 @@
-const make_button = (size: number) => {
+export const make_button = (size: number) => {
   return 
 }

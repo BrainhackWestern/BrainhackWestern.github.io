@@ -1,6 +1,6 @@
-import { EmbeddedForm } from "./form";
-import { ScheduleConfig } from "./schedule";
-import { TutorialInfo } from "./tutorial";
+import { EmbeddedForm } from './form';
+import { AnyEvent, ScheduleConfig } from './schedule';
+import { TutorialInfo } from './tutorial';
 
 /**
  * @additionalProperties false
@@ -90,7 +90,7 @@ export interface Event {
 
 /**
  * Settings pertaining to registration forms and status
- * 
+ *
  * @additionalProperties false
  */
 export interface Registration {
@@ -99,7 +99,7 @@ export interface Registration {
    */
   url?: string;
   cost: number;
-  status: "unopened" | "open" | "closed";
+  status: 'unopened' | 'open' | 'closed';
   /**
    * Url of a webhook (e.g. from make.com) to send data from the email signup
    * form This form is used in place of the registration button when
@@ -117,7 +117,7 @@ export interface Registration {
  */
 export interface SiteConfig {
   event: Event;
-  schedule: ScheduleConfig;
+  schedule: ScheduleConfig<AnyEvent>;
   sponsors: SponsorConfig[];
   organizers: string[];
   location: LocationConfig;
@@ -136,7 +136,7 @@ export interface SiteConfig {
    */
   twitterUrl?: string;
 
-  registration: Registration
+  registration: Registration;
 
   faq?: FAQ[];
 

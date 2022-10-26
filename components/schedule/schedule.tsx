@@ -1,13 +1,13 @@
 import { Day } from "./day";
-import { ScheduleConfig, ScheduleDay } from "../../interfaces/schedule";
+import { GenericEvent, ScheduleConfig, ScheduleDay } from "../../interfaces/schedule";
 import useScreenSize, { screenSizes } from "../../services/screen-size/use";
 
 
 interface ScheduleProps {
     lineHeight: number;
-    config: ScheduleConfig;
+    config: ScheduleConfig<GenericEvent>;
     show: boolean;
-    calendar: ScheduleDay[];
+    // calendar: ScheduleDay[];
 }
 
 type TimeCode = "AM" | "PM"
@@ -45,14 +45,15 @@ export const Schedule = (props: ScheduleProps) => {
     })
 
 
+    const calendar = props.config.days;
     const numLines = hourLines.length;
 
-    const numDays = props.calendar.length;
+    const numDays = calendar.length;
 
     const scheduleMultiplier = largeScreen ? 0 : 1;
     const scheduleHeight = (numLines + 1) * lineHeight;
 
-    const days = props.calendar.map(day => {
+    const days = calendar.map(day => {
         const date = new Date(day.year, day.month - 1, day.day)
         return <Day
             key={date.toString()}

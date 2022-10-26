@@ -19,23 +19,23 @@ import learn_skillz from '../public/img/learn_skillz_cropped.png';
 import brainNetwork from '../public/img/splash-brain-network.png';
 import upvote from '../public/img/upvote.png';
 import styles from '../styles/globals.css';
-import { readCalendar, readConfig } from '../utils/data';
+import { readCalendar, readConfig, linkScheduleEvents } from '../utils/data';
 
 export const getStaticProps = async () => {
   const config = await readConfig();
-  const calendar = await readCalendar();
+  // const calendar = await readCalendar();
 
   return {
     props: {
-      config,
-      calendar
+      config: await linkScheduleEvents(await readCalendar(config)),
+      // calendar
     }
   };
 };
 
 const Home = ({
   config,
-  calendar
+  // calendar
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <div className={styles.home.app}>
@@ -44,9 +44,9 @@ const Home = ({
         <meta
           name="description"
           content={
-            'Western Brainhack brings together researchers and trainees of all ' +
-            'backgrounds to collaborate on open science projects in neuroimaging and ' +
-            'neuroscience.'
+            'Western Brainhack brings together researchers and trainees of ' +
+            'all backgrounds to collaborate on open science projects in ' +
+            'neuroimaging and neuroscience.'
           }
         />
       </Head>
@@ -169,7 +169,7 @@ const Home = ({
 
       <Schedule
         config={config.schedule}
-        calendar={calendar}
+        // calendar={calendar}
         lineHeight={120}
         show={config.displaySections.schedule ?? true}
       />

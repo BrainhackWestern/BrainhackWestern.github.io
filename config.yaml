@@ -3,71 +3,76 @@ event:
   year: 2022
 displaySections:
   tutorial: true
-  schedule: false
+  schedule: true
   twitterFeed: true
 twitterUrl: https://twitter.com/uwobrainhack
 faq:
   - question: What is a "Brainhack"?
     answer: |
-      Brainhack is an academically oriented hackathon which connects researchers from
-      across many different disciplines to work together on innovative projects related
-      to neuroscience. For more details and examples of past Brainhack projects click
+      Brainhack is an academically oriented hackathon which connects researchers
+      from across many different disciplines to work together on innovative
+      projects related to neuroscience. For more details and examples of past
+      Brainhack projects click
       [here](https://gigascience.biomedcentral.com/articles/10.1186/s13742-016-0121-x).
   - question: Who can participate?
     answer: |
-      Any students (undergraduate/graduate), post-docs, staff, faculty, or clinicians
-      with an interest in coding, neuroscience or neuroimaging are encouraged to
-      participate.
+      Any students (undergraduate/graduate), post-docs, staff, faculty, or
+      clinicians with an interest in coding, neuroscience or neuroimaging are
+      encouraged to participate.
   - question: Will the event be in-person or virtual?
     answer: |
-      Brainhack Western 2022 will be in-person as Western University policies allow.
-      Tutorials will be hybrid, however, only virtual attendees will be given access to
-      the Zoom room links.  Virtual participation for in-person attendees will be
-      granted if you are required to self-isolate due to illness or have a primary
-      workplace outside of the greater London, ON area.
+      Brainhack Western 2022 will be in-person as Western University policies
+      allow. Tutorials will be hybrid, however, only virtual attendees will be
+      given access to the Zoom room links.  Virtual participation for in-person
+      attendees will be granted if you are required to self-isolate due to
+      illness or have a primary workplace outside of the greater London, ON
+      area.
   - question: |
-      I am interested in attending a specific tutorial in-person. How do I do that?
+      I am interested in attending a specific tutorial in-person. How do I do
+      that?
     answer: |
       You will have the opportunity to build a schedule during registration by
       specifying which tutorials you wish to attend.  However, provided Western
-      University does not re-implement room capacity limits, you should be able to
-      attend any tutorials you wish.
+      University does not re-implement room capacity limits, you should be able
+      to attend any tutorials you wish.
   - question: What COVID-19 rules and restrictions will be in place?
     answer: |
-      Brainhack Western 2022 will be following all Western University campus rules
-      regarding COVID-19.  This includes mandatory COVID-19 vaccination for anyone
-      coming on campus and masking when attending tutorials or in hacking rooms.  The
-      masking requirement will be revisited if Western University campus policies
-      change.
+      Brainhack Western 2022 will be following all Western University campus
+      rules regarding COVID-19.  This includes mandatory COVID-19 vaccination
+      for anyone coming on campus and masking when attending tutorials or in
+      hacking rooms.  The masking requirement will be revisited if Western
+      University campus policies change.
   - question: How much does it cost?
     answer: The cost of the event is $5 CAD!
-  - question: Is it possible to attend if I am not affiliated with Western University?
+  - question: |
+      Is it possible to attend if I am not affiliated with Western University?
     answer: |
-      Unfortunately, we are still unable to accommodate off-site participants attending
-      in-person.  If you wish to attend Brainhack Western 2022 and are not affiliated
-      with Western University or any of its affiliates, you are more than welcome to
-      register and attend virtually.
+      Unfortunately, we are still unable to accommodate off-site participants
+      attending in-person.  If you wish to attend Brainhack Western 2022 and are
+      not affiliated with Western University or any of its affiliates, you are
+      more than welcome to register and attend virtually.
   - question: Will there be food?
     answer: |
-      Yes! For on-site attendees, breakfast, lunch, snacks, non-alcoholic beverages, and
-      coffee will be provided throughout the event. Please indicate any dietary
-      restrictions when you register. Also, to cut down on waste, please bring your own
-      coffee mug and/or water bottle.
+      Yes! For on-site attendees, breakfast, lunch, snacks, non-alcoholic
+      beverages, and coffee will be provided throughout the event. Please
+      indicate any dietary restrictions when you register. Also, to cut down on
+      waste, please bring your own coffee mug and/or water bottle.
   - question: What should I bring?
     answer: |
-      Please bring your own laptop, cables, chargers, USB sticks, and some form of
-      identification (e.g. Student card or Driver's licence). Also bring anything else
-      you may need to work on your project (hardware, datasets etc.).
+      Please bring your own laptop, cables, chargers, USB sticks, and some form
+      of identification (e.g. Student card or Driver's licence). Also bring
+      anything else you may need to work on your project (hardware, datasets
+      etc.).
   - question: What if I don't know how to code?
     answer: |
-      Learning is an important component of a Brainhack. There will be tutorials and
-      experts around to answer questions.
+      Learning is an important component of a Brainhack. There will be tutorials
+      and experts around to answer questions.
   - question: What if I can't attend all three days?
     answer: |
-      You are welcome to attend as much or as little as your schedule allows.  We
-      understand that Brainhack Western 2022 is scheduled during a busy part of the
-      academic year, so we have tried to scheduled breaks each day to give attendees
-      time to decompress and attend to their own work.
+      You are welcome to attend as much or as little as your schedule allows.
+      We understand that Brainhack Western 2022 is scheduled during a busy part
+      of the academic year, so we have tried to scheduled breaks each day to
+      give attendees time to decompress and attend to their own work.
 forms:
   registration:
     type: cognito
@@ -119,40 +124,42 @@ schedule:
           room: WIRB 4190
         - name: Welcome & Project Pitches
           time: '9:00'
-          duration: '1:30'
+          duration: '1:00'
           room:
             - WIRB 1170
-            - Zoom Room 1
-        - name: Hacking
-          time: '10:30'
-          duration: '1:30'
-          color: red
-          room: WIRB 1130
         - name: Lunch
           time: '12:00'
           duration: '1:30'
           room: WIRB 4190
-        - name: MRI Data in Python
-          time: '13:30'
-          duration: '1:00'
-          color: '#1f331e'
-          link: '#python'
-          priority: 1
-          room:
-            - WIRB 1110
-            - Zoom Room 1
-        - name: Intro to Datalad
-          time: '14:30'
+        - tutorial: git
+          time: '10:30'
           duration: '1:30'
           color: '#1f331e'
-          link: '#datalad'
           priority: 1
           room:
-            - WIRB 1160
-            - Zoom Room 2
+            - WIRB 1170
+        - tutorial: mri
+          time: '13:30'
+          duration: '1:30'
+          color: '#1f331e'
+          priority: 1
+          room:
+            - WIRB 4190
+        - tutorial: data-management
+          time: '15:00'
+          duration: '1:30'
+          color: '#1f331e'
+          priority: 1
+          room:
+            - WIRB 4190
+        - name: Hacking
+          time: '10:00'
+          duration: '2:00'
+          color: red
+          room: WIRB 1130
         - name: Hacking
           time: '13:30'
-          duration: '2:30'
+          duration: '3:00'
           color: red
           room: WIRB 4190
     - day: 2
@@ -163,39 +170,47 @@ schedule:
           time: '8:00'
           duration: '1:00'
           room: WIRB 4190
-        - name: fMRI/fMRIPrep
+        - tutorial: reproducability
           time: '9:00'
-          duration: '1:30'
+          duration: '1:00'
           color: '#1f331e'
-          link: '#frmi'
-          priority: 1
-          room:
-            - WIRB 1170
-            - Zoom Room 1
-        - name: Introduction to Meta-analyses
-          time: '10:30'
-          duration: '1:30'
-          color: '#1f331e'
-          link: '#meta-analysis'
           priority: 1
           room:
             - WIRB 4190
-            - Zoom Room 2
-        - name: Lunch
-          time: '12:00'
-          duration: '1:30'
-          room: WIRB 4190
-        - name: Intro to fNIRS
-          time: '13:30'
-          duration: '2:30'
+        - tutorial: bias
+          time: '10:00'
+          duration: '1:00'
           color: '#1f331e'
-          link: '#fnirs'
+          priority: 1
+          room:
+            - WIRB 3000
+        - tutorial: data-mining
+          time: '12:30'
+          duration: '1:30'
+          color: '#1f331e'
+          priority: 1
+          room:
+            - WIRB 4190
+        - tutorial: behaviour
+          time: '12:30'
+          duration: '1:30'
+          color: '#1f331e'
           priority: 1
           room:
             - WIRB 1110
-            - Zoom Room 1
+        - tutorial: data-viz
+          time: '15:00'
+          duration: '1:30'
+          color: '#1f331e'
+          priority: 1
+          room:
+            - WIRB 1170
+        - name: Lunch
+          time: '11:00'
+          duration: '1:30'
+          room: WIRB 4190
         - name: Hacking
-          time: '13:30'
+          time: '14:00'
           duration: '2:30'
           color: red
           room:
@@ -203,16 +218,11 @@ schedule:
             - VAC 100 (1:30-4:00)
         - name: Hacking
           time: '9:00'
-          duration: '3:00'
+          duration: '2:00'
           color: red
           room:
             - NSC 1 (9:00-12:00)
             - WIRB 1160 (10:30-12:00)
-        - name: 'Diversity in Academia'
-          time: '12:30'
-          duration: '0:45'
-          color: blue
-          link: 'https://github.com/BrainhackWestern/BrainhackWestern.github.io/wiki/Lunch-and-Learn#winrepo'
 
     - day: 3
       month: 12
@@ -222,48 +232,43 @@ schedule:
           time: '8:00'
           duration: '1:00'
           room: WIRB 4190
-        - name: Intro to Machine Learning
+        - tutorial: anat
           time: '9:00'
           duration: '1:30'
           color: '#1f331e'
-          link: '#machine-learning'
           priority: 1
           room:
             - WIRB 1130
-            - Zoom Room 1
-        - name: Intro to Deep Learning
+        - tutorial: eeg
           time: '10:30'
           duration: '1:30'
           color: '#1f331e'
-          link: '#deep-learning'
           priority: 1
           room:
-            - WIRB 1130
-            - Zoom Room 2
+            - WIRB 1120
+        - tutorial: fanbids
+          time: '10:30'
+          duration: '1:30'
+          color: '#1f331e'
+          priority: 1
+          room:
+            - WIRB 1160
         - name: Lunch
           time: '12:00'
           duration: '1:30'
           room: WIRB 4190
         - name: Hacking
-          time: '9:00'
-          duration: '3:00'
-          color: red
-          room:
-            - WIRB 4190 (9:30-12:00)
-            - VAC 100 (9:00-12:00)
-        - name: Hacking
           time: '13:30'
-          duration: '1:00'
+          duration: '1:30'
           color: red
           room:
             - WIRB 4190 (1:30-2:00)
             - VAC 100 (1:30-2:30)
         - name: Project presentations & Wrap-up
-          time: '14:30'
-          duration: '1:30'
+          time: '15:00'
+          duration: '1:00'
           room:
-            - VAC 100
-            - Zoom Room 1
+            - WIRB 1170
 tutorials:
   - id: fanbids
     name: FANBIDS
@@ -275,12 +280,12 @@ tutorials:
       facilitate cross-toolbox interactions. The primary benefits include:
 
       1. Producing file structures that are intuitive, descriptive, and portable
-      2. Scaling well to large datasets
-      3. Promoting an ecosystem of widely compatible tools
+      2. Scaling well to large datasets 3. Promoting an ecosystem of widely
+      compatible tools
 
-      Two fully functional example tools will be presented: cardiac-based channel
-      screening and a figure generation module. A workflow manager that applies the
-      framework will also be shown.
+      Two fully functional example tools will be presented: cardiac-based
+      channel screening and a figure generation module. A workflow manager that
+      applies the framework will also be shown.
   - id: eeg
     name: The Brain in Time
     image: /img/eeg.png
@@ -364,56 +369,58 @@ tutorials:
       - Luke Stark
       - Dan Lizotte
     description: |
-      Come hear both psychology and data science faculty discuss the implications of a
-      recently published paper, _Cross-ethnicity/race generalization failure of
-      behavioral prediction from rest-state functional connectivity_
-      ([DOI:10.1126/sciadv.abj1812](https://doi.org/10.1126/sciadv.abj1812)). This paper
-      addresses how machine learning algorithms may increase, rather than alleviate,
-      bias and unfairness against equity-deserving populations. Learn why collecting
-      diverse study populations is important for the generalizability of results and how
-      naively applying machine learning algorithms to large datasets may lead to the
-      perpetuation of unfair biases against minority populations. Also, learn about
-      inherent biases that may exist in many commonly used measurement techniques and
-      tools.
+      Come hear both psychology and data science faculty discuss the
+      implications of a recently published paper, _Cross-ethnicity/race
+      generalization failure of behavioral prediction from rest-state functional
+      connectivity_
+      ([DOI:10.1126/sciadv.abj1812](https://doi.org/10.1126/sciadv.abj1812)).
+      This paper addresses how machine learning algorithms may increase, rather
+      than alleviate, bias and unfairness against equity-deserving populations.
+      Learn why collecting diverse study populations is important for the
+      generalizability of results and how naively applying machine learning
+      algorithms to large datasets may lead to the perpetuation of unfair biases
+      against minority populations. Also, learn about inherent biases that may
+      exist in many commonly used measurement techniques and tools.
   - id: mri
     name: A Brief Introduction to MRI
     image: /img/fmri.png
     organizer: Brad Karat
     description: |
-      This tutorial will provide a basic introduction to MRI. We will cover where the
-      MRI signal is originating from, what are the different contrasts, basic pulse
-      sequences for acquiring an image, how to reconstruct and visualize an image from
-      DICOM to NIFTI, and unique MRI contrasts such as diffusion or functional imaging.
+      This tutorial will provide a basic introduction to MRI. We will cover
+      where the MRI signal is originating from, what are the different
+      contrasts, basic pulse sequences for acquiring an image, how to
+      reconstruct and visualize an image from DICOM to NIFTI, and unique MRI
+      contrasts such as diffusion or functional imaging.
   - id: behaviour
     name: Modern Realities of Behavioural Research
     organizer:
     - Priya Kalra
     - Anthony Cruz
     description: |
-      This tutorial will cover the basics of behavioral data collection and analysis in
-      neuroscience-adjacent fields such as cognitive psychology. The session will
-      provide a broad overview of the topic, ranging from basics of behavioral
-      experiment design, stimulus presentation, and data collection and analysis, to
-      emerging data analysis techniques and online data collection. Throughout, the
-      software options available for each step will be briefly discussed. No previous
-      knowledge or experience is expected.
+      This tutorial will cover the basics of behavioral data collection and
+      analysis in neuroscience-adjacent fields such as cognitive psychology. The
+      session will provide a broad overview of the topic, ranging from basics of
+      behavioral experiment design, stimulus presentation, and data collection
+      and analysis, to emerging data analysis techniques and online data
+      collection. Throughout, the software options available for each step will
+      be briefly discussed. No previous knowledge or experience is expected.
   - id: anat
     name: 'Neuroanatomy for Researchers: a Focus on Surgical Targets'
     organizer: Alaa Taha
     image: "/img/afids.png"
     description: |
-      In this tutorial, we will begin with a basic introduction to neuroanatomy then
-      briefly discuss the hippocampus, basal ganglia structures, midbrain, and
-      relatively uncharted zona incerta. Taking on a clinical lens, we will explore how
-      these structures could be crucial targets during functional neurosurgical
-      procedures.
+      In this tutorial, we will begin with a basic introduction to neuroanatomy
+      then briefly discuss the hippocampus, basal ganglia structures, midbrain,
+      and relatively uncharted zona incerta. Taking on a clinical lens, we will
+      explore how these structures could be crucial targets during functional
+      neurosurgical procedures.
 
       We end our tutorial with 3 mini-software demo stations:
 
-      1. Learning neuroanatomy using an open and validated anatomical fiducial framework
-        ([AFIDs](https://validator.afids.io/))
-      2. Reviewing introduced anatomy in the context of a surgical case using a virtual
-        reality headset
-      3. Applying our functional neuroanatomy knowledge to plan a surgical case using a
-        fully open-source software
-        ([trajectoryGuide](https://trajectoryguide.greydongilmore.com/)).
+      1. Learning neuroanatomy using an open and validated anatomical fiducial
+         framework ([AFIDs](https://validator.afids.io/))
+      2. Reviewing introduced anatomy in the context of a surgical case using a
+         virtual reality headset
+      3. Applying our functional neuroanatomy knowledge to plan a surgical case
+         using a fully open-source software
+         ([trajectoryGuide](https://trajectoryguide.greydongilmore.com/)).
