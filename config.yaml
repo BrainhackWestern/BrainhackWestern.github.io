@@ -156,12 +156,10 @@ schedule:
           time: '10:00'
           duration: '2:00'
           color: red
-          room: WIRB 1130
         - name: Hacking
           time: '13:30'
           duration: '3:00'
           color: red
-          room: WIRB 4190
     - day: 2
       month: 12
       year: 2021
@@ -213,16 +211,10 @@ schedule:
           time: '14:00'
           duration: '2:30'
           color: red
-          room:
-            - WIRB 4190 (1:30-2:30)
-            - VAC 100 (1:30-4:00)
         - name: Hacking
           time: '9:00'
           duration: '2:00'
           color: red
-          room:
-            - NSC 1 (9:00-12:00)
-            - WIRB 1160 (10:30-12:00)
 
     - day: 3
       month: 12
@@ -266,9 +258,6 @@ schedule:
           time: '13:30'
           duration: '1:30'
           color: red
-          room:
-            - WIRB 4190 (1:30-2:00)
-            - VAC 100 (1:30-2:30)
         - name: Project presentations & Wrap-up
           time: '15:00'
           duration: '1:00'
