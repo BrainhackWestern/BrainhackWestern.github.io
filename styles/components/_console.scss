@@ -225,6 +225,7 @@ $console_light_white: #979797;
       display: inline-block;
     }
     .el-radio {
+      cursor: pointer;
       &__label input {
         visibility: unset;
         width: unset;
@@ -262,6 +263,10 @@ $console_light_white: #979797;
       border-right: none;
     }
 
+    .el-radio-group:hover {
+      background: #333;
+    }
+
     .el-radio {
       width: 100%;
       height: 100%;
@@ -288,6 +293,7 @@ $console_light_white: #979797;
       }
       &:focus-visible {
         outline: unset;
+
         .el-radio__label {
           color: white;
         }
@@ -299,6 +305,8 @@ $console_light_white: #979797;
   }
 
   .el-checkbox {
+    cursor: pointer;
+
     &__input {
       position: relative;
       display: block;
