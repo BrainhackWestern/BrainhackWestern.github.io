@@ -40,17 +40,31 @@ faq:
       Brainhack Western 2022 will be following all Western University campus
       rules regarding COVID-19.  This includes mandatory COVID-19 vaccination
       for anyone coming on campus and masking when attending tutorials or in
-      hacking rooms.  The masking requirement will be revisited if Western
-      University campus policies change.
+      hacking rooms.
+  - question: What does registration include?
+    answer:
+      In-person registration includes access to all in-person tutorials and the
+      ability to join an in-person hacking project group. In-person registration
+      also includes breakfast, lunch, and snacks on all three days. Virtual
+      attendees will be provided with zoom links that will allow them to attend
+      any or all tutorials.
+  - question: Do I need to register if I only want to hack?
+    answer: |
+      Yes! Anyone wishing to participate in any aspect of Brainhack Western
+      2022, even just hacking, needs to register.
   - question: How much does it cost?
     answer: The cost of the event is $5 CAD!
   - question: |
       Is it possible to attend if I am not affiliated with Western University?
     answer: |
-      Unfortunately, we are still unable to accommodate off-site participants
-      attending in-person.  If you wish to attend Brainhack Western 2022 and are
-      not affiliated with Western University or any of its affiliates, you are
-      more than welcome to register and attend virtually.
+      We are able to accommodate non-Western University affiliated attendees.
+      Please note that all attendees will need to follow Western University
+      COVID-19 campus rules, which include being fully vaccinated and masking in
+      classroom settings. We reserve the right to inspect COVID-19 vaccination
+      records for non-Western affiliated attendees. Note that Brainhack Western
+      does not offer travel stipends. Attendees traveling to London, ON are
+      wholly responsible for their own travel, lodging, and any meals not
+      already included with registration.
   - question: Will there be food?
     answer: |
       Yes! For on-site attendees, breakfast, lunch, snacks, non-alcoholic
