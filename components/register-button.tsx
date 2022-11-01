@@ -14,11 +14,11 @@ export const RegisterButton = (props: RegisterButtonProps) => {
   const settings = props.settings;
   const alignClass =
     props.alignment == 'left' ? 'align-self-lg-start' : 'align-self-lg-center';
-
+  
   return (
     <div className={alignClass}>
       {(() => {
-        if (settings.status === 'open' && settings.url !== undefined) {
+        if (settings.status === 'open' && settings.url) {
           return (
             <Button
               className={`${props.className} large-button`}

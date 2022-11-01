@@ -1,7 +1,5 @@
 import CognitoForm from '@tylermenezes/cognitoforms-react';
-import { findIndex } from 'lodash';
-import { merge, set } from 'lodash';
-import styles from "../../styles/globals.css"
+import { findIndex, merge, set } from 'lodash';
 
 import type { InferGetStaticPropsType } from 'next';
 import ErrorPage from 'next/error';
@@ -13,6 +11,7 @@ import { Loading } from '../../components/loading';
 import { NavBar } from '../../components/navbar';
 import { EmbeddedForm } from '../../interfaces/form';
 import useScreenSize, { screenSizes } from '../../services/screen-size/use';
+import styles from '../../styles/globals.css';
 import style from '../../styles/pages/[form].css';
 import { readConfig } from '../../utils/data';
 

@@ -1,3 +1,5 @@
+import { pipeInto } from 'ts-functional-pipe';
+
 import type { InferGetStaticPropsType } from 'next';
 import Head from 'next/head';
 
@@ -18,7 +20,12 @@ import learn_skillz from '../public/img/learn_skillz_cropped.png';
 import brainNetwork from '../public/img/splash-brain-network.png';
 import upvote from '../public/img/upvote.png';
 import styles from '../styles/globals.css';
-import { linkScheduleEvents, readCalendar, readConfig } from '../utils/data';
+import {
+  inferRegistrationStatus,
+  linkScheduleEvents,
+  readCalendar,
+  readConfig
+} from '../utils/data';
 
 export const getStaticProps = async () => {
   const config = await readConfig();
@@ -26,7 +33,12 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      config: await linkScheduleEvents(await readCalendar(config))
+      config: await pipeInto(
+        config,
+        readCalendar,
+        async (c) => linkScheduleEvents(await c),
+        async (c) => inferRegistrationStatus(await c)
+      )
       // calendar
     }
   };

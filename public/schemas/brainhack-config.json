@@ -2,6 +2,34 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "additionalProperties": false,
     "definitions": {
+        "BasicDate": {
+            "additionalProperties": false,
+            "properties": {
+                "day": {
+                    "description": "Day of the month",
+                    "maximum": 31,
+                    "minimum": 1,
+                    "type": "number"
+                },
+                "month": {
+                    "description": "Month of the year",
+                    "maximum": 12,
+                    "minimum": 1,
+                    "type": "number"
+                },
+                "year": {
+                    "description": "Year",
+                    "minimum": 0,
+                    "type": "number"
+                }
+            },
+            "required": [
+                "day",
+                "month",
+                "year"
+            ],
+            "type": "object"
+        },
         "DisplaySections": {
             "additionalProperties": false,
             "description": "Allows turning specific sections of the website off. This is useful if\nthe content for these parts is not fully ready.",
@@ -188,6 +216,11 @@
             "additionalProperties": false,
             "description": "Settings pertaining to registration forms and status",
             "properties": {
+                "closeDate": {
+                    "$ref": "#/definitions/BasicDate",
+                    "additionalProperties": false,
+                    "description": "The date registration should close"
+                },
                 "cost": {
                     "type": "number"
                 },
@@ -195,7 +228,13 @@
                     "description": "Url of a webhook (e.g. from make.com) to send data from the email signup\nform This form is used in place of the registration button when\nregistration status is set to \"unopened\". The webhook should be configured\nto take POSTed JSON data with a single field: \"email\"",
                     "type": "string"
                 },
+                "openDate": {
+                    "$ref": "#/definitions/BasicDate",
+                    "additionalProperties": false,
+                    "description": "The date registration should open."
+                },
                 "status": {
+                    "description": "Current registration status. If blank, it will be automatically inferred\nat build time from the open and close dates. Otherwise it overrides any\ninference.",
                     "enum": [
                         "closed",
                         "open",
@@ -209,8 +248,7 @@
                 }
             },
             "required": [
-                "cost",
-                "status"
+                "cost"
             ],
             "type": "object"
         },

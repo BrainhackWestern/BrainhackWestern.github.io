@@ -1,13 +1,14 @@
-import { PropsWithChildren, useEffect, useState } from "react";
-import ScrollPositionContext from "./context";
-import useScrollPosition from "./use";
-import { debounce } from "lodash";
+import { debounce } from 'lodash';
+import { PropsWithChildren, useEffect, useState } from 'react';
+
+import ScrollPositionContext from './context';
+import useScrollPosition from './use';
 
 function ScrollPositionProvider({ children }: PropsWithChildren<{}>) {
   const [scrollPosition, setScrollPosition] = useState(0);
   const value = {
     state: { scrollPosition },
-    actions: { setScrollPosition },
+    actions: { setScrollPosition }
   };
   return (
     <ScrollPositionContext.Provider value={value}>
@@ -18,7 +19,7 @@ function ScrollPositionProvider({ children }: PropsWithChildren<{}>) {
 
 export const Responsive = ({ children }: PropsWithChildren<{}>) => {
   const {
-    actions: { setScrollPosition },
+    actions: { setScrollPosition }
   } = useScrollPosition();
 
   const handleScroll = debounce(
@@ -31,10 +32,10 @@ export const Responsive = ({ children }: PropsWithChildren<{}>) => {
 
   useEffect(() => {
     handleScroll();
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
     return function cleanup() {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   });
 

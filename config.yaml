@@ -98,8 +98,11 @@ forms:
 registration:
   cost: 5
   url: /forms/registration
-  status: open
   emailSignupTarget: https://hook.us1.make.com/hrdtv28jy9i55havi84l6db2xc1ieyol
+  closeDate:
+    day: 16
+    month: 11
+    year: 2022
 location:
   name: Western Interdisciplinary Research Building
   street: Perth Dr

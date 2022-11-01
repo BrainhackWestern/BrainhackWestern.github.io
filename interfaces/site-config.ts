@@ -1,4 +1,5 @@
 import { EmbeddedForm } from './form';
+import { BasicDate } from './generic';
 import { AnyEvent, ScheduleConfig } from './schedule';
 import { TutorialInfo } from './tutorial';
 
@@ -88,6 +89,7 @@ export interface Event {
   year: number;
 }
 
+export type RegistrationStatus = 'unopened' | 'open' | 'closed';
 /**
  * Settings pertaining to registration forms and status
  *
@@ -99,7 +101,24 @@ export interface Registration {
    */
   url?: string;
   cost: number;
-  status: 'unopened' | 'open' | 'closed';
+
+  /**
+   * Current registration status. If blank, it will be automatically inferred
+   * at build time from the open and close dates. Otherwise it overrides any
+   * inference.
+   */
+  status?: RegistrationStatus
+
+  /**
+   * The date registration should open.
+   */
+  openDate?: BasicDate
+
+  /**
+   * The date registration should close
+   */
+  closeDate?: BasicDate
+
   /**
    * Url of a webhook (e.g. from make.com) to send data from the email signup
    * form This form is used in place of the registration button when

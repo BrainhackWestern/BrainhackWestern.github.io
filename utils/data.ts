@@ -1,13 +1,14 @@
 import { promises as fs } from 'fs';
 import imageSize from 'image-size';
+import produce from 'immer';
 import yaml from 'js-yaml';
-import _, { zip } from 'lodash';
+import { merge, zip } from 'lodash';
 import { exec } from 'node:child_process';
 import { Readable } from 'node:stream';
 import path from 'path';
 
-import { AnyEvent, EventPosition, ScheduleDay } from '../interfaces/schedule';
-import { SiteConfig } from '../interfaces/site-config';
+import { EventPosition } from '../interfaces/schedule';
+import { RegistrationStatus, SiteConfig } from '../interfaces/site-config';
 
 function streamToString(stream: Readable) {
   const chunks: Uint8Array[] = [];
@@ -59,7 +60,7 @@ export const readCalendar = async <T extends SiteConfig>(config: T) => {
                     'was assigned a position'
                 );
               }
-              return _.merge(event, position)
+              return merge(event, position);
             })
           };
         }
@@ -107,4 +108,42 @@ export const linkScheduleEvents = async <T extends SiteConfig>(config: T) => {
       })
     }
   };
+};
+
+interface RegistrationStatusSet {
+  registration: {
+    status: string;
+  };
+}
+export const inferRegistrationStatus = async <T extends SiteConfig>(
+  config: T
+): Promise<T & RegistrationStatusSet> => {
+  if (config.registration.status) {
+    return config as T & RegistrationStatusSet;
+  }
+
+  const setRegistration = (status: RegistrationStatus) =>
+    produce(config, (draft) => {
+      draft.registration.status = status;
+    }) as T & RegistrationStatusSet;
+
+  const open = config.registration.openDate;
+  const close = config.registration.closeDate;
+  // Use right now as openDate if not specified
+  const openDate = open
+    ? new Date(open.year, open.month, open.day)
+    : new Date();
+
+  const now = new Date();
+  if (now < openDate) {
+    return setRegistration('unopened');
+  } else if (!close) {
+    return setRegistration('open');
+    // Subtract 1 from the month to make it zero based
+    // Add one to the day to make the date refer to the beginning of the next day
+  } else if (now > new Date(close.year, close.month - 1, close.day + 1)) {
+    return setRegistration('closed');
+  } else {
+    return setRegistration('open');
+  }
 };
