@@ -8,10 +8,10 @@ import Head from 'next/head';
 import Footer, { getFooterProps } from '../components/footer';
 import { NavBar } from '../components/navbar';
 import { RegisterButton } from '../components/register-button';
-import { readConfig } from '../utils/data';
+import { inferRegistrationStatus, readConfig } from '../utils/data';
 
 export const getStaticProps = async () => {
-  const config = await readConfig();
+  const config = await inferRegistrationStatus(await readConfig());
   return {
     props: {
       config
