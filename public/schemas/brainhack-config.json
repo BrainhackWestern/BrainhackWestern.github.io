@@ -268,8 +268,9 @@
                     "minimum": 0,
                     "type": "number"
                 },
-                "show": {
-                    "type": "boolean"
+                "name": {
+                    "description": "Name of the schedule.",
+                    "type": "string"
                 },
                 "startTime": {
                     "description": "First hour to display on the schedule (in 24hr time).",
@@ -281,7 +282,7 @@
             "required": [
                 "days",
                 "endTime",
-                "show",
+                "name",
                 "startTime"
             ],
             "type": "object"
@@ -491,7 +492,10 @@
             "$ref": "#/definitions/Registration"
         },
         "schedule": {
-            "$ref": "#/definitions/ScheduleConfig<AnyEvent>"
+            "items": {
+                "$ref": "#/definitions/ScheduleConfig<AnyEvent>"
+            },
+            "type": "array"
         },
         "sponsors": {
             "items": {

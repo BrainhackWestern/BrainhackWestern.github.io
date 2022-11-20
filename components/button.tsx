@@ -15,6 +15,7 @@ const LinkIfTarget = ({
 }) => {
   return target ? <Link href={target}>{children}</Link> : <>{children}</>;
 };
+
 export const Button = (props: ButtonProps) => {
   return (
     <LinkIfTarget target={props.target}>

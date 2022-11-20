@@ -9,6 +9,7 @@ $button_background: linear-gradient(90deg, rgba(12,110,100,1) 0%, rgba(44,76,129
   transition: top $time, bottom $time, left $time, right $time, border-width $time / 2;
 }
 
+
 @mixin button($size) {
   position: relative;
   display: inline-block;
@@ -16,8 +17,6 @@ $button_background: linear-gradient(90deg, rgba(12,110,100,1) 0%, rgba(44,76,129
   border: none;
   background: none;
   padding: 0;
-  // background: $button_background;
-  // border-radius: 10px;
 
   .inner {
     position: relative;
@@ -29,7 +28,7 @@ $button_background: linear-gradient(90deg, rgba(12,110,100,1) 0%, rgba(44,76,129
   }
 
   span {
-    font-size: var.$body_large;
+    font-size: $size;
     color: var.$font-light;
   // vertical-align: middle;
   }
@@ -54,7 +53,7 @@ $button_background: linear-gradient(90deg, rgba(12,110,100,1) 0%, rgba(44,76,129
     background: $button_background;
     z-index: 1;
     border-radius: 15px;
-    @include transition_bounds((0.20s))
+    @include transition_bounds((0.20s));
   }
 
   &:hover::before {
@@ -67,6 +66,53 @@ $button_background: linear-gradient(90deg, rgba(12,110,100,1) 0%, rgba(44,76,129
     z-index: 1;
     border-radius: 14px;
   }
+
+  &.selected {
+    &::before {
+      @include mixins.pseudoblock(5px);
+    }
+
+    &::after {
+      @include mixins.pseudoblock(0);
+      background: $button_background;
+      z-index: 1;
+    }
+  }
+
+  &-appear.selected {
+    &::before {
+      @include mixins.pseudoblock(0);
+      transition: none;
+    }
+
+    &::after {
+      @include mixins.pseudoblock(-5px);
+      background: $button_background;
+      z-index: 1;
+      border-radius: 14px;
+      transition: none;
+    }
+  }
+
+  &-appear-active.selected {
+    &::before {
+      @include mixins.pseudoblock(5px);
+      @include transition_bounds((0.15s));
+      
+    }
+
+    &::after {
+      @include mixins.pseudoblock(0);
+      background: $button_background;
+      z-index: 1;
+      @include transition_bounds((0.20s))
+    }
+  }
+
+}
+
+.small-button {
+  @include button(var.$body_small)
 }
 
 .button {

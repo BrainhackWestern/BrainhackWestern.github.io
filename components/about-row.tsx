@@ -23,7 +23,7 @@ export const AboutRow = (props: ImageProps) => {
         </div>,
         <div key="description" className={styles.description}>
             <h2 className={alignClass}>{props.title}</h2>
-            <p className={alignClass}>{props.children}</p>
+            <div className={alignClass}>{props.children}</div>
         </div>
     ]
     return (

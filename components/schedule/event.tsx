@@ -15,7 +15,7 @@ interface EventProps {
 const colorLookup = {
     green: "#1f331e",
     red: "#440101",
-    blue: "#071f4d"
+    blue: "#384C7B"
 }
 
 export const Event = (props: EventProps) => {

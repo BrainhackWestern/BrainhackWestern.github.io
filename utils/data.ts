@@ -38,34 +38,41 @@ export const parseCalendar = async () => {
   }
   return (await JSON.parse(
     await streamToString(proc.stdout)
-  )) as EventPosition[][];
+  )) as EventPosition[][][];
 };
 
 export const readCalendar = async <T extends SiteConfig>(config: T) => {
   return {
     ...config,
-    schedule: {
-      ...config.schedule,
-      days: zip(config.schedule.days, await parseCalendar()).map(
-        ([day, positions]) => {
-          if (!day || !positions) {
-            throw Error('Not every day was assigned positions');
-          }
-          return {
-            ...day,
-            events: zip(day.events, positions).map(([event, position]) => {
-              if (!event || !position) {
-                throw Error(
-                  `Not every event in ${day.day}/${day.month}/${day.year} ` +
-                    'was assigned a position'
-                );
-              }
-              return merge(event, position);
-            })
-          };
+    schedule: zip(config.schedule, await parseCalendar()).map(
+      ([schedule, schedulePositions]) => {
+        if (!schedule || !schedulePositions) {
+          throw Error('Not every schedule was assigned positions');
         }
-      )
-    }
+        return {
+          ...schedule,
+          days: zip(schedule.days, schedulePositions).map(
+            ([day, positions]) => {
+              if (!day || !positions) {
+                throw Error('Not every day was assigned positions');
+              }
+              return {
+                ...day,
+                events: zip(day.events, positions).map(([event, position]) => {
+                  if (!event || !position) {
+                    throw Error(
+                      `Not every event in ${day.day}/${day.month}/` +
+                        `${day.year} was assigned a position`
+                    );
+                  }
+                  return merge(event, position);
+                })
+              };
+            }
+          )
+        };
+      }
+    )
   };
 };
 
@@ -81,32 +88,34 @@ const parseSponsorImages = async <T extends SiteConfig>(config: T) => {
 export const linkScheduleEvents = async <T extends SiteConfig>(config: T) => {
   return {
     ...config,
-    schedule: {
-      ...config.schedule,
-      days: config.schedule.days.map((day) => {
-        return {
-          ...day,
-          events: day.events.map((event) => {
-            if ('tutorial' in event) {
-              const tutorial = config.tutorials.find(
-                (tutorial) => tutorial.id === event.tutorial
-              );
-              if (!tutorial) {
-                throw Error(
-                  `Could not find tutorial with id ${event.tutorial}`
+    schedule: config.schedule.map((schedule) => {
+      return {
+        ...schedule,
+        days: schedule.days.map((day) => {
+          return {
+            ...day,
+            events: day.events.map((event) => {
+              if ('tutorial' in event) {
+                const tutorial = config.tutorials.find(
+                  (tutorial) => tutorial.id === event.tutorial
                 );
+                if (!tutorial) {
+                  throw Error(
+                    `Could not find tutorial with id ${event.tutorial}`
+                  );
+                }
+                return {
+                  ...event,
+                  name: tutorial.name,
+                  link: `#${tutorial.id}`
+                };
               }
-              return {
-                ...event,
-                name: tutorial.name,
-                link: `#${tutorial.id}`
-              };
-            }
-            return event;
-          })
-        };
-      })
-    }
+              return event;
+            })
+          };
+        })
+      };
+    })
   };
 };
 

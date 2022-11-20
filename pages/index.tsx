@@ -117,11 +117,13 @@ InferGetStaticPropsType<typeof getStaticProps>) => {
           attendees to recruit others to your team.
           <br />
           <br />
-          <Button target="https://github.com/BrainhackWestern/BrainhackWestern.github.io/wiki/Projects">
-            {config.registration.status === 'unopened'
-              ? 'View Previous Project Proposals'
-              : 'View Project Proposals'}
-          </Button>
+          <div className={styles.home.center}>
+            <Button target="https://github.com/BrainhackWestern/BrainhackWestern.github.io/wiki/Projects">
+              {config.registration.status === 'unopened'
+                ? 'View Previous Project Proposals'
+                : 'View Project Proposals'}
+            </Button>
+          </div>
         </AboutRow>
         <AboutRow img={learn_skillz} title="Learn new skills" reverse={true}>
           Attend tutorials to learn new neuroscience tools and techniques from

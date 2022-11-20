@@ -97,7 +97,10 @@ export interface ScheduleDay<T extends EventBase> extends BasicDate {
  * @additionalProperties false
  */
 export interface ScheduleConfig<T extends EventBase> {
-  show: boolean;
+  /**
+   * Name of the schedule.
+   */
+  name: string;
 
   /**
    * First hour to display on the schedule (in 24hr time).

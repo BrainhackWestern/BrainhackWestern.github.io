@@ -136,7 +136,7 @@ export interface Registration {
  */
 export interface SiteConfig {
   event: Event;
-  schedule: ScheduleConfig<AnyEvent>;
+  schedule: ScheduleConfig<AnyEvent>[];
   sponsors: SponsorConfig[];
   organizers: string[];
   location: LocationConfig;
