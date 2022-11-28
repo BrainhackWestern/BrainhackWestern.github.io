@@ -121,9 +121,9 @@
                 line-height="200%"
             >
                 The zoom room links for each of the tutorials can be found in
-                the attached spreadsheet. You'll also be given access to the
-                online-participants channel on our Slack (make sure your username
-                is something recognizable so that we can assign you the role).
+                the attached spreadsheet. You'll also find the links on the 
+                online participant channel on Discord (make sure your username
+                is something recognizable so that we can add you to the channel).
             </mj-text>
             <mj-divider
                 border-color="#f9f9f9"
