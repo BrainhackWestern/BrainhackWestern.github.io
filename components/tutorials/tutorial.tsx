@@ -66,7 +66,13 @@ export const Tutorial = (props: TutorialProps) => {
   const data = [
     props.config.image ? (
       <div key="image" className={style.img}>
-        <Image src={props.config.image} width={250} height={250} alt="" />
+        <Image
+          src={props.config.image}
+          width={250}
+          height={250}
+          style={{ objectFit: 'contain' }}
+          alt=""
+        />
       </div>
     ) : null,
     <div key="description" className={style.description}>

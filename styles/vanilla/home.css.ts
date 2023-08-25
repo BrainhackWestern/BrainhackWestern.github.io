@@ -40,7 +40,7 @@ const backgroundImg = style([
   {
     position: "absolute",
     overflow: "hidden",
-    maxHeight: "95vh",
+    height: "95vh",
     maxWidth: 1300,
     width: "100%",
     right: 0,

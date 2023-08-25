@@ -75,7 +75,12 @@ InferGetStaticPropsType<typeof getStaticProps>) => {
       <div className={styles.home.splash}>
         <div className={styles.home.window}>
           <div className={styles.home.backgroundImg}>
-            <Image src={brainNetwork} alt="" />
+            <Image
+              src={brainNetwork}
+              alt=""
+              fill
+              style={{ objectFit: 'contain' }}
+            />
           </div>
           <div className={styles.home.titleCol.container}>
             <div className="flex-fill"></div>
@@ -159,7 +164,11 @@ InferGetStaticPropsType<typeof getStaticProps>) => {
           </div>
           <div className="col-lg-6 d-flex justify-content-center">
             <div style={{ maxWidth: '300px' }}>
-              <Image src={global_logo} alt="" />
+              <Image
+                src={global_logo}
+                alt=""
+                style={{ objectFit: 'contain', height: 'unset' }}
+              />
             </div>
           </div>
         </div>
@@ -176,7 +185,7 @@ InferGetStaticPropsType<typeof getStaticProps>) => {
           </div>
           <div className="col-lg-6 d-flex justify-content-center">
             <div style={{ maxWidth: '300px' }}>
-              <Image src={dollar_signs} alt="" />
+              <Image src={dollar_signs} alt="" style={{ objectFit: 'contain', height: 'unset' }}/>
             </div>
           </div>
         </div>
@@ -236,9 +245,10 @@ InferGetStaticPropsType<typeof getStaticProps>) => {
               >
                 <Image
                   src={sponsor.img}
-                  width={sponsor.dims.width}
-                  height={sponsor.dims.height}
+                  width={Math.min(250, sponsor.dims.width ?? 250)}
+                  height={Math.min(150, sponsor.dims.height ?? 250)}
                   alt={sponsor.name}
+                  style={{objectFit: 'contain'}}
                 />
               </a>
             </div>
