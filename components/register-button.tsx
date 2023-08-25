@@ -14,7 +14,7 @@ export const RegisterButton = (props: RegisterButtonProps) => {
   const settings = props.settings;
   const alignClass =
     props.alignment == 'left' ? 'align-self-lg-start' : 'align-self-lg-center';
-  
+
   return (
     <div className={alignClass}>
       {(() => {

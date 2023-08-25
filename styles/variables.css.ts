@@ -12,9 +12,9 @@ const background = {
 }
 
 export const colors = {
-  hightlight: "#b157ff",
-  highlightDark: '#830bab',
-  highlightLight: '#b157ff',
+  highlight: "#8004fd",
+  highlightDark: '#5902b0',
+  highlightLight: '#a204ff',
 
   background,
 

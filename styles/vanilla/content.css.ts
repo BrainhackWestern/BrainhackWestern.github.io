@@ -12,7 +12,7 @@ css(content, {
   "h1::before": {
     content: '#',
     display: 'inline',
-    color: colors.hightlight
+    color: colors.highlight
   },
   h3: {
     display: 'inline-block',

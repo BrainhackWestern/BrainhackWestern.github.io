@@ -6,7 +6,7 @@ const msgCard = style({
   textAlign: 'center',
   backgroundColor: colors.background[600],
   borderStyle: 'solid',
-  borderColor: colors.hightlight,
+  borderColor: colors.highlight,
   borderRadius: 10,
   borderWidth: 5,
   padding: '1em 4em',
