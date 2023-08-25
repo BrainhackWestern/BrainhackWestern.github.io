@@ -12,12 +12,13 @@ import { RegisterButton } from '../components/register-button';
 import { Schedule } from '../components/schedule/schedule';
 import { TutorialList } from '../components/tutorials/tutorial-list';
 import { WhiteBox } from '../components/white-box';
-import main_logo from '../public/img/2022-splash-logo.png';
+import main_logo from '../public/img/logo-2023-splash.png';
 import dollar_signs from '../public/img/dollar_signs.png';
 import global_logo from '../public/img/global_logo.png';
 import hack from '../public/img/hack.png';
 import learn_skillz from '../public/img/learn_skillz_cropped.png';
-import brainNetwork from '../public/img/splash-brain-network.png';
+import paper from "../public/img/paper.png";
+import painterly from "../public/img/painterly_brain.png";
 import upvote from '../public/img/upvote.png';
 import styles from '../styles/globals.css';
 import {
@@ -73,10 +74,11 @@ InferGetStaticPropsType<typeof getStaticProps>) => {
       />
 
       <div className={styles.home.splash}>
+        <Image src={paper} style={{position: 'absolute', height: '100vh', width: '100vw'}} alt=""/>
         <div className={styles.home.window}>
           <div className={styles.home.backgroundImg}>
             <Image
-              src={brainNetwork}
+              src={painterly}
               alt=""
               fill
               style={{ objectFit: 'contain' }}
