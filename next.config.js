@@ -28,11 +28,9 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  experimental: {
-    modularizeImports: {
-      lodash: {
-        transform: 'lodash/{{member}}'
-      }
+  modularizeImports: {
+    lodash: {
+      transform: 'lodash/{{member}}'
     }
   },
   sassOptions: {

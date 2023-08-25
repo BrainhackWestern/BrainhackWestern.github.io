@@ -1,6 +1,6 @@
 import { promises as fs } from 'fs';
 import imageSize from 'image-size';
-import produce from 'immer';
+import {produce} from 'immer';
 import yaml from 'js-yaml';
 import { merge, zip } from 'lodash';
 import { exec } from 'node:child_process';
