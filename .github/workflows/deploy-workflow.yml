@@ -62,7 +62,7 @@ jobs:
       - name: Build App
         run: npm run gh-build
       - name: Push git subdirectory as branch
-        uses: s0/git-publish-subdir-action@v2.5.0
+        uses: s0/git-publish-subdir-action@v2.6.0
         env:
           REPO: self
           BRANCH: gh-pages
