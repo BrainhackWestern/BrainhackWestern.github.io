@@ -1,9 +1,7 @@
 import { pipeInto } from 'ts-functional-pipe';
 
 import type { InferGetStaticPropsType } from 'next';
-import Head from 'next/head';
 
-import { DateTime } from 'luxon';
 import { AboutRow } from '../components/about-row';
 import { Button } from '../components/button';
 import Footer, { getFooterProps } from '../components/footer';
@@ -28,7 +26,6 @@ import {
   readCalendar,
   readConfig
 } from '../utils/data';
-import { BasicDate } from '../interfaces/generic';
 import { Helmet } from 'react-helmet';
 
 export const getStaticProps = async () => {
@@ -52,11 +49,6 @@ const Home = ({
   config
 }: // calendar
 InferGetStaticPropsType<typeof getStaticProps>) => {
-  const formatDate = (date: BasicDate) => {
-    const d = DateTime.fromObject({ ...date }, { zone: 'America/Toronto' });
-    // const d = new Date(Date.UTC(date.year, date.month - 1, date.day));
-    return d.toLocaleString({ month: 'short', day: 'numeric' });
-  };
   return (
     <div className={styles.home.app}>
       <Helmet>

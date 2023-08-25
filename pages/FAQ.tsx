@@ -3,7 +3,6 @@ import remarkGfm from 'remark-gfm';
 import style from '../styles/globals.css'
 
 import type { InferGetStaticPropsType } from 'next';
-import Head from 'next/head';
 
 import Footer, { getFooterProps } from '../components/footer';
 import { NavBar } from '../components/navbar';

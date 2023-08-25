@@ -133,9 +133,6 @@ sponsors:
   - img: '/img/brainscan_logo.png'
     name: Brainscan
     url: 'https://brainscan.uwo.ca'
-  - img: /img/OBI_logo_4C_pos_biling.jpg
-    name: Ontario Brain Institute
-    url: https://braininstitute.ca/
 schedule:
   - name: Tutorials
     startTime: 8
