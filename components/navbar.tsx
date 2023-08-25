@@ -32,10 +32,10 @@ export const NavBar = ({
       }`}
     >
       <div className="container-fluid">
-        <Link href="/">
-          <a className="navbar-brand">
-            <Image src={logo} width={58} height={40} alt="Home"></Image>
-          </a>
+        <Link href="/" className="navbar-brand">
+
+          <Image src={logo} width={58} height={40} alt="Home"></Image>
+
         </Link>
         <button
           className="navbar-toggler"
@@ -52,42 +52,44 @@ export const NavBar = ({
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav me-auto">
             <li className="nav-item">
-              <Link href="/#about">
-                <a className="nav-link">About</a>
+              <Link href="/#about" className="nav-link">
+                About
               </Link>
             </li>
             {displaySections.schedule ?? true ? (
               <li className="nav-item">
-                <Link href="/#schedule">
-                  <a className="nav-link">Schedule</a>
+                <Link href="/#schedule" className="nav-link">
+                  Schedule
                 </Link>
               </li>
             ) : null}
             {displaySections.tutorial ?? true ? (
               <li className="nav-item">
-                <Link href="/#tutorials">
-                  <a className="nav-link">Tutorials</a>
+                <Link href="/#tutorials" className="nav-link">
+                  Tutorials
                 </Link>
               </li>
             ) : null}
             <li className="nav-item">
-              <Link href="/#location">
-                <a className="nav-link">Location</a>
+              <Link href="/#location" className="nav-link">
+                Location
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="https://github.com/BrainhackWestern/BrainhackWestern.github.io/wiki/Projects">
-                <a className="nav-link">Projects</a>
+              <Link
+                href="https://github.com/BrainhackWestern/BrainhackWestern.github.io/wiki/Projects"
+                className="nav-link">
+                Projects
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/FAQ">
-                <a className="nav-link">FAQ</a>
+              <Link href="/FAQ" className="nav-link">
+                FAQ
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="https://brainhack.org/code-of-conduct.html">
-                <a className="nav-link">Code of Conduct</a>
+              <Link href="https://brainhack.org/code-of-conduct.html" className="nav-link">
+                Code of Conduct
               </Link>
             </li>
           </ul>
