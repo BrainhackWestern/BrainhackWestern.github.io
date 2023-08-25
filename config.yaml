@@ -123,23 +123,12 @@ location:
   url: 'https://www.uwo.ca/bmi/about/wirb.html'
   maps_id: ChIJCVSloavvLogR82_w3v729s0
 organizers:
-  - Ali Khan
   - Suzanne Witt
   - Tristan Kuehn
+  - Farrah Mushtaha
+  - Keza Motlana
   - Peter Van Dyken
-  - Alaa Taha
-  - Derrick Xiang
-  - Kaycee Stewart
-  - Taylor Breddy
-  - Mahdiyar Shahbazi
-  - Farah Mushtaha
-  - Laiba Rizwan
-  - Amira Hmidan
-  - Jaimy Hannah
-  - Mansoure Jahanian
-  - Saba Charmi Motlagh
-  - Greydon Gilmore
-  - Sophia Robinson
+  - Ali Khan
 sponsors:
   - img: '/img/brainscan_logo.png'
     name: Brainscan
