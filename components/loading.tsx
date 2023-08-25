@@ -13,18 +13,18 @@ export const Loading = ({ interval, className, prefix }: LoadingProps) => {
   useEffect(() => {
     const current = loader.current;
     const glyphs = [
-      "&nbsp;&nbsp;&nbsp;",
-      ".&nbsp;&nbsp;",
-      "..&nbsp;",
-      "...",
-      "&nbsp;..",
-      "&nbsp;&nbsp;.",
-    ]
-    let i = 0
+      '&nbsp;&nbsp;&nbsp;',
+      '.&nbsp;&nbsp;',
+      '..&nbsp;',
+      '...',
+      '&nbsp;..',
+      '&nbsp;&nbsp;.'
+    ];
+    let i = 0;
     if (current) {
       loadingInterval.current = window.setInterval(() => {
         i++;
-        current.innerHTML = prefix + glyphs[i % glyphs.length];
+        current.innerHTML = (prefix ?? '') + glyphs[i % glyphs.length];
       }, interval ?? 300);
     } else {
       window.clearInterval(loadingInterval.current);
