@@ -1,7 +1,7 @@
 import { validate } from 'email-validator';
 import React, { Dispatch, FormEvent, useState } from 'react';
 
-const TEST = true;
+const TEST = process.env.NODE_ENV == "development";
 
 interface SignupFormProps {
   setValidity: Dispatch<boolean>;
