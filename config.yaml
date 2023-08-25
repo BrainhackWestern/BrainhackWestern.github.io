@@ -1,9 +1,17 @@
 # yaml-language-server: $schema=public/schemas/brainhack-config.json
 event:
-  year: 2022
+  year: 2023
+  startDate:
+    day: 1
+    month: 11
+    year: 2023
+  endDate:
+    day: 3
+    month: 11
+    year: 2023
 displaySections:
-  tutorial: true
-  schedule: true
+  tutorial: false
+  schedule: false
   twitterFeed: true
 twitterUrl: https://twitter.com/uwobrainhack
 faq:
@@ -21,7 +29,7 @@ faq:
       encouraged to participate.
   - question: Will the event be in-person or virtual?
     answer: |
-      Brainhack Western 2022 will be in-person as Western University policies
+      Brainhack Western 2023 will be in-person as Western University policies
       allow. Tutorials will be hybrid, however, only virtual attendees will be
       given access to the Zoom room links.  Virtual participation for in-person
       attendees will be granted if you are required to self-isolate due to
@@ -37,7 +45,7 @@ faq:
       to attend any tutorials you wish.
   - question: What COVID-19 rules and restrictions will be in place?
     answer: |
-      Brainhack Western 2022 will be following all Western University campus
+      Brainhack Western 2023 will be following all Western University campus
       rules regarding COVID-19.  This includes mandatory COVID-19 vaccination
       for anyone coming on campus and masking when attending tutorials or in
       hacking rooms.
@@ -90,19 +98,23 @@ faq:
 forms:
   registration:
     type: cognito
-    title: Brainhack 2022 Registration
+    title: Brainhack 2023 Registration
     shortTitle: Registration
-    embedTag: <script src="https://www.cognitoforms.com/f/seamless.js" data-key="dKVrRkF3yk6PnoRpFF7XGg" data-form="3"></script>
+    embedTag: <script src="https://www.cognitoforms.com/f/seamless.js" data-key="dKVrRkF3yk6PnoRpFF7XGg" data-form="4"></script>
     prefillMappings:
       id: Calculations.VolunteerCode
 registration:
   cost: 5
   url: /forms/registration
   emailSignupTarget: https://hook.us1.make.com/hrdtv28jy9i55havi84l6db2xc1ieyol
+  openDate:
+    day: 18
+    month: 9
+    year: 2023
   closeDate:
-    day: 16
-    month: 11
-    year: 2022
+    day: 13
+    month: 10
+    year: 2023
 location:
   name: Western Interdisciplinary Research Building
   street: Perth Dr

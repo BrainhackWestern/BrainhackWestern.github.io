@@ -87,6 +87,8 @@ export interface FAQ {
  */
 export interface Event {
   year: number;
+  startDate: BasicDate;
+  endDate: BasicDate;
 }
 
 export type RegistrationStatus = 'unopened' | 'open' | 'closed';

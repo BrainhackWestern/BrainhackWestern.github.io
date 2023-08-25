@@ -3,6 +3,7 @@ import { pipeInto } from 'ts-functional-pipe';
 import type { InferGetStaticPropsType } from 'next';
 import Head from 'next/head';
 
+import { DateTime } from 'luxon';
 import { AboutRow } from '../components/about-row';
 import { Button } from '../components/button';
 import Footer, { getFooterProps } from '../components/footer';
@@ -17,8 +18,8 @@ import dollar_signs from '../public/img/dollar_signs.png';
 import global_logo from '../public/img/global_logo.png';
 import hack from '../public/img/hack.png';
 import learn_skillz from '../public/img/learn_skillz_cropped.png';
-import paper from "../public/img/paper.png";
-import painterly from "../public/img/painterly_brain.png";
+import paper from '../public/img/paper.png';
+import painterly from '../public/img/painterly_brain.png';
 import upvote from '../public/img/upvote.png';
 import styles from '../styles/globals.css';
 import {
@@ -27,6 +28,8 @@ import {
   readCalendar,
   readConfig
 } from '../utils/data';
+import { BasicDate } from '../interfaces/generic';
+import { Helmet } from 'react-helmet';
 
 export const getStaticProps = async () => {
   const config = await readConfig();
@@ -49,10 +52,15 @@ const Home = ({
   config
 }: // calendar
 InferGetStaticPropsType<typeof getStaticProps>) => {
+  const formatDate = (date: BasicDate) => {
+    const d = DateTime.fromObject({ ...date }, { zone: 'America/Toronto' });
+    // const d = new Date(Date.UTC(date.year, date.month - 1, date.day));
+    return d.toLocaleString({ month: 'short', day: 'numeric' });
+  };
   return (
     <div className={styles.home.app}>
-      <Head>
-        <title>Brainhack Western {config.event.year}</title>
+      <Helmet>
+        <title>{`Brainhack Western ${config.event.year}`}</title>
         <meta
           name="description"
           content={
@@ -61,7 +69,7 @@ InferGetStaticPropsType<typeof getStaticProps>) => {
             'neuroimaging and neuroscience.'
           }
         />
-      </Head>
+      </Helmet>
 
       <NavBar
         displaySections={config.displaySections}
@@ -74,7 +82,11 @@ InferGetStaticPropsType<typeof getStaticProps>) => {
       />
 
       <div className={styles.home.splash}>
-        <Image src={paper} style={{position: 'absolute', height: '100vh', width: '100vw'}} alt=""/>
+        <Image
+          src={paper}
+          style={{ position: 'absolute', height: '100vh', width: '100vw' }}
+          alt=""
+        />
         <div className={styles.home.window}>
           <div className={styles.home.backgroundImg}>
             <Image
@@ -90,6 +102,7 @@ InferGetStaticPropsType<typeof getStaticProps>) => {
             <div>
               <RegisterButton
                 settings={config.registration}
+                eventTimespan={config.event.eventTimespan}
                 className={styles.home.titleCol.button}
                 alignment="center"
               />
@@ -103,7 +116,9 @@ InferGetStaticPropsType<typeof getStaticProps>) => {
                   height={186}
                   alt="Western Brainhack 2022"
                 />
-                <div className={styles.logo.dates}>Nov 30 - Dec 2</div>
+                <div className={styles.logo.dates}>
+                  {config.event.eventTimespan}
+                </div>
               </div>
             </div>
           </div>
@@ -183,11 +198,19 @@ InferGetStaticPropsType<typeof getStaticProps>) => {
               <h2>Cost: ${config.registration.cost}</h2>
               <p>Includes on-site meals, snacks, and coffee!</p>
             </div>
-            <RegisterButton settings={config.registration} alignment="center" />
+            <RegisterButton
+              settings={config.registration}
+              alignment="center"
+              eventTimespan={config.event.eventTimespan}
+            />
           </div>
           <div className="col-lg-6 d-flex justify-content-center">
             <div style={{ maxWidth: '300px' }}>
-              <Image src={dollar_signs} alt="" style={{ objectFit: 'contain', height: 'unset' }}/>
+              <Image
+                src={dollar_signs}
+                alt=""
+                style={{ objectFit: 'contain', height: 'unset' }}
+              />
             </div>
           </div>
         </div>
@@ -250,7 +273,7 @@ InferGetStaticPropsType<typeof getStaticProps>) => {
                   width={Math.min(250, sponsor.dims.width ?? 250)}
                   height={Math.min(150, sponsor.dims.height ?? 250)}
                   alt={sponsor.name}
-                  style={{objectFit: 'contain'}}
+                  style={{ objectFit: 'contain' }}
                 />
               </a>
             </div>

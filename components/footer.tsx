@@ -43,7 +43,6 @@ export const Footer = (props: FooterProps) => {
                 <script
                   async
                   src="https://platform.twitter.com/widgets.js"
-                  charSet="utf-8"
                 ></script>
               </p>
             </div>

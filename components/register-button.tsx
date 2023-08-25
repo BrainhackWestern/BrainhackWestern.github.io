@@ -5,6 +5,7 @@ import { MsgCard } from './msg-card';
 import { UpdatesSignup } from './updates-signup';
 
 interface RegisterButtonProps {
+  eventTimespan?: string;
   settings: Registration;
   alignment?: 'left' | 'center';
   className?: string;
@@ -27,12 +28,12 @@ export const RegisterButton = (props: RegisterButtonProps) => {
               Register Now
             </Button>
           );
-        } else if (settings.status === 'unopened') {
+        } else if (settings.status === 'unopened' && props.eventTimespan) {
           return (
             <Console>
               <span className="blue"># Coming soon</span>
               <br />
-              <span>Nov 30 - Dec 2</span>
+              <span>{props.eventTimespan}</span>
               {settings.emailSignupTarget ? (
                 <>
                   <br />

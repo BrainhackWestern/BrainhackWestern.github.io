@@ -1,14 +1,17 @@
 import { promises as fs } from 'fs';
 import imageSize from 'image-size';
-import {produce} from 'immer';
+import { produce } from 'immer';
 import yaml from 'js-yaml';
 import { merge, zip } from 'lodash';
 import { exec } from 'node:child_process';
 import { Readable } from 'node:stream';
 import path from 'path';
+import { DateTime } from 'luxon';
 
 import { EventPosition } from '../interfaces/schedule';
+import { Event } from '../interfaces/site-config';
 import { RegistrationStatus, SiteConfig } from '../interfaces/site-config';
+import { BasicDate } from '../interfaces/generic';
 
 function streamToString(stream: Readable) {
   const chunks: Uint8Array[] = [];
@@ -27,6 +30,7 @@ export const readConfig = async () => {
   return {
     currentYear,
     ...data,
+    event: await parseEventDates(data.event),
     sponsors: await parseSponsorImages(data)
   };
 };
@@ -116,6 +120,25 @@ export const linkScheduleEvents = async <T extends SiteConfig>(config: T) => {
         })
       };
     })
+  };
+};
+
+interface EventDatesParsed {
+  eventTimespan: string;
+}
+const parseEventDates = async <T extends Event>(
+  config: T
+): Promise<T & EventDatesParsed> => {
+  const formatDate = (date: BasicDate) => {
+    const d = DateTime.fromObject({ ...date }, { zone: 'America/Toronto' });
+    // const d = new Date(Date.UTC(date.year, date.month - 1, date.day));
+    return d.toLocaleString({ month: 'short', day: 'numeric' });
+  };
+  return {
+    ...config,
+    eventTimespan: `${formatDate(config.startDate)} - ${formatDate(
+      config.endDate
+    )}`
   };
 };
 

@@ -9,6 +9,7 @@ import Footer, { getFooterProps } from '../components/footer';
 import { NavBar } from '../components/navbar';
 import { RegisterButton } from '../components/register-button';
 import { inferRegistrationStatus, readConfig } from '../utils/data';
+import { Helmet } from 'react-helmet';
 
 export const getStaticProps = async () => {
   const config = await inferRegistrationStatus(await readConfig());
@@ -24,13 +25,13 @@ const FaqPage = ({
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <div className={style.home.app}>
-      <Head>
-        <title>FAQ - Brainhack Western {config.event.year}</title>
+      <Helmet>
+        <title>{`FAQ - Brainhack Western ${config.event.year}`}</title>
         <meta
           name="description"
           content="Frequently asked Questions for Brainhack Western"
         />
-      </Head>
+      </Helmet>
       <NavBar
         displaySections={config.displaySections}
         registrationButton={

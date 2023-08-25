@@ -5,6 +5,7 @@ import type { InferGetStaticPropsType } from 'next';
 import ErrorPage from 'next/error';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+import {Helmet} from 'react-helmet';
 
 import Footer, { getFooterProps } from '../../components/footer';
 import { Loading } from '../../components/loading';
@@ -120,18 +121,19 @@ const GenericForm = ({
 
   return (
     <div className={styles.home.app}>
-      <Head>
-        <title>{formData.shortTitle} - Brainhack Western 2022</title>
+      <Helmet>
+        <title>{formData.shortTitle} - Brainhack Western 2023</title>
         <meta
           name="description"
           content="Frequently asked Questions for Brainhack Western"
         />
-      </Head>
+      </Helmet>
       <div className={styles.home.splash}>
         <NavBar
           displaySections={config.displaySections}
           splashMode={!smallScreen}
         />
+
         {/* <Image src={Logo}></Image> */}
         {smallScreen ? null : <div className="spacer"></div>}
         <div className="container-sm back-card">

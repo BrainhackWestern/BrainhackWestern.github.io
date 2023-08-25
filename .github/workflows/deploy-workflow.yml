@@ -11,17 +11,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: fabasoad/yaml-json-xml-converter-action@main
+      - uses: fabasoad/data-format-converter-action@v0.1.11
         id: jsonyaml
         with:
-          path: 'config.yaml'
+          input: 'config.yaml'
           from: 'yaml'
           to: 'json'
       - name: Save yaml schema
         uses: DamianReeves/write-file-action@master
         with:
           path: config.json
-          contents: ${{ steps.jsonyaml.outputs.data }}
+          contents: ${{ steps.jsonyaml.outputs.output }}
           write-mode: overwrite
       - name: Validate JSON
         uses: docker://orrosenblatt/validate-json-action:latest

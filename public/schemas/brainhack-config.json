@@ -2,6 +2,16 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "additionalProperties": false,
     "definitions": {
+        "AnyEvent": {
+            "anyOf": [
+                {
+                    "$ref": "#/definitions/GenericEvent"
+                },
+                {
+                    "$ref": "#/definitions/TutorialEvent"
+                }
+            ]
+        },
         "BasicDate": {
             "additionalProperties": false,
             "properties": {
@@ -78,9 +88,7 @@
                     "type": "string"
                 },
                 "type": {
-                    "enum": [
-                        "cognito"
-                    ],
+                    "const": "cognito",
                     "type": "string"
                 }
             },
@@ -95,11 +103,19 @@
         "Event": {
             "description": "Basic info about the event",
             "properties": {
+                "endDate": {
+                    "$ref": "#/definitions/BasicDate"
+                },
+                "startDate": {
+                    "$ref": "#/definitions/BasicDate"
+                },
                 "year": {
                     "type": "number"
                 }
             },
             "required": [
+                "endDate",
+                "startDate",
                 "year"
             ],
             "type": "object"
@@ -299,14 +315,7 @@
                 "events": {
                     "description": "List of events to be held on this day.",
                     "items": {
-                        "anyOf": [
-                            {
-                                "$ref": "#/definitions/GenericEvent"
-                            },
-                            {
-                                "$ref": "#/definitions/TutorialEvent"
-                            }
-                        ]
+                        "$ref": "#/definitions/AnyEvent"
                     },
                     "type": "array"
                 },

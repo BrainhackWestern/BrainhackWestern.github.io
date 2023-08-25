@@ -12,10 +12,20 @@ export const Loading = ({ interval, className, prefix }: LoadingProps) => {
 
   useEffect(() => {
     const current = loader.current;
+    const glyphs = [
+      "&nbsp;&nbsp;&nbsp;",
+      ".&nbsp;&nbsp;",
+      "..&nbsp;",
+      "...",
+      "&nbsp;..",
+      "&nbsp;&nbsp;.",
+    ]
+    let i = 0
     if (current) {
       loadingInterval.current = window.setInterval(() => {
-        current.innerHTML += '.';
-      }, interval ?? 1000);
+        i++;
+        current.innerHTML = prefix + glyphs[i % glyphs.length];
+      }, interval ?? 300);
     } else {
       window.clearInterval(loadingInterval.current);
     }
@@ -23,8 +33,7 @@ export const Loading = ({ interval, className, prefix }: LoadingProps) => {
 
   return (
     <span className={className}>
-      {prefix}
-      <span ref={loader}>.</span>
+      <span ref={loader}></span>
     </span>
   );
 };
