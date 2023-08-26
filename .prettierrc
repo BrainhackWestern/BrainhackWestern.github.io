@@ -3,7 +3,12 @@
   "trailingComma": "none",
   "singleQuote": true,
   "printWidth": 80,
-  "importOrder": ["^next(/(.*))?$", "^components/(.*)$", "^\\.", "^\\.\\."],
+  "importOrder": [
+    "^next(/(.*))?$",
+    "^components/(.*)$",
+    "^\\.",
+    "^\\.\\."
+  ],
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true
 }

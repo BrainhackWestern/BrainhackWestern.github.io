@@ -7,7 +7,7 @@ import wordjoin from 'word-join';
 import { TutorialInfo } from '../../interfaces/tutorial';
 import useScreenSize, { screenSizes } from '../../services/screen-size/use';
 import style from '../../styles/vanilla/tutorial.css';
-import Image from '../image';
+import Image from 'next/image';
 
 interface TutorialProps {
   config: TutorialInfo;

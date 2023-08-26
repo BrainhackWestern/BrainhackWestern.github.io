@@ -54,7 +54,7 @@ jobs:
             echo NEXT_PUBLIC_URL='' > .env.production.local
             echo NEXT_PUBLIC_MAPS_EMBED_API_KEY=AIzaSyAfZCgUDCHkwhPMwFnT2xl1DdnyZmR334Q >> .env.production.local
             echo NEXT_IMAGE_LOADER_URL=https://brainhack-western.imgix.net/ >> .env.production.local
-            echo NEXT_PUBLIC_LOADER='imgix' >> .env.production.local
+            echo NEXT_PUBLIC_LOADER='./utils/image-loaders/imgix.ts' >> .env.production.local
             echo Running on Production
           else
             echo Running on stage

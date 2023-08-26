@@ -3,17 +3,13 @@ const webpack = require('webpack');
 const path = require('path');
 
 const imgLoader = () => {
-  const loader = process.env.NEXT_PUBLIC_LOADER || 'default';
-  if (['default', 'custom'].includes(loader)) {
-    return {
-      loader: loader
-    };
-  } else {
-    return {
-      loader: loader,
-      path: process.env.NEXT_IMAGE_LOADER_URL
-    };
-  }
+  const loader = process.env.NEXT_PUBLIC_LOADER;
+  return loader
+    ? {
+        loader: 'custom',
+        loaderFile: loader
+      }
+    : { loader: 'default' };
 };
 const { createVanillaExtractPlugin } = require('@vanilla-extract/next-plugin');
 const withVanillaExtract = createVanillaExtractPlugin();

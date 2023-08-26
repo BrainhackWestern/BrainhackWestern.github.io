@@ -5,7 +5,7 @@ import type { InferGetStaticPropsType } from 'next';
 import { AboutRow } from '../components/about-row';
 import { Button } from '../components/button';
 import Footer, { getFooterProps } from '../components/footer';
-import Image from '../components/image';
+import Image from 'next/image';
 import { NavBar } from '../components/navbar';
 import { RegisterButton } from '../components/register-button';
 import { Schedule } from '../components/schedule/schedule';
