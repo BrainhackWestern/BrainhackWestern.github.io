@@ -29,8 +29,8 @@ jobs:
           entrypoint: node
           args: /service/lib/main.js
         env:
-          INPUT_SCHEMA: "./public/schemas/brainhack-config.json"
-          INPUT_JSONS: "./config.json"
+          INPUT_SCHEMA: './public/schemas/brainhack-config.json'
+          INPUT_JSONS: './config.json'
 
   deploy:
     runs-on: ubuntu-latest
@@ -69,4 +69,3 @@ jobs:
           FOLDER: out
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SQUASH_HISTORY: true
-

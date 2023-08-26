@@ -1,15 +1,15 @@
-import { globalStyle, style } from "@vanilla-extract/css";
-import EmailForm from "../../components/email-form";
-import { css } from "../helpers.css";
-import { colors, font, textSize } from "../variables.css";
+import { globalStyle, style } from '@vanilla-extract/css';
+import EmailForm from '../../components/email-form';
+import { css } from '../helpers.css';
+import { colors, font, textSize } from '../variables.css';
 
-const content = style([])
+const content = style([]);
 
 css(content, {
   h1: {
-    padding: '2em 0 1em 0',
+    padding: '2em 0 1em 0'
   },
-  "h1::before": {
+  'h1::before': {
     content: '#',
     display: 'inline',
     color: colors.highlight
@@ -22,10 +22,10 @@ css(content, {
     fontSize: textSize.lg
   },
   section: {
-    marginBottom: '2em',
+    marginBottom: '2em'
   }
-})
+});
 
 export default {
   content
-}
+};

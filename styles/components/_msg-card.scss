@@ -1,6 +1,6 @@
-@use "../variables" as var;
-@use "../mixins";
-@use "bootstrap/scss/bootstrap" as bootstrap;
+@use '../variables' as var;
+@use '../mixins';
+@use 'bootstrap/scss/bootstrap' as bootstrap;
 
 .msg-card {
   @include mixins.shadow;

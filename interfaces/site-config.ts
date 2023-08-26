@@ -109,17 +109,17 @@ export interface Registration {
    * at build time from the open and close dates. Otherwise it overrides any
    * inference.
    */
-  status?: RegistrationStatus
+  status?: RegistrationStatus;
 
   /**
    * The date registration should open.
    */
-  openDate?: BasicDate
+  openDate?: BasicDate;
 
   /**
    * The date registration should close
    */
-  closeDate?: BasicDate
+  closeDate?: BasicDate;
 
   /**
    * Url of a webhook (e.g. from make.com) to send data from the email signup

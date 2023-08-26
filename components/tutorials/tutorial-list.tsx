@@ -1,9 +1,9 @@
-import { TutorialDay, TutorialInfo } from "../../interfaces/tutorial";
-import { newColorGradient, iterator } from "../../lib/color-tools";
-import formatDate from "../../lib/format-date";
-import style from "../../styles/vanilla/tutorial.css"
-import { Tutorial } from "./tutorial";
-import globalStyles from "../../styles/globals.css"
+import { TutorialDay, TutorialInfo } from '../../interfaces/tutorial';
+import { newColorGradient, iterator } from '../../lib/color-tools';
+import formatDate from '../../lib/format-date';
+import style from '../../styles/vanilla/tutorial.css';
+import { Tutorial } from './tutorial';
+import globalStyles from '../../styles/globals.css';
 
 interface TutorialListProps {
   tutorials: TutorialInfo[];
@@ -14,20 +14,21 @@ interface TutorialListProps {
 export const TutorialList = ({
   tutorials,
   show,
-  schedule,
+  schedule
 }: TutorialListProps) => {
   // Generate a gradient of colors between light and dark purple with one
   // color for each gradient. This list is passed to colorIterator, which returns
   // one color each time it's .next() method is called
-  const colors = iterator(
-    newColorGradient("#5E11A4", tutorials.length)
-  );
+  const colors = iterator(newColorGradient('#5E11A4', tutorials.length));
 
   // Left is first so that even tutorials (index % 2) will be on the left side
-  const sides: ("left" | "right")[] = ["left", "right"];
+  const sides: ('left' | 'right')[] = ['left', 'right'];
 
   return show ? (
-    <div id="tutorials" className={`${globalStyles.home.contentSpace} container-lg`}>
+    <div
+      id="tutorials"
+      className={`${globalStyles.home.contentSpace} container-lg`}
+    >
       <h2>Tutorials</h2>
       <div className={style.tutorialDay}>
         {
@@ -38,7 +39,7 @@ export const TutorialList = ({
             <Tutorial
               key={tutorial.id}
               config={tutorial}
-              color={colors.next().value ?? ["#5E11A4", "#5E11A4"]}
+              color={colors.next().value ?? ['#5E11A4', '#5E11A4']}
               side={sides[i % 2]}
             />
           ))

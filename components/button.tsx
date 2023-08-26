@@ -13,7 +13,13 @@ const LinkIfTarget = ({
   target?: string;
   children: React.ReactChild;
 }) => {
-  return target ? <Link href={target} legacyBehavior>{children}</Link> : <>{children}</>;
+  return target ? (
+    <Link href={target} legacyBehavior>
+      {children}
+    </Link>
+  ) : (
+    <>{children}</>
+  );
 };
 
 export const Button = (props: ButtonProps) => {

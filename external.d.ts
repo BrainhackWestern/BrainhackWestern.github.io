@@ -1,1 +1,1 @@
-declare module 'react-obfuscate'
+declare module 'react-obfuscate';

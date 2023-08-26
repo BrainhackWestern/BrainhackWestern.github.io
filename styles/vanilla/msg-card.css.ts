@@ -1,6 +1,6 @@
-import { globalStyle, style } from "@vanilla-extract/css";
-import { media } from "../helpers.css";
-import { colors, textSize } from "../variables.css";
+import { globalStyle, style } from '@vanilla-extract/css';
+import { media } from '../helpers.css';
+import { colors, textSize } from '../variables.css';
 
 const msgCard = style({
   textAlign: 'center',
@@ -10,19 +10,22 @@ const msgCard = style({
   borderRadius: 10,
   borderWidth: 5,
   padding: '1em 4em',
-  margin: '1em 0',
-})
+  margin: '1em 0'
+});
 
 globalStyle(`${msgCard} span`, {
   fontSize: textSize.lg,
-  color: colors.fontLight,
-})
+  color: colors.fontLight
+});
 
-globalStyle(`${msgCard} span`, media.lg({
-  fontSize: textSize.lg,
-  color: colors.fontLight,
-}))
+globalStyle(
+  `${msgCard} span`,
+  media.lg({
+    fontSize: textSize.lg,
+    color: colors.fontLight
+  })
+);
 
 export default {
-  msgCard,
-}
+  msgCard
+};

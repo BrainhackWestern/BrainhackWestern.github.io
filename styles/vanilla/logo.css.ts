@@ -1,5 +1,5 @@
-import { globalStyle, style } from "@vanilla-extract/css"
-import { colors, textSize } from "../variables.css"
+import { globalStyle, style } from '@vanilla-extract/css';
+import { colors, textSize } from '../variables.css';
 
 const dates = style({
   textAlign: 'center',
@@ -7,10 +7,10 @@ const dates = style({
   padding: '0.5em 2em',
   margin: '0.5em 0',
   fontSize: textSize.lg,
-  fontWeight: "bolder",
-  color: colors.fontLight,
-})
+  fontWeight: 'bolder',
+  color: colors.fontLight
+});
 
 export default {
-  dates,
-}
+  dates
+};

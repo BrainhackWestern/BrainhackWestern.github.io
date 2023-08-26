@@ -491,8 +491,8 @@ tutorials:
   - id: behaviour
     name: Modern Realities of Behavioural Research
     organizer:
-    - Priya Kalra
-    - Anthony Cruz
+      - Priya Kalra
+      - Anthony Cruz
     description: |
       This tutorial will cover the basics of behavioral data collection and
       analysis in neuroscience-adjacent fields such as cognitive psychology. The
@@ -504,7 +504,7 @@ tutorials:
   - id: anat
     name: 'Neuroanatomy for Researchers: a Focus on Surgical Targets'
     organizer: Alaa Taha
-    image: "/img/afids.png"
+    image: '/img/afids.png'
     description: |
       In this tutorial, we will begin with a basic introduction to neuroanatomy
       then briefly discuss the hippocampus, basal ganglia structures, midbrain,

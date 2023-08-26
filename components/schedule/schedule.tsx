@@ -84,7 +84,7 @@ export const Schedule = (props: ScheduleProps) => {
       scheduleHeight,
       scheduleMultiplier,
       numDays,
-      hourLines,
+      hourLines
     };
   };
 

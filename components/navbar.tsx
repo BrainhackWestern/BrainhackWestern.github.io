@@ -33,9 +33,7 @@ export const NavBar = ({
     >
       <div className="container-fluid">
         <Link href="/" className="navbar-brand">
-
           <Image src={logo} width={58} height={40} alt="Home"></Image>
-
         </Link>
         <button
           className="navbar-toggler"
@@ -78,7 +76,8 @@ export const NavBar = ({
             <li className="nav-item">
               <Link
                 href="https://github.com/BrainhackWestern/BrainhackWestern.github.io/wiki/Projects"
-                className="nav-link">
+                className="nav-link"
+              >
                 Projects
               </Link>
             </li>
@@ -88,7 +87,10 @@ export const NavBar = ({
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="https://brainhack.org/code-of-conduct.html" className="nav-link">
+              <Link
+                href="https://brainhack.org/code-of-conduct.html"
+                className="nav-link"
+              >
                 Code of Conduct
               </Link>
             </li>

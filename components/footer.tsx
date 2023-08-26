@@ -1,6 +1,6 @@
 import Obfuscate from 'react-obfuscate';
-import style from '../styles/vanilla/footer.css'
-import mainStyles from '../styles/globals.css'
+import style from '../styles/vanilla/footer.css';
+import mainStyles from '../styles/globals.css';
 
 import { ExpandedConfig, SiteConfig } from '../interfaces/site-config';
 
@@ -50,7 +50,9 @@ export const Footer = (props: FooterProps) => {
         </div>
         <h3 id="contact">Contact</h3>
         <Obfuscate email="brainhack.western@gmail.com" />
-        <p className={style.copyright}>Copyright © {props.year} Brainhack Western</p>
+        <p className={style.copyright}>
+          Copyright © {props.year} Brainhack Western
+        </p>
       </div>
     </footer>
   );

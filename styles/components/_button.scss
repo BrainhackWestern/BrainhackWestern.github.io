@@ -1,14 +1,22 @@
-@use "../variables" as var;
-@use "bootstrap/scss/bootstrap" as bootstrap;
-@use "../mixins" as mixins;
+@use '../variables' as var;
+@use 'bootstrap/scss/bootstrap' as bootstrap;
+@use '../mixins' as mixins;
 
-$button_background: linear-gradient(90deg, rgba(12,110,100,1) 0%, rgba(44,76,129,1) 53%, rgba(132,10,171,1) 100%);
-
+$button_background: linear-gradient(
+  90deg,
+  rgba(12, 110, 100, 1) 0%,
+  rgba(44, 76, 129, 1) 53%,
+  rgba(132, 10, 171, 1) 100%
+);
 
 @mixin transition_bounds($time) {
-  transition: top $time, bottom $time, left $time, right $time, border-width $time / 2;
+  transition:
+    top $time,
+    bottom $time,
+    left $time,
+    right $time,
+    border-width $time / 2;
 }
-
 
 @mixin button($size) {
   position: relative;
@@ -30,7 +38,7 @@ $button_background: linear-gradient(90deg, rgba(12,110,100,1) 0%, rgba(44,76,129
   span {
     font-size: $size;
     color: var.$font-light;
-  // vertical-align: middle;
+    // vertical-align: middle;
   }
 
   @include bootstrap.media-breakpoint-up(lg) {
@@ -53,7 +61,7 @@ $button_background: linear-gradient(90deg, rgba(12,110,100,1) 0%, rgba(44,76,129
     background: $button_background;
     z-index: 1;
     border-radius: 15px;
-    @include transition_bounds((0.20s));
+    @include transition_bounds((0.2s));
   }
 
   &:hover::before {
@@ -98,21 +106,19 @@ $button_background: linear-gradient(90deg, rgba(12,110,100,1) 0%, rgba(44,76,129
     &::before {
       @include mixins.pseudoblock(5px);
       @include transition_bounds((0.15s));
-      
     }
 
     &::after {
       @include mixins.pseudoblock(0);
       background: $button_background;
       z-index: 1;
-      @include transition_bounds((0.20s))
+      @include transition_bounds((0.2s));
     }
   }
-
 }
 
 .small-button {
-  @include button(var.$body_small)
+  @include button(var.$body_small);
 }
 
 .button {

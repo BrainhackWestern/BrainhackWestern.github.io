@@ -10,7 +10,11 @@ interface TabParams<T> {
   setState: Dispatch<SetStateAction<T>>;
   choices: T[];
 }
-export const TabSelector = function <T>({ choices, state, setState }: TabParams<T>) {
+export const TabSelector = function <T>({
+  choices,
+  state,
+  setState
+}: TabParams<T>) {
   const handleChange: ChangeEventHandler<HTMLInputElement> = (e) => {
     setState(choices[parseInt(e.target.value)]);
   };

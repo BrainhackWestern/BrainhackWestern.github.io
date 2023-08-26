@@ -1,6 +1,6 @@
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import style from '../styles/globals.css'
+import style from '../styles/globals.css';
 
 import type { InferGetStaticPropsType } from 'next';
 

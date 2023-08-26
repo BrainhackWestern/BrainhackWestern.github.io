@@ -11,7 +11,7 @@ const selector = style([
   {
     position: 'absolute',
     width: '100%',
-    padding: '0.5em',
+    padding: '0.5em'
   }
 ]);
 

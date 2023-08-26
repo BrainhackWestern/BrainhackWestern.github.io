@@ -1,29 +1,29 @@
 export interface EmbeddedForm {
-  type: "cognito"
+  type: 'cognito';
 
   /**
    * Short version of the title to be used in links
    */
-  shortTitle: string
+  shortTitle: string;
 
   /**
    * The friendly title that will appear at the top of the form
    */
-  title: string
+  title: string;
 
   /**
    * The embedding tag copied from the site
    */
-  embedTag: string
+  embedTag: string;
 
   /**
    * Whether the form should be viewable (vs returning form not found)
    *
    * @default false
    */
-  hidden?: boolean
+  hidden?: boolean;
 
   prefillMappings?: {
-    [param: string]: string
-  }
+    [param: string]: string;
+  };
 }
