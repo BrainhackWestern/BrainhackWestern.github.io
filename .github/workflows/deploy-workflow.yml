@@ -4,8 +4,8 @@ on:
     branches:
       - master
       - main
-  schedule:
-    - cron: "24 3 * 8-12 *" # at 3:24 every day from August to December
+  # schedule:
+  #   - cron: "24 3 * 8-12 *" # at 3:24 every day from August to December
 jobs:
   check-yaml:
     runs-on: ubuntu-latest
