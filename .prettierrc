@@ -2,13 +2,5 @@
   "semi": true,
   "trailingComma": "none",
   "singleQuote": true,
-  "printWidth": 80,
-  "importOrder": [
-    "^next(/(.*))?$",
-    "^components/(.*)$",
-    "^\\.",
-    "^\\.\\."
-  ],
-  "importOrderSeparation": true,
-  "importOrderSortSpecifiers": true
+  "printWidth": 80
 }
