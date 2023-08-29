@@ -48,9 +48,9 @@ jobs:
             ]' config.yaml
 
       - name: Format yaml output
-        uses: creyD/prettier_action@v4.3
+        uses: actionsx/prettier@v2
         with:
-          prettier_options: --no-config --write config.yaml
+          args: --no-config --write config.yaml
       - name: Create PR
         uses: peter-evans/create-pull-request@v5
         with:
