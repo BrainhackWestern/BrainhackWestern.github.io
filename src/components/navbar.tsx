@@ -9,7 +9,7 @@ import style from '../styles/vanilla/navbar.css';
 interface NavBarProps {
   displaySections: DisplaySections;
   splashMode?: boolean;
-  registrationButton?: React.ReactChild | null;
+  registrationButton?: React.ReactNode | null;
 }
 
 export const NavBar = ({

@@ -11,7 +11,7 @@ const LinkIfTarget = ({
   children
 }: {
   target?: string;
-  children: React.ReactChild;
+  children: React.ReactNode;
 }) => {
   return target ? (
     <Link href={target} legacyBehavior>

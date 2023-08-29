@@ -45,39 +45,5 @@ export const TutorialList = ({
         }
       </div>
     </div>
-  ) : (
-    <></>
-  );
-  // return show ? (
-  //   <div id="tutorials" className="content-space container-lg">
-  //     <h2>Tutorials</h2>
-  //     {tutorials.map((day) => (
-  //       <div
-  //         key={day.day + day.month * 10 + day.year * 100}
-  //         className="tutorial-day"
-  //       >
-  //         <h3 className="tutorial-day-name">
-  //           {formatDate(new Date(day.year, day.month - 1, day.day))}
-  //         </h3>
-  //         {
-  //           // Right now we don't distinguish between morning and
-  //           // afternoon tutorials, so we merge all the tutorials
-  //           // together
-  //           day.tutorialTimes
-  //             .flatMap((time) => time.options)
-  //             .map((tutorial, i) => (
-  //               <Tutorial
-  //                 key={tutorial.id}
-  //                 config={tutorial}
-  //                 color={colors.next().value as string}
-  //                 side={sides[i % 2]}
-  //               />
-  //             ))
-  //         }
-  //       </div>
-  //     ))}
-  //   </div>
-  // ) : (
-  //   <></>
-  // );
+  ) : null;
 };
