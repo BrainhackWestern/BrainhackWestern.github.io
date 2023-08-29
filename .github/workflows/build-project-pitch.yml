@@ -37,12 +37,15 @@ jobs:
           )" >> "$GITHUB_ENV"
       - name: Add data to config
         uses: mikefarah/yq@master
+        env:
+          DESCRIPTION: ${{ toJson(fromJson(steps.parse.outputs.payload)['Description']) }}
+          TITLE: ${{ toJson(fromJson(steps.parse.outputs.payload)['Title']) }}
         with:
           cmd: >
             yq -i '.projects['"$year"'] += [
               {
-                "title": ${{ toJson(fromJson(steps.parse.outputs.payload)['Title']) }},
-                "description": ${{ toJson(fromJson(steps.parse.outputs.payload)['Description'])}},
+                "title": '"$TITLE"',
+                "description": '"$DESCRIPTION"',
                 "organizers": '"$organizers"'
               }
             ]' config.yaml
