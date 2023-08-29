@@ -1,13 +1,10 @@
-import { useState } from 'react';
-
+import Image from 'next/image';
 import Link from 'next/link';
-
+import { useState } from 'react';
 import { DisplaySections } from '../interfaces/site-config';
 import logo from '../public/img/brainhack_logo.png';
 import useScrollPosition from '../services/scroll-position/use';
 import style from '../styles/vanilla/navbar.css';
-import { getFooterProps } from './footer';
-import Image from 'next/image';
 
 interface NavBarProps {
   displaySections: DisplaySections;

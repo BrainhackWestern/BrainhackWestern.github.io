@@ -1,13 +1,12 @@
+import Image from 'next/image';
 import { isString } from 'lodash';
 import { CSSProperties, Fragment } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import wordjoin from 'word-join';
-
 import { TutorialInfo } from '../../interfaces/tutorial';
 import useScreenSize, { screenSizes } from '../../services/screen-size/use';
 import style from '../../styles/vanilla/tutorial.css';
-import Image from 'next/image';
 
 interface TutorialProps {
   config: TutorialInfo;

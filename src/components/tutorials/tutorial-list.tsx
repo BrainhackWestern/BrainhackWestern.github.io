@@ -1,9 +1,9 @@
 import { TutorialDay, TutorialInfo } from '../../interfaces/tutorial';
-import { newColorGradient, iterator } from '../../lib/color-tools';
+import { iterator, newColorGradient } from '../../lib/color-tools';
 import formatDate from '../../lib/format-date';
+import globalStyles from '../../styles/globals.css';
 import style from '../../styles/vanilla/tutorial.css';
 import { Tutorial } from './tutorial';
-import globalStyles from '../../styles/globals.css';
 
 interface TutorialListProps {
   tutorials: TutorialInfo[];

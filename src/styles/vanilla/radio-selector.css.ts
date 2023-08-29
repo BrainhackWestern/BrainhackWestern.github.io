@@ -1,5 +1,4 @@
-import { StyleRule, style } from '@vanilla-extract/css';
-
+import { style, StyleRule } from '@vanilla-extract/css';
 import { pseudoblock } from '../mixins.css';
 
 const button_background =

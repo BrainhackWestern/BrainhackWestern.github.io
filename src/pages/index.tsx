@@ -1,32 +1,30 @@
-import { pipeInto } from 'ts-functional-pipe';
-
 import type { InferGetStaticPropsType } from 'next';
-
+import Image from 'next/image';
+import { Helmet } from 'react-helmet';
+import { pipeInto } from 'ts-functional-pipe';
 import { AboutRow } from '../components/about-row';
 import { Button } from '../components/button';
 import Footer, { getFooterProps } from '../components/footer';
-import Image from 'next/image';
 import { NavBar } from '../components/navbar';
 import { RegisterButton } from '../components/register-button';
 import { Schedule } from '../components/schedule/schedule';
 import { TutorialList } from '../components/tutorials/tutorial-list';
 import { WhiteBox } from '../components/white-box';
-import main_logo from '../public/img/logo-2023-splash.png';
-import dollar_signs from '../public/img/dollar_signs.png';
-import global_logo from '../public/img/global_logo.png';
-import hack from '../public/img/hack.png';
-import learn_skillz from '../public/img/learn_skillz_cropped.png';
-import paper from '../public/img/paper.png';
-import painterly from '../public/img/painterly_brain.png';
-import upvote from '../public/img/upvote.png';
-import styles from '../styles/globals.css';
 import {
   inferRegistrationStatus,
   linkScheduleEvents,
   readCalendar,
   readConfig
 } from '../lib/data';
-import { Helmet } from 'react-helmet';
+import dollar_signs from '../public/img/dollar_signs.png';
+import global_logo from '../public/img/global_logo.png';
+import hack from '../public/img/hack.png';
+import learn_skillz from '../public/img/learn_skillz_cropped.png';
+import main_logo from '../public/img/logo-2023-splash.png';
+import painterly from '../public/img/painterly_brain.png';
+import paper from '../public/img/paper.png';
+import upvote from '../public/img/upvote.png';
+import styles from '../styles/globals.css';
 
 export const getStaticProps = async () => {
   const config = await readConfig();

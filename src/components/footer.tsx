@@ -1,8 +1,7 @@
 import Obfuscate from 'react-obfuscate';
-import style from '../styles/vanilla/footer.css';
-import mainStyles from '../styles/globals.css';
-
 import { ExpandedConfig, SiteConfig } from '../interfaces/site-config';
+import mainStyles from '../styles/globals.css';
+import style from '../styles/vanilla/footer.css';
 
 interface FooterProps {
   organizers: string[];

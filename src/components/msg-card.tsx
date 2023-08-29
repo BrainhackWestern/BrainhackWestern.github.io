@@ -1,4 +1,5 @@
 import style from '../styles/vanilla/msg-card.css';
+
 interface MsgCardProps {
   className?: string;
   children: React.ReactNode;

@@ -1,5 +1,4 @@
 import { useState } from 'react';
-
 import { GenericEvent, ScheduleConfig } from '../../interfaces/schedule';
 import useScreenSize, { screenSizes } from '../../services/screen-size/use';
 import style from '../../styles/globals.css';

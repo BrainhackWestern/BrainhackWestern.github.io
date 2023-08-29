@@ -1,14 +1,12 @@
+import type { InferGetStaticPropsType } from 'next';
+import { Helmet } from 'react-helmet';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import style from '../styles/globals.css';
-
-import type { InferGetStaticPropsType } from 'next';
-
 import Footer, { getFooterProps } from '../components/footer';
 import { NavBar } from '../components/navbar';
 import { RegisterButton } from '../components/register-button';
 import { inferRegistrationStatus, readConfig } from '../lib/data';
-import { Helmet } from 'react-helmet';
+import style from '../styles/globals.css';
 
 export const getStaticProps = async () => {
   const config = await inferRegistrationStatus(await readConfig());

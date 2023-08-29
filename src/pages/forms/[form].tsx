@@ -1,20 +1,18 @@
-import CognitoForm from '@tylermenezes/cognitoforms-react';
-import { findIndex, merge, set } from 'lodash';
-
 import type { InferGetStaticPropsType } from 'next';
 import ErrorPage from 'next/error';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+import CognitoForm from '@tylermenezes/cognitoforms-react';
+import { findIndex, merge, set } from 'lodash';
 import { Helmet } from 'react-helmet';
-
 import Footer, { getFooterProps } from '../../components/footer';
 import { Loading } from '../../components/loading';
 import { NavBar } from '../../components/navbar';
 import { EmbeddedForm } from '../../interfaces/form';
+import { readConfig } from '../../lib/data';
 import useScreenSize, { screenSizes } from '../../services/screen-size/use';
 import styles from '../../styles/globals.css';
 import style from '../../styles/pages/[form].css';
-import { readConfig } from '../../lib/data';
 
 const parseFormData = async (forms: { [key: string]: EmbeddedForm }) => {
   const parse = (await import('hypertag')).default;

@@ -1,5 +1,5 @@
 import interpolate from 'color-interpolate';
-import { adjustHue, lighten, darken } from 'color2k';
+import { adjustHue, darken, lighten } from 'color2k';
 
 export const colorGradient = (
   colorStart: string,

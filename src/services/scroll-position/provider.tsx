@@ -1,6 +1,5 @@
 import { debounce } from 'lodash';
 import { PropsWithChildren, useEffect, useState } from 'react';
-
 import ScrollPositionContext from './context';
 import useScrollPosition from './use';
 

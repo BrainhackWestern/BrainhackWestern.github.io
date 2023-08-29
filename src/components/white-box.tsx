@@ -1,4 +1,5 @@
 import styles from '../styles/vanilla/whitebox.css';
+
 interface WhiteBoxProps {
   className?: string;
   children: React.ReactNode;

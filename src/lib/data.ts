@@ -1,17 +1,19 @@
 import { promises as fs } from 'fs';
+import { exec } from 'node:child_process';
+import { Readable } from 'node:stream';
+import path from 'path';
 import imageSize from 'image-size';
 import { produce } from 'immer';
 import yaml from 'js-yaml';
 import { merge, zip } from 'lodash';
-import { exec } from 'node:child_process';
-import { Readable } from 'node:stream';
-import path from 'path';
 import { DateTime } from 'luxon';
-
-import { EventPosition } from '../interfaces/schedule';
-import { Event } from '../interfaces/site-config';
-import { RegistrationStatus, SiteConfig } from '../interfaces/site-config';
 import { BasicDate } from '../interfaces/generic';
+import { EventPosition } from '../interfaces/schedule';
+import {
+  Event,
+  RegistrationStatus,
+  SiteConfig
+} from '../interfaces/site-config';
 
 function streamToString(stream: Readable) {
   const chunks: Uint8Array[] = [];

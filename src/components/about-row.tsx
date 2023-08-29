@@ -1,5 +1,4 @@
-import { StaticImageData } from 'next/image';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import useScreenSize, { screenSizes } from '../services/screen-size/use';
 import styles from '../styles/vanilla/about.css';
 
