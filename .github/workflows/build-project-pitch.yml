@@ -1,0 +1,51 @@
+name: Build Project Pitch
+on:
+  issues:
+    types: [labeled]
+jobs:
+  compile-form:
+    if: github.event.label.name == 'approved'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Parse issue
+        id: parse
+        uses: onmax/issue-form-parser@v1.4
+        with:
+          issue_number: ${{ github.event.issue.number }}
+      - name: Get year
+        run: >
+          echo "year=$(echo "${{ join(github.event.issue.labels.*.name, '\n') }}" |
+            grep 'year/' |
+            awk -d'/' '{print $2}')" >> "$GITHUB_ENV"
+      - name: Validate year
+        run: >
+          [[ "$year" =~ "[0-9][0-9][0-9][0-9]" ]]
+      - name: Parse organizers
+        run: >
+          echo "organizers=$(
+            echo "${{ fromJson(steps.parse.outputs.payload)['Project Leads']}}" |
+              sed -E 's/([^(]+)\s\(@?([^@)]+)\)/{"name": "\1", "github": "\2"}/' |
+              paste -d',' -s |
+              sed -E 's/^(.*)$/[\1]/'
+          )" >> "$GITHUB_ENV"
+      - name: Add data to config
+        uses: mikefarah/yq@v4
+        with:
+          cmd: >
+            yq -i '.projects['"$year"'] += [
+              {
+                "title": "${{ fromJson(steps.parse.outputs.payload)['Title']}}",
+                "description": "${{ fromJson(steps.parse.outputs.payload)['Description']}}",
+                "organizers": '"$organizers"'
+              }
+            ]' config.yaml
+
+      - name: Create PR
+        uses: peter-evans/create-pull-request@v5
+        with:
+          commit-message: >
+            Add Project: ${{ fromJson(steps.parse.outputs.payload)['Title']}}
+          branch: pitch/${{ github.event.issue.number }}
+          title: >
+            Add Project: ${{ fromJson(steps.parse.outputs.payload)['Title']}}

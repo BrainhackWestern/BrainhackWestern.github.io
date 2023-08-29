@@ -1,7 +1,7 @@
 name: Project Pitch
 description: Pitch a project for the upcoming Western Brainhack!
 title: '[Pitch]: '
-labels: ['pitch', 'triage']
+labels: ['pitch', 'triage', 'year/2023']
 body:
   - type: input
     id: title
