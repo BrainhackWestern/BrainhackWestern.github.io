@@ -1,10 +1,14 @@
 name: Build Project Pitch
 on:
   issues:
-    types: [labeled]
+    types: [labeled, unlabeled]
 jobs:
   compile-form:
-    if: github.event.label.name == 'approved'
+    if:
+      contains(github.event.issue.labels.*.name, 'approved') &&
+      contains(join(github.event.issue.labels.*.name, ', '), 'year/') &&
+      contains(github.event.issue.labels.*.name, 'pitch') &&
+      ! contains(github.event.issue.labels.*.name, 'triage')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -32,17 +36,21 @@ jobs:
               sed -E 's/^(.*)$/[\1]/'
           )" >> "$GITHUB_ENV"
       - name: Add data to config
-        uses: mikefarah/yq@v4
+        uses: mikefarah/yq@master
         with:
           cmd: >
-            cat 'config.yaml' | yq -i '.projects[${{ env.year }}] += [
+            yq -i '.projects['"$year"'] += [
               {
                 "title": "${{ fromJson(steps.parse.outputs.payload)['Title']}}",
                 "description": "${{ fromJson(steps.parse.outputs.payload)['Description']}}",
-                "organizers": ${{ env.organizers }}
+                "organizers": '"$organizers"'
               }
-            ]' >> test.yaml && false
+            ]' config.yaml
 
+      - name: Format yaml output
+        uses: creyD/prettier_action@v4.3
+        with:
+          prettier_options: --write config.yaml
       - name: Create PR
         uses: peter-evans/create-pull-request@v5
         with:
