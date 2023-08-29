@@ -1,0 +1,38 @@
+name: Project Pitch
+description: Pitch a project for the upcoming Western Brainhack!
+title: '[Pitch]: '
+labels: ['pitch', 'triage']
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Title
+      description: Title of your project
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: >
+         Describe your project in less than 150 words. You can use
+         github-flavoured markdown syntax
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Project url
+      description: >
+        Link to a github repository or other source for project information
+  - type: textarea
+    id: organizers
+    attributes:
+      label: Project Leads
+      description: >
+        Names of the people pitching and organizing the project. Please enter
+        one name per line. Following your name, please put your github username
+        in parentheses, if you have one
+      placeholder: Brain Hacker (@BrainhackWestern)
+    validations:
+      required: true
