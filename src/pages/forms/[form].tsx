@@ -14,7 +14,7 @@ import { EmbeddedForm } from '../../interfaces/form';
 import useScreenSize, { screenSizes } from '../../services/screen-size/use';
 import styles from '../../styles/globals.css';
 import style from '../../styles/pages/[form].css';
-import { readConfig } from '../../utils/data';
+import { readConfig } from '../../lib/data';
 
 const parseFormData = async (forms: { [key: string]: EmbeddedForm }) => {
   const parse = (await import('hypertag')).default;

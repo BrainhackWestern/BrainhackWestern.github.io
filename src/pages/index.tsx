@@ -25,7 +25,7 @@ import {
   linkScheduleEvents,
   readCalendar,
   readConfig
-} from '../utils/data';
+} from '../lib/data';
 import { Helmet } from 'react-helmet';
 
 export const getStaticProps = async () => {

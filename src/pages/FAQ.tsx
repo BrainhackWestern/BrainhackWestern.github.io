@@ -7,7 +7,7 @@ import type { InferGetStaticPropsType } from 'next';
 import Footer, { getFooterProps } from '../components/footer';
 import { NavBar } from '../components/navbar';
 import { RegisterButton } from '../components/register-button';
-import { inferRegistrationStatus, readConfig } from '../utils/data';
+import { inferRegistrationStatus, readConfig } from '../lib/data';
 import { Helmet } from 'react-helmet';
 
 export const getStaticProps = async () => {
