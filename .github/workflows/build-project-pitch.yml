@@ -15,7 +15,7 @@ jobs:
           issue_number: ${{ github.event.issue.number }}
       - name: Get year
         run: >
-          echo "year=$(echo "${{ join(github.event.issue.labels.*.name, '\n') }}" |
+          echo "year=$(echo -e "${{ join(github.event.issue.labels.*.name, '\n') }}" |
             grep 'year/' |
             awk -F'/' '{print $2}')" >> "$GITHUB_ENV"
       - name: Validate year
