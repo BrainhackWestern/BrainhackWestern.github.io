@@ -16,14 +16,14 @@ import {
   readCalendar,
   readConfig
 } from '../lib/data';
-import dollar_signs from '../public/img/dollar_signs.png';
-import global_logo from '../public/img/global_logo.png';
-import hack from '../public/img/hack.png';
-import learn_skillz from '../public/img/learn_skillz_cropped.png';
-import main_logo from '../public/img/logo-2023-splash.png';
-import painterly from '../public/img/painterly_brain.png';
-import paper from '../public/img/paper.png';
-import upvote from '../public/img/upvote.png';
+import dollar_signs from '../../public/img/dollar_signs.png';
+import global_logo from '../../public/img/global_logo.png';
+import hack from '../../public/img/hack.png';
+import learn_skillz from '../../public/img/learn_skillz_cropped.png';
+import main_logo from '../../public/img/logo-2023-splash.png';
+import painterly from '../../public/img/painterly_brain.png';
+import paper from '../../public/img/paper.png';
+import upvote from '../../public/img/upvote.png';
 import styles from '../styles/globals.css';
 
 export const getStaticProps = async () => {

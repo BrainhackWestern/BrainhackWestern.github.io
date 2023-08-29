@@ -1,6 +1,5 @@
 import { TutorialDay, TutorialInfo } from '../../interfaces/tutorial';
 import { iterator, newColorGradient } from '../../lib/color-tools';
-import formatDate from '../../lib/format-date';
 import globalStyles from '../../styles/globals.css';
 import style from '../../styles/vanilla/tutorial.css';
 import { Tutorial } from './tutorial';

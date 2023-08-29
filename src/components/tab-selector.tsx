@@ -1,8 +1,9 @@
 import { toString } from 'lodash';
 import { ChangeEventHandler, Dispatch, SetStateAction, useRef } from 'react';
 import { CSSTransition } from 'react-transition-group';
+
 import style from '../styles/vanilla/radio-selector.css';
-import { joinStyles } from '../utils/utils';
+import { joinStyles } from '../lib/utils';
 
 interface TabParams<T> {
   state: T;
@@ -22,7 +23,7 @@ export const TabSelector = function <T>({
     children
   }: {
     value: number;
-    children: React.ReactChild;
+    children: React.ReactNode;
   }) => {
     const selected = state === choices[value];
     const nodeRef = useRef(null);

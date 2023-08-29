@@ -1,8 +1,9 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document';
-import { basePath } from '../utils/image-loader';
 
 class MyDocument extends Document {
   render() {
+    
+    const basePath = process.env.NEXT_PUBLIC_URL || '';
     return (
       <Html>
         <Head>
