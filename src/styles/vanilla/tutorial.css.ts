@@ -54,7 +54,7 @@ const img = style([
   }
 ]);
 
-const description = style(['col-12', 'col-lg', 'flex-grow-1', 'console']);
+const description = style(['col-12', 'col-lg', 'flex-grow-1']);
 
 export default {
   tutorialDay,

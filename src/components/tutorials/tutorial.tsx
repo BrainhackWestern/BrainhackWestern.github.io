@@ -7,41 +7,15 @@ import wordjoin from 'word-join';
 import { TutorialInfo } from '../../interfaces/tutorial';
 import useScreenSize, { screenSizes } from '../../services/screen-size/use';
 import style from '../../styles/vanilla/tutorial.css';
+import NameLister from '../name-lister';
+import { Console } from '../console';
+import Markdown from '../markdown';
 
 interface TutorialProps {
   config: TutorialInfo;
   color: string[];
   side: 'left' | 'right';
 }
-
-const makeYamlList = (items: string[]) => {
-  return items.map((item) => (
-    <Fragment key={item}>
-      <span>&nbsp;&nbsp;- {item}</span>
-      <br />
-    </Fragment>
-  ));
-};
-
-const Organizers = ({ organizers }: { organizers?: string | string[] }) => {
-  if (!organizers) {
-    return null;
-  }
-  return (
-    <div>
-      <span className="green">
-        {isString(organizers) || organizers.length === 1
-          ? 'Organizer: '
-          : 'Organizers: '}
-      </span>
-      <span>
-        {wordjoin(isString(organizers) ? [organizers] : organizers, {
-          oxford: true
-        })}
-      </span>
-    </div>
-  );
-};
 
 export const Tutorial = (props: TutorialProps) => {
   const {
@@ -74,17 +48,22 @@ export const Tutorial = (props: TutorialProps) => {
         />
       </div>
     ) : null,
-    <div key="description" className={style.description}>
-      <ReactMarkdown remarkPlugins={[remarkGfm]}>{description}</ReactMarkdown>
-      <Organizers organizers={props.config.organizer} />
+    <Console key="description" className={style.description}>
+      <Markdown>{description}</Markdown>
+      <NameLister
+        heading="Organizer"
+        names={props.config.organizer}
+        headingClassName="green"
+      />
       {props.config.panelists ? (
-        <div>
-          <span className="blue">Panelists: </span>
-          <br />
-          {makeYamlList(props.config.panelists)}
-        </div>
+        <NameLister
+          heading="Panelist"
+          names={props.config.panelists}
+          bulletedList
+          headingClassName="blue"
+        />
       ) : null}
-    </div>
+    </Console>
   ];
 
   return (

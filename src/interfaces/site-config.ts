@@ -3,6 +3,7 @@ import { BasicDate } from './generic';
 import { AnyEvent, ScheduleConfig } from './schedule';
 import { TutorialInfo } from './tutorial';
 
+
 /**
  * @additionalProperties false
  */
@@ -161,6 +162,14 @@ export interface SiteConfig {
 
   faq?: FAQ[];
 
+  /**
+   * Object mapping years to project lists.
+   *
+   * The allows the archiving of past projects
+   */
+  projects?: {
+    [year: number]: Project[]
+  }
   displaySections: DisplaySections;
 }
 
