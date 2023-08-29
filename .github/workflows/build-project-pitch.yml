@@ -1,7 +1,7 @@
 name: Build Project Pitch
 on:
   issues:
-    types: [labeled, unlabeled]
+    types: [labeled]
 jobs:
   compile-form:
     if:
@@ -31,7 +31,7 @@ jobs:
         run: >
           echo "organizers=$(
             echo "${{ fromJson(steps.parse.outputs.payload)['Project Leads']}}" |
-              sed -E 's/([^(]+)\s\(@?([^@)]+)\)/{"name": "\1", "github": "\2"}/' |
+              sed -E 's/([^(]+)\s\(\s*@?([a-zA-Z0-9\-]+)\s*\)/{"name": "\1", "github": "\2"}/' |
               paste -d',' -s |
               sed -E 's/^(.*)$/[\1]/'
           )" >> "$GITHUB_ENV"
@@ -41,8 +41,8 @@ jobs:
           cmd: >
             yq -i '.projects['"$year"'] += [
               {
-                "title": "${{ fromJson(steps.parse.outputs.payload)['Title']}}",
-                "description": "${{ fromJson(steps.parse.outputs.payload)['Description']}}",
+                "title": ${{ toJson(fromJson(steps.parse.outputs.payload)['Title']) }},
+                "description": ${{ toJson(fromJson(steps.parse.outputs.payload)['Description'])}},
                 "organizers": '"$organizers"'
               }
             ]' config.yaml
