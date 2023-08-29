@@ -20,7 +20,9 @@ jobs:
             awk -F'/' '{print $2}')" >> "$GITHUB_ENV"
       - name: Validate year
         run: >
-          [[ "$year" =~ "[0-9][0-9][0-9][0-9]" ]]
+          [[ "$year" =~ ^[[:digit:]]{4}$ ]] || (
+            echo "$year" is invalid >&2 && false
+          )
       - name: Parse organizers
         run: >
           echo "organizers=$(
@@ -33,13 +35,13 @@ jobs:
         uses: mikefarah/yq@v4
         with:
           cmd: >
-            yq -i '.projects['"$year"'] += [
+            cat 'config.yaml' | yq -i '.projects[${{ env.year }}] += [
               {
                 "title": "${{ fromJson(steps.parse.outputs.payload)['Title']}}",
                 "description": "${{ fromJson(steps.parse.outputs.payload)['Description']}}",
-                "organizers": '"$organizers"'
+                "organizers": ${{ env.organizers }}
               }
-            ]' config.yaml
+            ]' >> test.yaml && false
 
       - name: Create PR
         uses: peter-evans/create-pull-request@v5
