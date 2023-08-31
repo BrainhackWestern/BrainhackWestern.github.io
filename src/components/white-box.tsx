@@ -1,4 +1,5 @@
-import styles from '../styles/vanilla/whitebox.css';
+import { Container } from 'react-bootstrap';
+import styles from './white-box.css';
 
 interface WhiteBoxProps {
   className?: string;
@@ -7,8 +8,8 @@ interface WhiteBoxProps {
 
 export const WhiteBox = (props: WhiteBoxProps) => (
   <div className={[styles.whitebox, props.className ?? ''].join(' ')}>
-    <div className="container-lg">
+    <Container fluid="lg">
       <div className="col">{props.children}</div>
-    </div>
+    </Container>
   </div>
 );

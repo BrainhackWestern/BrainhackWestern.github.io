@@ -1,13 +1,19 @@
-import about from './vanilla/about.css';
-import content from './vanilla/content.css';
-import home from './vanilla/home.css';
-import logo from './vanilla/logo.css';
-import sponsor from './vanilla/sponsor.css';
+import { globalStyle } from "@vanilla-extract/css";
 
-export default {
-  sponsor,
-  home,
-  about,
-  logo,
-  content
-};
+
+globalStyle('img', {
+  width: '100%'
+});
+
+globalStyle('hr', {
+  borderWidth: 1,
+  borderColor: '#707070',
+  width: '50%',
+  margin: '3em'
+});
+
+globalStyle('h3', {
+  textAlign: 'center'
+});
+
+export default {}

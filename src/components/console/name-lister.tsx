@@ -69,20 +69,23 @@ const NameLister = ({
       <span className={headingClassName}>{headerFormatted}</span>
       <br />
       {namesNormed.map((person) => (
-        <Fragment key={person.name}>
-          <span>&nbsp;&nbsp;- {person.name}</span>
-          {person.github ? (
-            <span>
-              {' '}
-              (
-              <a href={`https://github.com/${person.github}`}>
-                @{person.github}
-              </a>
-              )
-            </span>
-          ) : null}
+        <div key={person.name} className='d-flex'>
+          <span>&nbsp;&nbsp;-&nbsp;</span>
+          <div>
+            {person.name}
+            {person.github ? (
+              <>
+                {' '}
+                (
+                <a href={`https://github.com/${person.github}`}>
+                  @{person.github}
+                </a>
+                )
+              </>
+            ) : null}
+          </div>
           <br />
-        </Fragment>
+        </div>
       ))}
     </div>
   );

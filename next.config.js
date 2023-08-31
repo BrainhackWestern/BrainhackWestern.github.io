@@ -24,6 +24,9 @@ const nextConfig = {
   modularizeImports: {
     lodash: {
       transform: 'lodash/{{member}}'
+    },
+    'react-bootstrap': {
+      transform: 'react-bootstrap/{{member}}'
     }
   },
   sassOptions: {

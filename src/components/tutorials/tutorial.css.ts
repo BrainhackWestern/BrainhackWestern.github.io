@@ -1,6 +1,6 @@
 import { globalStyle, style } from '@vanilla-extract/css';
-import { media } from '../helpers.css';
-import { textSize, textWeight } from '../variables.css';
+import { media } from '../../styles/helpers.css';
+import { textSize, textWeight } from '../../styles/variables.css';
 
 const tutorialDay = style({
   maxWidth: 920,
@@ -11,13 +11,16 @@ const tutorialDay = style({
 globalStyle(`${tutorialDay} h3`, {
   fontSize: textSize.lg
 });
+export const tutorialHeading = style({
+  fontSize: textSize.lg,
+})
 
 const tutorialDayName = style({
   fontWeight: textWeight.bold,
   textAlign: 'left'
 });
 
-const tutorial = style([
+export const tutorial = style([
   {
     margin: '1em 0 2em 0'
   },
@@ -26,18 +29,19 @@ const tutorial = style([
   })
 ]);
 
-const tutorialHeader = style({
-  padding: '1em 2em 1em 2em',
+export const tutorialHeader = style({
+  padding: '0.5em 1em 0.5em 1em',
   maxWidth: 550,
-  width: '100%'
+  width: '100%',
+  margin: 0
 });
 
-globalStyle(`${tutorialHeader} h3`, {
+export const tutorialHeaderText = style({
   textAlign: 'inherit',
   margin: 0
 });
 
-const row = style([
+export const row = style([
   'row',
   'align-items-center',
   'justify-content-center',
@@ -46,7 +50,7 @@ const row = style([
   }
 ]);
 
-const img = style([
+export const img = style([
   'col-12',
   'col-lg',
   {
@@ -54,14 +58,4 @@ const img = style([
   }
 ]);
 
-const description = style(['col-12', 'col-lg', 'flex-grow-1']);
-
-export default {
-  tutorialDay,
-  tutorialDayName,
-  tutorial,
-  tutorialHeader,
-  img,
-  row,
-  description
-};
+export const description = style(['col-12', 'col-lg', 'flex-grow-1']);

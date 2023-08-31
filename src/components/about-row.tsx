@@ -1,16 +1,17 @@
 import Image, { StaticImageData } from 'next/image';
 import useScreenSize, { screenSizes } from '../services/screen-size/use';
-import styles from '../styles/vanilla/about.css';
+import styles from './about-row.css';
+import { Row } from 'react-bootstrap';
+import { PropsWithChildren } from 'react';
 
 interface ImageProps {
   imgClass?: string;
   img: StaticImageData;
   title: string;
-  children: React.ReactNode;
   reverse?: boolean;
 }
 
-export const AboutRow = (props: ImageProps) => {
+export const AboutRow = (props: PropsWithChildren<ImageProps>) => {
   const {
     state: { screenSize }
   } = useScreenSize();
@@ -28,8 +29,8 @@ export const AboutRow = (props: ImageProps) => {
     </div>
   ];
   return (
-    <div className="row">
+    <Row className={styles.row}>
       {props.reverse && largeScreen ? content.reverse() : content}
-    </div>
+    </Row>
   );
 };

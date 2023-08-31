@@ -1,8 +1,8 @@
 import { TutorialDay, TutorialInfo } from '../../interfaces/tutorial';
 import { iterator, newColorGradient } from '../../lib/color-tools';
-import globalStyles from '../../styles/globals.css';
-import style from '../../styles/vanilla/tutorial.css';
+import * as style from './tutorial-list.css';
 import { Tutorial } from './tutorial';
+import Content from '../content';
 
 interface TutorialListProps {
   tutorials: TutorialInfo[];
@@ -24,9 +24,9 @@ export const TutorialList = ({
   const sides: ('left' | 'right')[] = ['left', 'right'];
 
   return show ? (
-    <div
+    <Content
       id="tutorials"
-      className={`${globalStyles.home.contentSpace} container-lg`}
+      fluid="lg"
     >
       <h2>Tutorials</h2>
       <div className={style.tutorialDay}>
@@ -44,6 +44,6 @@ export const TutorialList = ({
           ))
         }
       </div>
-    </div>
+    </Content>
   ) : null;
 };

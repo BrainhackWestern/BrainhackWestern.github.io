@@ -1,16 +1,9 @@
 import { globalStyle, style } from '@vanilla-extract/css';
-import { media } from '../helpers.css';
-import { shadow } from '../mixins.css';
-import home from './home.css';
+import { media } from '../styles/helpers.css';
+import { shadow } from '../styles/mixins.css';
 
-const container = style(['container-lg', home.contentSpace]);
-
-globalStyle(`${container} .row`, {
+const row = style({
   paddingBottom: '4em'
-});
-
-globalStyle(`${container} h2, ${container} p`, {
-  textAlign: 'center'
 });
 
 const imgWrapper = style([
@@ -48,11 +41,13 @@ const alignLeft = style(
   })
 );
 
-export default {
-  container,
+const styles = {
   imgWrapper,
+  row,
   img,
   alignRight,
   alignLeft,
   description
 };
+
+export default styles;

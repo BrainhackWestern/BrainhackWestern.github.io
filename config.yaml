@@ -10,8 +10,8 @@ event:
     month: 11
     year: 2023
 displaySections:
-  tutorial: false
-  schedule: false
+  tutorial: true
+  schedule: true
   twitterFeed: true
 twitterUrl: https://twitter.com/uwobrainhack
 faq:
@@ -109,7 +109,7 @@ registration:
   emailSignupTarget: https://hook.us1.make.com/hrdtv28jy9i55havi84l6db2xc1ieyol
   openDate:
     day: 18
-    month: 9
+    month: 8
     year: 2023
   closeDate:
     day: 13

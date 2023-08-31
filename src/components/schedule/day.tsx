@@ -1,6 +1,7 @@
 import { GenericEvent } from '../../interfaces/schedule';
 import formatDate from '../../lib/format-date';
 import { Event } from './event';
+import * as style from './day.css'
 
 interface DayProps {
   date: Date;
@@ -32,14 +33,14 @@ export const Day = (props: DayProps) => {
   });
 
   return (
-    <div className="day-col" style={{ height: props.height }}>
+    <div className={style.dayCol} style={{ height: props.height }}>
       <div
-        className="day-name d-flex flex-column justify-content-end"
+        className="d-flex flex-column justify-content-end"
         style={{ height: props.lineHeight }}
       >
-        <h3>{dateString}</h3>
+        <h3 className={style.dayHeading}>{dateString}</h3>
       </div>
-      <div className="events">{events}</div>
+      <div className={style.events}>{events}</div>
     </div>
   );
 };

@@ -1,15 +1,11 @@
 import Image from 'next/image';
-import { isString } from 'lodash';
-import { CSSProperties, Fragment } from 'react';
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
-import wordjoin from 'word-join';
+import { CSSProperties } from 'react';
 import { TutorialInfo } from '../../interfaces/tutorial';
 import useScreenSize, { screenSizes } from '../../services/screen-size/use';
-import style from '../../styles/vanilla/tutorial.css';
-import NameLister from '../name-lister';
-import { Console } from '../console';
+import { Console } from '../console/console';
+import NameLister from '../console/name-lister';
 import Markdown from '../markdown';
+import * as style from './tutorial.css';
 
 interface TutorialProps {
   config: TutorialInfo;
@@ -72,9 +68,9 @@ export const Tutorial = (props: TutorialProps) => {
         className="d-flex"
         style={{ justifyContent: reverse ? 'flex-end' : 'flex-start' }}
       >
-        <div className={style.tutorialHeader} style={headerStyle}>
-          <h3>{props.config.name}</h3>
-        </div>
+        <h3 className={style.tutorialHeader} style={headerStyle}>
+          {props.config.name}
+        </h3>
       </div>
       <div className={style.row}>{reverse ? data.reverse() : data}</div>
     </div>

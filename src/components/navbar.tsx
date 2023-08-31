@@ -1,10 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-import { DisplaySections } from '../interfaces/site-config';
+import { Container, Nav, Navbar } from 'react-bootstrap';
 import logo from '../../public/img/brainhack_logo.png';
+import { DisplaySections } from '../interfaces/site-config';
 import useScrollPosition from '../services/scroll-position/use';
-import style from '../styles/vanilla/navbar.css';
+import * as style from './navbar.css';
 
 interface NavBarProps {
   displaySections: DisplaySections;
@@ -23,75 +24,68 @@ export const NavBar = ({
   const [open, setOpen] = useState(false);
 
   return (
-    <nav
-      className={`${style.navbar} ${splashMode ? 'fixed-top' : 'sticky-top'} ${
+    <Navbar
+      expand="lg"
+      variant="light"
+      fixed={splashMode ? 'top' : undefined}
+      sticky={!splashMode ? 'top' : undefined}
+      className={
         !splashMode || scrollPosition > 0 || open ? style.navbarWhite : ''
-      }`}
+      }
     >
-      <div className="container-fluid">
+      <Container fluid={true}>
         <Link href="/" className="navbar-brand">
           <Image src={logo} width={58} height={40} alt="Home"></Image>
         </Link>
-        <button
-          className="navbar-toggler"
-          type="button"
-          onClick={(_) => setOpen(!open)}
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav me-auto">
-            <li className="nav-item">
-              <Link href="/#about" className="nav-link">
-                About
-              </Link>
-            </li>
-            {displaySections.schedule ?? true ? (
-              <li className="nav-item">
-                <Link href="/#schedule" className="nav-link">
-                  Schedule
+        <Navbar.Toggle aria-label="Toggle navigation" onClick={(e) => setOpen(!open)}/>
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+              <Nav.Item>
+                <Link href="/#about" className="nav-link">
+                  About
                 </Link>
-              </li>
-            ) : null}
-            {displaySections.tutorial ?? true ? (
-              <li className="nav-item">
-                <Link href="/#tutorials" className="nav-link">
-                  Tutorials
+              </Nav.Item>
+              {displaySections.schedule ?? true ? (
+                <Nav.Item>
+                  <Link href="/#schedule" className="nav-link">
+                    Schedule
+                  </Link>
+                </Nav.Item>
+              ) : null}
+              {displaySections.tutorial ?? true ? (
+                <Nav.Item>
+                  <Link href="/#tutorials" className="nav-link">
+                    Tutorials
+                  </Link>
+                </Nav.Item>
+              ) : null}
+              <Nav.Item>
+                <Link href="/#location" className="nav-link">
+                  Location
                 </Link>
-              </li>
-            ) : null}
-            <li className="nav-item">
-              <Link href="/#location" className="nav-link">
-                Location
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                href="https://github.com/BrainhackWestern/BrainhackWestern.github.io/wiki/Projects"
-                className="nav-link"
-              >
-                Projects
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link href="/FAQ" className="nav-link">
-                FAQ
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                href="https://brainhack.org/code-of-conduct.html"
-                className="nav-link"
-              >
-                Code of Conduct
-              </Link>
-            </li>
-          </ul>
+              </Nav.Item>
+              <Nav.Item>
+                <Link
+                  href="https://github.com/BrainhackWestern/BrainhackWestern.github.io/wiki/Projects"
+                  className="nav-link"
+                >
+                  Projects
+                </Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Link href="/FAQ" className="nav-link">
+                  FAQ
+                </Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Link
+                  href="https://brainhack.org/code-of-conduct.html"
+                  className="nav-link"
+                >
+                  Code of Conduct
+                </Link>
+              </Nav.Item>
+          </Nav>
           <span
             className={`${style.registerBtn} ${
               !splashMode || scrollPosition > 0 || open
@@ -101,8 +95,8 @@ export const NavBar = ({
           >
             {registrationButton ?? null}
           </span>
-        </div>
-      </div>
-    </nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };

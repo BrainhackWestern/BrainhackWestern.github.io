@@ -11,6 +11,7 @@ import { BasicDate } from '../interfaces/generic';
 import { EventPosition } from '../interfaces/schedule';
 import {
   Event,
+  ExpandedConfig,
   RegistrationStatus,
   SiteConfig
 } from '../interfaces/site-config';
@@ -165,7 +166,7 @@ export const inferRegistrationStatus = async <T extends SiteConfig>(
   const close = config.registration.closeDate;
   // Use right now as openDate if not specified
   const openDate = open
-    ? new Date(open.year, open.month, open.day)
+    ? new Date(open.year, open.month - 1, open.day)
     : new Date();
 
   const now = new Date();
@@ -180,4 +181,26 @@ export const inferRegistrationStatus = async <T extends SiteConfig>(
   } else {
     return setRegistration('open');
   }
+};
+
+export const ensureCurrentProjectYear = <
+  T extends ExpandedConfig & RegistrationStatusSet
+>(
+  config: T
+): T => {
+  if (['closed', 'unopened'].includes(config.registration.status)) {
+    return config;
+  }
+  if (
+    !Object.keys(config.projects ?? {}).includes(config.currentYear.toString())
+  ) {
+    return {
+      ...config,
+      projects: {
+        ...config.projects,
+        [config.currentYear]: []
+      }
+    };
+  }
+  return config;
 };

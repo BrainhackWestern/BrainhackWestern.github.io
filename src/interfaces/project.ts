@@ -16,4 +16,9 @@ interface Project {
    * Project description (in markdown)
    */
   description: string
+
+  /**
+   * Project URL (e.g. github or similar)
+   */
+  url?: string
 }

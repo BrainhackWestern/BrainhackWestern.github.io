@@ -40,12 +40,14 @@ jobs:
         env:
           DESCRIPTION: ${{ toJson(fromJson(steps.parse.outputs.payload)['Description']) }}
           TITLE: ${{ toJson(fromJson(steps.parse.outputs.payload)['Title']) }}
+          URL: ${{ toJson(fromJson(steps.parse.outputs.payload)['Project url']) }}
         with:
           cmd: >
             yq -i '.projects['"$year"'] += [
               {
                 "title": '"$TITLE"',
                 "description": '"$DESCRIPTION"',
+                "url": '"$URL"',
                 "organizers": '"$organizers"'
               }
             ]' config.yaml

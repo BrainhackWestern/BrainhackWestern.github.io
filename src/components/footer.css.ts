@@ -1,6 +1,6 @@
 import { style } from '@vanilla-extract/css';
-import { css } from '../helpers.css';
-import { textSize } from '../variables.css';
+import { css } from '../styles/helpers.css';
+import { textSize } from '../styles/variables.css';
 
 const footer = style([]);
 
@@ -25,7 +25,9 @@ const copyright = style([
   }
 ]);
 
-export default {
+const styles = {
   footer,
   copyright
 };
+
+export default styles;

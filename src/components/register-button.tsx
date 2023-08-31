@@ -1,6 +1,6 @@
 import { Registration } from '../interfaces/site-config';
 import { Button } from './button';
-import { Console } from './console';
+import { Console } from './console/console';
 import { MsgCard } from './msg-card';
 import { UpdatesSignup } from './updates-signup';
 

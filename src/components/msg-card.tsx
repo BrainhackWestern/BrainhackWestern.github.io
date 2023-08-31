@@ -1,4 +1,4 @@
-import style from '../styles/vanilla/msg-card.css';
+import * as style from './msg-card.css';
 
 interface MsgCardProps {
   className?: string;
@@ -8,7 +8,7 @@ interface MsgCardProps {
 export const MsgCard = (props: MsgCardProps) => {
   return (
     <div className={`${style.msgCard} ${props.className ?? ''}`}>
-      <span>{props.children}</span>
+      <span className={style.content}>{props.children}</span>
     </div>
   );
 };

@@ -1,18 +1,15 @@
 import type { InferGetStaticPropsType } from 'next';
 import ErrorPage from 'next/error';
-import Head from 'next/head';
 import { useRouter } from 'next/router';
 import CognitoForm from '@tylermenezes/cognitoforms-react';
 import { findIndex, merge, set } from 'lodash';
-import { Helmet } from 'react-helmet';
-import Footer, { getFooterProps } from '../../components/footer';
 import { Loading } from '../../components/loading';
-import { NavBar } from '../../components/navbar';
+import Page from '../../components/page';
 import { EmbeddedForm } from '../../interfaces/form';
 import { readConfig } from '../../lib/data';
 import useScreenSize, { screenSizes } from '../../services/screen-size/use';
-import styles from '../../styles/globals.css';
 import style from '../../styles/pages/[form].css';
+import Splash from '../../components/splash';
 
 const parseFormData = async (forms: { [key: string]: EmbeddedForm }) => {
   const parse = (await import('hypertag')).default;
@@ -118,20 +115,13 @@ const GenericForm = ({
   );
 
   return (
-    <div className={styles.home.app}>
-      <Helmet>
-        <title>{formData.shortTitle} - Brainhack Western 2023</title>
-        <meta
-          name="description"
-          content="Frequently asked Questions for Brainhack Western"
-        />
-      </Helmet>
-      <div className={styles.home.splash}>
-        <NavBar
-          displaySections={config.displaySections}
-          splashMode={!smallScreen}
-        />
-
+    <Page
+      config={config}
+      title={`${formData.shortTitle} - Brainhack Western 2023`}
+      description="Form for Western Brainhack"
+      splash={!smallScreen}
+    >
+      <Splash>
         {/* <Image src={Logo}></Image> */}
         {smallScreen ? null : <div className="spacer"></div>}
         <div className="container-sm back-card">
@@ -149,9 +139,8 @@ const GenericForm = ({
             />
           </div>
         </div>
-      </div>
-      <Footer {...getFooterProps(config)} />
-    </div>
+      </Splash>
+    </Page>
   );
 };
 

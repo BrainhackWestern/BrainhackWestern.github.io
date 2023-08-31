@@ -12,9 +12,12 @@ const background = {
 };
 
 export const colors = {
-  highlight: '#8004fd',
-  highlightDark: '#5902b0',
-  highlightLight: '#a204ff',
+  primary: '#8004fd',
+  primaryDark: '#5902b0',
+  primaryDarker: '#320163',
+  primaryLight: '#a204ff',
+
+  highlight: '#01ac3d',
 
   background,
 

@@ -1,11 +1,17 @@
 import type { InferGetStaticPropsType } from 'next';
 import Image from 'next/image';
-import { Helmet } from 'react-helmet';
 import { pipeInto } from 'ts-functional-pipe';
+import dollar_signs from '../../public/img/dollar_signs.png';
+import global_logo from '../../public/img/global_logo.png';
+import hack from '../../public/img/hack.png';
+import learn_skillz from '../../public/img/learn_skillz_cropped.png';
+import main_logo from '../../public/img/logo-2023-splash.png';
+import painterly from '../../public/img/painterly_brain.png';
+import paper from '../../public/img/paper.png';
+import upvote from '../../public/img/upvote.png';
 import { AboutRow } from '../components/about-row';
 import { Button } from '../components/button';
-import Footer, { getFooterProps } from '../components/footer';
-import { NavBar } from '../components/navbar';
+import Page from '../components/page';
 import { RegisterButton } from '../components/register-button';
 import { Schedule } from '../components/schedule/schedule';
 import { TutorialList } from '../components/tutorials/tutorial-list';
@@ -16,15 +22,10 @@ import {
   readCalendar,
   readConfig
 } from '../lib/data';
-import dollar_signs from '../../public/img/dollar_signs.png';
-import global_logo from '../../public/img/global_logo.png';
-import hack from '../../public/img/hack.png';
-import learn_skillz from '../../public/img/learn_skillz_cropped.png';
-import main_logo from '../../public/img/logo-2023-splash.png';
-import painterly from '../../public/img/painterly_brain.png';
-import paper from '../../public/img/paper.png';
-import upvote from '../../public/img/upvote.png';
-import styles from '../styles/globals.css';
+import * as styles from '../styles/pages/home.css'
+import Splash from '../components/splash';
+import Content from '../components/content';
+import { Col, Container, Row } from 'react-bootstrap';
 
 export const getStaticProps = async () => {
   const config = await readConfig();
@@ -48,37 +49,25 @@ const Home = ({
 }: // calendar
 InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
-    <div className={styles.home.app}>
-      <Helmet>
-        <title>{`Brainhack Western ${config.event.year}`}</title>
-        <meta
-          name="description"
-          content={
-            'Western Brainhack brings together researchers and trainees of ' +
-            'all backgrounds to collaborate on open science projects in ' +
-            'neuroimaging and neuroscience.'
-          }
-        />
-      </Helmet>
-
-      <NavBar
-        displaySections={config.displaySections}
-        splashMode={true}
-        registrationButton={
-          config.registration.status === 'open' ? (
-            <RegisterButton settings={config.registration} />
-          ) : null
-        }
-      />
-
-      <div className={styles.home.splash}>
+    <Page
+      config={config}
+      title={`Brainhack Western ${config.event.year}`}
+      description={
+        'Western Brainhack brings together researchers and trainees of ' +
+        'all backgrounds to collaborate on open science projects in ' +
+        'neuroimaging and neuroscience.'
+      }
+      splash
+      registrationButton
+    >
+      <Splash>
         <Image
           src={paper}
           style={{ position: 'absolute', height: '100vh', width: '100vw' }}
           alt=""
         />
-        <div className={styles.home.window}>
-          <div className={styles.home.backgroundImg}>
+        <div className={styles.window}>
+          <div className={styles.backgroundImg}>
             <Image
               src={painterly}
               alt=""
@@ -86,14 +75,14 @@ InferGetStaticPropsType<typeof getStaticProps>) => {
               style={{ objectFit: 'contain' }}
             />
           </div>
-          <div className={styles.home.titleCol.container}>
+          <div className={styles.titleCol.container}>
             <div className="flex-fill"></div>
             <div className="flex-fill"></div>
             <div>
               <RegisterButton
                 settings={config.registration}
                 eventTimespan={config.event.eventTimespan}
-                className={styles.home.titleCol.button}
+                className={styles.titleCol.button}
                 alignment="center"
               />
             </div>
@@ -106,14 +95,14 @@ InferGetStaticPropsType<typeof getStaticProps>) => {
                   height={186}
                   alt="Western Brainhack 2022"
                 />
-                <div className={styles.logo.dates}>
+                <div className={styles.eventDates}>
                   {config.event.eventTimespan}
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </Splash>
 
       <WhiteBox>
         <p>
@@ -123,13 +112,13 @@ InferGetStaticPropsType<typeof getStaticProps>) => {
         </p>
       </WhiteBox>
 
-      <div id="about" className={styles.about.container}>
+      <Content id="about" fluid='lg'>
         <AboutRow img={upvote} imgClass="upvote-img" title="Pitch your project">
           Submit your project ideas online, then pitch them to your fellow
           attendees to recruit others to your team.
           <br />
           <br />
-          <div className={styles.home.center}>
+          <div className={styles.center}>
             <Button target="https://github.com/BrainhackWestern/BrainhackWestern.github.io/wiki/Projects">
               {config.registration.status === 'unopened'
                 ? 'View Previous Project Proposals'
@@ -143,7 +132,7 @@ InferGetStaticPropsType<typeof getStaticProps>) => {
           <br />
           <br />
           {config.displaySections.tutorial ? (
-            <div className={styles.home.center}>
+            <div className={styles.center}>
               <Button target="#tutorials">View Tutorials</Button>
             </div>
           ) : (
@@ -153,11 +142,11 @@ InferGetStaticPropsType<typeof getStaticProps>) => {
         <AboutRow img={hack} title="Hack!!">
           Solve real-world problems while sharpening your skills!
         </AboutRow>
-      </div>
+      </Content>
 
       <WhiteBox>
-        <div className="row d-flex align-items-center">
-          <div className="col-lg-6">
+        <Row className="align-items-center">
+          <Col lg="6">
             <p>
               Brainhack Western {config.event.year} is an official satellite
               event of&nbsp;
@@ -168,8 +157,8 @@ InferGetStaticPropsType<typeof getStaticProps>) => {
                 Brainhack Global
               </a>
             </p>
-          </div>
-          <div className="col-lg-6 d-flex justify-content-center">
+          </Col>
+          <Col lg="6" className="d-flex justify-content-center">
             <div style={{ maxWidth: '300px' }}>
               <Image
                 src={global_logo}
@@ -177,13 +166,13 @@ InferGetStaticPropsType<typeof getStaticProps>) => {
                 style={{ objectFit: 'contain', height: 'unset' }}
               />
             </div>
-          </div>
-        </div>
+          </Col>
+        </Row>
       </WhiteBox>
 
-      <div className={`${styles.home.contentSpace} container-lg`}>
-        <div className="row">
-          <div className="col-lg-6 d-flex flex-column justify-content-between align-items-start">
+      <Content fluid="lg">
+        <Row>
+          <Col lg="6" className="d-flex flex-column justify-content-between align-items-start">
             <div>
               <h2>Cost: ${config.registration.cost}</h2>
               <p>Includes on-site meals, snacks, and coffee!</p>
@@ -193,8 +182,8 @@ InferGetStaticPropsType<typeof getStaticProps>) => {
               alignment="center"
               eventTimespan={config.event.eventTimespan}
             />
-          </div>
-          <div className="col-lg-6 d-flex justify-content-center">
+          </Col>
+          <Col lg="6" className="d-flex justify-content-center">
             <div style={{ maxWidth: '300px' }}>
               <Image
                 src={dollar_signs}
@@ -202,9 +191,9 @@ InferGetStaticPropsType<typeof getStaticProps>) => {
                 style={{ objectFit: 'contain', height: 'unset' }}
               />
             </div>
-          </div>
-        </div>
-      </div>
+          </Col>
+        </Row>
+      </Content>
 
       <Schedule
         config={config.schedule}
@@ -218,9 +207,9 @@ InferGetStaticPropsType<typeof getStaticProps>) => {
         show={config.displaySections.tutorial ?? true}
       />
 
-      <div id="location" className={`${styles.home.contentSpace} container-lg`}>
-        <div className="row">
-          <div className="col-lg-4 d-flex flex-column justify-content-start align-items-start">
+      <Content id="location" fluid="lg">
+        <Row>
+          <Col lg="4" className="d-flex flex-column justify-content-start align-items-start">
             <h2>Location</h2>
             <address>
               <a href={config.location.url} title={config.location.name}>
@@ -231,10 +220,10 @@ InferGetStaticPropsType<typeof getStaticProps>) => {
               <br />
               {config.location.city}, {config.location.province}
             </address>
-          </div>
-          <div className="col-lg-8 d-flex flex-column justify-content-start align-items-start">
+          </Col>
+          <Col lg="8" className="d-flex flex-column justify-content-start align-items-start">
             <iframe
-              className={styles.home.mapFrame}
+              className={styles.mapFrame}
               width="600"
               height="450"
               style={{ border: 0 }}
@@ -242,21 +231,21 @@ InferGetStaticPropsType<typeof getStaticProps>) => {
               allowFullScreen
               src={`https://www.google.com/maps/embed/v1/place?q=place_id:${config.location.maps_id}&key=${process.env.NEXT_PUBLIC_MAPS_EMBED_API_KEY}`}
             ></iframe>
-          </div>
-        </div>
-      </div>
+          </Col>
+        </Row>
+      </Content>
 
       <WhiteBox>
         <h2 id="sponsors">Sponsors</h2>
-        <div className="row d-flex justify-content-center justify-content-lg-start align-items-center">
+        <Row className="justify-content-center justify-content-lg-start align-items-center">
           {config.sponsors.map((sponsor) => (
-            <div key={sponsor.name} className={styles.sponsor.sponsor}>
+            <div key={sponsor.name} className={styles.sponsor}>
               <a
                 href={sponsor.url}
                 title={sponsor.name}
                 target="_blank"
                 rel="noreferrer"
-                className={styles.sponsor.sponsorLink}
+                className={styles.sponsorLink}
               >
                 <Image
                   src={sponsor.img}
@@ -268,11 +257,9 @@ InferGetStaticPropsType<typeof getStaticProps>) => {
               </a>
             </div>
           ))}
-        </div>
+        </Row>
       </WhiteBox>
-
-      <Footer {...getFooterProps(config)} />
-    </div>
+    </Page>
   );
 };
 

@@ -1,4 +1,4 @@
-import { globalStyle, StyleRule } from '@vanilla-extract/css';
+import { globalStyle, GlobalStyleRule, StyleRule } from '@vanilla-extract/css';
 
 const make_breakpoint = (size: number) => (style: StyleRule) => ({
   '@media': {
@@ -14,7 +14,7 @@ export const media = {
   xxl: make_breakpoint(1400)
 };
 
-export function css(selector: string, styles: { [rule: string]: StyleRule }) {
+export function css(selector: string, styles: { [rule: string]: GlobalStyleRule }) {
   Object.keys(styles).forEach((rule) => {
     globalStyle(`${selector} ${rule}`, styles[rule]);
   });

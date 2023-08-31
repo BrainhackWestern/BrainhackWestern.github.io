@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { GenericEvent, ScheduleConfig } from '../../interfaces/schedule';
 import useScreenSize, { screenSizes } from '../../services/screen-size/use';
-import style from '../../styles/globals.css';
 import { TabSelector } from '../tab-selector';
 import { Day } from './day';
+import * as styles from './schedule.css'
+import Content from '../content';
+import { Container } from 'react-bootstrap';
 
 interface ScheduleProps {
   lineHeight: number;
@@ -43,14 +45,14 @@ export const Schedule = (props: ScheduleProps) => {
         return (
           <div
             key={time}
-            className="hour-line d-flex flex-column justify-content-end"
+            className={`${styles.hourLine} d-flex flex-column justify-content-end`}
             style={{
               height: lineHeight,
               top: lineHeight * i
             }}
           >
             <span>{`${time}:00${timeCode}`}</span>
-            <hr />
+            <hr className={styles.hourSep}/>
           </div>
         );
       }
@@ -90,12 +92,12 @@ export const Schedule = (props: ScheduleProps) => {
   const calendar = makeCalendar(props.config[tabs.indexOf(tab)]);
 
   return props.show ? (
-    <div id="schedule" className={style.home.contentSpace}>
-      <div className="container-lg">
+    <Content id="schedule" fluid={true}>
+      <Container fluid="lg">
         <h2>Schedule</h2>
-      </div>
+      </Container>
       <div
-        className="schedule"
+        className={styles.schedule}
         style={{
           height:
             calendar.scheduleHeight *
@@ -110,7 +112,7 @@ export const Schedule = (props: ScheduleProps) => {
           .map((i) => (
             <div
               key={i}
-              className="hour-lines"
+              className={styles.hourLines}
               style={{
                 height: calendar.scheduleHeight,
                 top: calendar.scheduleHeight * i
@@ -121,7 +123,7 @@ export const Schedule = (props: ScheduleProps) => {
           ))}
         <div
           className={[
-            'days',
+            styles.days,
             'd-flex',
             'flex-column',
             'flex-xl-row',
@@ -135,6 +137,6 @@ export const Schedule = (props: ScheduleProps) => {
           {calendar.days}
         </div>
       </div>
-    </div>
+    </Content>
   ) : null;
 };

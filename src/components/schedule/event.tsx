@@ -1,3 +1,6 @@
+import styles from "../about-row.css";
+import * as style from "./event.css"
+
 interface EventProps {
   name: string;
   time: string;
@@ -42,7 +45,7 @@ export const Event = (props: EventProps) => {
 
   const el = (
     <div
-      className="event"
+      className={style.event}
       style={{
         height: height,
         top: top,
@@ -51,15 +54,15 @@ export const Event = (props: EventProps) => {
         ...background
       }}
     >
-      <p className="event-name">{props.name}</p>
-      <p className="event-time">{to12Hr(props.time)}</p>
-      {room_str ? <p className="event-room">{room_str}</p> : null}
+      <p className={style.eventName}>{props.name}</p>
+      <p className={style.time}>{to12Hr(props.time)}</p>
+      {room_str ? <p className={style.room}>{room_str}</p> : null}
 
-      {props.link ? <p className="event-more-info">more info</p> : null}
+      {props.link ? <p className={style.moreInfo}>more info</p> : null}
     </div>
   );
 
-  return props.link ? <a href={props.link}>{el}</a> : el;
+  return props.link ? <a href={props.link} className={style.link}>{el}</a> : el;
 };
 
 const proportionalPosition = (position: number, width: number) => {

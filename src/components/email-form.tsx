@@ -1,5 +1,6 @@
 import { validate } from 'email-validator';
 import React, { Dispatch, FormEvent, useState } from 'react';
+import * as styles from './email-form.css'
 
 const TEST = process.env.NODE_ENV == 'development';
 
@@ -58,8 +59,9 @@ export default function EmailForm(props: SignupFormProps) {
   };
 
   return (
-    <form className="signup-form" onSubmit={onSubmit}>
+    <form className={styles.signupForm} onSubmit={onSubmit}>
       <input
+        className={styles.signupFormInput}
         type="text"
         value={email}
         placeholder="█"

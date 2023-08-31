@@ -1,5 +1,5 @@
 import { globalStyle, style } from '@vanilla-extract/css';
-import { colors, textSize } from '../variables.css';
+import { colors, textSize } from '../styles/variables.css';
 
 const whitebox = style([
   {

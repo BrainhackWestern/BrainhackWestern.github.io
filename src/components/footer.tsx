@@ -1,7 +1,8 @@
 import Obfuscate from 'react-obfuscate';
 import { ExpandedConfig, SiteConfig } from '../interfaces/site-config';
-import mainStyles from '../styles/globals.css';
-import style from '../styles/vanilla/footer.css';
+import style from './footer.css';
+import Content from './content';
+import { Row } from 'react-bootstrap';
 
 interface FooterProps {
   organizers: string[];
@@ -22,8 +23,8 @@ export const getFooterProps = (config: ExpandedConfig) => {
 export const Footer = (props: FooterProps) => {
   return (
     <footer className={style.footer}>
-      <div className={`${mainStyles.home.contentSpace} container-lg`}>
-        <div className="row">
+      <Content fluid="lg">
+        <Row>
           <div className="col-lg-6 d-flex flex-column justify-content-start align-items-start">
             <h3>Organizers</h3>
             <p className="organizers">{props.organizers.join(', ')}</p>
@@ -46,13 +47,13 @@ export const Footer = (props: FooterProps) => {
               </p>
             </div>
           ) : null}
-        </div>
+        </Row>
         <h3 id="contact">Contact</h3>
         <Obfuscate email="brainhack.western@gmail.com" />
         <p className={style.copyright}>
           Copyright © {props.year} Brainhack Western
         </p>
-      </div>
+      </Content>
     </footer>
   );
 };
