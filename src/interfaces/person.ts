@@ -2,7 +2,7 @@ interface Person {
   /**
    * Name
    */
-  name: string
+  name: string;
 
   /**
    * Github username
@@ -11,5 +11,5 @@ interface Person {
    *
    * @pattern ^[a-zA-Z0-9](?:-(?=[a-zA-Z0-9])|[a-zA-Z0-9]){0,38}(?<=[a-zA-Z0-9])$
    */
-  github?: string
+  github?: string;
 }

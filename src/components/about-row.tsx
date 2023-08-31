@@ -1,8 +1,9 @@
-import Image, { StaticImageData } from 'next/image';
+import { StaticImageData } from 'next/image';
+import { PropsWithChildren } from 'react';
+import { Row } from 'react-bootstrap';
 import useScreenSize, { screenSizes } from '../services/screen-size/use';
 import styles from './about-row.css';
-import { Row } from 'react-bootstrap';
-import { PropsWithChildren } from 'react';
+import Image from './image';
 
 interface ImageProps {
   imgClass?: string;

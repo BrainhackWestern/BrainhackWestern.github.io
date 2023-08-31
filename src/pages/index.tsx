@@ -1,5 +1,5 @@
 import type { InferGetStaticPropsType } from 'next';
-import Image from 'next/image';
+import { Col, Container, Row } from 'react-bootstrap';
 import { pipeInto } from 'ts-functional-pipe';
 import dollar_signs from '../../public/img/dollar_signs.png';
 import global_logo from '../../public/img/global_logo.png';
@@ -11,9 +11,12 @@ import paper from '../../public/img/paper.png';
 import upvote from '../../public/img/upvote.png';
 import { AboutRow } from '../components/about-row';
 import { Button } from '../components/button';
+import Content from '../components/content';
+import Image from '../components/image';
 import Page from '../components/page';
 import { RegisterButton } from '../components/register-button';
 import { Schedule } from '../components/schedule/schedule';
+import Splash from '../components/splash';
 import { TutorialList } from '../components/tutorials/tutorial-list';
 import { WhiteBox } from '../components/white-box';
 import {
@@ -22,10 +25,7 @@ import {
   readCalendar,
   readConfig
 } from '../lib/data';
-import * as styles from '../styles/pages/home.css'
-import Splash from '../components/splash';
-import Content from '../components/content';
-import { Col, Container, Row } from 'react-bootstrap';
+import * as styles from '../styles/pages/home.css';
 
 export const getStaticProps = async () => {
   const config = await readConfig();
@@ -112,7 +112,7 @@ InferGetStaticPropsType<typeof getStaticProps>) => {
         </p>
       </WhiteBox>
 
-      <Content id="about" fluid='lg'>
+      <Content id="about" fluid="lg">
         <AboutRow img={upvote} imgClass="upvote-img" title="Pitch your project">
           Submit your project ideas online, then pitch them to your fellow
           attendees to recruit others to your team.
@@ -172,7 +172,10 @@ InferGetStaticPropsType<typeof getStaticProps>) => {
 
       <Content fluid="lg">
         <Row>
-          <Col lg="6" className="d-flex flex-column justify-content-between align-items-start">
+          <Col
+            lg="6"
+            className="d-flex flex-column justify-content-between align-items-start"
+          >
             <div>
               <h2>Cost: ${config.registration.cost}</h2>
               <p>Includes on-site meals, snacks, and coffee!</p>
@@ -209,7 +212,10 @@ InferGetStaticPropsType<typeof getStaticProps>) => {
 
       <Content id="location" fluid="lg">
         <Row>
-          <Col lg="4" className="d-flex flex-column justify-content-start align-items-start">
+          <Col
+            lg="4"
+            className="d-flex flex-column justify-content-start align-items-start"
+          >
             <h2>Location</h2>
             <address>
               <a href={config.location.url} title={config.location.name}>
@@ -221,7 +227,10 @@ InferGetStaticPropsType<typeof getStaticProps>) => {
               {config.location.city}, {config.location.province}
             </address>
           </Col>
-          <Col lg="8" className="d-flex flex-column justify-content-start align-items-start">
+          <Col
+            lg="8"
+            className="d-flex flex-column justify-content-start align-items-start"
+          >
             <iframe
               className={styles.mapFrame}
               width="600"

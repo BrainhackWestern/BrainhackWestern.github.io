@@ -1,5 +1,5 @@
-import styles from "../about-row.css";
-import * as style from "./event.css"
+import styles from '../about-row.css';
+import * as style from './event.css';
 
 interface EventProps {
   name: string;
@@ -62,7 +62,13 @@ export const Event = (props: EventProps) => {
     </div>
   );
 
-  return props.link ? <a href={props.link} className={style.link}>{el}</a> : el;
+  return props.link ? (
+    <a href={props.link} className={style.link}>
+      {el}
+    </a>
+  ) : (
+    el
+  );
 };
 
 const proportionalPosition = (position: number, width: number) => {

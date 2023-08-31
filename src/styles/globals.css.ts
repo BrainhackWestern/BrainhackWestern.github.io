@@ -1,5 +1,4 @@
-import { globalStyle } from "@vanilla-extract/css";
-
+import { globalStyle } from '@vanilla-extract/css';
 
 globalStyle('img', {
   width: '100%'
@@ -16,4 +15,4 @@ globalStyle('h3', {
   textAlign: 'center'
 });
 
-export default {}
+export default {};

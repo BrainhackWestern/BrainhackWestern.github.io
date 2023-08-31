@@ -1,9 +1,9 @@
-import Image from 'next/image';
 import { CSSProperties } from 'react';
 import { TutorialInfo } from '../../interfaces/tutorial';
 import useScreenSize, { screenSizes } from '../../services/screen-size/use';
 import { Console } from '../console/console';
 import NameLister from '../console/name-lister';
+import Image from '../image';
 import Markdown from '../markdown';
 import * as style from './tutorial.css';
 

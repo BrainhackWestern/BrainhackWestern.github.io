@@ -1,10 +1,10 @@
+import Head from 'next/head';
 import React, { ReactNode } from 'react';
 import { ExpandedConfig } from '../interfaces/site-config';
 import Footer, { getFooterProps } from './footer';
 import { NavBar } from './navbar';
 import * as styles from './page.css';
 import { RegisterButton } from './register-button';
-import Head from 'next/head';
 
 interface DocumentProps {
   config: ExpandedConfig;

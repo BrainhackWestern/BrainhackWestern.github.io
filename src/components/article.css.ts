@@ -24,4 +24,3 @@ css(article, {
     marginBottom: '2em'
   }
 });
-

@@ -1,5 +1,5 @@
-import { style } from "@vanilla-extract/css";
-import { colors } from "../styles/variables.css";
+import { style } from '@vanilla-extract/css';
+import { colors } from '../styles/variables.css';
 
 export const page = style({
   position: 'relative',

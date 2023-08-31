@@ -5,11 +5,11 @@ import CognitoForm from '@tylermenezes/cognitoforms-react';
 import { findIndex, merge, set } from 'lodash';
 import { Loading } from '../../components/loading';
 import Page from '../../components/page';
+import Splash from '../../components/splash';
 import { EmbeddedForm } from '../../interfaces/form';
 import { readConfig } from '../../lib/data';
 import useScreenSize, { screenSizes } from '../../services/screen-size/use';
 import style from '../../styles/pages/[form].css';
-import Splash from '../../components/splash';
 
 const parseFormData = async (forms: { [key: string]: EmbeddedForm }) => {
   const parse = (await import('hypertag')).default;

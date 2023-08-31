@@ -1,8 +1,8 @@
+import { Row } from 'react-bootstrap';
 import Obfuscate from 'react-obfuscate';
 import { ExpandedConfig, SiteConfig } from '../interfaces/site-config';
-import style from './footer.css';
 import Content from './content';
-import { Row } from 'react-bootstrap';
+import style from './footer.css';
 
 interface FooterProps {
   organizers: string[];

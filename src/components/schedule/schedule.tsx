@@ -1,11 +1,11 @@
 import { useState } from 'react';
+import { Container } from 'react-bootstrap';
 import { GenericEvent, ScheduleConfig } from '../../interfaces/schedule';
 import useScreenSize, { screenSizes } from '../../services/screen-size/use';
+import Content from '../content';
 import { TabSelector } from '../tab-selector';
 import { Day } from './day';
-import * as styles from './schedule.css'
-import Content from '../content';
-import { Container } from 'react-bootstrap';
+import * as styles from './schedule.css';
 
 interface ScheduleProps {
   lineHeight: number;
@@ -52,7 +52,7 @@ export const Schedule = (props: ScheduleProps) => {
             }}
           >
             <span>{`${time}:00${timeCode}`}</span>
-            <hr className={styles.hourSep}/>
+            <hr className={styles.hourSep} />
           </div>
         );
       }

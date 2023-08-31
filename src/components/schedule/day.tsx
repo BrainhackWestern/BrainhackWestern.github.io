@@ -1,7 +1,7 @@
 import { GenericEvent } from '../../interfaces/schedule';
 import formatDate from '../../lib/format-date';
+import * as style from './day.css';
 import { Event } from './event';
-import * as style from './day.css'
 
 interface DayProps {
   date: Date;

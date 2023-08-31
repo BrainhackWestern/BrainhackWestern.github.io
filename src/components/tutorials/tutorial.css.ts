@@ -12,8 +12,8 @@ globalStyle(`${tutorialDay} h3`, {
   fontSize: textSize.lg
 });
 export const tutorialHeading = style({
-  fontSize: textSize.lg,
-})
+  fontSize: textSize.lg
+});
 
 const tutorialDayName = style({
   fontWeight: textWeight.bold,

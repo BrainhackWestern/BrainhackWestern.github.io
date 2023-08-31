@@ -1,9 +1,8 @@
 import { toString } from 'lodash';
 import { ChangeEventHandler, Dispatch, SetStateAction, useRef } from 'react';
 import { CSSTransition } from 'react-transition-group';
-
-import * as style from './tab-selector.css';
 import { joinStyles } from '../lib/utils';
+import * as style from './tab-selector.css';
 
 interface TabParams<T> {
   state: T;

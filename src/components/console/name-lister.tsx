@@ -69,7 +69,7 @@ const NameLister = ({
       <span className={headingClassName}>{headerFormatted}</span>
       <br />
       {namesNormed.map((person) => (
-        <div key={person.name} className='d-flex'>
+        <div key={person.name} className="d-flex">
           <span>&nbsp;&nbsp;-&nbsp;</span>
           <div>
             {person.name}

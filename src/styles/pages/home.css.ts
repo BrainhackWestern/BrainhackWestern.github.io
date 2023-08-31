@@ -2,7 +2,6 @@ import { globalStyle, style } from '@vanilla-extract/css';
 import { media } from '../helpers.css';
 import { colors, textSize } from '../variables.css';
 
-
 export const center = style([
   {
     textAlign: 'center'
@@ -19,7 +18,6 @@ export const window = style([
     padding: '2em'
   }
 ]);
-
 
 export const backgroundImg = style([
   {

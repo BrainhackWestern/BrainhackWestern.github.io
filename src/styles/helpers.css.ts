@@ -14,7 +14,10 @@ export const media = {
   xxl: make_breakpoint(1400)
 };
 
-export function css(selector: string, styles: { [rule: string]: GlobalStyleRule }) {
+export function css(
+  selector: string,
+  styles: { [rule: string]: GlobalStyleRule }
+) {
   Object.keys(styles).forEach((rule) => {
     globalStyle(`${selector} ${rule}`, styles[rule]);
   });

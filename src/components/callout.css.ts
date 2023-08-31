@@ -47,7 +47,6 @@ css(frontCard, {
     color: colors.fontDark
   },
   h2: {
-    color: colors.fontDark,
+    color: colors.fontDark
   }
 });
-

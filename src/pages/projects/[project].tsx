@@ -82,32 +82,34 @@ const ProjectPage = ({
   const noProjectsYet = () => (
     <Callout>
       <Row>
-        <Col lg="6" className='d-flex flex-column align-items-center'>
+        <Col lg="6" className="d-flex flex-column align-items-center">
           <h2>No projects yet!</h2>
           <br />
           <p style={{ fontSize: textSize.lg }}>Be the first to submit</p>
         </Col>
         <Col lg="6">
           <Row>
-            <Col xxl="6" className="d-flex flex-column align-items-center justify-content-between">
-                <p style={{ fontSize: textSize.lg }}>
-                  Start by registering
-                </p>
-                <RegisterButton
-                  settings={config.registration}
-                  alignment="center"
-                  eventTimespan={config.event.eventTimespan}
-                />
-              </Col>
-              <Col xxl="6" className="d-flex flex-column align-items-center justify-content-between">
-                <p style={{ fontSize: textSize.lg }}>
-                  Then submit a project
-                </p>
-                <RegisterButton
-                  settings={config.registration}
-                  alignment="center"
-                  eventTimespan={config.event.eventTimespan}
-                />
+            <Col
+              xxl="6"
+              className="d-flex flex-column align-items-center justify-content-between"
+            >
+              <p style={{ fontSize: textSize.lg }}>Start by registering</p>
+              <RegisterButton
+                settings={config.registration}
+                alignment="center"
+                eventTimespan={config.event.eventTimespan}
+              />
+            </Col>
+            <Col
+              xxl="6"
+              className="d-flex flex-column align-items-center justify-content-between"
+            >
+              <p style={{ fontSize: textSize.lg }}>Then submit a project</p>
+              <RegisterButton
+                settings={config.registration}
+                alignment="center"
+                eventTimespan={config.event.eventTimespan}
+              />
             </Col>
           </Row>
         </Col>

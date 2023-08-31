@@ -2,7 +2,6 @@ import Document, { Head, Html, Main, NextScript } from 'next/document';
 
 class MyDocument extends Document {
   render() {
-    
     const basePath = process.env.NEXT_PUBLIC_URL || '';
     return (
       <Html>

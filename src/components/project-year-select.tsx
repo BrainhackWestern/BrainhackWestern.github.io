@@ -1,7 +1,7 @@
 import React from 'react';
 import Select from 'react-select';
-import { colors } from '../styles/variables.css';
 import { optionCSS } from 'react-select/dist/declarations/src/components/Option';
+import { colors } from '../styles/variables.css';
 
 const ProjectYearSelect = ({
   years,

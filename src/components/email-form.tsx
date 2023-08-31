@@ -1,6 +1,6 @@
 import { validate } from 'email-validator';
 import React, { Dispatch, FormEvent, useState } from 'react';
-import * as styles from './email-form.css'
+import * as styles from './email-form.css';
 
 const TEST = process.env.NODE_ENV == 'development';
 

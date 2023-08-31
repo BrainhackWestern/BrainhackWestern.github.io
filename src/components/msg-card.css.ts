@@ -13,7 +13,6 @@ export const msgCard = style({
   margin: '1em 0'
 });
 
-
 export const content = style([
   {
     fontSize: textSize.md,
@@ -23,5 +22,4 @@ export const content = style([
     fontSize: textSize.lg,
     color: colors.fontLight
   })
-])
-
+]);
