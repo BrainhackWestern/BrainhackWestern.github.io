@@ -3,6 +3,13 @@ description: Pitch a project for the upcoming Western Brainhack!
 title: '[Pitch]: '
 labels: ['pitch', 'triage', 'year/2023']
 body:
+  - type: markown
+    attributes:
+      value: |
+        Thank you for submitting a project to Brainhack Western! Before you
+        continue, be sure to
+        [register](https://brainhackwestern.github.io/forms/registration) for
+        the event.
   - type: input
     id: title
     attributes:
