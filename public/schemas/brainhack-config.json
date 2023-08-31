@@ -262,6 +262,10 @@
                 "title": {
                     "description": "Project title (in plain text)",
                     "type": "string"
+                },
+                "url": {
+                    "description": "Project URL (e.g. github or similar)",
+                    "type": "string"
                 }
             },
             "required": [
@@ -292,6 +296,10 @@
                     "additionalProperties": false,
                     "description": "The date registration should open."
                 },
+                "projectPitchUrl": {
+                    "description": "Link to a form where users can pitch a brainhack project",
+                    "type": "string"
+                },
                 "status": {
                     "description": "Current registration status. If blank, it will be automatically inferred\nat build time from the open and close dates. Otherwise it overrides any\ninference.",
                     "enum": [
@@ -307,7 +315,8 @@
                 }
             },
             "required": [
-                "cost"
+                "cost",
+                "projectPitchUrl"
             ],
             "type": "object"
         },

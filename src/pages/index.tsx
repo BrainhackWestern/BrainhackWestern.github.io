@@ -119,12 +119,22 @@ InferGetStaticPropsType<typeof getStaticProps>) => {
           <br />
           <br />
           <div className={styles.center}>
-            <Button target="https://github.com/BrainhackWestern/BrainhackWestern.github.io/wiki/Projects">
+            <Button target="/projects">
               {config.registration.status === 'unopened'
                 ? 'View Previous Project Proposals'
                 : 'View Project Proposals'}
             </Button>
           </div>
+          {config.registration.status !== 'unopened' ? (
+            <>
+              <br />
+              <div className={styles.center}>
+                <Button target={config.registration.projectPitchUrl}>
+                  Pitch Project
+                </Button>
+              </div>
+            </>
+          ) : null}
         </AboutRow>
         <AboutRow img={learn_skillz} title="Learn new skills" reverse={true}>
           Attend tutorials to learn new neuroscience tools and techniques from

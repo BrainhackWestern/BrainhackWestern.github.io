@@ -38,7 +38,7 @@ export const Responsive = ({ children }: PropsWithChildren<{}>) => {
     };
   });
 
-  return <>{children}</>;
+  return children;
 };
 
 export default ScrollPositionProvider;

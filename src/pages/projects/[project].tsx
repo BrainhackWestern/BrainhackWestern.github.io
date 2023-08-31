@@ -18,6 +18,7 @@ import {
   readConfig
 } from '../../lib/data';
 import { textSize } from '../../styles/variables.css';
+import { Button } from '../../components/button';
 
 const getProjectConfig = async () =>
   // prettier-ignore
@@ -28,9 +29,15 @@ const getProjectConfig = async () =>
   );
 
 export const getStaticProps = async () => {
+  const config = await getProjectConfig();
+  if (!Object.keys(config.projects ?? {}).length) {
+    return {
+      notFound: true
+    };
+  }
   return {
     props: {
-      config: await getProjectConfig()
+      config: config
     }
   };
 };
@@ -49,12 +56,19 @@ const ProjectPage = ({
   config
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const router = useRouter();
-  const { project: current_year } = router.query as {
+  const { project: currentYear } = router.query as {
     project: string;
   };
 
+  // If no paths are found by `getStaticPaths` (e.g. because there is no)
+  // project key in config.yaml, NextJs requests a fallback even though fallback
+  // is set to false. In this case, config===undefined, so abort early
+  if (router.isFallback) {
+    return null;
+  }
+
   const changeYear = (year: string) => {
-    if (year !== current_year) {
+    if (year !== currentYear) {
       router.push(`/projects/${year}`);
     }
   };
@@ -105,11 +119,7 @@ const ProjectPage = ({
               className="d-flex flex-column align-items-center justify-content-between"
             >
               <p style={{ fontSize: textSize.lg }}>Then submit a project</p>
-              <RegisterButton
-                settings={config.registration}
-                alignment="center"
-                eventTimespan={config.event.eventTimespan}
-              />
+              <Button target={config.registration.projectPitchUrl}>Submit Project Pitch</Button>
             </Col>
           </Row>
         </Col>
@@ -132,8 +142,9 @@ const ProjectPage = ({
         <ProjectYearSelect
           years={Object.keys(config.projects ?? {})}
           changeYear={changeYear}
+          def={currentYear}
         />
-        {config.projects?.[parseInt(current_year)].map((project) => {
+        {config.projects?.[parseInt(currentYear)]?.map((project) => {
           const slug = slugify(project.title, { remove: /[*+~.()'"!:@]/g });
           return (
             <section key={slug} id={slug}>
@@ -156,7 +167,8 @@ const ProjectPage = ({
             </section>
           );
         })}
-        {!config.projects?.[parseInt(current_year)].length
+        {!config.projects?.[parseInt(currentYear)].length &&
+        config.registration.status !== 'unopened'
           ? noProjectsYet()
           : null}
       </Article>

@@ -2,13 +2,16 @@ import React from 'react';
 import Select from 'react-select';
 import { optionCSS } from 'react-select/dist/declarations/src/components/Option';
 import { colors } from '../styles/variables.css';
+import { find } from 'lodash';
 
 const ProjectYearSelect = ({
   years,
-  changeYear
+  changeYear,
+  def,
 }: {
   years: string[];
   changeYear: (year: string) => void;
+  def: string
 }) => {
   const pageOptions = years
     .sort()
@@ -17,6 +20,7 @@ const ProjectYearSelect = ({
       value: year,
       label: year
     }));
+  const defaultOption = find(pageOptions, ix => ix.value ===  def )
   return (
     <Select
       styles={{
@@ -71,7 +75,7 @@ const ProjectYearSelect = ({
         }
       })}
       options={pageOptions}
-      defaultValue={pageOptions[0]}
+      defaultValue={defaultOption}
       isSearchable={false}
       onChange={(args) => (args ? changeYear(args.value) : null)}
       isDisabled={pageOptions.length === 1}

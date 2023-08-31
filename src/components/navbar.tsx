@@ -69,7 +69,7 @@ export const NavBar = ({
             </Nav.Item>
             <Nav.Item>
               <Link
-                href="https://github.com/BrainhackWestern/BrainhackWestern.github.io/wiki/Projects"
+                href="/projects"
                 className="nav-link"
               >
                 Projects

@@ -128,6 +128,11 @@ export interface Registration {
    * to take POSTed JSON data with a single field: "email"
    */
   emailSignupTarget?: string;
+
+  /**
+   * Link to a form where users can pitch a brainhack project
+   */
+  projectPitchUrl: string
 }
 
 /**
