@@ -1,3 +1,5 @@
+'use client'
+
 import { MutableRefObject, useEffect, useRef } from 'react';
 
 interface LoadingProps {

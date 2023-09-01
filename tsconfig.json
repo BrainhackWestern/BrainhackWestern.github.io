@@ -1,8 +1,15 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "typeRoots": ["env.d.ts", "./types"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "typeRoots": [
+      "env.d.ts",
+      "./types"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -15,7 +22,12 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "downlevelIteration": true,
-    "incremental": true
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "ts-node": {
     // these options are overrides used only by ts-node
@@ -23,9 +35,19 @@
     "compilerOptions": {
       "module": "commonjs",
       "jsx": "react",
-      "types": ["node"]
-    },
+      "types": [
+        "node"
+      ]
+    }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules", "emails"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "emails"
+  ]
 }

@@ -1,3 +1,5 @@
+'use client'
+
 import { createContext, Dispatch, SetStateAction } from 'react';
 
 export interface ScrollPositionProviderType {

@@ -1,3 +1,5 @@
+'use client'
+
 import { StaticImageData } from 'next/image';
 import { PropsWithChildren } from 'react';
 import { Row } from 'react-bootstrap';
@@ -15,7 +17,7 @@ interface ImageProps {
 export const AboutRow = (props: PropsWithChildren<ImageProps>) => {
   const {
     state: { screenSize }
-  } = useScreenSize();
+  } =  useScreenSize();
   const largeScreen = screenSize >= screenSizes['lg'];
   const alignClass = props.reverse ? styles.alignRight : styles.alignLeft;
   const content = [

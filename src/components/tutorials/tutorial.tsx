@@ -1,3 +1,5 @@
+'use client'
+
 import { CSSProperties } from 'react';
 import { TutorialInfo } from '../../interfaces/tutorial';
 import useScreenSize, { screenSizes } from '../../services/screen-size/use';

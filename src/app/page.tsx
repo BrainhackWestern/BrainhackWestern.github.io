@@ -1,5 +1,4 @@
-import type { InferGetStaticPropsType } from 'next';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
 import { pipeInto } from 'ts-functional-pipe';
 import dollar_signs from '../../public/img/dollar_signs.png';
 import global_logo from '../../public/img/global_logo.png';
@@ -27,7 +26,7 @@ import {
 } from '../lib/data';
 import * as styles from '../styles/pages/home.css';
 
-export const getStaticProps = async () => {
+const getStaticProps = async () => {
   const config = await readConfig();
   // const calendar = await readCalendar();
 
@@ -44,10 +43,8 @@ export const getStaticProps = async () => {
   };
 };
 
-const Home = ({
-  config
-}: // calendar
-InferGetStaticPropsType<typeof getStaticProps>) => {
+const Home = async () => {
+  const { props: { config } } = await getStaticProps()
   return (
     <Page
       config={config}

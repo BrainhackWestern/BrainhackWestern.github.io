@@ -1,3 +1,5 @@
+'use client'
+
 import { useState } from 'react';
 import EmailForm from './email-form';
 import { Loading } from './loading';

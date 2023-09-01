@@ -1,3 +1,5 @@
+'use client'
+
 import { PropsWithChildren, useEffect, useState } from 'react';
 import ScreenSizeContext from './context';
 import useScreenSize from './use';
