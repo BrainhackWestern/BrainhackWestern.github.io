@@ -14,7 +14,7 @@ export const validateProjectLeads = (projectLeads) => {
 Looks like you haven't formatted your Project Leads correctly. Each lead should
 be on a single line, and should be followed by a github username in parentheses
 (e.g. \`Brain Hacker (@brainhackwestern)\`). Please update the form to fix the error.
-        `.replace("\n", " "),
+        `.replace(/\n/g, " "),
         "```",
         ...badProjectLeads.map((s) => `${s}\n${'~'.repeat(s.length)}`),
         "```"

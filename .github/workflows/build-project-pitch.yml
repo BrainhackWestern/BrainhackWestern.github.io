@@ -4,11 +4,10 @@ on:
     types: [labeled]
 jobs:
   compile-form:
-    if:
-      contains(github.event.issue.labels.*.name, 'approved') &&
+    if: contains(github.event.issue.labels.*.name, 'approved') &&
       contains(join(github.event.issue.labels.*.name, ', '), 'year/') &&
       contains(github.event.issue.labels.*.name, 'pitch') &&
-      ! contains(github.event.issue.labels.*.name, 'triage')
+      ! contains(github.event.issue.labels.*.name, 'error')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -17,16 +16,14 @@ jobs:
         uses: onmax/issue-form-parser@v1.4
         with:
           issue_number: ${{ github.event.issue.number }}
-      - name: Get year
-        run: >
-          echo "year=$(echo -e "${{ join(github.event.issue.labels.*.name, '\n') }}" |
-            grep 'year/' |
-            awk -F'/' '{print $2}')" >> "$GITHUB_ENV"
-      - name: Validate year
-        run: >
-          [[ "$year" =~ ^[[:digit:]]{4}$ ]] || (
-            echo "$year" is invalid >&2 && false
-          )
+      - name: Set year label
+        id: get_year
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const { default: script } = await import('${{ github.workspace }}/actions/get-year.mjs')
+            await script({github, context})
+          result-encoding: string
       - name: Parse organizers
         run: >
           echo "organizers=$(
@@ -43,7 +40,7 @@ jobs:
           URL: ${{ toJson(fromJson(steps.parse.outputs.payload)['Project url']) }}
         with:
           cmd: >
-            yq -i '.projects['"$year"'] += [
+            yq -i '.projects['${{ steps.get_year.outputs.result }}'] += [
               {
                 "title": '"$TITLE"',
                 "description": '"$DESCRIPTION"',

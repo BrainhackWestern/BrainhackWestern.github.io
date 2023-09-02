@@ -7,7 +7,7 @@ export default async ({ github, context }) => {
     repo: context.issue.repo,
     issue_number: context.issue.number
   });
-  issue.data.labels
+  const yearLabels = issue.data.labels
     .map((label) => {
       if (typeof label === 'string') {
         return label;
@@ -18,4 +18,12 @@ export default async ({ github, context }) => {
     .map((label) => {
       return label.split('/')[1];
     });
+  if (yearLabels.length > 1) {
+    throw Error("Multiple year labels on issue")
+  }
+  if (yearLabels.length) {
+    console.log(yearLabels[0])
+    return
+  }
+  throw Error("No year labels found on issue")
 };
