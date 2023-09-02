@@ -8,16 +8,6 @@ export const center = style([
   }
 ]);
 
-export const window = style([
-  'd-flex',
-  'flex-row',
-  'justify-content-start',
-  'container-fluid',
-  {
-    height: '100vh',
-    padding: '2em'
-  }
-]);
 
 export const backgroundImg = style([
   {

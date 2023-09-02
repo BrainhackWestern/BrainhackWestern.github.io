@@ -28,6 +28,7 @@ import {
   readConfig
 } from '../lib/data';
 import * as styles from './styles.css';
+import Window from '../components/window';
 
 export const generateMetadata = async (): Promise<Metadata> => {
   return {
@@ -50,7 +51,7 @@ const Home = async () => {
           style={{ position: 'absolute', height: '100vh', width: '100vw' }}
           alt=""
         />
-        <div className={styles.window}>
+        <Window>
           <div className={styles.backgroundImg}>
             <Image
               src={painterly}
@@ -86,7 +87,7 @@ const Home = async () => {
               </div>
             </div>
           </div>
-        </div>
+        </Window>
       </Splash>
 
       <WhiteBox>

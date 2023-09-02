@@ -6,9 +6,8 @@ import { createContext, PropsWithChildren, useEffect, useState } from 'react';
 export const ScrollPositionContext = createContext(0);
 
 export function ScrollPositionProvider({ children }: PropsWithChildren<{}>) {
-  const [scrollPosition, setScrollPosition] = useState(
-    document.documentElement.scrollTop
-  );
+  const initial = typeof window === 'undefined' ? 0 : document.documentElement.scrollTop;
+  const [scrollPosition, setScrollPosition] = useState(initial);
 
   const handleScroll = debounce(
     () => {
@@ -33,4 +32,3 @@ export function ScrollPositionProvider({ children }: PropsWithChildren<{}>) {
     </ScrollPositionContext.Provider>
   );
 }
-

@@ -7,7 +7,7 @@ import { createContext, PropsWithChildren, useEffect, useState } from 'react';
 const ScreenSizeContext = createContext(0)
 
 const getScreenSize = () => {
-  const w = window.innerWidth;
+  const w = typeof window === 'undefined' ? 0 : window.innerWidth;
   if (w >= 1400) {
     return (5);
   } else if (w >= 1200) {
