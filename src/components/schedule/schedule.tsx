@@ -2,12 +2,11 @@
 
 import { useContext, useState } from 'react';
 import Container from '../layout/container';
-import  { screenSizes } from '../../services/screen-size/use';
+import  { screenSizes, ScreenSizeContext } from '../../services/screen-size';
 import Content from '../content';
 import { TabSelector } from '../tab-selector';
 import { Day } from './day';
 import * as styles from './schedule.css';
-import ScreenSizeContext from '../../services/screen-size/context';
 import { ParsedCalendarType as ParsedScheduleType } from '../../lib/data';
 import { ValuesType } from 'utility-types';
 
@@ -22,9 +21,7 @@ type TimeCode = 'AM' | 'PM';
 export const Schedule = (props: ScheduleProps) => {
   const tabs = props.config.map((schedule) => schedule.name);
   const [tab, setTab] = useState(tabs[0]);
-  const {
-    state: { screenSize }
-  } = useContext(ScreenSizeContext);
+  const screenSize = useContext(ScreenSizeContext);
   const largeScreen = screenSize >= screenSizes['xl'];
   const lineHeight = props.lineHeight;
 

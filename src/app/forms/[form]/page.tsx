@@ -6,6 +6,7 @@ import Page from '../../../components/page';
 import Splash from '../../../components/splash';
 import { getEventYear, readConfig } from '../../../lib/data';
 import { parseFormData } from '../../../lib/form-parse';
+import { Suspense } from 'react';
 
 
 export const generateStaticParams = async () => {
@@ -45,7 +46,9 @@ const GenericForm = async ({
   return (
     <Page config={config} splash>
       <Splash>
+        <Suspense>
         <Form formData={formData} />
+        </Suspense>
       </Splash>
     </Page>
   );

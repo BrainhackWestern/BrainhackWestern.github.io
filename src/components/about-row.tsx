@@ -1,12 +1,11 @@
-'use client'
+'use client';
 
 import { StaticImageData } from 'next/image';
 import { PropsWithChildren, useContext } from 'react';
-import Row from './layout/row';
-import { screenSizes } from '../services/screen-size/use';
+import { ScreenSizeContext, screenSizes } from '../services/screen-size';
 import styles from './about-row.css';
 import Image from './image';
-import ScreenSizeContext from '../services/screen-size/context';
+import Row from './layout/row';
 
 interface ImageProps {
   imgClass?: string;
@@ -16,9 +15,7 @@ interface ImageProps {
 }
 
 export const AboutRow = (props: PropsWithChildren<ImageProps>) => {
-  const {
-    state: { screenSize }
-  } =  useContext(ScreenSizeContext);
+  const screenSize  = useContext(ScreenSizeContext);
   const largeScreen = screenSize >= screenSizes['lg'];
   const alignClass = props.reverse ? styles.alignRight : styles.alignLeft;
   const content = [

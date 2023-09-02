@@ -5,7 +5,7 @@ import { useContext, useState } from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
 import logo from '../../public/img/brainhack_logo.png';
 import { DisplaySections } from '../interfaces/site-config';
-import ScrollPositionContext from '../services/scroll-position/context';
+import { ScrollPositionContext } from '../services/scroll-position';
 import Image from './image';
 import Container from './layout/container';
 import * as style from './navbar.css';
@@ -23,9 +23,7 @@ export const NavBar = ({
   registrationButton,
   projectUrl
 }: NavBarProps) => {
-  const {
-    state: { scrollPosition }
-  } = useContext(ScrollPositionContext);
+  const scrollPosition = useContext(ScrollPositionContext);
   const [open, setOpen] = useState(false);
 
   return (

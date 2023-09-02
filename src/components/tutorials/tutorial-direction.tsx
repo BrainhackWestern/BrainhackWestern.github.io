@@ -1,17 +1,14 @@
 'use client';
 
 import React, { PropsWithChildren, useContext } from 'react';
-import ScreenSizeContext from '../../services/screen-size/context';
-import { screenSizes } from '../../services/screen-size/use';
+import { ScreenSizeContext, screenSizes } from '../../services/screen-size';
 import Reversable from '../reversable';
 
 const TutorialDirection = ({
   children,
   reversable
 }: PropsWithChildren<{ reversable: boolean }>) => {
-  const {
-    state: { screenSize }
-  } = useContext(ScreenSizeContext);
+  const screenSize = useContext(ScreenSizeContext);
   const largeScreen = screenSize >= screenSizes['lg'];
 
   const reverse = reversable && largeScreen;

@@ -3,17 +3,15 @@
 import React, { Suspense, useContext } from 'react';
 import { ValuesType } from 'utility-types';
 import { ParsedFormData } from '../../lib/form-parse';
-import ScreenSizeContext from '../../services/screen-size/context';
-import { screenSizes } from '../../services/screen-size/use';
+import { screenSizes, ScreenSizeContext } from '../../services/screen-size';
 import style from '../../styles/pages/[form].css';
 import { Loading } from '../loading';
 import CognitoPrefilled from './cognito-prefilled';
 
 const Form = ({ formData }: { formData: ValuesType<ParsedFormData> }) => {
-  const {
-    state: { screenSize }
-  } = useContext(ScreenSizeContext);
+  const screenSize = useContext(ScreenSizeContext);
 
+  console.log(screenSize)
   const smallScreen = screenSize < screenSizes['md'];
 
   return (
