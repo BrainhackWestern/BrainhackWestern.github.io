@@ -1,10 +1,10 @@
 name: Label Pitch Year
 on:
   issues:
-    types: [labeled]
+    types: [opened]
 jobs:
   compile-form:
-    if:
+    if: >
       ! contains(join(github.event.issue.labels.*.name, ', '), 'year/') &&
       contains(github.event.issue.labels.*.name, 'pitch')
     runs-on: ubuntu-latest
