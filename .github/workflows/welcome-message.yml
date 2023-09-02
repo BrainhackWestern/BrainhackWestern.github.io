@@ -1,0 +1,29 @@
+name: Receive New Pitch
+on:
+  issues:
+    types: [opened]
+jobs:
+  compile-form:
+    if: >
+      contains(github.event.issue.labels.*.name, 'pitch')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Parse issue
+        id: parse
+        uses: onmax/issue-form-parser@v1.4
+        with:
+          issue_number: ${{ github.event.issue.number }}
+      - name: Get project year
+        uses: mikefarah/yq@master
+        with:
+          cmd: >
+            echo "YEAR=$(yq '.event.year' config.yaml)" >> "$GITHUB_ENV"
+      - name: Set year label
+        uses: actions/github-script@v6
+        env:
+            FORM_JSON: ${{ steps.parse.outputs.payload }}
+        with:
+            script: |
+                const { default: script } = await import('${{ github.workspace }}/actions/receive-pitch.mjs')
+                await script({github, context})

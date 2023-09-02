@@ -1,11 +1,10 @@
-name: Label Pitch Year
+name: Update pitch
 on:
   issues:
-    types: [opened]
+    types: [edited]
 jobs:
   compile-form:
     if: >
-      ! contains(join(github.event.issue.labels.*.name, ', '), 'year/') &&
       contains(github.event.issue.labels.*.name, 'pitch')
     runs-on: ubuntu-latest
     steps:
@@ -15,14 +14,11 @@ jobs:
         uses: onmax/issue-form-parser@v1.4
         with:
           issue_number: ${{ github.event.issue.number }}
-      - name: Get project year
-        uses: mikefarah/yq@master
-        with:
-          cmd: >
-            echo "YEAR=$(yq '.event.year' config.yaml)" >> "$GITHUB_ENV"
-      - name: Set year label
+      - name: Update automated comment
         uses: actions/github-script@v6
+        env:
+            FORM_JSON: ${{ steps.parse.outputs.payload }}
         with:
             script: |
-                const { default: script } = await import('${{ github.workspace }}/actions/receive-pitch.mjs')
+                const { default: script } = await import('${{ github.workspace }}/actions/update-pitch.mjs')
                 await script({github, context})
