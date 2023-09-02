@@ -44,7 +44,7 @@ const GenericForm = async ({
   }
 
   return (
-    <Page config={config} splash>
+    <Page config={config} >
       <Splash>
         <Suspense>
         <Form formData={formData} />
