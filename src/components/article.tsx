@@ -1,6 +1,6 @@
 import React, { CSSProperties, PropsWithChildren } from 'react';
-import { Container } from 'react-bootstrap';
 import * as styles from './article.css';
+import Container from './layout/container';
 
 const Article = ({
   children,

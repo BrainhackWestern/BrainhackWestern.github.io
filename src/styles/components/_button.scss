@@ -42,7 +42,6 @@ $button_background: linear-gradient(
   }
 
   @include bootstrap.media-breakpoint-up(lg) {
-    align-self: flex-start;
     // span {
     font-size: $size;
     // }

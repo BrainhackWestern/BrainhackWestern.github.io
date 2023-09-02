@@ -1,7 +1,7 @@
 @use 'bootstrap/scss/bootstrap' as bootstrap;
 @use 'variables';
 
-$monospace: 'Fira Mono', monospace;
+$monospace: var(--font-fira-mono), monospace;
 
 // html,
 // body {
@@ -30,16 +30,6 @@ $monospace: 'Fira Mono', monospace;
 //   color: variables.$font-light;
 // }
 
-// h1,
-// h2,
-// h3,
-// h4,
-// h5,
-// h6 {
-//   font-family: variables.$font_family_heading;
-//   font-weight: variables.$weight_normal;
-//   color: variables.$font-light;
-// }
 
 // h1 {
 //   font-size: variables.$text_large;

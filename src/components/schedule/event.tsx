@@ -1,4 +1,4 @@
-import styles from '../about-row.css';
+import Link from 'next/link';
 import * as style from './event.css';
 
 interface EventProps {
@@ -63,9 +63,9 @@ export const Event = (props: EventProps) => {
   );
 
   return props.link ? (
-    <a href={props.link} className={style.link}>
+    <Link href={props.link} className={style.link}>
       {el}
-    </a>
+    </Link>
   ) : (
     el
   );

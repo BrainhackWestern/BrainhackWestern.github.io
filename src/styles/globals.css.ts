@@ -1,13 +1,12 @@
 import { globalStyle } from '@vanilla-extract/css';
 import { css } from './helpers.css';
 import { colors, textSize, textWeight } from './variables.css';
-import { montserrat, quicksand } from './fonts';
+// import { montserrat, quicksand } from './fonts';
 
 css('', {
   'html, body': {
     padding: 0,
     margin: 0,
-    // ...montserrat.style,
   },
 
   a: {
@@ -20,7 +19,7 @@ css('', {
   },
 
   body: {
-    // ...montserrat.style,
+    fontFamily: 'var(--font-montserrat)',
     padding: 0,
     margin: 0,
     fontSize: textSize.md,
@@ -28,7 +27,7 @@ css('', {
   },
 
   'h1, h2, h3, h4, h5, h6': {
-    // ...quicksand.style,
+    fontFamily: 'var(--font-quicksand)',
     fontWeight: textWeight.normal,
     color: colors.fontLight
   },
@@ -67,5 +66,3 @@ globalStyle('hr', {
 globalStyle('h3', {
   textAlign: 'center'
 });
-
-export default {};

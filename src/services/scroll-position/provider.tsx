@@ -1,9 +1,8 @@
 'use client'
 
 import { debounce } from 'lodash';
-import { PropsWithChildren, useEffect, useState } from 'react';
+import { PropsWithChildren, useContext, useEffect, useState } from 'react';
 import ScrollPositionContext from './context';
-import useScrollPosition from './use';
 
 function ScrollPositionProvider({ children }: PropsWithChildren<{}>) {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -21,7 +20,7 @@ function ScrollPositionProvider({ children }: PropsWithChildren<{}>) {
 export const Responsive = ({ children }: PropsWithChildren<{}>) => {
   const {
     actions: { setScrollPosition }
-  } = useScrollPosition();
+  } = useContext(ScrollPositionContext)
 
   const handleScroll = debounce(
     () => {

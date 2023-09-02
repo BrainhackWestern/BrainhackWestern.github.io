@@ -1,4 +1,7 @@
 {
-  "plugins": ["prettier"],
-  "extends": ["next/core-web-vitals"]
+  "plugins": ["prettier", "unused-imports"],
+  "extends": ["next/core-web-vitals"],
+  "rules": {
+    "unused-imports/no-unused-imports": "error"
+  }
 }

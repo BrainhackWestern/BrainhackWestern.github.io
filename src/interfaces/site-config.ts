@@ -176,7 +176,3 @@ export interface SiteConfig {
   };
   displaySections: DisplaySections;
 }
-
-export interface ExpandedConfig extends SiteConfig {
-  currentYear: number;
-}

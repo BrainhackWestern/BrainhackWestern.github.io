@@ -1,8 +1,7 @@
 'use client'
 
-import { PropsWithChildren, useEffect, useState } from 'react';
+import { PropsWithChildren, useContext, useEffect, useState } from 'react';
 import ScreenSizeContext from './context';
-import useScreenSize from './use';
 
 function ScreenSizeProvider({ children }: PropsWithChildren<{}>) {
   const [screenSize, setScreenSize] = useState(0);
@@ -20,7 +19,7 @@ function ScreenSizeProvider({ children }: PropsWithChildren<{}>) {
 export const Responsive = ({ children }: PropsWithChildren<{}>) => {
   const {
     actions: { setScreenSize }
-  } = useScreenSize();
+  } = useContext(ScreenSizeContext);
 
   const handleResize = () => {
     const w = window.innerWidth;

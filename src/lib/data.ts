@@ -1,20 +1,24 @@
+import 'server-only'
 import { promises as fs } from 'fs';
 import { exec } from 'node:child_process';
 import { Readable } from 'node:stream';
 import path from 'path';
 import imageSize from 'image-size';
-import { produce } from 'immer';
 import yaml from 'js-yaml';
 import { merge, zip } from 'lodash';
 import { DateTime } from 'luxon';
+import { cache } from 'react';
 import { BasicDate } from '../interfaces/generic';
-import { EventPosition } from '../interfaces/schedule';
+import { EventPosition, GenericEvent } from '../interfaces/schedule';
 import {
   Event,
-  ExpandedConfig,
   RegistrationStatus,
   SiteConfig
 } from '../interfaces/site-config';
+
+export async function getEventYear() {
+  return (await readConfig()).event.year;
+}
 
 function streamToString(stream: Readable) {
   const chunks: Uint8Array[] = [];
@@ -25,20 +29,19 @@ function streamToString(stream: Readable) {
   });
 }
 
-export const readConfig = async () => {
+export const getCurrentYear = () => new Date().getFullYear();
+export const readConfig = cache(async () => {
   const configFile = path.join(process.cwd(), 'config.yaml');
   const config_data = await fs.readFile(configFile, 'utf-8');
-  const currentYear = new Date().getFullYear();
   const data = (await yaml.load(config_data)) as SiteConfig;
   return {
-    currentYear,
     ...data,
     event: await parseEventDates(data.event),
     sponsors: await parseSponsorImages(data)
   };
-};
+});
 
-export const parseCalendar = async () => {
+const parseCalendar = async () => {
   const proc = exec('.venv/bin/calendar-stack config.yaml');
   if (!proc.stdout) {
     throw Error('');
@@ -46,41 +49,6 @@ export const parseCalendar = async () => {
   return (await JSON.parse(
     await streamToString(proc.stdout)
   )) as EventPosition[][][];
-};
-
-export const readCalendar = async <T extends SiteConfig>(config: T) => {
-  return {
-    ...config,
-    schedule: zip(config.schedule, await parseCalendar()).map(
-      ([schedule, schedulePositions]) => {
-        if (!schedule || !schedulePositions) {
-          throw Error('Not every schedule was assigned positions');
-        }
-        return {
-          ...schedule,
-          days: zip(schedule.days, schedulePositions).map(
-            ([day, positions]) => {
-              if (!day || !positions) {
-                throw Error('Not every day was assigned positions');
-              }
-              return {
-                ...day,
-                events: zip(day.events, positions).map(([event, position]) => {
-                  if (!event || !position) {
-                    throw Error(
-                      `Not every event in ${day.day}/${day.month}/` +
-                        `${day.year} was assigned a position`
-                    );
-                  }
-                  return merge(event, position);
-                })
-              };
-            }
-          )
-        };
-      }
-    )
-  };
 };
 
 const parseSponsorImages = async <T extends SiteConfig>(config: T) => {
@@ -92,38 +60,57 @@ const parseSponsorImages = async <T extends SiteConfig>(config: T) => {
   });
 };
 
-export const linkScheduleEvents = async <T extends SiteConfig>(config: T) => {
-  return {
-    ...config,
-    schedule: config.schedule.map((schedule) => {
+export type ParsedCalendarType = Awaited<ReturnType<typeof getCalendar>>;
+
+export const getCalendar = async () => {
+  const config = await readConfig();
+  return zip(config.schedule, await parseCalendar()).map(
+    ([schedule, schedulePositions]) => {
+      if (!schedule || !schedulePositions) {
+        throw Error('Not every schedule was assigned positions');
+      }
       return {
         ...schedule,
-        days: schedule.days.map((day) => {
+        days: zip(schedule.days, schedulePositions).map(([day, positions]) => {
+          if (!day || !positions) {
+            throw Error('Not every day was assigned positions');
+          }
           return {
             ...day,
-            events: day.events.map((event) => {
-              if ('tutorial' in event) {
-                const tutorial = config.tutorials.find(
-                  (tutorial) => tutorial.id === event.tutorial
+            events: zip(day.events, positions).map(([event, position]) => {
+              if (!event || !position) {
+                throw Error(
+                  `Not every event in ${day.day}/${day.month}/` +
+                    `${day.year} was assigned a position`
                 );
-                if (!tutorial) {
-                  throw Error(
-                    `Could not find tutorial with id ${event.tutorial}`
-                  );
-                }
-                return {
-                  ...event,
-                  name: tutorial.name,
-                  link: `#${tutorial.id}`
-                };
               }
-              return event;
+              return merge(
+                event,
+                position,
+                (() => {
+                  if ('tutorial' in event) {
+                    const tutorial = config.tutorials.find(
+                      (tutorial) => tutorial.id === event.tutorial
+                    );
+                    if (!tutorial) {
+                      throw Error(
+                        `Could not find tutorial with id ${event.tutorial}`
+                      );
+                    }
+                    return {
+                      name: tutorial.name,
+                      link: `#${tutorial.id}`
+                    };
+                  }
+                  return {};
+                })()
+              ) as GenericEvent & EventPosition;
             })
           };
         })
       };
-    })
-  };
+    }
+  );
 };
 
 interface EventDatesParsed {
@@ -145,22 +132,8 @@ const parseEventDates = async <T extends Event>(
   };
 };
 
-interface RegistrationStatusSet {
-  registration: {
-    status: string;
-  };
-}
-export const inferRegistrationStatus = async <T extends SiteConfig>(
-  config: T
-): Promise<T & RegistrationStatusSet> => {
-  if (config.registration.status) {
-    return config as T & RegistrationStatusSet;
-  }
-
-  const setRegistration = (status: RegistrationStatus) =>
-    produce(config, (draft) => {
-      draft.registration.status = status;
-    }) as T & RegistrationStatusSet;
+export const getRegistrationStatus = async (): Promise<RegistrationStatus> => {
+  const config = await readConfig();
 
   const open = config.registration.openDate;
   const close = config.registration.closeDate;
@@ -171,36 +144,45 @@ export const inferRegistrationStatus = async <T extends SiteConfig>(
 
   const now = new Date();
   if (now < openDate) {
-    return setRegistration('unopened');
+    return 'unopened';
   } else if (!close) {
-    return setRegistration('open');
+    return 'open';
     // Subtract 1 from the month to make it zero based
     // Add one to the day to make the date refer to the beginning of the next day
   } else if (now > new Date(close.year, close.month - 1, close.day + 1)) {
-    return setRegistration('closed');
+    return 'closed';
   } else {
-    return setRegistration('open');
+    return 'open';
   }
 };
 
-export const ensureCurrentProjectYear = <
-  T extends ExpandedConfig & RegistrationStatusSet
->(
-  config: T
-): T => {
-  if (['closed', 'unopened'].includes(config.registration.status)) {
-    return config;
+export const getProjectInfo = async (): Promise<Record<number, Project[]>> => {
+  const config = await readConfig();
+  const registrationStatus = await getRegistrationStatus();
+  if (['closed', 'unopened'].includes(registrationStatus)) {
+    return config.projects ?? {};
   }
   if (
-    !Object.keys(config.projects ?? {}).includes(config.currentYear.toString())
+    !Object.keys(config.projects ?? {}).includes(getCurrentYear().toString())
   ) {
     return {
-      ...config,
-      projects: {
-        ...config.projects,
-        [config.currentYear]: []
-      }
+      ...config.projects,
+      [getCurrentYear()]: []
     };
   }
-  return config;
+  return config.projects ?? {};
+};
+
+export const getCurrentProjectYear = async (): Promise<string | undefined> => {
+  return (
+    Object.keys(await getProjectInfo())
+      .sort()
+      // .reverse()
+      .pop()
+  );
+};
+
+export const getCurrentProjectURL = async (): Promise<string | undefined> => {
+  const year = await getCurrentProjectYear();
+  return year ? `/projects/${year}` : undefined;
 };

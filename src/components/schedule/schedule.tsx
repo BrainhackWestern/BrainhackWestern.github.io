@@ -1,19 +1,20 @@
 'use client'
 
-import { useState } from 'react';
-import { Container } from 'react-bootstrap';
-import { GenericEvent, ScheduleConfig } from '../../interfaces/schedule';
-import useScreenSize, { screenSizes } from '../../services/screen-size/use';
+import { useContext, useState } from 'react';
+import Container from '../layout/container';
+import  { screenSizes } from '../../services/screen-size/use';
 import Content from '../content';
 import { TabSelector } from '../tab-selector';
 import { Day } from './day';
 import * as styles from './schedule.css';
+import ScreenSizeContext from '../../services/screen-size/context';
+import { ParsedCalendarType as ParsedScheduleType } from '../../lib/data';
+import { ValuesType } from 'utility-types';
 
 interface ScheduleProps {
   lineHeight: number;
-  config: ScheduleConfig<GenericEvent>[];
+  config: ParsedScheduleType;
   show: boolean;
-  // calendar: ScheduleDay[];
 }
 
 type TimeCode = 'AM' | 'PM';
@@ -23,11 +24,11 @@ export const Schedule = (props: ScheduleProps) => {
   const [tab, setTab] = useState(tabs[0]);
   const {
     state: { screenSize }
-  } = useScreenSize();
+  } = useContext(ScreenSizeContext);
   const largeScreen = screenSize >= screenSizes['xl'];
   const lineHeight = props.lineHeight;
 
-  const makeCalendar = (config: ScheduleConfig<GenericEvent>) => {
+  const makeCalendar = (config: ValuesType<ParsedScheduleType>) => {
     const startTimeCode: TimeCode = config.startTime < 12 ? 'AM' : 'PM';
 
     const hourLines = [...Array(config.endTime - config.startTime).keys()].map(

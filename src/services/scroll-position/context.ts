@@ -1,8 +1,8 @@
-'use client'
+'use client';
 
 import { createContext, Dispatch, SetStateAction } from 'react';
 
-export interface ScrollPositionProviderType {
+export interface ScrollPositionContextType {
   state: {
     scrollPosition: number;
   };
@@ -11,9 +11,10 @@ export interface ScrollPositionProviderType {
   };
 }
 
-export type ScrollPositionContextType = ScrollPositionProviderType | undefined;
 
-const ScrollPositionContext =
-  createContext<ScrollPositionContextType>(undefined);
+const ScrollPositionContext = createContext<ScrollPositionContextType>({
+  state: { scrollPosition: 0 },
+  actions: { setScrollPosition: () => (val: number) => null }
+});
 
 export default ScrollPositionContext;

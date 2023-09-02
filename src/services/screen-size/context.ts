@@ -2,7 +2,7 @@
 
 import { createContext, Dispatch, SetStateAction } from 'react';
 
-export interface ScreenSizeProviderType {
+export interface ScreenSizeContextType {
   state: {
     screenSize: number;
   };
@@ -11,8 +11,10 @@ export interface ScreenSizeProviderType {
   };
 }
 
-export type ScreenSizeContextType = ScreenSizeProviderType | undefined;
 
-const ScreenSizeContext = createContext<ScreenSizeContextType>(undefined);
+const ScreenSizeContext = createContext<ScreenSizeContextType>({
+  state: { screenSize: 0 },
+  actions: { setScreenSize: () => (val: number) => null }
+});
 
 export default ScreenSizeContext;

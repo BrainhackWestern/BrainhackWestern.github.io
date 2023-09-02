@@ -1,28 +1,31 @@
-'use client'
+'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { useContext, useState } from 'react';
+import { Nav, Navbar } from 'react-bootstrap';
 import logo from '../../public/img/brainhack_logo.png';
 import { DisplaySections } from '../interfaces/site-config';
-import useScrollPosition from '../services/scroll-position/use';
+import ScrollPositionContext from '../services/scroll-position/context';
 import Image from './image';
+import Container from './layout/container';
 import * as style from './navbar.css';
 
 interface NavBarProps {
   displaySections: DisplaySections;
   splashMode?: boolean;
   registrationButton?: React.ReactNode | null;
+  projectUrl?: string;
 }
 
 export const NavBar = ({
   displaySections,
   splashMode,
-  registrationButton
+  registrationButton,
+  projectUrl
 }: NavBarProps) => {
   const {
     state: { scrollPosition }
-  } = useScrollPosition();
+  } = useContext(ScrollPositionContext);
   const [open, setOpen] = useState(false);
 
   return (
@@ -69,14 +72,13 @@ export const NavBar = ({
                 Location
               </Link>
             </Nav.Item>
-            <Nav.Item>
-              <Link
-                href="/projects"
-                className="nav-link"
-              >
-                Projects
-              </Link>
-            </Nav.Item>
+            {projectUrl ? (
+              <Nav.Item>
+                <Link href={projectUrl} className="nav-link">
+                  Projects
+                </Link>
+              </Nav.Item>
+            ) : null}
             <Nav.Item>
               <Link href="/FAQ" className="nav-link">
                 FAQ

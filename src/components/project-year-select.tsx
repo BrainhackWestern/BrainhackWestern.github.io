@@ -4,16 +4,22 @@ import React from 'react';
 import Select from 'react-select';
 import { colors } from '../styles/variables.css';
 import { find } from 'lodash';
+import { useRouter } from 'next/navigation';
 
 const ProjectYearSelect = ({
   years,
-  changeYear,
   def,
 }: {
   years: string[];
-  changeYear: (year: string) => void;
   def: string
 }) => {
+  const router = useRouter();
+  const changeYear = (year: string) => {
+    if (year !== def) {
+      router.push(`/projects/${year}`);
+    }
+  };
+
   const pageOptions = years
     .sort()
     .reverse()

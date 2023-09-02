@@ -20,7 +20,7 @@ const LinkIfTarget = ({
       {children}
     </Link>
   ) : (
-    <a className={className}>{children}</a>
+    <Link href='' className={className}>{children}</Link>
   );
 };
 

@@ -1,6 +1,6 @@
-import { globalStyle, style } from '@vanilla-extract/css';
-import { media } from '../helpers.css';
-import { colors, textSize } from '../variables.css';
+import { style } from '@vanilla-extract/css';
+import { media } from '../styles/helpers.css';
+import { colors, textSize, textWeight } from '../styles/variables.css';
 
 export const center = style([
   {
@@ -41,7 +41,7 @@ export const eventDates = style({
   padding: '0.5em 2em',
   margin: '0.5em 0',
   fontSize: textSize.lg,
-  fontWeight: 'bolder',
+  fontWeight: textWeight.bold,
   color: colors.fontLight
 });
 
@@ -58,12 +58,10 @@ export const titleCol = {
     'align-items-center'
   ]),
 
-  button: style([
-    {
-      alignSelf: 'center',
-      fontSize: textSize.heading.sm
-    }
-  ])
+  button: style({
+    alignSelf: 'center',
+    fontSize: textSize.heading.sm
+  })
 };
 
 export const mapFrame = style([

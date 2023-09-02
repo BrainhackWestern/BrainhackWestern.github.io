@@ -1,4 +1,6 @@
 import { Registration } from '../interfaces/site-config';
+import { getRegistrationStatus } from '../lib/data';
+import { joinStyles } from '../lib/utils';
 import { Button } from './button';
 import { Console } from './console/console';
 import { MsgCard } from './msg-card';
@@ -9,31 +11,33 @@ interface RegisterButtonProps {
   settings: Registration;
   alignment?: 'left' | 'center';
   className?: string;
+  large?: boolean
 }
 
-export const RegisterButton = (props: RegisterButtonProps) => {
+export const RegisterButton = async (props: RegisterButtonProps) => {
   const settings = props.settings;
+  const registrationStatus = await getRegistrationStatus();
   const alignClass =
     props.alignment == 'left' ? 'align-self-lg-start' : 'align-self-lg-center';
 
   return (
     <div className={alignClass}>
       {(() => {
-        if (settings.status === 'open' && settings.url) {
+        if (registrationStatus === 'open' && settings.url) {
           return (
             <Button
-              className={`${props.className} large-button`}
+              className={joinStyles([props.className, props.large ? 'large-button' : null])}
               target={settings.url}
             >
               Register Now
             </Button>
           );
-        } else if (settings.status === 'unopened' && props.eventTimespan) {
+        } else if (registrationStatus === 'unopened') {
           return (
             <Console>
               <span className="blue"># Coming soon</span>
               <br />
-              <span>{props.eventTimespan}</span>
+              {props.eventTimespan ? <span>{props.eventTimespan}</span> : null}
               {settings.emailSignupTarget ? (
                 <>
                   <br />

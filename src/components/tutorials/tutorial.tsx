@@ -1,12 +1,11 @@
-'use client'
-
 import { CSSProperties } from 'react';
 import { TutorialInfo } from '../../interfaces/tutorial';
-import useScreenSize, { screenSizes } from '../../services/screen-size/use';
 import { Console } from '../console/console';
 import NameLister from '../console/name-lister';
 import Image from '../image';
 import Markdown from '../markdown';
+import Reversable from '../reversable';
+import TutorialDirection from './tutorial-direction';
 import * as style from './tutorial.css';
 
 interface TutorialProps {
@@ -16,19 +15,18 @@ interface TutorialProps {
 }
 
 export const Tutorial = (props: TutorialProps) => {
-  const {
-    state: { screenSize }
-  } = useScreenSize();
-  const largeScreen = screenSize >= screenSizes['lg'];
-
   // We put things in reverse if right side is indicated, but only on large screens
-  const reverse = props.side === 'right' && largeScreen;
-  const grad = !reverse ? props.color.slice().reverse() : props.color;
-
-  const headerStyle: CSSProperties = {
-    background: `linear-gradient(100deg, ${grad[0]} , ${grad[1]})`,
-    textAlign: reverse ? 'left' : 'right'
-  };
+  const makeHeaderStyle = (reverse: boolean): CSSProperties => {
+    const grad = reverse ? props.color.slice().reverse() : props.color
+    return {
+      background: `linear-gradient(100deg, ${grad[0]} , ${grad[1]})`,
+      textAlign: reverse ? 'left' : 'right'
+    }
+  }
+  const headerStyle: [CSSProperties, CSSProperties] = [
+    makeHeaderStyle(false),
+    makeHeaderStyle(true)
+  ]
 
   const description = props.config.description
     ? props.config.description
@@ -66,15 +64,12 @@ export const Tutorial = (props: TutorialProps) => {
 
   return (
     <div id={props.config.id} className={style.tutorial}>
-      <div
-        className="d-flex"
-        style={{ justifyContent: reverse ? 'flex-end' : 'flex-start' }}
-      >
-        <h3 className={style.tutorialHeader} style={headerStyle}>
+      <TutorialDirection reversable={props.side === 'right'}>
+        <Reversable.Header className={style.tutorialHeader} style={headerStyle}>
           {props.config.name}
-        </h3>
-      </div>
-      <div className={style.row}>{reverse ? data.reverse() : data}</div>
+        </Reversable.Header>
+        <Reversable.Content contents={data} className={style.row} />
+      </TutorialDirection>
     </div>
   );
 };

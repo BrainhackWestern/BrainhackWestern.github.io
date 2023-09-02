@@ -1,4 +1,4 @@
-import { Container } from 'react-bootstrap';
+import Container from './layout/container';
 import styles from './white-box.css';
 
 interface WhiteBoxProps {

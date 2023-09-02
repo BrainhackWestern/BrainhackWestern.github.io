@@ -1,4 +1,4 @@
-import { globalStyle, style, StyleRule } from '@vanilla-extract/css';
+import { style, StyleRule } from '@vanilla-extract/css';
 import { css, media } from '../styles/helpers.css';
 import { colors } from '../styles/variables.css';
 

@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { Container } from 'react-bootstrap';
+import Container from './layout/container';
 import { contentSpace } from './content.css';
 
 interface ContentProps {

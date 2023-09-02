@@ -41,14 +41,9 @@ export const tutorialHeaderText = style({
   margin: 0
 });
 
-export const row = style([
-  'row',
-  'align-items-center',
-  'justify-content-center',
-  {
-    padding: '1em 0'
-  }
-]);
+export const row = style({
+  padding: '1em 0'
+});
 
 export const img = style([
   'col-12',

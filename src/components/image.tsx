@@ -1,4 +1,4 @@
-import NextImage, { ImageLoader, ImageProps } from 'next/image';
+import NextImage, { ImageProps } from 'next/image';
 import { isString } from 'lodash';
 
 const basePath = process.env.NEXT_PUBLIC_URL;

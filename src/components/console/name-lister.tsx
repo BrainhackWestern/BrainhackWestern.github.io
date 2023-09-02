@@ -1,4 +1,5 @@
 import { isString } from 'lodash';
+import Link from 'next/link';
 import React, { Fragment } from 'react';
 import wordJoin from 'word-join';
 
@@ -77,9 +78,9 @@ const NameLister = ({
               <>
                 {' '}
                 (
-                <a href={`https://github.com/${person.github}`}>
+                <Link href={`https://github.com/${person.github}`}>
                   @{person.github}
-                </a>
+                </Link>
                 )
               </>
             ) : null}

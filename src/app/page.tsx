@@ -1,5 +1,5 @@
-import { Col, Row } from 'react-bootstrap';
-import { pipeInto } from 'ts-functional-pipe';
+import { Metadata } from 'next';
+import Link from 'next/link';
 import dollar_signs from '../../public/img/dollar_signs.png';
 import global_logo from '../../public/img/global_logo.png';
 import hack from '../../public/img/hack.png';
@@ -12,6 +12,8 @@ import { AboutRow } from '../components/about-row';
 import { Button } from '../components/button';
 import Content from '../components/content';
 import Image from '../components/image';
+import Col from '../components/layout/col';
+import Row from '../components/layout/row';
 import Page from '../components/page';
 import { RegisterButton } from '../components/register-button';
 import { Schedule } from '../components/schedule/schedule';
@@ -19,44 +21,29 @@ import Splash from '../components/splash';
 import { TutorialList } from '../components/tutorials/tutorial-list';
 import { WhiteBox } from '../components/white-box';
 import {
-  inferRegistrationStatus,
-  linkScheduleEvents,
-  readCalendar,
+  getCalendar,
+  getCurrentProjectURL,
+  getEventYear,
+  getRegistrationStatus,
   readConfig
 } from '../lib/data';
-import * as styles from '../styles/pages/home.css';
+import * as styles from './styles.css';
 
-const getStaticProps = async () => {
-  const config = await readConfig();
-  // const calendar = await readCalendar();
-
+export const generateMetadata = async (): Promise<Metadata> => {
   return {
-    props: {
-      config: await pipeInto(
-        config,
-        readCalendar,
-        async (c) => linkScheduleEvents(await c),
-        async (c) => inferRegistrationStatus(await c)
-      )
-      // calendar
-    }
+    title: `Brainhack Western ${await getEventYear()}`,
+    description:
+      'Western Brainhack brings together researchers and trainees of ' +
+      'all backgrounds to collaborate on open science projects in ' +
+      'neuroimaging and neuroscience.'
   };
 };
 
 const Home = async () => {
-  const { props: { config } } = await getStaticProps()
+  const config = await readConfig();
+  const registrationStatus = await getRegistrationStatus();
   return (
-    <Page
-      config={config}
-      title={`Brainhack Western ${config.event.year}`}
-      description={
-        'Western Brainhack brings together researchers and trainees of ' +
-        'all backgrounds to collaborate on open science projects in ' +
-        'neuroimaging and neuroscience.'
-      }
-      splash
-      registrationButton
-    >
+    <Page config={config} splash registrationButton>
       <Splash>
         <Image
           src={paper}
@@ -80,6 +67,7 @@ const Home = async () => {
                 settings={config.registration}
                 eventTimespan={config.event.eventTimespan}
                 className={styles.titleCol.button}
+                large
                 alignment="center"
               />
             </div>
@@ -116,13 +104,18 @@ const Home = async () => {
           <br />
           <br />
           <div className={styles.center}>
-            <Button target="/projects">
-              {config.registration.status === 'unopened'
-                ? 'View Previous Project Proposals'
-                : 'View Project Proposals'}
-            </Button>
+            {await (async () => {
+              const projectUrl = await getCurrentProjectURL();
+              return projectUrl ? (
+                <Button target={projectUrl}>
+                  {registrationStatus === 'unopened'
+                    ? 'View Previous Project Proposals'
+                    : 'View Project Proposals'}
+                </Button>
+              ) : null;
+            })()}
           </div>
-          {config.registration.status !== 'unopened' ? (
+          {registrationStatus !== 'unopened' ? (
             <>
               <br />
               <div className={styles.center}>
@@ -157,12 +150,12 @@ const Home = async () => {
             <p>
               Brainhack Western {config.event.year} is an official satellite
               event of&nbsp;
-              <a
+              <Link
                 href="https://brainhack.org/index.html"
                 title="Brainhack Global"
               >
                 Brainhack Global
-              </a>
+              </Link>
             </p>
           </Col>
           <Col lg="6" className="d-flex justify-content-center">
@@ -191,6 +184,7 @@ const Home = async () => {
               settings={config.registration}
               alignment="center"
               eventTimespan={config.event.eventTimespan}
+              large
             />
           </Col>
           <Col lg="6" className="d-flex justify-content-center">
@@ -206,7 +200,7 @@ const Home = async () => {
       </Content>
 
       <Schedule
-        config={config.schedule}
+        config={await getCalendar()}
         // calendar={calendar}
         lineHeight={120}
         show={config.displaySections.schedule ?? true}
@@ -225,9 +219,9 @@ const Home = async () => {
           >
             <h2>Location</h2>
             <address>
-              <a href={config.location.url} title={config.location.name}>
+              <Link href={config.location.url} title={config.location.name}>
                 {config.location.name}
-              </a>
+              </Link>
               <br />
               {config.location.street}
               <br />
@@ -256,7 +250,7 @@ const Home = async () => {
         <Row className="justify-content-center justify-content-lg-start align-items-center">
           {config.sponsors.map((sponsor) => (
             <div key={sponsor.name} className={styles.sponsor}>
-              <a
+              <Link
                 href={sponsor.url}
                 title={sponsor.name}
                 target="_blank"
@@ -270,7 +264,7 @@ const Home = async () => {
                   alt={sponsor.name}
                   style={{ objectFit: 'contain' }}
                 />
-              </a>
+              </Link>
             </div>
           ))}
         </Row>

@@ -1,24 +1,5 @@
 'use client'
 
-import { useContext } from 'react';
-import ScrollPositionContext, {
-  ScrollPositionContextType,
-  ScrollPositionProviderType
-} from './context';
-
-function isProviderType(
-  value: ScrollPositionContextType
-): value is ScrollPositionProviderType {
-  return value !== undefined;
-}
-
-function useScrollPosition() {
-  const value = useContext(ScrollPositionContext);
-  console.log(value)
-  if (!isProviderType(value))
-    throw new Error('Components must be wrapped in ScrollPositionProvider');
-  return value;
-}
 
 export const screenSizes = {
   xsm: 0,
@@ -29,4 +10,3 @@ export const screenSizes = {
   xxl: 5
 };
 
-export default useScrollPosition;

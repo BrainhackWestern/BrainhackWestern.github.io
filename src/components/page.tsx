@@ -1,44 +1,40 @@
-import Head from 'next/head';
 import React, { ReactNode } from 'react';
-import { ExpandedConfig } from '../interfaces/site-config';
+import { SiteConfig } from '../interfaces/site-config';
 import Footer, { getFooterProps } from './footer';
 import { NavBar } from './navbar';
 import * as styles from './page.css';
 import { RegisterButton } from './register-button';
+import { getCurrentProjectURL, getRegistrationStatus } from '../lib/data';
 
 interface DocumentProps {
-  config: ExpandedConfig;
+  config: SiteConfig;
   children: ReactNode;
-  title: string;
-  description: string;
   splash?: boolean;
   registrationButton?: boolean;
 }
-const Page = ({
+const Page = async ({
   config,
   children,
-  title,
-  description,
   splash = false,
   registrationButton = false
-}: DocumentProps) => (
+}: DocumentProps) => {
+  const registrationStatus = await getRegistrationStatus()
+  const projectUrl = await getCurrentProjectURL()
+  return (
   <div className={styles.page}>
-    <Head>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-    </Head>
     <NavBar
       displaySections={config.displaySections}
       splashMode={splash}
       registrationButton={
-        registrationButton && config.registration.status === 'open' ? (
+        registrationButton && registrationStatus === 'open' ? (
           <RegisterButton settings={config.registration} />
         ) : null
       }
+      projectUrl={projectUrl}
     />
     {children}
     <Footer {...getFooterProps(config)} />
   </div>
-);
+)};
 
 export default Page;

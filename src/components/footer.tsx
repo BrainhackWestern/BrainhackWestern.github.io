@@ -1,22 +1,22 @@
-import { Row } from 'react-bootstrap';
-import Obfuscate from 'react-obfuscate';
-import { ExpandedConfig, SiteConfig } from '../interfaces/site-config';
+import Row from './layout/row';
+import { SiteConfig } from '../interfaces/site-config';
 import Content from './content';
 import style from './footer.css';
+import ObfuscateClient from './obfuscate-client';
+import Link from 'next/link';
+import { getCurrentYear } from '../lib/data';
 
 interface FooterProps {
   organizers: string[];
   twitterUrl?: string;
   displayTwitter: boolean;
-  year: number;
 }
 
-export const getFooterProps = (config: ExpandedConfig) => {
+export const getFooterProps = (config: SiteConfig) => {
   return {
     organizers: config.organizers,
     twitterUrl: config.twitterUrl,
     displayTwitter: config.displaySections.twitterFeed ?? true,
-    year: config.currentYear
   };
 };
 
@@ -32,14 +32,14 @@ export const Footer = (props: FooterProps) => {
           {props.displayTwitter && props.twitterUrl ? (
             <div className="col-lg-6 d-flex flex-column justify-content-between align-items-center">
               <p>
-                <a
+                <Link
                   className="twitter-timeline"
                   data-dnt="true"
                   data-theme="light"
                   href={props.twitterUrl}
                 >
                   Tweets by UWOBrainhack
-                </a>{' '}
+                </Link>{' '}
                 <script
                   async
                   src="https://platform.twitter.com/widgets.js"
@@ -49,9 +49,9 @@ export const Footer = (props: FooterProps) => {
           ) : null}
         </Row>
         <h3 id="contact">Contact</h3>
-        <Obfuscate email="brainhack.western@gmail.com" />
+        <ObfuscateClient email="brainhack.western@gmail.com" />
         <p className={style.copyright}>
-          Copyright © {props.year} Brainhack Western
+          Copyright © {getCurrentYear()} Brainhack Western
         </p>
       </Content>
     </footer>
