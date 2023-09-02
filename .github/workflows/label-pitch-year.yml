@@ -24,9 +24,5 @@ jobs:
         uses: actions/github-script@v6
         with:
             script: |
-                github.rest.issues.addLabels({
-                    issue_number: context.issue.number,
-                    owner: context.repo.owner,
-                    repo: context.repo.repo,
-                    labels: [`year/${process.env.YEAR}}`]
-                })
+                const script = require('./actions/receive-pitch.mjs')
+                await script({github, context})
