@@ -24,5 +24,5 @@ jobs:
         uses: actions/github-script@v6
         with:
             script: |
-                const script = require('./actions/receive-pitch.mjs')
+                const { default: script } = await import('${{ github.workspace }}/actions/receive-pitch.mjs')
                 await script({github, context})
