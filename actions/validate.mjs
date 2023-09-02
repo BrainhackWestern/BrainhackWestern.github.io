@@ -2,7 +2,7 @@
  * @param {string} projectLeads
  */
 export const validateProjectLeads = (projectLeads) => {
-  const badProjectLeads = form['Project Leads'].split('\n').filter((line) => {
+  const badProjectLeads = projectLeads.split('\n').filter((line) => {
     return !/^[\w\s]+\s\(\s*@[a-zA-Z0-9](?:-(?=[a-zA-Z0-9])|[a-zA-Z0-9]){0,38}(?<=[a-zA-Z0-9])\s*\)\s*/.test(
       line
     );
