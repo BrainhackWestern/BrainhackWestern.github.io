@@ -22,7 +22,7 @@ jobs:
         with:
           script: |
             const { default: script } = await import('${{ github.workspace }}/actions/get-year.mjs')
-            await script({github, context})
+            return await script({github, context})
           result-encoding: string
       - name: Parse organizers
         run: >

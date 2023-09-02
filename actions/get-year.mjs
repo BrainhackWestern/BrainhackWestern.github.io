@@ -22,8 +22,7 @@ export default async ({ github, context }) => {
     throw Error("Multiple year labels on issue")
   }
   if (yearLabels.length) {
-    console.log(yearLabels[0])
-    return
+    return yearLabels[0]
   }
   throw Error("No year labels found on issue")
 };
