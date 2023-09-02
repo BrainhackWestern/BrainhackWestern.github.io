@@ -1,9 +1,9 @@
 name: Project Pitch
 description: Pitch a project for the upcoming Western Brainhack!
 title: '[Pitch]: '
-labels: ['pitch', 'triage', 'year/2023']
+labels: ['pitch']
 body:
-  - type: markown
+  - type: markdown
     attributes:
       value: |
         Thank you for submitting a project to Brainhack Western! Before you

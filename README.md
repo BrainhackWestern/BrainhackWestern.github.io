@@ -1,5 +1,9 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Update and maintenance guides
+
+- [Guide for annual site updates](docs/annual-update.md)
+
 ## Updating Data
 
 Most data for the site is stored in the [config.yaml](config.yaml) file. Values here can be updated directly on github by clicking the pencil icon at the top of the file. Once you've made changes, they can be saved through a Pull Request.

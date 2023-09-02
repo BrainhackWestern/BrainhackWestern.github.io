@@ -76,15 +76,11 @@ The year's splash logo will always need to be updated, as it contains the year. 
 
 Login to [Cognito Forms](https://www.cognitoforms.com/) using the Brainhack Google account. You should see registration forms from the last years on the main screen. Hover your mouse over the previous years form, and a `copy` link should appear. Use this to create a copy of the form for the current year. Press the `build` link and edit the form as needed. As of 2023, the Open/Close dates for the form can be set by clicking the `Workflow` button at the very bottom of the `Build` page, then clicking the `Public Links` drop-down tab in the left-hand control panel, then setting the relevant dates in the `Allow Links` section.
 
-To edit the volunteer registration code, go to the `Calculations` section of the form and click on the `IsVolunteer` field. In the left-hand control panel, select the `Calculation` text box, which should contain text similar to this: 
+To edit the volunteer registration code, go to the `Calculations` section of the form and click on the `CorrectVolunteerCode` field. Set the `Default Value` of the field in the left-hand control panel to whatever you want the volunteer code to be.
 
-```
-=Form.Calculations.VolunteerCode.Length > 0 and "volunteer2023;".Contains(Form.Calculations.VolunteerCode + ";")
-```
+To publish the form onto the website, click the `Publish` button at the top of the `Build` page. In the control panel on the left-hand side, copy the embed code from the `Embed in your site` section. Paste the entire embed code into `config.yaml` into `forms.registration.embedTag`. Do not change anything else in the `forms` section of `config.yaml`. Preview the registration form by manually navigating to the `localhost:3000/forms/registration` page on your development site. Use `localhost:3000/forms/registration?id=<volunteercode>` to test the volunteer registration form.
 
-Not all of the text will be visibile, you'll need to move your cursor over. The quoted string: "volunteer2023;" contains the volunteer code. Replace it with whatever string you desire. The string **MUST** end with a `;`, and the `;` is **NOT** part of the code (so the volunteer code in the above example is `volunteer2023`). Volunteers can register using this code in the url `https://brainhackwestern.github.io/forms/registration?id=<volunteer code>`.
-
-To publish the form onto the website, click the `Publish` button at the top of the `Build` page. In the control panel on the left-hand side, copy the embed code from the `Embed in your site` section. Paste the entire embed code into `config.yaml` into `forms.registration.embedTag`. Do not change anything else in the `forms` section of `config.yaml`. Preview the registration form by manually navigating to the `localhost:3000/forms/registration` page on your development site.
+Volunteers can input their volunteer code by using the url `https://<brainhack_website>/forms/registration?id=<volunteercode>`
 
 ## Update Make.com integration
 
@@ -111,7 +107,8 @@ Once everything is working in the local dev site, you can push back to your stag
 ```
 NEXT_PUBLIC_URL='/brainhack_western_test_site'
 ```
-so that `NEXT_PUBLIC_URL` is set according to the repository name of your fork. Then commit all your changes and push them back to the server:
+
+so that `NEXT_PUBLIC_URL` is set according to the repository name of your fork. If you want the google maps inlay to work on your staging site, you'll also need to set `NEXT_PUBLIC_MAPS_EMBED_API_KEY` to a key scoped to your staging site URL ([see here](https://developers.google.com/maps/documentation/embed/map-generator#create-project)). Then commit all your changes and push them back to the server:
 
 ```
 git push origin
