@@ -16,7 +16,7 @@ be on a single line, and should be followed by a github username in parentheses
 (e.g. \`Brain Hacker (@brainhackwestern)\`). Please update the form to fix the error.
         `.replace("\n", " "),
         "```",
-        ...badProjectLeads.map((s) => `!- ${s}`),
+        ...badProjectLeads.map((s) => `${s}\n${'~'.repeat(s.length)}`),
         "```"
       ]
     : [];

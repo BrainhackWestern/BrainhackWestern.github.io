@@ -17,7 +17,7 @@ export const getAutomatedMsg = ({ body, warnings }) => {
   text += '<!-- END USER_BODY -->\n';
   text += '<!-- WARNINGS -->\n';
   if (warnings?.length) {
-    text += '## Warnings';
+    text += '## Warnings\n';
   }
   text += (warnings ?? []).join('\n') + '\n';
   text += '<!-- END WARNINGS -->\n';
