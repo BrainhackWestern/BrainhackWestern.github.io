@@ -1,6 +1,5 @@
 @use '../variables' as var;
 @use '../mixins' as mixins;
-@use '../typography' as type;
 @use 'bootstrap/scss/bootstrap' as bootstrap;
 
 $console_blue: #4a90e2;
@@ -51,10 +50,11 @@ $console_light_white: #979797;
 .console,
 #registration-form {
   background-color: #272822;
-  font-family: type.$monospace;
+  font-family: var.$monospace;
   padding: 1em;
   font-size: var.$body_norm;
   max-width: 800px;
+  --p-spacing3: 5px;
 
   @include bootstrap.media-breakpoint-up(md) {
     box-shadow: 0px 20px 100px black;
@@ -82,7 +82,7 @@ $console_light_white: #979797;
 
   h1 {
     font-size: var.$body_large;
-    font-family: type.$monospace;
+    font-family: var.$monospace;
     color: $console_purple;
   }
   h1::before {
@@ -93,7 +93,7 @@ $console_light_white: #979797;
   h2 {
     color: $console_purple;
     font-size: var.$body_large;
-    font-family: type.$monospace;
+    font-family: var.$monospace;
   }
   h2::before {
     content: '## ';
@@ -103,7 +103,7 @@ $console_light_white: #979797;
   h3 {
     color: $console_purple;
     font-size: var.$body_large;
-    font-family: type.$monospace;
+    font-family: var.$monospace;
     text-align: left;
   }
   h3::before {

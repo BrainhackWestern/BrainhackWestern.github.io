@@ -4,7 +4,7 @@ import React, { Suspense, useContext } from 'react';
 import { ValuesType } from 'utility-types';
 import { ParsedFormData } from '../../lib/form-parse';
 import { screenSizes, ScreenSizeContext } from '../../services/screen-size';
-import style from '../../styles/pages/[form].css';
+import style from './form.css';
 import { Loading } from '../loading';
 import CognitoPrefilled from './cognito-prefilled';
 
