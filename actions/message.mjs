@@ -1,5 +1,4 @@
-
-const LEAD = "<!-- BRAINHACK_AUTOMATED_RECEIPT -->\n"
+const LEAD = '<!-- BRAINHACK_AUTOMATED_RECEIPT -->';
 
 const DEFAULT_MSG = `
 Thank you for pitching a project to Brainhack! We'll review your proposal shortly.
@@ -10,8 +9,8 @@ If you haven't already, be sure to [register](https://brainhackwestern.github.io
  *  warnings?: string[]
  * }} options
  * */
-export const getAutomatedMsg = ({body, warnings}) => {
-  let text = LEAD;
+export const getAutomatedMsg = ({ body, warnings }) => {
+  let text = LEAD + "\n";
   text += '<!-- Do not manually edit -->\n';
   text += '<!-- USER_BODY -->\n';
   text += (body ?? DEFAULT_MSG) + '\n';
@@ -30,8 +29,11 @@ export const getAutomatedMsg = ({body, warnings}) => {
  * @param {string} text
  */
 export const isAutomatedMsg = (text) => {
-    return text.startsWith(LEAD)
-}
+  console.log(LEAD)
+  console.log(text)
+  console.log(text.trim().startsWith(LEAD))
+  return text.trim().startsWith(LEAD);
+};
 
 /** @param {Pick<Toolkit, 'github' | 'context'>} Toolkit */
 export const findAutomatedComment = async ({ github, context }) => {
@@ -41,12 +43,13 @@ export const findAutomatedComment = async ({ github, context }) => {
       owner: context.repo.owner,
       repo: context.repo.repo
     })
-  ).data.filter((comment) => isAutomatedMsg(comment.body_text ?? ''));
+  ).data.filter((comment) => isAutomatedMsg(comment.body ?? ''));
+
   if (automatedComments.length > 1) {
-    throw Error("More than one automated comment found!")
+    throw Error('More than one automated comment found!');
   }
   if (automatedComments.length) {
-    return automatedComments[0].id
+    return automatedComments[0].id;
   }
-  return undefined
+  return undefined;
 };
