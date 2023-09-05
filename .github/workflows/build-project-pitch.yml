@@ -52,7 +52,7 @@ jobs:
       - name: Format yaml output
         uses: actionsx/prettier@v2
         with:
-          args: --no-config --write config.yaml
+          args: --no-config --single-quote --write config.yaml
       - name: Create PR
         uses: peter-evans/create-pull-request@v5
         with:
