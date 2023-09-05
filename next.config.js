@@ -19,11 +19,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 });
 
 const basePath = () => {
-  const path = process.env.NEXT_PUBLIC_URL;
-  if (!path) {
-    return path
-  }
-  return path.endsWith('/') ? path : `${path}/`
+  return process.env.NEXT_PUBLIC_URL;
 }
 
 /** @type {import('next').NextConfig} */
