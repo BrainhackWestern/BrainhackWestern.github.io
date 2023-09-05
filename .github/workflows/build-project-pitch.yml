@@ -44,7 +44,7 @@ jobs:
               {
                 "title": '"$TITLE"',
                 "description": '"$DESCRIPTION"',
-                "url": '"$URL"',
+                '"$([[ "$URL" != '"_No response_"' ]] && echo '"url": '"$URL"',')"'
                 "organizers": '"$organizers"'
               }
             ]' config.yaml
