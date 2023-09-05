@@ -5,7 +5,6 @@ import React from 'react';
 import slugify from 'slugify';
 import { ValuesType } from 'utility-types';
 import Article from '../../../components/article';
-import { Button } from '../../../components/button';
 import Callout from '../../../components/callout';
 import { Console } from '../../../components/console/console';
 import NameLister from '../../../components/console/name-lister';
@@ -22,9 +21,8 @@ import {
   getRegistrationStatus,
   readConfig
 } from '../../../lib/data';
-import { textSize } from '../../../styles/variables.css';
-
-
+import SubmitProject from './submit-project.component';
+import { DateTime } from 'luxon';
 
 export const generateStaticParams = async () => {
   const projects = await getProjectInfo();
@@ -63,9 +61,9 @@ const ProjectPage = async ({
   const registrationUnopened = () => (
     <Callout>
       <Row>
-        <Col as="p" lg="6" className='d-flex flex-column align-items-center'>
-          Project Submission for Brainhack Western {getCurrentYear()} will
-          open soon!
+        <Col as="p" lg="6" className="d-flex flex-column align-items-center">
+          Project Submission for Brainhack Western {getCurrentYear()} will open
+          soon!
           <br />
           In the meantime, check out the project pitches from previous years.
         </Col>
@@ -80,51 +78,18 @@ const ProjectPage = async ({
     </Callout>
   );
 
-  const noProjectsYet = () => (
-    <Callout>
-      <Row>
-        <Col lg="6" className="d-flex flex-column align-items-center justify-content-center">
-          <h2>No projects yet!</h2>
-          <br />
-          <p style={{ fontSize: textSize.lg, margin: 0 }}>Be the first to submit</p>
-        </Col>
-        <Col lg="6">
-          <Row>
-            <Col
-              xxl="6"
-              className="d-flex flex-column align-items-center justify-content-between"
-            >
-              <p style={{ fontSize: textSize.lg }}>Start by registering</p>
-              <RegisterButton
-                settings={config.registration}
-                alignment="center"
-                eventTimespan={config.event.eventTimespan}
-              />
-            </Col>
-            <Col
-              xxl="6"
-              className="d-flex flex-column align-items-center justify-content-between"
-            >
-              <p style={{ fontSize: textSize.lg }}>Then submit a project</p>
-              <Button target={config.registration.projectPitchUrl}>
-                Submit Project Pitch
-              </Button>
-            </Col>
-          </Row>
-        </Col>
-      </Row>
-    </Callout>
-  );
-
   return (
     <Page config={config} registrationButton>
       <Article>
         <h1>Projects</h1>
         {registrationStatus === 'unopened' ? registrationUnopened() : null}
-        <ProjectYearSelect
-          years={Object.keys(projects)}
-          def={currentYear}
-        />
+        <ProjectYearSelect years={Object.keys(projects)} def={currentYear} />
+        {parseInt(currentYear) === config.event.year &&
+        registrationStatus !== 'unopened' && DateTime.now() < DateTime.fromObject(config.event.endDate) ? (
+          <SubmitProject
+            noProjectsYet={!projects[parseInt(currentYear)]?.length}
+          />
+        ) : null}
         {projects[parseInt(currentYear)]?.map((project) => {
           const slug = slugify(project.title, { remove: /[*+~.()'"!:@]/g });
           return (
@@ -148,10 +113,6 @@ const ProjectPage = async ({
             </section>
           );
         })}
-        {!projects[parseInt(currentYear)]?.length &&
-        registrationStatus !== 'unopened'
-          ? noProjectsYet()
-          : null}
       </Article>
     </Page>
   );
