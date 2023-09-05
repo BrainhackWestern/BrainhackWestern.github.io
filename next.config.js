@@ -18,6 +18,14 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true'
 });
 
+const basePath = () => {
+  const path = process.env.NEXT_PUBLIC_URL;
+  if (!path) {
+    return path
+  }
+  return path.endsWith('/') ? path : `${path}/`
+}
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: process.env.EXPORT_APP ? 'export' : undefined,
@@ -37,8 +45,8 @@ const nextConfig = {
     ]
   },
   images: imgLoader(),
-  basePath: process.env.NEXT_PUBLIC_URL,
-  assetPrefix: process.env.NEXT_PUBLIC_URL
+  basePath: basePath(),
+  assetPrefix: basePath()
 };
 
 module.exports = withBundleAnalyzer(withVanillaExtract(nextConfig));
