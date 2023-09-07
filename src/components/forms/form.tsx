@@ -5,7 +5,6 @@ import { ValuesType } from 'utility-types';
 import { ParsedFormData } from '../../lib/form-parse';
 import { ScreenSizeContext, screenSizes } from '../../services/screen-size';
 import { Loading } from '../loading';
-import Window from '../window';
 import CognitoPrefilled from './cognito-prefilled';
 import style from './form.css';
 

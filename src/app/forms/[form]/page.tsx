@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 import { notFound } from 'next/navigation';
 import { findIndex } from 'lodash';
-import { Suspense } from 'react';
 import Page from '../../../components/page';
 import Splash from '../../../components/splash';
 import Window from '../../../components/window';
