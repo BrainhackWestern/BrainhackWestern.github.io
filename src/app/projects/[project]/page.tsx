@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { DateTime } from 'luxon';
 import React from 'react';
 import slugify from 'slugify';
 import { ValuesType } from 'utility-types';
@@ -22,7 +23,6 @@ import {
   readConfig
 } from '../../../lib/data';
 import SubmitProject from './submit-project.component';
-import { DateTime } from 'luxon';
 
 export const generateStaticParams = async () => {
   const projects = await getProjectInfo();
@@ -61,7 +61,11 @@ const ProjectPage = async ({
   const registrationUnopened = () => (
     <Callout>
       <Row>
-        <Col as="p" lg="6" className="d-flex flex-column align-items-center">
+        <Col
+          as="p"
+          lg="6"
+          className="d-flex flex-column align-items-center justify-content-center"
+        >
           Project Submission for Brainhack Western {getCurrentYear()} will open
           soon!
           <br />
@@ -85,7 +89,8 @@ const ProjectPage = async ({
         {registrationStatus === 'unopened' ? registrationUnopened() : null}
         <ProjectYearSelect years={Object.keys(projects)} def={currentYear} />
         {parseInt(currentYear) === config.event.year &&
-        registrationStatus !== 'unopened' && DateTime.now() < DateTime.fromObject(config.event.endDate) ? (
+        registrationStatus !== 'unopened' &&
+        DateTime.now() < DateTime.fromObject(config.event.endDate) ? (
           <SubmitProject
             noProjectsYet={!projects[parseInt(currentYear)]?.length}
           />
