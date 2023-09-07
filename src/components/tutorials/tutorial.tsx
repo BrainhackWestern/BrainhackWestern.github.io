@@ -5,8 +5,9 @@ import NameLister from '../console/name-lister';
 import Image from '../image';
 import Markdown from '../markdown';
 import Reversable from '../reversable';
-import TutorialDirection from './tutorial-direction';
 import * as style from './tutorial.css';
+import ReversableHeader from '../reversable/reversable-header';
+import ReversableRow from '../reversable/reversable-row';
 
 interface TutorialProps {
   config: TutorialInfo;
@@ -64,12 +65,12 @@ export const Tutorial = (props: TutorialProps) => {
 
   return (
     <div id={props.config.id} className={style.tutorial}>
-      <TutorialDirection reversable={props.side === 'right'}>
-        <Reversable.Header className={style.tutorialHeader} style={headerStyle}>
+      <Reversable reversed={props.side === 'right'} minSize='lg'>
+        <ReversableHeader className={style.tutorialHeader} style={headerStyle}>
           {props.config.name}
-        </Reversable.Header>
-        <Reversable.Content contents={data} className={style.row} />
-      </TutorialDirection>
+        </ReversableHeader>
+        <ReversableRow contents={data} className={style.row} />
+      </Reversable>
     </div>
   );
 };

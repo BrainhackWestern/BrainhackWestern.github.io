@@ -1,11 +1,9 @@
-'use client';
-
 import { StaticImageData } from 'next/image';
-import { PropsWithChildren, useContext } from 'react';
-import { ScreenSizeContext, screenSizes } from '../services/screen-size';
+import { PropsWithChildren } from 'react';
 import styles from './about-row.css';
 import Image from './image';
-import Row from './layout/row';
+import Reversable from './reversable';
+import ReversableRow from './reversable/reversable-row';
 
 interface ImageProps {
   imgClass?: string;
@@ -15,8 +13,6 @@ interface ImageProps {
 }
 
 export const AboutRow = (props: PropsWithChildren<ImageProps>) => {
-  const screenSize  = useContext(ScreenSizeContext);
-  const largeScreen = screenSize >= screenSizes['lg'];
   const alignClass = props.reverse ? styles.alignRight : styles.alignLeft;
   const content = [
     <div key="image" className={styles.imgWrapper}>
@@ -30,8 +26,9 @@ export const AboutRow = (props: PropsWithChildren<ImageProps>) => {
     </div>
   ];
   return (
-    <Row className={styles.row}>
-      {props.reverse && largeScreen ? content.reverse() : content}
-    </Row>
-  );
+    <Reversable reversed={props.reverse} minSize='lg' >
+      <ReversableRow contents={content} className={styles.row} />
+
+    </Reversable>
+  )
 };
