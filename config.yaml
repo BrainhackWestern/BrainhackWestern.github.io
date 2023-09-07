@@ -115,7 +115,7 @@ registration:
     day: 13
     month: 10
     year: 2023
-  projectPitchUrl: https://github.com/pvandyken/brainhack_western_test_site/issues/new?assignees=&labels=pitch%2Ctriage%2Cyear%2F2023&projects=&template=project-pitch.yml&title=%5BPitch%5D%3A+
+  projectPitchUrl: https://github.com/BrainhackWestern/BrainhackWestern.github.io/issues/new?assignees=&labels=pitch&projects=&template=project-pitch.yml&title=%5BPitch%5D%3A+
 location:
   name: Western Interdisciplinary Research Building
   street: Perth Dr
