@@ -15,7 +15,7 @@ If you edit the config file on a local IDE, you can take advantage of the JSON s
 First, clone this repository:
 
 ```
-git clone https://github.com/pvandyken/brainhack_western_test_site.git brainhack
+git clone https://github.com/BrainhackWestern/BrainhackWestern.github.io.git brainhack
 cd brainhack
 ```
 
