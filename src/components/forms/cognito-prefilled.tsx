@@ -1,7 +1,8 @@
 import { useSearchParams } from 'next/navigation';
-import CognitoForm from '@tylermenezes/cognitoforms-react';
+// import CognitoForm from '@tylermenezes/cognitoforms-react';
 import { merge, set } from 'lodash';
 import React, { ReactNode } from 'react';
+import CognitoForm from '@tylermenezes/cognitoforms-react'
 
 interface CognitoPrefilledProps {
   loading?: ReactNode;

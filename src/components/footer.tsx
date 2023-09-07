@@ -31,7 +31,7 @@ export const Footer = (props: FooterProps) => {
           </div>
           {props.displayTwitter && props.twitterUrl ? (
             <div className="col-lg-6 d-flex flex-column justify-content-between align-items-center">
-              <p>
+              <p suppressHydrationWarning>
                 <Link
                   className="twitter-timeline"
                   data-dnt="true"

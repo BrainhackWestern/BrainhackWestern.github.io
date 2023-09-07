@@ -1,13 +1,18 @@
 import type { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 import { notFound } from 'next/navigation';
 import { findIndex } from 'lodash';
-import Form from '../../../components/forms/form';
+import { Suspense } from 'react';
 import Page from '../../../components/page';
 import Splash from '../../../components/splash';
+import Window from '../../../components/window';
 import { getEventYear, readConfig } from '../../../lib/data';
 import { parseFormData } from '../../../lib/form-parse';
-import { Suspense } from 'react';
 
+const Form = dynamic(() => import('../../../components/forms/form'), {
+  ssr: false,
+  loading: () => <Window half />
+});
 
 export const generateStaticParams = async () => {
   const config = await readConfig();
@@ -31,8 +36,8 @@ const GenericForm = async ({
 }: {
   params: { form: string };
 }) => {
-  const config = await readConfig()
-  const forms = await parseFormData(config.forms ?? {})
+  const config = await readConfig();
+  const forms = await parseFormData(config.forms ?? {});
   const formIndex = findIndex(forms, (form) => formId === form.id);
   if (formIndex < 0) {
     notFound();
@@ -44,11 +49,9 @@ const GenericForm = async ({
   }
 
   return (
-    <Page config={config} >
+    <Page config={config}>
       <Splash>
-        <Suspense>
         <Form formData={formData} />
-        </Suspense>
       </Splash>
     </Page>
   );

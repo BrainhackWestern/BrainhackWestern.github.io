@@ -5,9 +5,9 @@ import { ValuesType } from 'utility-types';
 import { ParsedFormData } from '../../lib/form-parse';
 import { ScreenSizeContext, screenSizes } from '../../services/screen-size';
 import { Loading } from '../loading';
+import Window from '../window';
 import CognitoPrefilled from './cognito-prefilled';
 import style from './form.css';
-import Window from '../window';
 
 const Form = ({ formData }: { formData: ValuesType<ParsedFormData> }) => {
   const screenSize = useContext(ScreenSizeContext);
@@ -17,27 +17,23 @@ const Form = ({ formData }: { formData: ValuesType<ParsedFormData> }) => {
   return (
     <>
       {smallScreen ? null : <div className="spacer"></div>}
-      {typeof window !== 'undefined' ? (
-        <div className="container-sm back-card">
-          <h1>{formData.title}</h1>
-          <div className="container console overlap-up" id="registration-form">
-            <Suspense>
-              <CognitoPrefilled
-                loading={
-                  <div className="spacer">
-                    <Loading className={style.loading} prefix="Loading " />
-                  </div>
-                }
-                formId={formData.dataForm}
-                accountId={formData.key}
-                prefill={formData.prefillMappings}
-              />
-            </Suspense>
-          </div>
+      <div className="container-sm back-card">
+        <h1>{formData.title}</h1>
+        <div className="container console overlap-up" id="registration-form">
+          <Suspense>
+            <CognitoPrefilled
+              loading={
+                <div className="spacer">
+                  <Loading className={style.loading} prefix="Loading " />
+                </div>
+              }
+              formId={formData.dataForm}
+              accountId={formData.key}
+              prefill={formData.prefillMappings}
+            />
+          </Suspense>
         </div>
-      ) : (
-        <Window half></Window>
-      )}
+      </div>
     </>
   );
 };

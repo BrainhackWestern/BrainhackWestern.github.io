@@ -6,7 +6,7 @@ import { createContext, PropsWithChildren, useEffect, useState } from 'react';
 export const ScrollPositionContext = createContext(0);
 
 export function ScrollPositionProvider({ children }: PropsWithChildren<{}>) {
-  const initial = typeof window === 'undefined' ? 0 : document.documentElement.scrollTop;
+  const initial = 0;
   const [scrollPosition, setScrollPosition] = useState(initial);
 
   const handleScroll = debounce(
