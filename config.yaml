@@ -10,9 +10,9 @@ event:
     month: 11
     year: 2023
 displaySections:
-  tutorial: true
-  schedule: true
-  twitterFeed: true
+  tutorial: false
+  schedule: false
+  twitterFeed: false
 twitterUrl: https://twitter.com/uwobrainhack
 faq:
   - question: What is a "Brainhack"?
@@ -109,7 +109,7 @@ registration:
   emailSignupTarget: https://hook.us1.make.com/hrdtv28jy9i55havi84l6db2xc1ieyol
   openDate:
     day: 18
-    month: 8
+    month: 9
     year: 2023
   closeDate:
     day: 13
