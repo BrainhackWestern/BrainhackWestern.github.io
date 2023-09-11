@@ -62,9 +62,13 @@ jobs:
       - name: Compile email templates
         run: npx ts-node emails/render.ts
       - name: Build App
+        uses: nick-fields/retry@v2
         env:
           EXPORT_APP: true
-        run: npm run gh-build
+        with:
+          retry_on: error
+          max_attempts: "${{ github.event_name == 'schedule' && 3 || 1}}"
+          command: npm run gh-build
       - name: Push git subdirectory as branch
         uses: s0/git-publish-subdir-action@v2.6.0
         env:
