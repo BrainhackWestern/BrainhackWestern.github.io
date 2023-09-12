@@ -67,6 +67,7 @@ jobs:
           EXPORT_APP: true
         with:
           retry_on: error
+          timeout_minutes: 30
           max_attempts: "${{ github.event_name == 'schedule' && 3 || 1}}"
           command: npm run gh-build
       - name: Push git subdirectory as branch
