@@ -10,7 +10,7 @@ event:
     month: 11
     year: 2023
 displaySections:
-  tutorial: false
+  tutorial: true
   schedule: false
   twitterFeed: false
 twitterUrl: https://twitter.com/uwobrainhack
@@ -356,38 +356,35 @@ schedule:
             room:
               - WIRB 1170
 tutorials:
-  - id: fanbids
-    name: FANBIDS
-    organizer: Kevin Stubbs
+  - id: dmri-fmri
+    name: DTI and fMRI
+    organizer:
+      - Farah Mushtaha
+      - Suzanne Witt
+    image: /img/dfmri.png
     description: |
-      FANBIDS is a collection of guidelines and MATLAB utilities that extends
-      the benefits of BIDS to fNIRS data at every stage of processing. The
-      framework is not tied to any single toolbox and aims to eventually
-      facilitate cross-toolbox interactions. The primary benefits include:
-
-      1. Producing file structures that are intuitive, descriptive, and portable
-      2. Scaling well to large datasets 3. Promoting an ecosystem of widely
-      compatible tools
-
-      Two fully functional example tools will be presented: cardiac-based
-      channel screening and a figure generation module. A workflow manager that
-      applies the framework will also be shown.
-  - id: eeg
-    name: The Brain in Time
-    image: /img/eeg.png
-    organizer: Diana Dima
+      This joint tutorial will cover both the basics of diffusion
+      MRI and functional MRI. For diffusion MRI, the basics of processing data
+      from MRI acquisitions to computing diffusion tensors and tracking the
+      structural connectome will be covered. For functional MRI, the basics of
+      what aspect of brain function fMRI measures to considerations for
+      preprocessing fMRI data will be presented.
+  - id: impact-statements
+    name: Writing Research Impact Statements
+    organizer: Suzanne Witt
     description: |
-      This tutorial will cover the basics of EEG data analysis, with a focus on
-      how we can use tools from machine learning and computer vision to
-      investigate rich spatiotemporally resolved datasets. There will be an
-      interactive component allowing participants to look at real EEG data and
-      try out analysis steps.
+      This micro-workshop (based on MIT's impact course) will cover what an
+      impact statement is in the context of research. Most of the workshop will
+      be devoted to attendees working in small groups drafting impact statements
+      for their own research suitable for the proverbial elevator pitch or
+      meet-and-greet scenarios.
   - id: data-mining
     name: Data Mining
     organizer: Suzanne Witt
+    image: /img/review.png
     description: |
       Meta-analyses of neuroimaging data are a good way to get started with
-      understanding neuroimaging and task-based neural processing, as well as
+      understanding neuroimaging and task-based neural processing, as well as,
       answer research questions that may not be easily addressed with by
       traditional data collection. This tutorial will cover the various aspects
       of designing a meta-analysis and some of the more popular methods,
@@ -395,24 +392,19 @@ tutorials:
       image-based meta-analyses. Some hands-on work with the python-based tool
       NiMARE with a sample dataset will be included to help attendees appreciate
       some of the nuances between the various types of meta-analyses. A new,
-      web-driven, all-in-one meta-analysis toolbox will also be introduced.
+      web-driven all-in-one meta-analysis toolbox will also be introduced.
   - id: git
-    name: Demystifying Git and Github
+    name: Research Code Management
     image: /img/git-logo.png
-    organizer: Suzanne Witt
+    organizer:
+    - Suzanne Witt
+    - Tristan Kuehn
     description: |
-      Git offers a simple and powerful way to track changes and automatically
-      version control scripts and workflows, making collaborative coding much
-      simpler. This hands-on tutorial will introduce new Git and GitHub users to
-      the basics of the three-stage directory structure of Git, commits,
-      branching, merge conflicts, forking, and pull requests. Both basic command
-      line and GUI-based approaches will be covered. This tutorial is designed
-      for people with little to no prior experience with Git and GitHub. More
-      advanced topics, such as Git actions, will be mentioned but not covered.
-      Come prepared with a GitHub account and and GitHub desktop installed
-      (https://desktop.github.com). It is not necessary to install the Git
-      sourcecode. (See https://git-scm.com/downloads/guis for a more complete
-      list of GUI-based Git clients.)
+      This tutorial will cover best practices for managing research code with
+      the ultimate goal of sharing it. Aspects of Git and GitHub, including
+      version control, branching, collaborations, etc. will be covered.
+      Additionally, new guidelines to help researchers assess how open and
+      sharable their code is will be presented.
   - id: data-management
     name: Research Data Management
     image: /img/datalad.png
@@ -447,29 +439,20 @@ tutorials:
       why you might want to use one, and how to write your analyses as
       workflows. As an example, we'll go over SnakeBIDS, a Western-grown
       workflow management tool for handling BIDS-formatted neuroimaging data.
-  - id: bias
-    name: Unintended Racial Bias in Predictive Modeling
-    organizer: Suzanne Witt
-    panelists:
-      - Lindsay Bodell
-      - Luke Stark
-      - Dan Lizotte
+  - id: indigenous
+    name: Open Science and Data Sharing in the Context of Indigenous Research
+    organizer:
+    - Keza Motlana
+    - Suzanne Witt
     description: |
-      Come hear both psychology and data science faculty discuss the
-      implications of a recently published paper, _Cross-ethnicity/race
-      generalization failure of behavioral prediction from rest-state functional
-      connectivity_
-      ([DOI:10.1126/sciadv.abj1812](https://doi.org/10.1126/sciadv.abj1812)).
-      This paper addresses how machine learning algorithms may increase, rather
-      than alleviate, bias and unfairness against equity-deserving populations.
-      Learn why collecting diverse study populations is important for the
-      generalizability of results and how naively applying machine learning
-      algorithms to large datasets may lead to the perpetuation of unfair biases
-      against minority populations. Also, learn about inherent biases that may
-      exist in many commonly used measurement techniques and tools.
+      The rules, guidelines, and obligations when it comes to conducting
+      Indigenous Research are different in Canada than for non-Indigenous
+      populations. Come learn about why these differences exist and how they
+      relate to the open science and data sharing expectations that exist for
+      much of neuroscience and neuroimaging research.
   - id: mri
     name: A Brief Introduction to MRI
-    image: /img/fmri.png
+    image: /img/t1w.jpg
     organizer: Brad Karat
     description: |
       This tutorial will provide a basic introduction to MRI. We will cover
@@ -482,6 +465,7 @@ tutorials:
     organizer:
       - Priya Kalra
       - Anthony Cruz
+    image: /img/abstract-task.png
     description: |
       This tutorial will cover the basics of behavioral data collection and
       analysis in neuroscience-adjacent fields such as cognitive psychology. The
@@ -510,6 +494,17 @@ tutorials:
       3. Applying our functional neuroanatomy knowledge to plan a surgical case
          using a fully open-source software
          ([trajectoryGuide](https://trajectoryguide.greydongilmore.com/)).
+  - id: eeg
+    name: Introduction to EEG
+    organizer: Mauricio Cespedes Tenorio
+    image: /img/eeg.png
+    description: |
+      This tutorial will explore the essentials of EEG, including its origin,
+      conventions and related modalities. From there, we'll step into the world
+      of EEG analysis, from time domain to time-frequency analysis, all while
+      getting hands-on sessions with Python. Finally, the tutorial will cover a
+      bit on the important role of preprocessing in EEG. Discover the
+      fascinating world of EEG with Python.
 projects:
   2021:
     - title: BIDS - Creating the events.tsv file

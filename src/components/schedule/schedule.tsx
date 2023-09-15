@@ -13,7 +13,6 @@ import { ValuesType } from 'utility-types';
 interface ScheduleProps {
   lineHeight: number;
   config: ParsedScheduleType;
-  show: boolean;
 }
 
 type TimeCode = 'AM' | 'PM';
@@ -91,7 +90,7 @@ export const Schedule = (props: ScheduleProps) => {
 
   const calendar = makeCalendar(props.config[tabs.indexOf(tab)]);
 
-  return props.show ? (
+  return (
     <Content id="schedule" fluid={true}>
       <Container fluid="lg">
         <h2>Schedule</h2>
@@ -138,5 +137,5 @@ export const Schedule = (props: ScheduleProps) => {
         </div>
       </div>
     </Content>
-  ) : null;
+  );
 };

@@ -20,6 +20,7 @@ import { Schedule } from '../components/schedule/schedule';
 import Splash from '../components/splash';
 import { TutorialList } from '../components/tutorials/tutorial-list';
 import { WhiteBox } from '../components/white-box';
+import Window from '../components/window';
 import {
   getCalendar,
   getCurrentProjectURL,
@@ -28,7 +29,6 @@ import {
   readConfig
 } from '../lib/data';
 import * as styles from './styles.css';
-import Window from '../components/window';
 
 export const generateMetadata = async (): Promise<Metadata> => {
   return {
@@ -200,12 +200,13 @@ const Home = async () => {
         </Row>
       </Content>
 
-      <Schedule
-        config={await getCalendar()}
-        // calendar={calendar}
-        lineHeight={120}
-        show={config.displaySections.schedule ?? true}
-      />
+      {config.displaySections.schedule ?? (
+        <Schedule
+          config={await getCalendar()}
+          // calendar={calendar}
+          lineHeight={120}
+        />
+      )}
 
       <TutorialList
         tutorials={config.tutorials}
