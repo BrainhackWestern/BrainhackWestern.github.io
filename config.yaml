@@ -96,7 +96,7 @@ registration:
   url: /forms/registration
   emailSignupTarget: https://hook.us1.make.com/hrdtv28jy9i55havi84l6db2xc1ieyol
   openDate:
-    day: 18
+    day: 15
     month: 9
     year: 2023
   closeDate:
