@@ -1,22 +1,22 @@
-import React from 'react';
 import {
   Mjml,
-  MjmlHead,
-  MjmlTitle,
-  MjmlPreview,
   MjmlBody,
-  MjmlSection,
   MjmlColumn,
+  MjmlDivider,
+  MjmlHead,
   MjmlImage,
-  MjmlDivider
+  MjmlPreview,
+  MjmlSection,
+  MjmlTitle
 } from '@faire/mjml-react';
-
+import React from 'react';
+import { Button } from '../components/button';
 import { FontImports } from '../components/fonts';
+import { Footer } from '../components/footer';
 import { Heading } from '../components/heading';
+import { Link } from '../components/link';
 import { Paragraph } from '../components/paragraph';
 import { Table } from '../components/table';
-import { Link } from '../components/link';
-import { Footer } from '../components/footer';
 
 const mjml = (
   <Mjml>
@@ -45,6 +45,14 @@ const mjml = (
             </a>{' '}
             (https://brainhackwestern.github.io) for event and schedule updates.
           </Paragraph>
+          {"{{#show_pitch_link}}"}
+          <Paragraph>
+            The next step is to pitch a project! Follow the link below!
+          </Paragraph>
+          <Button href="https://github.com/BrainhackWestern/BrainhackWestern.github.io/issues/new?assignees=&labels=pitch&projects=&template=project-pitch.yml&title=%5BPitch%5D%3A+">
+            Pitch a project
+          </Button>
+          {"{{/show_pitch_link}}"}
           <MjmlDivider borderColor="#0f0f0f" borderWidth={1} />
         </MjmlColumn>
       </MjmlSection>
