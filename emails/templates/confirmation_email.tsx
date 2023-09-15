@@ -6,6 +6,7 @@ import {
   MjmlHead,
   MjmlImage,
   MjmlPreview,
+  MjmlRaw,
   MjmlSection,
   MjmlTitle
 } from '@faire/mjml-react';
@@ -45,14 +46,22 @@ const mjml = (
             </a>{' '}
             (https://brainhackwestern.github.io) for event and schedule updates.
           </Paragraph>
-          {"{{#show_pitch_link}}"}
+        </MjmlColumn>
+      </MjmlSection>
+      <MjmlRaw>{'{{#show_pitch_link}}'}</MjmlRaw>
+      <MjmlSection padding={0}>
+        <MjmlColumn padding={0}>
           <Paragraph>
             The next step is to pitch a project! Follow the link below!
           </Paragraph>
           <Button href="https://github.com/BrainhackWestern/BrainhackWestern.github.io/issues/new?assignees=&labels=pitch&projects=&template=project-pitch.yml&title=%5BPitch%5D%3A+">
             Pitch a project
           </Button>
-          {"{{/show_pitch_link}}"}
+        </MjmlColumn>
+      </MjmlSection>
+      <MjmlRaw>{'{{/show_pitch_link}}'}</MjmlRaw>
+      <MjmlSection>
+        <MjmlColumn>
           <MjmlDivider borderColor="#0f0f0f" borderWidth={1} />
         </MjmlColumn>
       </MjmlSection>
