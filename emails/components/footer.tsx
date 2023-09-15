@@ -1,6 +1,6 @@
 import { MjmlColumn, MjmlImage, MjmlSection } from '@faire/mjml-react';
 import React from 'react';
-import { Paragraph } from './body';
+import { Paragraph } from './paragraph';
 import { Link } from './link';
 
 export const Footer = () => {

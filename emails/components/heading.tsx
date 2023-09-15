@@ -6,7 +6,7 @@ export const Heading = ({ children, large }: { children: React.ReactNode, large?
     <MjmlText
       fontFamily="Quicksand, Verdana, sans-serif"
       fontSize={large ? 32 : 24}
-      color="#f9f9f9"
+      color="#0f0f0f"
       paddingBottom={50}
       align="center"
     >

@@ -12,7 +12,7 @@ export const Paragraph = ({
     <MjmlText
       fontFamily="Montserrat, Verdana, sans-serif"
       fontSize={small ? 11 : 16}
-      color="#f9f9f9"
+      color="#0f0f0f"
       lineHeight="200%"
     >
       {children}

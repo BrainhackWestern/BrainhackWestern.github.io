@@ -6,7 +6,7 @@ export const Table = ({ children }: { children: React.ReactNode }) => {
     <MjmlTable
       fontFamily="Montserrat, Verdana, sans-serif"
       fontSize={16}
-      color="#f9f9f9"
+      color="#0f0f0f"
       cellpadding="10px"
     >
       {children}
