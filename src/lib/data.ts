@@ -1,4 +1,4 @@
-import 'server-only'
+import 'server-only';
 import { promises as fs } from 'fs';
 import { exec } from 'node:child_process';
 import { Readable } from 'node:stream';
@@ -120,8 +120,7 @@ const parseEventDates = async <T extends Event>(
   config: T
 ): Promise<T & EventDatesParsed> => {
   const formatDate = (date: BasicDate) => {
-    const d = DateTime.fromObject({ ...date }, { zone: 'America/Toronto' });
-    // const d = new Date(Date.UTC(date.year, date.month - 1, date.day));
+    const d = DateTime.fromObject(date, { zone: 'America/Toronto' });
     return d.toLocaleString({ month: 'short', day: 'numeric' });
   };
   return {
@@ -139,17 +138,19 @@ export const getRegistrationStatus = async (): Promise<RegistrationStatus> => {
   const close = config.registration.closeDate;
   // Use right now as openDate if not specified
   const openDate = open
-    ? new Date(open.year, open.month - 1, open.day)
-    : new Date();
+    ? DateTime.fromObject(open, { zone: 'America/Toronto' })
+    : DateTime.now();
 
-  const now = new Date();
+  const now = DateTime.now();
   if (now < openDate) {
     return 'unopened';
   } else if (!close) {
     return 'open';
-    // Subtract 1 from the month to make it zero based
     // Add one to the day to make the date refer to the beginning of the next day
-  } else if (now > new Date(close.year, close.month - 1, close.day + 1)) {
+  } else if (
+    now >
+    DateTime.fromObject(close, { zone: 'America/Toronto' }).plus({ days: 1 })
+  ) {
     return 'closed';
   } else {
     return 'open';
