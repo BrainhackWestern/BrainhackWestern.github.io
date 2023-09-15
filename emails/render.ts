@@ -20,7 +20,7 @@ function writeFile(path: string, data: string) {
   });
 }
 
-async function render(email: React.ReactElement) {
+export async function render(email: React.ReactElement) {
   const { html, errors } = mjml2html(renderToMjml(email));
   errors.forEach((err) => {
     console.error(err.formattedMessage);
