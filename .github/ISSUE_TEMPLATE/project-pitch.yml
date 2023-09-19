@@ -15,10 +15,8 @@ body:
 
         - Your project should contribute to open science. This depends a bit on
           your project, but may mean:
-
           - Any code you write is publicly available on github (or an
             equivalent)
-
           - Datasets you collect or process are publicly available (assuming
             you have the appropriate ethics approvals)
 
@@ -28,11 +26,13 @@ body:
         projects](https://brainhackwestern.github.io/projects/2022) for
         inspiration.
 
+
         At the Brainhack opening ceremony (typically 9am on the first day), you
         will pitch your project to all the attendees, encouraging them to join
         your team. Pitches will be 2-minute elevator style, with no slides.
         Please ensure one of the leads is able to attend the pitch: projects
         that aren't pitched typically don't get off the ground.
+
 
         As part of your project description, you may specify certain skills
         (e.g. python, git, neuroimaging, etc) that will be used in your project.
@@ -40,6 +40,7 @@ body:
         regardless of their level of knowledge. As a project lead, part of your
         responsibility is to teach and guide those with less technical
         experience than yourself.
+
 
         Finally, before you continue, be sure to
         [register](https://brainhackwestern.github.io/forms/registration) for
