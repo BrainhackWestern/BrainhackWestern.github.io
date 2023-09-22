@@ -326,7 +326,6 @@ schedule:
             duration: '4:00'
             color: red
             room: WIRB 1160
-
       - day: 2
         month: 12
         year: 2022
@@ -397,8 +396,8 @@ tutorials:
     name: Research Code Management
     image: /img/git-logo.png
     organizer:
-    - Suzanne Witt
-    - Tristan Kuehn
+      - Suzanne Witt
+      - Tristan Kuehn
     description: |
       This tutorial will cover best practices for managing research code with
       the ultimate goal of sharing it. Aspects of Git and GitHub, including
@@ -442,8 +441,8 @@ tutorials:
   - id: indigenous
     name: Open Science and Data Sharing in the Context of Indigenous Research
     organizer:
-    - Keza Motlana
-    - Suzanne Witt
+      - Keza Motlana
+      - Suzanne Witt
     description: |
       The rules, guidelines, and obligations when it comes to conducting
       Indigenous Research are different in Canada than for non-Indigenous
@@ -558,8 +557,8 @@ projects:
         [here](https://www.smestern.com/PCCA_demo/intro.html).
     - title: Quality Control Visualization App
       organizers:
-      - name: Peter Van Dyken
-        github: pvandyken
+        - name: Peter Van Dyken
+          github: pvandyken
       description: |
         Many automated pipelines include some sort of HTML based Quality Control
         output, allowing you to quickly scan through visualizations of the
@@ -582,12 +581,11 @@ projects:
         but anyone interested in learning web app development is welcome.
         Knowledge or interest in graphic design (especially user interfaces)
         would also be useful.
-
   2022:
     - title: Safer Multimodal Teleoperation of (Simulated) Robots
       organizers:
         - name: Pranshu Malik
-          github: "pranshumalik14"
+          github: 'pranshumalik14'
       description: |
         Being confused, freezing, or panicking while trying hard to stop,
         re-direct, or stabilize a drone (or any such robot/toy) in sudden
@@ -619,7 +617,7 @@ projects:
         match the desired motion. We can strive to keep the approach suitable
         for generalizing well enough to robots of other types and/or
         morphologies and to more unusual environments.
-    - title: "Brain3DVis: AR/MR MRI Visualizer"
+    - title: 'Brain3DVis: AR/MR MRI Visualizer'
       organizers:
         - name: Liam Bilbie
           github: LiamBilbie
@@ -631,7 +629,7 @@ projects:
         AR/VR application. We would love to work with people who have experience
         with MRI volumetric segmentation or are interested in VR/AR data
         visualization. :slightly_smiling_face:
-    - title: "Functional Atlas Explorer"
+    - title: 'Functional Atlas Explorer'
       organizers:
         - name: Caroline Nettekoven
           github: carobellum
@@ -661,7 +659,7 @@ projects:
         The tool will help synthesize findings across studies (think Neurosynth,
         but directly based on fMRI data) and aid interpretation of results as
         well as planning of future experiments.
-    - title: "DWI Fiducials"
+    - title: 'DWI Fiducials'
       organizers:
         - name: Arun Thurairajah
       description: |
@@ -682,3 +680,13 @@ projects:
         potential fiducials across various acquisition types and models in DWI.
         Those with experience in acquiring diffusion images or who have an
         interest in neuroimaging or anatomy are welcome to join!
+  2023:
+    - title: DiffSimViz
+      description:
+        - DiffSimViz (Diffusion Simulator Visualizer) will be a python toolbox with the aim of providing intuitive visualizations of particle diffusion in different media/microstructure. This will ideally include an interface to choose particular media to visualize diffusion within
+        - as well as to change parameters such as diffusion time and membrane permeability. The use of such a visualizer will be didactic
+        - or for researchers to better understand what their diffusion MRI signal might look like in particular microstructural environments.
+      url: https://github.com/Bradley-Karat/DiffSimViz
+      organizers:
+        - name: Bradley Karat
+          github: Bradley-Karat
