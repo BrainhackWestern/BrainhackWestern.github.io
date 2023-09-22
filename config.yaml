@@ -682,10 +682,15 @@ projects:
         interest in neuroimaging or anatomy are welcome to join!
   2023:
     - title: DiffSimViz
-      description:
-        - DiffSimViz (Diffusion Simulator Visualizer) will be a python toolbox with the aim of providing intuitive visualizations of particle diffusion in different media/microstructure. This will ideally include an interface to choose particular media to visualize diffusion within
-        - as well as to change parameters such as diffusion time and membrane permeability. The use of such a visualizer will be didactic
-        - or for researchers to better understand what their diffusion MRI signal might look like in particular microstructural environments.
+      description: |
+        DiffSimViz (Diffusion Simulator Visualizer) will be a python toolbox
+        with the aim of providing intuitive visualizations of particle diffusion
+        in different media/microstructure. This will ideally include an interface
+        to choose particular media to visualize diffusion within as well as to
+        change parameters such as diffusion time and membrane permeability. The
+        use of such a visualizer will be didactic or for researchers to better
+        understand what their diffusion MRI signal might look like in particular
+        microstructural environments.
       url: https://github.com/Bradley-Karat/DiffSimViz
       organizers:
         - name: Bradley Karat
