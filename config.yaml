@@ -254,103 +254,103 @@ schedule:
             color: blue
             room:
               - WIRB 1170
-  - name: Hacking
-    startTime: 8
-    endTime: 17
-    days:
-      - day: 30
-        month: 11
-        year: 2022
-        events:
-          - name: Breakfast
-            time: '8:00'
-            duration: '1:00'
-            room: WIRB 4190
-          - name: Welcome & Project Pitches
-            time: '9:00'
-            duration: '1:00'
-            color: blue
-            room:
-              - WIRB 1170
-          - name: Lunch
-            time: '12:00'
-            duration: '1:30'
-            room: WIRB 4190
-          - name: Hacking
-            time: '10:00'
-            duration: '2:00'
-            color: red
-            room: WIRB 4190
-          - name: Hacking
-            time: '13:30'
-            duration: '3:30'
-            color: red
-            room: WIRB 1160
-          - name: Hacking
-            time: '13:30'
-            duration: '2:00'
-            color: red
-            room: WIRB 1120
-          - name: Hacking
-            time: '15:00'
-            duration: '1:30'
-            color: red
-            room: WIRB 1110
-      - day: 1
-        month: 12
-        year: 2022
-        events:
-          - name: Breakfast
-            time: '8:00'
-            duration: '1:00'
-            room: WIRB 4190
-          - name: Lunch
-            time: '11:00'
-            duration: '1:30'
-            room: WIRB 4190
-          - name: Hacking
-            time: '9:00'
-            duration: '1:00'
-            color: red
-            room: WIRB 1130
-          - name: Hacking
-            time: '14:00'
-            duration: '2:30'
-            color: red
-            room: WIRB 4190
-          - name: Hacking
-            time: '13:00'
-            duration: '4:00'
-            color: red
-            room: WIRB 1160
-      - day: 2
-        month: 12
-        year: 2022
-        events:
-          - name: Breakfast
-            time: '8:00'
-            duration: '1:00'
-            room: WIRB 4190
-          - name: Lunch
-            time: '12:00'
-            duration: '1:30'
-            room: WIRB Atrium
-          - name: Hacking
-            time: '9:00'
-            duration: '2:00'
-            color: red
-            room: WIRB 4190
-          - name: Hacking
-            time: '12:00'
-            duration: '3:00'
-            color: red
-            room: WIRB 1120
-          - name: Project presentations & Wrap-up
-            time: '15:00'
-            duration: '1:00'
-            color: blue
-            room:
-              - WIRB 1170
+  # - name: Hacking
+  #   startTime: 8
+  #   endTime: 17
+  #   days:
+  #     - day: 30
+  #       month: 11
+  #       year: 2022
+  #       events:
+  #         - name: Breakfast
+  #           time: '8:00'
+  #           duration: '1:00'
+  #           room: WIRB 4190
+  #         - name: Welcome & Project Pitches
+  #           time: '9:00'
+  #           duration: '1:00'
+  #           color: blue
+  #           room:
+  #             - WIRB 1170
+  #         - name: Lunch
+  #           time: '12:00'
+  #           duration: '1:30'
+  #           room: WIRB 4190
+  #         - name: Hacking
+  #           time: '10:00'
+  #           duration: '2:00'
+  #           color: red
+  #           room: WIRB 4190
+  #         - name: Hacking
+  #           time: '13:30'
+  #           duration: '3:30'
+  #           color: red
+  #           room: WIRB 1160
+  #         - name: Hacking
+  #           time: '13:30'
+  #           duration: '2:00'
+  #           color: red
+  #           room: WIRB 1120
+  #         - name: Hacking
+  #           time: '15:00'
+  #           duration: '1:30'
+  #           color: red
+  #           room: WIRB 1110
+  #     - day: 1
+  #       month: 12
+  #       year: 2022
+  #       events:
+  #         - name: Breakfast
+  #           time: '8:00'
+  #           duration: '1:00'
+  #           room: WIRB 4190
+  #         - name: Lunch
+  #           time: '11:00'
+  #           duration: '1:30'
+  #           room: WIRB 4190
+  #         - name: Hacking
+  #           time: '9:00'
+  #           duration: '1:00'
+  #           color: red
+  #           room: WIRB 1130
+  #         - name: Hacking
+  #           time: '14:00'
+  #           duration: '2:30'
+  #           color: red
+  #           room: WIRB 4190
+  #         - name: Hacking
+  #           time: '13:00'
+  #           duration: '4:00'
+  #           color: red
+  #           room: WIRB 1160
+  #     - day: 2
+  #       month: 12
+  #       year: 2022
+  #       events:
+  #         - name: Breakfast
+  #           time: '8:00'
+  #           duration: '1:00'
+  #           room: WIRB 4190
+  #         - name: Lunch
+  #           time: '12:00'
+  #           duration: '1:30'
+  #           room: WIRB Atrium
+  #         - name: Hacking
+  #           time: '9:00'
+  #           duration: '2:00'
+  #           color: red
+  #           room: WIRB 4190
+  #         - name: Hacking
+  #           time: '12:00'
+  #           duration: '3:00'
+  #           color: red
+  #           room: WIRB 1120
+  #         - name: Project presentations & Wrap-up
+  #           time: '15:00'
+  #           duration: '1:00'
+  #           color: blue
+  #           room:
+  #             - WIRB 1170
 tutorials:
   - id: dmri-fmri
     name: DTI and fMRI

@@ -1,14 +1,14 @@
-'use client'
+'use client';
 
 import { useContext, useState } from 'react';
-import Container from '../layout/container';
-import  { screenSizes, ScreenSizeContext } from '../../services/screen-size';
+import { ValuesType } from 'utility-types';
+import { ParsedCalendarType as ParsedScheduleType } from '../../lib/data';
+import { ScreenSizeContext, screenSizes } from '../../services/screen-size';
 import Content from '../content';
+import Container from '../layout/container';
 import { TabSelector } from '../tab-selector';
 import { Day } from './day';
 import * as styles from './schedule.css';
-import { ParsedCalendarType as ParsedScheduleType } from '../../lib/data';
-import { ValuesType } from 'utility-types';
 
 interface ScheduleProps {
   lineHeight: number;
@@ -103,7 +103,9 @@ export const Schedule = (props: ScheduleProps) => {
             Math.max(1, calendar.numDays * calendar.scheduleMultiplier)
         }}
       >
-        <TabSelector choices={tabs} state={tab} setState={setTab} />
+        {tabs.length > 1 ? (
+          <TabSelector choices={tabs} state={tab} setState={setTab} />
+        ) : null}
         {[...Array(calendar.numDays).keys()]
           .filter((i) => {
             return !i || !largeScreen;
