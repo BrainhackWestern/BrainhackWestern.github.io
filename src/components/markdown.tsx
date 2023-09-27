@@ -1,12 +1,10 @@
 import 'server-only';
-import {
-  ReactMarkdown,
-  ReactMarkdownOptions
-} from 'react-markdown/lib/react-markdown';
+import ReactMarkdown, { Options } from 'react-markdown'
+
 import remarkEmoji from 'remark-emoji';
 import remarkGfm from 'remark-gfm';
 
-const Markdown = (props: ReactMarkdownOptions) => {
+const Markdown = (props: Options) => {
   return (
     <ReactMarkdown
       remarkPlugins={[

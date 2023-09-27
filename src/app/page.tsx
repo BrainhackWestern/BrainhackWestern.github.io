@@ -164,7 +164,9 @@ const Home = async () => {
               <Image
                 src={global_logo}
                 alt=""
-                style={{ objectFit: 'contain', height: 'unset' }}
+                width={300}
+                height={Math.round(global_logo.height*300/global_logo.width)}
+                style={{ objectFit: 'contain'}}
               />
             </div>
           </Col>
@@ -193,7 +195,9 @@ const Home = async () => {
               <Image
                 src={dollar_signs}
                 alt=""
-                style={{ objectFit: 'contain', height: 'unset' }}
+                width={300}
+                height={Math.round(global_logo.height*300/global_logo.width)}
+                style={{ objectFit: 'contain'}}
               />
             </div>
           </Col>
