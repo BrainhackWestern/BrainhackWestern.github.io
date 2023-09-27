@@ -22,7 +22,8 @@ const tutorialDayName = style({
 
 export const tutorial = style([
   {
-    margin: '1em 0 2em 0'
+    margin: '1em 0 2em 0',
+    scrollMarginTop: 100
   },
   media.lg({
     margin: '1em 0 3em 0'
