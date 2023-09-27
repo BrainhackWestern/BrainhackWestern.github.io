@@ -38,8 +38,8 @@ export const Tutorial = (props: TutorialProps) => {
       <div key="image" className={style.img}>
         <Image
           src={props.config.image}
-          width={250}
-          height={250}
+          width={200}
+          height={200}
           style={{ objectFit: 'contain' }}
           alt=""
         />

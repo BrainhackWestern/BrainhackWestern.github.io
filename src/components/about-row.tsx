@@ -17,7 +17,7 @@ export const AboutRow = (props: PropsWithChildren<ImageProps>) => {
   const content = [
     <div key="image" className={styles.imgWrapper}>
       <div className={styles.img}>
-        <Image src={props.img} alt="" style={{ objectFit: 'contain' }} />
+        <Image src={props.img} alt="" style={{ objectFit: 'contain', width: "100%", height: "auto" }} />
       </div>
     </div>,
     <div key="description" className={styles.description}>

@@ -52,9 +52,6 @@ css('', {
 
 });
 
-globalStyle('img', {
-  width: '100%'
-});
 
 globalStyle('hr', {
   borderWidth: 1,

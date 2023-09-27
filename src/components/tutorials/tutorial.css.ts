@@ -49,7 +49,10 @@ export const img = style([
   'col-12',
   'col-lg',
   {
-    maxWidth: 250
+    maxWidth: 200,
+    padding: 0,
+    marginLeft: "1em",
+    marginRight: "1em",
   }
 ]);
 
