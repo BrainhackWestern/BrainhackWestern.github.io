@@ -196,7 +196,7 @@ const Home = async () => {
                 src={dollar_signs}
                 alt=""
                 width={300}
-                height={Math.round(global_logo.height*300/global_logo.width)}
+                height={Math.round(dollar_signs.height*300/dollar_signs.width)}
                 style={{ objectFit: 'contain'}}
               />
             </div>
