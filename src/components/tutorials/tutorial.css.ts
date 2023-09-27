@@ -52,9 +52,12 @@ export const img = style([
   {
     maxWidth: 200,
     padding: 0,
-    marginLeft: "1em",
-    marginRight: "1em",
-  }
+    margin: "1em",
+  },
+  media.lg({
+    marginTop: 0,
+    marginBottom: 0
+  })
 ]);
 
 export const description = style(['col-12', 'col-lg', 'flex-grow-1']);
