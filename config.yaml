@@ -11,7 +11,7 @@ event:
     year: 2023
 displaySections:
   tutorial: true
-  schedule: false
+  schedule: true
   twitterFeed: false
 twitterUrl: https://twitter.com/uwobrainhack
 faq:
@@ -144,9 +144,9 @@ schedule:
     startTime: 8
     endTime: 17
     days:
-      - day: 30
+      - day: 1
         month: 11
-        year: 2022
+        year: 2023
         events:
           - name: Breakfast
             time: '8:00'
@@ -174,100 +174,80 @@ schedule:
             duration: '1:30'
             color: '#1f331e'
             priority: 1
-            room:
-              - WIRB 4190
-          - tutorial: data-management
+          - tutorial: dmri-fmri
             time: '15:00'
             duration: '1:30'
             color: '#1f331e'
             priority: 1
-            room:
-              - WIRB 4190
-      - day: 1
-        month: 12
-        year: 2022
-        events:
-          - name: Breakfast
-            time: '8:00'
-            duration: '1:00'
-            room: WIRB 4190
-          - tutorial: reproducability
-            time: '9:00'
-            duration: '1:00'
-            color: '#1f331e'
-            priority: 1
-            room:
-              - WIRB 4190
-          - tutorial: bias
-            time: '10:00'
-            duration: '1:00'
-            color: '#1f331e'
-            priority: 1
-            room:
-              - WIRB 3000
-          - tutorial: data-mining
-            time: '12:30'
-            duration: '1:30'
-            color: '#1f331e'
-            priority: 1
-            room:
-              - WIRB 4190
-          - tutorial: behaviour
-            time: '12:30'
-            duration: '1:30'
-            color: '#1f331e'
-            priority: 1
-            room:
-              - WIRB 1110
-          - tutorial: data-viz
-            time: '15:00'
-            duration: '1:30'
-            color: '#1f331e'
-            priority: 1
-            room:
-              - WIRB 1170
-          - name: Lunch
-            time: '11:00'
-            duration: '1:30'
-            room: WIRB 4190
       - day: 2
-        month: 12
-        year: 2022
+        month: 11
+        year: 2023
         events:
           - name: Breakfast
             time: '8:00'
             duration: '1:00'
             room: WIRB 4190
+          - tutorial: data-management
+            time: '9:00'
+            duration: '1:30'
+            color: '#1f331e'
+            priority: 1
           - tutorial: anat
             time: '9:00'
             duration: '1:30'
             color: '#1f331e'
             priority: 1
-            room:
-              - WIRB 1130
+          - tutorial: indigenous
+            time: '13:30'
+            duration: '1:30'
+            color: '#1f331e'
+            priority: 1
+          - tutorial: data-mining
+            time: '10:30'
+            duration: '1:30'
+            color: '#1f331e'
+            priority: 1
+          - tutorial: behaviour
+            time: '15:00'
+            duration: '1:30'
+            color: '#1f331e'
+            priority: 1
+          - tutorial: data-viz
+            time: '10:30'
+            duration: '1:30'
+            color: '#1f331e'
+            priority: 1
           - tutorial: eeg
-            time: '10:30'
+            time: '15:00'
             duration: '1:30'
             color: '#1f331e'
             priority: 1
-            room:
-              - WIRB 1120
-          - tutorial: fanbids
-            time: '10:30'
-            duration: '1:30'
-            color: '#1f331e'
-            priority: 1
-            room:
-              - WIRB 1160
-          - name: Anatomy Drop-in Demos
-            time: '10:30'
-            duration: '1:30'
-            color: '#1f331e'
-            room: WIRB 1130
           - name: Lunch
             time: '12:00'
             duration: '1:30'
-            room: WIRB Atrium
+            room: WIRB 4190
+      - day: 3
+        month: 11
+        year: 2023
+        events:
+          - name: Breakfast
+            time: '8:00'
+            duration: '1:00'
+            room: WIRB 4190
+          - tutorial: impact-statements
+            time: '10:30'
+            duration: '1:30'
+            color: '#1f331e'
+            priority: 1
+          - tutorial: reproducability
+            time: '9:00'
+            duration: '1:00'
+            color: '#1f331e'
+            priority: 1
+          - name: Lunch
+            time: '12:00'
+            duration: '1:30'
+            room: WIRB 4190
           - name: Project presentations & Wrap-up
             time: '15:00'
             duration: '1:00'
