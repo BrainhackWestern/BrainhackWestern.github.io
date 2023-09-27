@@ -200,13 +200,9 @@ const Home = async () => {
         </Row>
       </Content>
 
-      {config.displaySections.schedule ?? (
-        <Schedule
-          config={await getCalendar()}
-          // calendar={calendar}
-          lineHeight={120}
-        />
-      )}
+      {config.displaySections.schedule ? (
+        <Schedule config={await getCalendar()} lineHeight={120} />
+      ) : null}
 
       <TutorialList
         tutorials={config.tutorials}
