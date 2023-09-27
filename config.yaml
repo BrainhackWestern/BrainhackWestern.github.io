@@ -436,10 +436,13 @@ tutorials:
       workflows. As an example, we'll go over SnakeBIDS, a Western-grown
       workflow management tool for handling BIDS-formatted neuroimaging data.
   - id: indigenous
-    name: Open Science and Data Sharing in the Context of Indigenous Research
+    name: "Indigenous and EDI Considerations for Data: Understanding Your Responsibilities as a Neuroscience Trainee"
     organizer:
       - Keza Motlana
       - Suzanne Witt
+    panelists:
+      - Katie Big Canoe
+      - Alex Levine
     description: |
       The rules, guidelines, and obligations when it comes to conducting
       Indigenous Research are different in Canada than for non-Indigenous
