@@ -118,7 +118,7 @@ organizers:
   - Keza Motlana
   - Peter Van Dyken
   - Ezgi Coskun
-  - Jiexi Jessie Wu 
+  - Jiexi Jessie Wu
   - Jessica Lammert
   - Nidhi Shah
   - Brian Wu
@@ -254,103 +254,103 @@ schedule:
             color: blue
             room:
               - WIRB 1170
-  # - name: Hacking
-  #   startTime: 8
-  #   endTime: 17
-  #   days:
-  #     - day: 30
-  #       month: 11
-  #       year: 2022
-  #       events:
-  #         - name: Breakfast
-  #           time: '8:00'
-  #           duration: '1:00'
-  #           room: WIRB 4190
-  #         - name: Welcome & Project Pitches
-  #           time: '9:00'
-  #           duration: '1:00'
-  #           color: blue
-  #           room:
-  #             - WIRB 1170
-  #         - name: Lunch
-  #           time: '12:00'
-  #           duration: '1:30'
-  #           room: WIRB 4190
-  #         - name: Hacking
-  #           time: '10:00'
-  #           duration: '2:00'
-  #           color: red
-  #           room: WIRB 4190
-  #         - name: Hacking
-  #           time: '13:30'
-  #           duration: '3:30'
-  #           color: red
-  #           room: WIRB 1160
-  #         - name: Hacking
-  #           time: '13:30'
-  #           duration: '2:00'
-  #           color: red
-  #           room: WIRB 1120
-  #         - name: Hacking
-  #           time: '15:00'
-  #           duration: '1:30'
-  #           color: red
-  #           room: WIRB 1110
-  #     - day: 1
-  #       month: 12
-  #       year: 2022
-  #       events:
-  #         - name: Breakfast
-  #           time: '8:00'
-  #           duration: '1:00'
-  #           room: WIRB 4190
-  #         - name: Lunch
-  #           time: '11:00'
-  #           duration: '1:30'
-  #           room: WIRB 4190
-  #         - name: Hacking
-  #           time: '9:00'
-  #           duration: '1:00'
-  #           color: red
-  #           room: WIRB 1130
-  #         - name: Hacking
-  #           time: '14:00'
-  #           duration: '2:30'
-  #           color: red
-  #           room: WIRB 4190
-  #         - name: Hacking
-  #           time: '13:00'
-  #           duration: '4:00'
-  #           color: red
-  #           room: WIRB 1160
-  #     - day: 2
-  #       month: 12
-  #       year: 2022
-  #       events:
-  #         - name: Breakfast
-  #           time: '8:00'
-  #           duration: '1:00'
-  #           room: WIRB 4190
-  #         - name: Lunch
-  #           time: '12:00'
-  #           duration: '1:30'
-  #           room: WIRB Atrium
-  #         - name: Hacking
-  #           time: '9:00'
-  #           duration: '2:00'
-  #           color: red
-  #           room: WIRB 4190
-  #         - name: Hacking
-  #           time: '12:00'
-  #           duration: '3:00'
-  #           color: red
-  #           room: WIRB 1120
-  #         - name: Project presentations & Wrap-up
-  #           time: '15:00'
-  #           duration: '1:00'
-  #           color: blue
-  #           room:
-  #             - WIRB 1170
+              # - name: Hacking
+              #   startTime: 8
+              #   endTime: 17
+              #   days:
+              #     - day: 30
+              #       month: 11
+              #       year: 2022
+              #       events:
+              #         - name: Breakfast
+              #           time: '8:00'
+              #           duration: '1:00'
+              #           room: WIRB 4190
+              #         - name: Welcome & Project Pitches
+              #           time: '9:00'
+              #           duration: '1:00'
+              #           color: blue
+              #           room:
+              #             - WIRB 1170
+              #         - name: Lunch
+              #           time: '12:00'
+              #           duration: '1:30'
+              #           room: WIRB 4190
+              #         - name: Hacking
+              #           time: '10:00'
+              #           duration: '2:00'
+              #           color: red
+              #           room: WIRB 4190
+              #         - name: Hacking
+              #           time: '13:30'
+              #           duration: '3:30'
+              #           color: red
+              #           room: WIRB 1160
+              #         - name: Hacking
+              #           time: '13:30'
+              #           duration: '2:00'
+              #           color: red
+              #           room: WIRB 1120
+              #         - name: Hacking
+              #           time: '15:00'
+              #           duration: '1:30'
+              #           color: red
+              #           room: WIRB 1110
+              #     - day: 1
+              #       month: 12
+              #       year: 2022
+              #       events:
+              #         - name: Breakfast
+              #           time: '8:00'
+              #           duration: '1:00'
+              #           room: WIRB 4190
+              #         - name: Lunch
+              #           time: '11:00'
+              #           duration: '1:30'
+              #           room: WIRB 4190
+              #         - name: Hacking
+              #           time: '9:00'
+              #           duration: '1:00'
+              #           color: red
+              #           room: WIRB 1130
+              #         - name: Hacking
+              #           time: '14:00'
+              #           duration: '2:30'
+              #           color: red
+              #           room: WIRB 4190
+              #         - name: Hacking
+              #           time: '13:00'
+              #           duration: '4:00'
+              #           color: red
+              #           room: WIRB 1160
+              #     - day: 2
+              #       month: 12
+              #       year: 2022
+              #       events:
+              #         - name: Breakfast
+              #           time: '8:00'
+              #           duration: '1:00'
+              #           room: WIRB 4190
+              #         - name: Lunch
+              #           time: '12:00'
+              #           duration: '1:30'
+              #           room: WIRB Atrium
+              #         - name: Hacking
+              #           time: '9:00'
+              #           duration: '2:00'
+              #           color: red
+              #           room: WIRB 4190
+              #         - name: Hacking
+              #           time: '12:00'
+              #           duration: '3:00'
+              #           color: red
+              #           room: WIRB 1120
+              #         - name: Project presentations & Wrap-up
+              #           time: '15:00'
+              #           duration: '1:00'
+              #           color: blue
+              #           room:
+              #             - WIRB 1170
 tutorials:
   - id: dmri-fmri
     name: DTI and fMRI
@@ -436,7 +436,7 @@ tutorials:
       workflows. As an example, we'll go over SnakeBIDS, a Western-grown
       workflow management tool for handling BIDS-formatted neuroimaging data.
   - id: indigenous
-    name: "Indigenous and EDI Considerations for Data: Understanding Your Responsibilities as a Neuroscience Trainee"
+    name: 'Indigenous and EDI Considerations for Data: Understanding Your Responsibilities as a Neuroscience Trainee'
     organizer:
       - Keza Motlana
       - Suzanne Witt
@@ -695,3 +695,10 @@ projects:
       organizers:
         - name: Bradley Karat
           github: Bradley-Karat
+    - title: FunctionalSight
+      description:
+        - What happens in the brain stem when we move our eyes? And how can fMRI show us regions that control eye movements in different directions? FunctionalSight will allow researchers to (1) use eye tracking data to get components of eye movements and (2) regress these eye movement components into high-resolution fMRI data to understand how the brain stem controls the eyes. We will dive into high-resolution fMRI data acquired at Western and combine it with in-scanner eye tracking data to build a model that can show us the neural signatures of eye movements. Researchers will be able to use the model for their own eye tracking and fMRI data to better understand the neural basis of visual perception
+        - attention or reading. A guaranteed eye opening experience!
+      organizers:
+        - name: David Mekhaiel
+          github: DavidMekhaiel
