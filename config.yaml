@@ -696,9 +696,18 @@ projects:
         - name: Bradley Karat
           github: Bradley-Karat
     - title: FunctionalSight
-      description:
-        - What happens in the brain stem when we move our eyes? And how can fMRI show us regions that control eye movements in different directions? FunctionalSight will allow researchers to (1) use eye tracking data to get components of eye movements and (2) regress these eye movement components into high-resolution fMRI data to understand how the brain stem controls the eyes. We will dive into high-resolution fMRI data acquired at Western and combine it with in-scanner eye tracking data to build a model that can show us the neural signatures of eye movements. Researchers will be able to use the model for their own eye tracking and fMRI data to better understand the neural basis of visual perception
-        - attention or reading. A guaranteed eye opening experience!
+      description: |
+        What happens in the brain stem when we move our eyes? And how can fMRI
+        show us regions that control eye movements in different directions?
+        FunctionalSight will allow researchers to (1) use eye tracking data to
+        get components of eye movements and (2) regress these eye movement
+        components into high-resolution fMRI data to understand how the brain
+        stem controls the eyes. We will dive into high-resolution fMRI data
+        acquired at Western and combine it with in-scanner eye tracking data to
+        build a model that can show us the neural signatures of eye movements.
+        Researchers will be able to use the model for their own eye tracking and
+        fMRI data to better understand the neural basis of visual perception
+        attention or reading. A guaranteed eye opening experience!
       organizers:
         - name: David Mekhaiel
           github: DavidMekhaiel
