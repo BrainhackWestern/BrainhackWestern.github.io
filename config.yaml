@@ -711,3 +711,13 @@ projects:
       organizers:
         - name: David Mekhaiel
           github: DavidMekhaiel
+    - title: 'BrainLex: Engaging Neuroscience Glossary'
+      description: |
+        Navigating through neuroscience can be challenging as there are lots of
+        complex terms to reference. BrainLex aims to solve this problem with an
+        interactive online glossary suitable for all learners. Users can look up
+        neuroscience terms and receive simple definitions visuals and links to related
+        resources.
+      organizers:
+        - name: Parsa Abadi
+          github: parsaabadi
