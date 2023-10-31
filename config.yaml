@@ -741,3 +741,16 @@ projects:
       organizers:
         - name: Parsa Abadi
           github: parsaabadi
+    - title: Ciftipy
+      description:
+        - CiftiPy is a Python library designed to streamline the handling of complex CIFTI files used in neuroimaging research. CIFTI files represent gray matter as cortical surface vertices and subcortical volumes
+        - which often are difficult and time consuming to access and manipulate. CiftiPy simplifies this process
+        - providing an intuitive
+        - numpy-like interface for loading
+        - manipulating or creating CIFTI files. Built on top of the established Nibabel library
+        - CiftiPy offers researchers a powerful yet user-friendly solution for working with CIFTI files
+        - enhancing the accessibility of advanced neuroimaging tools and workflows.
+      url: https://github.com/pvandyken/ciftipy
+      organizers:
+        - name: Mohamed Yousif
+          github: myousif9
