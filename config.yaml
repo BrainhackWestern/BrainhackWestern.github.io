@@ -174,11 +174,15 @@ schedule:
             duration: '1:30'
             color: '#1f331e'
             priority: 1
+            room:
+              - WIRB 4190
           - tutorial: dmri-fmri
             time: '15:00'
             duration: '1:30'
             color: '#1f331e'
             priority: 1
+            room:
+              - WIRB 4190
       - day: 2
         month: 11
         year: 2023
@@ -192,11 +196,15 @@ schedule:
             duration: '1:30'
             color: '#1f331e'
             priority: 1
+            room:
+              - WIRB 4190
           - tutorial: anat
             time: '9:00'
             duration: '1:30'
             color: '#1f331e'
             priority: 1
+            room:
+              - WIRB 1130
           - tutorial: indigenous
             time: '13:30'
             duration: '1:30'
@@ -207,21 +215,29 @@ schedule:
             duration: '1:30'
             color: '#1f331e'
             priority: 1
+            room:
+              - WIRB 1110
           - tutorial: behaviour
             time: '15:00'
             duration: '1:30'
             color: '#1f331e'
             priority: 1
+            room:
+              - WIRB 1110
           - tutorial: data-viz
             time: '10:30'
             duration: '1:30'
             color: '#1f331e'
             priority: 1
+            room:
+              - WIRB 4190
           - tutorial: eeg
             time: '15:00'
             duration: '1:30'
             color: '#1f331e'
             priority: 1
+            room:
+              - WIRB 1130
           - name: Lunch
             time: '12:00'
             duration: '1:30'
@@ -239,11 +255,15 @@ schedule:
             duration: '1:30'
             color: '#1f331e'
             priority: 1
+            room:
+              - WIRB 4190
           - tutorial: reproducability
             time: '9:00'
             duration: '1:00'
             color: '#1f331e'
             priority: 1
+            room:
+              - WIRB 4190
           - name: Lunch
             time: '12:00'
             duration: '1:30'
