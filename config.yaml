@@ -1,17 +1,17 @@
 # yaml-language-server: $schema=public/schemas/brainhack-config.json
 event:
-  year: 2023
+  year: 2025
   startDate:
-    day: 1
-    month: 11
-    year: 2023
+    day: 19
+    month: 3
+    year: 2025
   endDate:
-    day: 3
-    month: 11
-    year: 2023
+    day: 21
+    month: 3
+    year: 2025
 displaySections:
-  tutorial: true
-  schedule: true
+  tutorial: false
+  schedule: false
   twitterFeed: false
 twitterUrl: https://twitter.com/uwobrainhack
 faq:
@@ -94,15 +94,23 @@ forms:
 registration:
   cost: 5
   url: /forms/registration
-  emailSignupTarget: https://hook.us1.make.com/hrdtv28jy9i55havi84l6db2xc1ieyol
+  # This can be uncommented to allow users to enter email addresses.
+  # It should be a webhook that accepts the email as a simple json document with a
+  # single "email" key.
+  # In the past, I've used a make webhook to punt the email addresses on to a
+  # google docs form.
+  # Unless the dev is really committed however, it's probably not worth enabling this.
+  # Hardly anyone signed up for the email list, and those same individuals were students
+  # who would have got the registration email blast anyway.
+  # emailSignupTarget: https://hook.us1.make.com/hrdtv28jy9i55havi84l6db2xc1ieyol
   openDate:
-    day: 15
-    month: 9
-    year: 2023
+    day: 1
+    month: 2
+    year: 2025
   closeDate:
-    day: 13
-    month: 10
-    year: 2023
+    day: 9
+    month: 3
+    year: 2025
   projectPitchUrl: https://github.com/BrainhackWestern/BrainhackWestern.github.io/issues/new?assignees=&labels=pitch&projects=&template=project-pitch.yml&title=%5BPitch%5D%3A+
 location:
   name: Western Interdisciplinary Research Building
@@ -112,28 +120,8 @@ location:
   url: 'https://www.uwo.ca/bmi/about/wirb.html'
   maps_id: ChIJCVSloavvLogR82_w3v729s0
 organizers:
-  - Suzanne Witt
-  - Tristan Kuehn
-  - Farah Mushtaha
-  - Keza Motlana
-  - Peter Van Dyken
-  - Ezgi Coskun
-  - Jiexi Jessie Wu
-  - Jessica Lammert
-  - Nidhi Shah
-  - Brian Wu
-  - Taylor Breddy
-  - Anisha Regmi
-  - Jeremias Campos
-  - Sarah Al-Saoud
-  - Mohammed Rajab
-  - Sabrina Saladeen
   - Ali Tafakkor
-  - Mansoure Jahanian
-  - Saba Charmi Motlagh
-  - Aditi Nayak
-  - Matthew Modrusan
-  - Joseph Rovetti
+  - Peter Van Dyken
   - Ali Khan
 sponsors:
   - img: '/img/brainscan_logo.png'
