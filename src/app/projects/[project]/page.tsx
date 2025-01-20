@@ -38,11 +38,17 @@ export const generateMetadata = async (): Promise<Metadata> => {
   };
 };
 
-const ProjectPage = async ({
-  params: { project: currentYear }
-}: {
-  params: ValuesType<Awaited<ReturnType<typeof generateStaticParams>>>;
-}) => {
+const ProjectPage = async (
+  props: {
+    params: Promise<ValuesType<Awaited<ReturnType<typeof generateStaticParams>>>>;
+  }
+) => {
+  const params = await props.params;
+
+  const {
+    project: currentYear
+  } = params;
+
   const config = await readConfig();
   const projects = await getProjectInfo();
   const registrationStatus = await getRegistrationStatus();
@@ -83,7 +89,7 @@ const ProjectPage = async ({
   );
 
   return (
-    <Page config={config} registrationButton>
+    (<Page config={config} registrationButton>
       <Article>
         <h1>Projects</h1>
         {registrationStatus === 'unopened' ? registrationUnopened() : null}
@@ -119,7 +125,7 @@ const ProjectPage = async ({
           );
         })}
       </Article>
-    </Page>
+    </Page>)
   );
 };
 

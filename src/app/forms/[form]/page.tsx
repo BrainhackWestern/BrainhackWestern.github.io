@@ -30,11 +30,17 @@ export const generateMetadata = async (): Promise<Metadata> => {
     description: 'Forms for Western Brainhack'
   };
 };
-const GenericForm = async ({
-  params: { form: formId }
-}: {
-  params: { form: string };
-}) => {
+const GenericForm = async (
+  props: {
+    params: Promise<{ form: string }>;
+  }
+) => {
+  const params = await props.params;
+
+  const {
+    form: formId
+  } = params;
+
   const config = await readConfig();
   const forms = await parseFormData(config.forms ?? {});
   const formIndex = findIndex(forms, (form) => formId === form.id);
