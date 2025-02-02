@@ -1,4 +1,4 @@
-declare module 'hypertag' {
+declare module 'hypertag/hypertag' {
   const parse: (
     source: string,
     tags: string | string[],
