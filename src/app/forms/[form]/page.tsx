@@ -1,17 +1,17 @@
 import type { Metadata } from 'next';
-import dynamic from 'next/dynamic';
 import { notFound } from 'next/navigation';
 import { findIndex } from 'lodash';
 import Page from '../../../components/page';
 import Splash from '../../../components/splash';
-import Window from '../../../components/window';
 import { getEventYear, readConfig } from '../../../lib/data';
 import { parseFormData } from '../../../lib/form-parse';
 
-const Form = dynamic(() => import('../../../components/forms/form'), {
-  ssr: false,
-  loading: () => <Window half />
-});
+import FormClient from './form-client.component';
+// const Form = dynamic(() => import('../../../components/forms/form'), {
+//   ssr: false,
+//   loading: () => <Window half />
+// });
+// const Form = import('../../../components/forms/form')
 
 export const generateStaticParams = async () => {
   const config = await readConfig();
@@ -56,7 +56,7 @@ const GenericForm = async (
   return (
     <Page config={config}>
       <Splash>
-        <Form formData={formData} />
+        <FormClient formData={formData} />
       </Splash>
     </Page>
   );

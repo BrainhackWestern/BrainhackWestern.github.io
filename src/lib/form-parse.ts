@@ -3,7 +3,7 @@ import { EmbeddedForm } from '../interfaces/form';
 export declare type ParsedFormData = Awaited<ReturnType<typeof parseFormData>>
 
 export const parseFormData = async (forms: { [key: string]: EmbeddedForm }) => {
-  const parse = (await import('hypertag')).default;
+  const parse = (await import('hypertag/hypertag')).default;
   return Object.keys(forms).map((form) => {
     const data = forms[form];
     const tags = parse(data.embedTag || '', 'script');

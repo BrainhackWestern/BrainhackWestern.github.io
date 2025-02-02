@@ -1,6 +1,5 @@
 import { ScreenSizeProvider } from '../services/screen-size';
 import { ScrollPositionProvider } from '../services/scroll-position';
-import '../styles/fonts'
 import '../styles/globals.scss'
 import '../styles/globals.css'
 import { fira_mono, montserrat, quicksand } from '../styles/fonts';

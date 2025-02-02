@@ -1,5 +1,4 @@
 import { useSearchParams } from 'next/navigation';
-// import CognitoForm from '@tylermenezes/cognitoforms-react';
 import { merge, set } from 'lodash';
 import React, { ReactNode } from 'react';
 import CognitoForm from '@tylermenezes/cognitoforms-react'
@@ -38,6 +37,7 @@ const CognitoPrefilled = ({
       formId={formId}
       accountId={accountId}
       prefill={prefill}
+      // onReady={() => {}}
     />
   );
 };

@@ -79,7 +79,7 @@ const Home = async () => {
                   src={main_logo}
                   width={406}
                   height={186}
-                  alt="Western Brainhack 2022"
+                  alt="Western Brainhack 2025"
                 />
                 <div className={styles.eventDates}>
                   {config.event.eventTimespan}

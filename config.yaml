@@ -29,7 +29,7 @@ faq:
       encouraged to participate.
   - question: Will the event be in-person or virtual?
     answer: |
-      Brainhack Western 2023 will be in-person.
+      Brainhack Western 2025 will be in-person.
   - question: |
       I am interested in attending a specific tutorial in-person. How do I do
       that?
@@ -37,10 +37,6 @@ faq:
       You will have the opportunity to build a schedule during registration by
       specifying which tutorials you wish to attend.  You should be able
       to attend any tutorials you wish.
-  - question: What COVID-19 rules and restrictions will be in place?
-    answer: |
-      Brainhack Western 2023 will be following all Western University campus
-      rules regarding COVID-19.
   - question: What does registration include?
     answer: |
       In-person registration includes access to all in-person tutorials and the
@@ -86,9 +82,9 @@ faq:
 forms:
   registration:
     type: cognito
-    title: Brainhack 2023 Registration
+    title: Brainhack 2025 Registration
     shortTitle: Registration
-    embedTag: <script src="https://www.cognitoforms.com/f/seamless.js" data-key="dKVrRkF3yk6PnoRpFF7XGg" data-form="4"></script>
+    embedTag: <script src="https://www.cognitoforms.com/f/seamless.js" data-key="dKVrRkF3yk6PnoRpFF7XGg" data-form="6"></script>
     prefillMappings:
       id: Calculations.VolunteerCode
 registration:
@@ -105,7 +101,7 @@ registration:
   # emailSignupTarget: https://hook.us1.make.com/hrdtv28jy9i55havi84l6db2xc1ieyol
   openDate:
     day: 1
-    month: 2
+    month: 1
     year: 2025
   closeDate:
     day: 9
@@ -127,6 +123,10 @@ sponsors:
   - img: '/img/brainscan_logo.png'
     name: Brainscan
     url: 'https://brainscan.uwo.ca'
+# Can support multiple, named schedules. Each schedule is a separate list item under
+# schedule:
+# For color, you can use "red", "green", and "blue", or any hex color or javascript
+# colorname
 schedule:
   - name: Tutorials
     startTime: 8

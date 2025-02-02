@@ -14,7 +14,7 @@
     "postinstall": "([ -d .venv ] || python3 -m venv .venv) && .venv/bin/python -m pip install git+https://github.com/pvandyken/overlapping-events.git"
   },
   "dependencies": {
-    "@tylermenezes/cognitoforms-react": "git://github.com/pvandyken/cognitoforms-react.git#v2.1.0.dev2",
+    "@tylermenezes/cognitoforms-react": "file:../cognitoforms-react",
     "@typed-actions/github-script": "^1.0.1",
     "@vanilla-extract/css": "^1.9.1",
     "@vanilla-extract/sprinkles": "^1.5.0",
