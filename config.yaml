@@ -100,8 +100,8 @@ registration:
   # who would have got the registration email blast anyway.
   # emailSignupTarget: https://hook.us1.make.com/hrdtv28jy9i55havi84l6db2xc1ieyol
   openDate:
-    day: 1
-    month: 1
+    day: 3
+    month: 3
     year: 2025
   closeDate:
     day: 9
