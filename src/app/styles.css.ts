@@ -27,7 +27,7 @@ export const backgroundImg = style([
 
 export const eventDates = style({
   textAlign: 'center',
-  background: `linear-gradient(120deg, #320066 20%, #04147b 30%, #024d1e)`,
+  background: `linear-gradient(120deg, #9530a2, #96e6ff, #a2ec9f)`,
   padding: '0.5em 2em',
   margin: '0.5em 0',
   fontSize: textSize.lg,
