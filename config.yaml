@@ -2,11 +2,11 @@
 event:
   year: 2025
   startDate:
-    day: 19
+    day: 26
     month: 3
     year: 2025
   endDate:
-    day: 21
+    day: 28
     month: 3
     year: 2025
 displaySections:
@@ -100,11 +100,11 @@ registration:
   # who would have got the registration email blast anyway.
   # emailSignupTarget: https://hook.us1.make.com/hrdtv28jy9i55havi84l6db2xc1ieyol
   openDate:
-    day: 3
-    month: 3
+    day: 19
+    month: 2
     year: 2025
   closeDate:
-    day: 9
+    day: 19
     month: 3
     year: 2025
   projectPitchUrl: https://github.com/BrainhackWestern/BrainhackWestern.github.io/issues/new?assignees=&labels=pitch&projects=&template=project-pitch.yml&title=%5BPitch%5D%3A+
@@ -118,6 +118,14 @@ location:
 organizers:
   - Ali Tafakkor
   - Peter Van Dyken
+  - Rafeala Platkin
+  - Anthony Cruz
+  - Matthew Suppa Modrusan
+  - Ricardo Alonso Rios Carrillo
+  - Ronak Mohammady
+  - Joud Abdulmajeed El-Shawa
+  - Tallulah Grace Nyland
+  - Ali Ghavampour
   - Ali Khan
 sponsors:
   - img: '/img/brainscan_logo.png'
