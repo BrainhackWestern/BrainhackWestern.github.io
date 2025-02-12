@@ -37,7 +37,7 @@ $button_background: linear-gradient(
 
   span {
     font-size: $size;
-    color: var.$font-light;
+    color: var.$font-dark;
     // vertical-align: middle;
   }
 
@@ -72,6 +72,24 @@ $button_background: linear-gradient(
     background: $button_background;
     z-index: 1;
     border-radius: 14px;
+  }
+
+  // Hover styles
+  &:hover {
+    span {
+      color: var.$font-light; // Text color change on hover
+    }
+
+    &::before {
+      @include mixins.pseudoblock(0%);
+    }
+
+    &::after {
+      @include mixins.pseudoblock(-5px);
+      background: $button_background;
+      z-index: 1;
+      border-radius: 14px;
+    }
   }
 
   &.selected {

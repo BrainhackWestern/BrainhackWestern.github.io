@@ -32,7 +32,7 @@ export const eventDates = style({
   margin: '0.5em 0',
   fontSize: textSize.lg,
   fontWeight: textWeight.bold,
-  color: colors.fontLight
+  color: colors.fontDark
 });
 
 export const titleCol = {
