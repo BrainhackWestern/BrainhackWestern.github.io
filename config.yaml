@@ -11,7 +11,7 @@ event:
     year: 2025
 displaySections:
   tutorial: false
-  schedule: false
+  schedule: true
   twitterFeed: false
 twitterUrl: https://twitter.com/uwobrainhack
 faq:
@@ -127,6 +127,7 @@ organizers:
   - Tallulah Grace Nyland
   - Ali Ghavampour
   - Kiro Samaan
+  - Hanna Maekebay
   - Armin Panjehpour
   - Ali Khan
 sponsors:
@@ -139,290 +140,207 @@ sponsors:
 # colorname
 schedule:
   - name: Tutorials
-    startTime: 8
-    endTime: 17
+    startTime: 9
+    endTime: 18
     days:
-      - day: 1
-        month: 11
-        year: 2023
+      - day: 26
+        month: 3
+        year: 2025
         events:
-          - name: Breakfast
-            time: '8:00'
-            duration: '1:00'
-            room: WIRB 4190
           - name: Welcome & Project Pitches
             time: '9:00'
             duration: '1:00'
             color: blue
             room:
-              - WIRB 1170
+              - TBD
+          - tutorial: prereg
+            time: '10:00'
+            duration: '1:00'
+            color: '#007c62'
+            room:
+              - TBD
+            priority: 2
+          - tutorial: bayesian
+            time: '10:00'
+            duration: '1:00'
+            color: green
+            room:
+              - TBD
+            priority: 1
+          - tutorial: eeg-bids
+            time: '11:00'
+            duration: '1:00'
+            color: green
+            room:
+              - TBD
           - name: Lunch
             time: '12:00'
-            duration: '1:30'
-            room: WIRB 4190
-          - tutorial: git
-            time: '10:30'
-            duration: '1:30'
+            duration: '1:00'
+            room: WIRB 4190 (Lunchroom)
+          - tutorial: hippunfold
+            time: '13:00'
+            duration: '1:00'
             color: '#1f331e'
             priority: 1
             room:
-              - WIRB 1170
-          - tutorial: mri
-            time: '13:30'
-            duration: '1:30'
+              - TBD
+          - tutorial: monai
+            time: '14:00'
+            duration: '1:00'
             color: '#1f331e'
             priority: 1
             room:
-              - WIRB 4190
-          - tutorial: dmri-fmri
+              - TBD
+          - tutorial: tms
             time: '15:00'
-            duration: '1:30'
+            duration: '1:00'
             color: '#1f331e'
             priority: 1
             room:
-              - WIRB 4190
-      - day: 2
-        month: 11
-        year: 2023
+              - TBD
+          - tutorial: mystmd
+            time: '15:00'
+            duration: '1:00'
+            color: '#1f331e'
+            priority: 1
+            room:
+              - TBD
+      - day: 27
+        month: 3
+        year: 2025
         events:
           - name: Breakfast
-            time: '8:00'
-            duration: '1:00'
-            room: WIRB 4190
-          - tutorial: data-management
             time: '9:00'
-            duration: '1:30'
-            color: '#1f331e'
+            duration: '1:00'
+            room: WIRB 4190 (Lunchroom)
+          - tutorial: dataman
+            time: '10:00'
+            duration: '1:00'
+            color: '#007c62'
             priority: 1
-            room:
-              - WIRB 4190
+            room: TBD
           - tutorial: anat
-            time: '9:00'
-            duration: '1:30'
+            time: '11:00'
+            duration: '1:00'
             color: '#1f331e'
             priority: 1
-            room:
-              - WIRB 1130
-          - tutorial: indigenous
-            time: '13:30'
-            duration: '1:30'
-            color: '#1f331e'
-            priority: 1
-          - tutorial: data-mining
-            time: '10:30'
-            duration: '1:30'
-            color: '#1f331e'
-            priority: 1
-            room:
-              - WIRB 1110
-          - tutorial: behaviour
-            time: '15:00'
-            duration: '1:30'
-            color: '#1f331e'
-            priority: 1
-            room:
-              - WIRB 1110
-          - tutorial: data-viz
-            time: '10:30'
-            duration: '1:30'
-            color: '#1f331e'
-            priority: 1
-            room:
-              - WIRB 4190
-          - tutorial: eeg
-            time: '15:00'
-            duration: '1:30'
-            color: '#1f331e'
-            priority: 1
-            room:
-              - WIRB 1130
+            room: TBD
           - name: Lunch
             time: '12:00'
-            duration: '1:30'
-            room: WIRB 4190
-      - day: 3
-        month: 11
-        year: 2023
+            duration: '1:00'
+            room: WIRB 4190 (Lunchroom)
+          - tutorial: fnirs
+            time: '13:00'
+            duration: '1:00'
+            color: '#1f331e'
+            priority: 1
+            room: TBD
+          - tutorial: dti-mri
+            time: '14:00'
+            duration: '1:00'
+            color: '#1f331e'
+            priority: 1
+            room: TBD
+          - tutorial: 3dprint
+            time: '15:00'
+            duration: '1:00'
+            color: '#1f331e'
+            priority: 1
+            room: TBD
+      - day: 28
+        month: 3
+        year: 2025
         events:
           - name: Breakfast
-            time: '8:00'
-            duration: '1:00'
-            room: WIRB 4190
-          - tutorial: impact-statements
-            time: '10:30'
-            duration: '1:30'
-            color: '#1f331e'
-            priority: 1
-            room:
-              - WIRB 4190
-          - tutorial: reproducability
             time: '9:00'
             duration: '1:00'
-            color: '#1f331e'
+            room: WIRB 4190 (Lunchroom)
+          - tutorial: git
+            time: '10:00'
+            duration: '1:00'
+            color: '#007c62'
             priority: 1
-            room:
-              - WIRB 4190
+            room: TBD
+          - tutorial: reprod
+            time: '11:00'
+            duration: '1:00'
+            color: '#007c62'
+            priority: 1
+            room: TBD
           - name: Lunch
             time: '12:00'
-            duration: '1:30'
-            room: WIRB 4190
-          - name: Project presentations & Wrap-up
+            duration: '1:00'
+            room: WIRB 4190 (Lunchroom)
+          - tutorial: writing
+            time: '13:00'
+            duration: '1:00'
+            color: '#1f331e'
+            priority: 1
+            room: TBD
+          - name: Project presentations
             time: '15:00'
             duration: '1:00'
             color: blue
-            room:
-              - WIRB 1170
-              # - name: Hacking
-              #   startTime: 8
-              #   endTime: 17
-              #   days:
-              #     - day: 30
-              #       month: 11
-              #       year: 2022
-              #       events:
-              #         - name: Breakfast
-              #           time: '8:00'
-              #           duration: '1:00'
-              #           room: WIRB 4190
-              #         - name: Welcome & Project Pitches
-              #           time: '9:00'
-              #           duration: '1:00'
-              #           color: blue
-              #           room:
-              #             - WIRB 1170
-              #         - name: Lunch
-              #           time: '12:00'
-              #           duration: '1:30'
-              #           room: WIRB 4190
-              #         - name: Hacking
-              #           time: '10:00'
-              #           duration: '2:00'
-              #           color: red
-              #           room: WIRB 4190
-              #         - name: Hacking
-              #           time: '13:30'
-              #           duration: '3:30'
-              #           color: red
-              #           room: WIRB 1160
-              #         - name: Hacking
-              #           time: '13:30'
-              #           duration: '2:00'
-              #           color: red
-              #           room: WIRB 1120
-              #         - name: Hacking
-              #           time: '15:00'
-              #           duration: '1:30'
-              #           color: red
-              #           room: WIRB 1110
-              #     - day: 1
-              #       month: 12
-              #       year: 2022
-              #       events:
-              #         - name: Breakfast
-              #           time: '8:00'
-              #           duration: '1:00'
-              #           room: WIRB 4190
-              #         - name: Lunch
-              #           time: '11:00'
-              #           duration: '1:30'
-              #           room: WIRB 4190
-              #         - name: Hacking
-              #           time: '9:00'
-              #           duration: '1:00'
-              #           color: red
-              #           room: WIRB 1130
-              #         - name: Hacking
-              #           time: '14:00'
-              #           duration: '2:30'
-              #           color: red
-              #           room: WIRB 4190
-              #         - name: Hacking
-              #           time: '13:00'
-              #           duration: '4:00'
-              #           color: red
-              #           room: WIRB 1160
-              #     - day: 2
-              #       month: 12
-              #       year: 2022
-              #       events:
-              #         - name: Breakfast
-              #           time: '8:00'
-              #           duration: '1:00'
-              #           room: WIRB 4190
-              #         - name: Lunch
-              #           time: '12:00'
-              #           duration: '1:30'
-              #           room: WIRB Atrium
-              #         - name: Hacking
-              #           time: '9:00'
-              #           duration: '2:00'
-              #           color: red
-              #           room: WIRB 4190
-              #         - name: Hacking
-              #           time: '12:00'
-              #           duration: '3:00'
-              #           color: red
-              #           room: WIRB 1120
-              #         - name: Project presentations & Wrap-up
-              #           time: '15:00'
-              #           duration: '1:00'
-              #           color: blue
-              #           room:
-              #             - WIRB 1170
+            room: TBD
+          - name: Grad Club Networking Event
+            time: '16:00'
+            duration: '1:30'
+            color: blue
+            room: Grad Club
 tutorials:
-  - id: dmri-fmri
-    name: DTI and fMRI
+  - id: dti-mri
+    name: Introduction to DTI and MRI
     organizer:
-      - Farah Mushtaha
-      - Suzanne Witt
+      - TBD
     image: /img/dfmri.png
     description: |
-      This joint tutorial will cover both the basics of diffusion
-      MRI and functional MRI. For diffusion MRI, the basics of processing data
-      from MRI acquisitions to computing diffusion tensors and tracking the
-      structural connectome will be covered. For functional MRI, the basics of
-      what aspect of brain function fMRI measures to considerations for
-      preprocessing fMRI data will be presented.
-  - id: impact-statements
-    name: Writing Research Impact Statements
-    organizer: Suzanne Witt
-    description: |
-      This micro-workshop (based on MIT's impact course) will cover what an
-      impact statement is in the context of research. Most of the workshop will
-      be devoted to attendees working in small groups drafting impact statements
-      for their own research suitable for the proverbial elevator pitch or
-      meet-and-greet scenarios.
-  - id: data-mining
-    name: Data Mining
-    organizer: Suzanne Witt
+    #   This joint tutorial will cover both the basics of diffusion
+    #   MRI and functional MRI. For diffusion MRI, the basics of processing data
+    #   from MRI acquisitions to computing diffusion tensors and tracking the
+    #   structural connectome will be covered. For functional MRI, the basics of
+    #   what aspect of brain function fMRI measures to considerations for
+    #   preprocessing fMRI data will be presented.
+  - id: eeg-bids
+    name: Introduction to EEG and BIDS
+    organizer: TBA
+    description: TBD
+  - id: fnirs
+    name: Introduction to fNIRS
+    organizer: TBA
     image: /img/review.png
     description: |
-      Meta-analyses of neuroimaging data are a good way to get started with
-      understanding neuroimaging and task-based neural processing, as well as,
-      answer research questions that may not be easily addressed with by
-      traditional data collection. This tutorial will cover the various aspects
-      of designing a meta-analysis and some of the more popular methods,
-      including both topic- and contrast-based meta-analyses and coordinate- and
-      image-based meta-analyses. Some hands-on work with the python-based tool
-      NiMARE with a sample dataset will be included to help attendees appreciate
-      some of the nuances between the various types of meta-analyses. A new,
-      web-driven all-in-one meta-analysis toolbox will also be introduced.
+      TBA
+  - id: anat
+    name: 'Introduction to Neuroanatomy for Researchers'
+    organizer: TBA
+    image: '/img/afids.png'
+    description: TBA
+  - id: tms
+    name: 'Introduction to TMS'
+    organizer: TBA
+    image: '/img/tms.png'
+    description: TBA
+  - id: prereg
+    name: 'Open Science: Pre-registration'
+    image: /img/preregistration.png
+    organizer:
+      - Christine Moreau 
+    description: TBA
   - id: git
-    name: Research Code Management
+    name: 'Open Science: Research Code Management (Git)'
     image: /img/git-logo.png
     organizer:
-      - Suzanne Witt
-      - Tristan Kuehn
+      - Ali Tafakkor
     description: |
       This tutorial will cover best practices for managing research code with
       the ultimate goal of sharing it. Aspects of Git and GitHub, including
       version control, branching, collaborations, etc. will be covered.
       Additionally, new guidelines to help researchers assess how open and
       sharable their code is will be presented.
-  - id: data-management
-    name: Research Data Management
+  - id: dataman
+    name: 'Open Science: Research Data Management (DataLad)'
     image: /img/datalad.png
-    organizer: Tristan Kuehn
+    organizer: Ali Tafakkor
     description: |
       Handling data can be a challenge, and it's best to think about it before
       you need to organize it on a deadline. In this tutorial you'll learn best
@@ -430,21 +348,10 @@ tutorials:
       We'll go over writing a Data Management Plan, formatting your data with
       BIDS and other open standards, and version controlling your data with
       DataLad, and uploading to a public repository.
-  - id: data-viz
-    name: Data Visualization
-    image: /img/matplotlib_small.png
-    organizer: Tristan Kuehn
-    description: |
-      A great data visualization can effectively demonstrate the arguments
-      you're making in a paper. In this tutorial you'll learn about designing
-      informative graphics, and how to use one of a selection of tools to
-      combine your design and data into a paper-ready graphic. We'll go over
-      tools in Python, but most of the concepts should be transferable to your
-      toolset of choice.
-  - id: reproducability
-    name: Reproducible Data Analysis
+  - id: reprod
+    name: 'Open Science: Reproducible Data Analysis (Snakemake)'
     image: /img/snakemake_reproducable.png
-    organizer: Tristan Kuehn
+    organizer: Ali Khan
     description: |
       Using a workflow management tool to run your research analyses can make it
       much easier to remember what you've done with your data, make small
@@ -453,75 +360,59 @@ tutorials:
       why you might want to use one, and how to write your analyses as
       workflows. As an example, we'll go over SnakeBIDS, a Western-grown
       workflow management tool for handling BIDS-formatted neuroimaging data.
-  - id: indigenous
-    name: 'Indigenous and EDI Considerations for Data: Understanding Your Responsibilities as a Neuroscience Trainee'
+  # - id: mri
+  #   name: A Brief Introduction to MRI
+  #   image: /img/t1w.jpg
+  #   organizer: Brad Karat
+  #   description: |
+  #     This tutorial will provide a basic introduction to MRI. We will cover
+  #     where the MRI signal is originating from, what are the different
+  #     contrasts, basic pulse sequences for acquiring an image, how to
+  #     reconstruct and visualize an image from DICOM to NIFTI, and unique MRI
+  #     contrasts such as diffusion or functional imaging.
+  - id: writing
+    name: Scientific Writing
     organizer:
-      - Keza Motlana
-      - Suzanne Witt
-    panelists:
-      - Katie Big Canoe
-      - Alex Levine
-    description: |
-      The rules, guidelines, and obligations when it comes to conducting
-      Indigenous Research are different in Canada than for non-Indigenous
-      populations. Come learn about why these differences exist and how they
-      relate to the open science and data sharing expectations that exist for
-      much of neuroscience and neuroimaging research.
-  - id: mri
-    name: A Brief Introduction to MRI
-    image: /img/t1w.jpg
-    organizer: Brad Karat
-    description: |
-      This tutorial will provide a basic introduction to MRI. We will cover
-      where the MRI signal is originating from, what are the different
-      contrasts, basic pulse sequences for acquiring an image, how to
-      reconstruct and visualize an image from DICOM to NIFTI, and unique MRI
-      contrasts such as diffusion or functional imaging.
-  - id: behaviour
-    name: Modern Realities of Behavioural Research
+      - TBA
+    image: /img/writing.png
+    description: TBA
+  - id: hippunfold
+    name: HippUnfold Tutorial
     organizer:
-      - Priya Kalra
-      - Anthony Cruz
-    image: /img/abstract-task.png
-    description: |
-      This tutorial will cover the basics of behavioral data collection and
-      analysis in neuroscience-adjacent fields such as cognitive psychology. The
-      session will provide a broad overview of the topic, ranging from basics of
-      behavioral experiment design, stimulus presentation, and data collection
-      and analysis, to emerging data analysis techniques and online data
-      collection. Throughout, the software options available for each step will
-      be briefly discussed. No previous knowledge or experience is expected.
-  - id: anat
-    name: 'Neuroanatomy for Researchers: a Focus on Surgical Targets'
-    organizer: Alaa Taha
-    image: '/img/afids.png'
-    description: |
-      In this tutorial, we will begin with a basic introduction to neuroanatomy
-      then briefly discuss the hippocampus, basal ganglia structures, midbrain,
-      and relatively uncharted zona incerta. Taking on a clinical lens, we will
-      explore how these structures could be crucial targets during functional
-      neurosurgical procedures.
+      - TBA
+    image: /img/hippunfold.png
+    description: TBA
+  - id: monai
+    name: MONAI Tutorial
+    organizer:
+      - TBA
+    image: /img/monai.png
+    description: TBA
+  - id: 3dprint
+    name: 3D Printing Tutorial
+    organizer:
+      - Mehrdad Kashefi
+    image: /img/3dprint.png
+    description: TBA
+  - id: mystmd
+    name: MystMD Tutorial
+    organizer:
+      - Ricardo Alonso Rios Carrillo
+    image: /img/mystmd.png
+    description: TBA
+  - id: bayesian
+    name: Baysian Methods for Hackers
+    organizer:
+      - Ali Tafakkor
+    image: /img/bayesian.png
+    description: TBA
+  - id: opendata
+    name: Open Data Analysis
+    organizer:
+      - Jessica Lammert
+    image: /img/opendata.png
+    description: TBA
 
-      We end our tutorial with 3 mini-software demo stations:
-
-      1. Learning neuroanatomy using an open and validated anatomical fiducial
-         framework ([AFIDs](https://validator.afids.io/))
-      2. Reviewing introduced anatomy in the context of a surgical case using a
-         virtual reality headset
-      3. Applying our functional neuroanatomy knowledge to plan a surgical case
-         using a fully open-source software
-         ([trajectoryGuide](https://trajectoryguide.greydongilmore.com/)).
-  - id: eeg
-    name: Introduction to EEG
-    organizer: Mauricio Cespedes Tenorio
-    image: /img/eeg.png
-    description: |
-      This tutorial will explore the essentials of EEG, including its origin,
-      conventions and related modalities. From there, we'll step into the world
-      of EEG analysis, from time domain to time-frequency analysis, all while
-      getting hands-on sessions with Python. Finally, the tutorial will cover a
-      bit on the important role of preprocessing in EEG. Discover the
-      fascinating world of EEG with Python.
 projects:
   2021:
     - title: BIDS - Creating the events.tsv file
