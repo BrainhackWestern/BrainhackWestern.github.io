@@ -10,7 +10,7 @@ event:
     month: 3
     year: 2025
 displaySections:
-  tutorial: false
+  tutorial: true
   schedule: true
   twitterFeed: false
 twitterUrl: https://twitter.com/uwobrainhack
@@ -152,27 +152,27 @@ schedule:
             duration: '1:00'
             color: blue
             room:
-              - TBD
+              - WIRB 4190 (Lunchroom)
           - tutorial: prereg
             time: '10:00'
             duration: '1:00'
             color: '#007c62'
             room:
-              - TBD
-            priority: 2
-          - tutorial: bayesian
-            time: '10:00'
-            duration: '1:00'
-            color: green
-            room:
-              - TBD
+              - WIRB 4190 (Lunchroom)
             priority: 1
+          # - tutorial: bayesian
+          #   time: '10:00'
+          #   duration: '1:00'
+          #   color: green
+          #   room:
+          #     - TBD
+          #   priority: 1
           - tutorial: eeg-bids
             time: '11:00'
             duration: '1:00'
             color: green
             room:
-              - TBD
+              - WIRB 4190 (Lunchroom)
           - name: Lunch
             time: '12:00'
             duration: '1:00'
@@ -183,28 +183,20 @@ schedule:
             color: '#1f331e'
             priority: 1
             room:
-              - TBD
-          - tutorial: monai
+              - WIRB 4190 (Lunchroom)
+          - tutorial: 3dprint
             time: '14:00'
             duration: '1:00'
             color: '#1f331e'
             priority: 1
-            room:
-              - TBD
+            room: 
+              - WIRB 4190 (Lunchroom)
           - tutorial: tms
             time: '15:00'
             duration: '1:00'
             color: '#1f331e'
             priority: 1
-            room:
-              - TBD
-          - tutorial: mystmd
-            time: '15:00'
-            duration: '1:00'
-            color: '#1f331e'
-            priority: 1
-            room:
-              - TBD
+            room: WIRB 4190 (Lunchroom)
       - day: 27
         month: 3
         year: 2025
@@ -213,40 +205,53 @@ schedule:
             time: '9:00'
             duration: '1:00'
             room: WIRB 4190 (Lunchroom)
-          - tutorial: dataman
+          - name: Hack Time
+            time: '10:00'
+            duration: '2:00'
+            room: WIRB 4190 (Lunchroom)
+            color: '#222233'
+            priority: 1
+          - tutorial: writing
             time: '10:00'
             duration: '1:00'
-            color: '#007c62'
-            priority: 1
-            room: TBD
-          - tutorial: anat
+            color: '#1f331e'
+            priority: 2
+            room: WIRB 3000
+          - tutorial: reprod
             time: '11:00'
             duration: '1:00'
-            color: '#1f331e'
-            priority: 1
-            room: TBD
+            color: '#007c62'
+            priority: 2
+            room: WIRB 3000
           - name: Lunch
             time: '12:00'
             duration: '1:00'
             room: WIRB 4190 (Lunchroom)
-          - tutorial: fnirs
+          - name: Hack Time
+            time: '13:00'
+            duration: '3:00'
+            room: WIRB 4190 (Lunchroom)
+            color: '#222233'
+            priority: 1
+          - tutorial: mystmd
             time: '13:00'
             duration: '1:00'
             color: '#1f331e'
-            priority: 1
-            room: TBD
-          - tutorial: dti-mri
+            priority: 2
+            room: WIRB 4190 (Lunchroom)
+          - tutorial: fnirs
             time: '14:00'
             duration: '1:00'
             color: '#1f331e'
-            priority: 1
-            room: TBD
-          - tutorial: 3dprint
+            priority: 2
+            room: WIRB 3000
+          - tutorial: monai
             time: '15:00'
             duration: '1:00'
             color: '#1f331e'
-            priority: 1
-            room: TBD
+            priority: 2
+            room: WIRB 3000
+
       - day: 28
         month: 3
         year: 2025
@@ -255,33 +260,57 @@ schedule:
             time: '9:00'
             duration: '1:00'
             room: WIRB 4190 (Lunchroom)
+          - name: Hack Time
+            time: '10:00'
+            duration: '2:00'
+            room: WIRB 4190 (Lunchroom)
+            color: '#222233'
+            priority: 1
           - tutorial: git
             time: '10:00'
             duration: '1:00'
             color: '#007c62'
-            priority: 1
-            room: TBD
-          - tutorial: reprod
+            priority: 2
+            room: WIRB 3000
+          - tutorial: datacol
             time: '11:00'
             duration: '1:00'
-            color: '#007c62'
-            priority: 1
-            room: TBD
+            color: '#1f331e'
+            priority: 2
+            room: WIRB 3000
           - name: Lunch
             time: '12:00'
             duration: '1:00'
             room: WIRB 4190 (Lunchroom)
-          - tutorial: writing
+          - name: Hack Time
             time: '13:00'
             duration: '1:00'
-            color: '#1f331e'
+            room: WIRB 4190 (Lunchroom)
+            color: '#222233'
             priority: 1
-            room: TBD
+          - tutorial: dataman
+            time: '13:00'
+            duration: '1:00'
+            color: '#007c62'
+            priority: 2
+            room: WIRB 3000
+          - tutorial: dti-mri
+            time: '14:00'
+            duration: '1:00'
+            color: '#1f331e'
+            priority: 2
+            room: WIRB 3000
+          - tutorial: anat
+            time: '14:00'
+            duration: '1:00'
+            color: '#1f331e'
+            priority: 3
+            room: WIRB 3000
           - name: Project presentations
             time: '15:00'
             duration: '1:00'
             color: blue
-            room: TBD
+            room: WIRB 3000
           - name: Grad Club Networking Event
             time: '16:00'
             duration: '1:30'
@@ -291,41 +320,48 @@ tutorials:
   - id: dti-mri
     name: Introduction to DTI and MRI
     organizer:
-      - TBD
+      - Bradley Karat
     image: /img/dfmri.png
     description: |
-    #   This joint tutorial will cover both the basics of diffusion
-    #   MRI and functional MRI. For diffusion MRI, the basics of processing data
-    #   from MRI acquisitions to computing diffusion tensors and tracking the
-    #   structural connectome will be covered. For functional MRI, the basics of
-    #   what aspect of brain function fMRI measures to considerations for
-    #   preprocessing fMRI data will be presented.
+      This joint tutorial will cover both the basics of diffusion
+      MRI and functional MRI. For diffusion MRI, the basics of processing data
+      from MRI acquisitions to computing diffusion tensors and tracking the
+      structural connectome will be covered. For functional MRI, the basics of
+      what aspect of brain function fMRI measures to considerations for
+      preprocessing fMRI data will be presented.
   - id: eeg-bids
-    name: Introduction to EEG and BIDS
-    organizer: TBA
-    description: TBD
+    name: Using EEG-BIDS for data management of large EEG datasets
+    organizer: Marc Joanisse
+    image: /img/eegbids.png
+    description: | 
+      EEG-BIDS is a relatively new standard for the orderly storage of raw EEG/iEEG/MEG datasets and derivatives.
+      I will demonstrate one possible workflow in which I use the EEGLAB toolbox to convert raw EEG data into BIDS format,
+      and for integrating existing EEG-BIDS datasets into your analysis workflow.
   - id: fnirs
     name: Introduction to fNIRS
-    organizer: TBA
-    image: /img/review.png
+    organizer: Matthew Kolisnyk
+    image: /img/fnirs2.png
     description: |
-      TBA
+      Participants will learn the basics of functional near-infrared spectroscopy (fNIRS). This includes a demo of the system, the underlying physics and experimental design, as well as some exciting current applications of fNIRS. Participants will also learn about handling and preprocessing fNIRS data -- including some hands on coding!
   - id: anat
     name: 'Introduction to Neuroanatomy for Researchers'
-    organizer: TBA
+    organizer:
+      - Alaa Taha
+      - Violet Liu
     image: '/img/afids.png'
     description: TBA
   - id: tms
     name: 'Introduction to TMS'
-    organizer: TBA
-    image: '/img/tms.png'
-    description: TBA
+    organizer: 
+      - Phivos Phylactou
+    image: '/img/tms2.png'
+    description: Transcranial Magnetic Stimulation is a safe, non-invasive, tool that enables us to modulate the brain’s regular activity with high spatial and temporal resolution. Forty years since its introduction, TMS has been utilized in a variety of ways; from the labs all the way to the clinics. In this workshop, we will explore how TMS can be employed to causally study the brain’s neural architecture, how it can be used to measure brain activity, and how it can help the maladaptive brain.
   - id: prereg
     name: 'Open Science: Pre-registration'
-    image: /img/preregistration.png
+    image: /img/prereg.png
     organizer:
       - Christine Moreau 
-    description: TBA
+    description: In this hands-on workshop, participants will learn the fundamentals of preregistration and how it enhances research transparency and rigor using the Open Science Framework (OSF). Attendees are encouraged to bring their research protocols as there will be the opportunity to receive peer feedback to refine their preregistrations. The session will also cover handling protocol changes post-publication, emphasizing the flexibility of preregistration.
   - id: git
     name: 'Open Science: Research Code Management (Git)'
     image: /img/git-logo.png
@@ -335,8 +371,6 @@ tutorials:
       This tutorial will cover best practices for managing research code with
       the ultimate goal of sharing it. Aspects of Git and GitHub, including
       version control, branching, collaborations, etc. will be covered.
-      Additionally, new guidelines to help researchers assess how open and
-      sharable their code is will be presented.
   - id: dataman
     name: 'Open Science: Research Data Management (DataLad)'
     image: /img/datalad.png
@@ -373,45 +407,44 @@ tutorials:
   - id: writing
     name: Scientific Writing
     organizer:
-      - TBA
+      - Jessica Grahn
     image: /img/writing.png
     description: TBA
   - id: hippunfold
     name: HippUnfold Tutorial
     organizer:
-      - TBA
+      - Ali Khan
     image: /img/hippunfold.png
     description: TBA
   - id: monai
     name: MONAI Tutorial
     organizer:
-      - TBA
+      - Mahmoud Salman
     image: /img/monai.png
-    description: TBA
+    description: |
+      A practical, no-theory guide to training deep learning models on neuroimaging data with zero experience. This tutorial covers MONAI, the leading AI framework for medical imaging, simplifying tasks like segmentation and classification. With pre-trained models, automated pipelines, and MONAI Zoo, you’ll apply deep learning to neuroscience research effortlessly—Python experience is required.
   - id: 3dprint
     name: 3D Printing Tutorial
     organizer:
       - Mehrdad Kashefi
-    image: /img/3dprint.png
-    description: TBA
+      - Bassel Arafat
+    image: /img/3dprint2.png
+    description: | 
+      Many experiments require rapid prototyping of experimental setups. While the traditional method of taping random parts together might work in a pinch, 3D printing offers a faster, more precise, and more robust solution. In this workshop, we’ll provide a brief overview of different 3D printing technologies and materials, followed by a hands-on tutorial on free, online 3D design software. As a fun bonus, we’ll show you how to turn your own MRI structural data into a 3D-printable model.
   - id: mystmd
     name: MystMD Tutorial
     organizer:
       - Ricardo Alonso Rios Carrillo
     image: /img/mystmd.png
-    description: TBA
-  - id: bayesian
-    name: Baysian Methods for Hackers
+    description: |
+      This tutorial will introduce MystMD (https://mystmd.org/). MyST extends Markdown for technical, scientific communication and publication. MyST is an ecosystem of open-source, community-driven tools designed to revolutionize scientific communication.  
+      The tutorial will cover installation and live code-writing of a short scientific article as a starting example. 
+  - id: datacol
+    name: 'Data Collection: Best Practices'
     organizer:
-      - Ali Tafakkor
-    image: /img/bayesian.png
-    description: TBA
-  - id: opendata
-    name: Open Data Analysis
-    organizer:
-      - Jessica Lammert
-    image: /img/opendata.png
-    description: TBA
+      - Sarah Hollywood
+    image: /img/datacol.png
+    description: This workshop centers around the best practices in the approach and conduct of data collection. This will include ethical considerations, how to effectively recruit participants and reduce attrition, improve your communication skills, and how these practices can make you a better researcher.
 
 projects:
   2021:
