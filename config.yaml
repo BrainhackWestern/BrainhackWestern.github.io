@@ -409,7 +409,10 @@ tutorials:
     organizer:
       - Jessica Grahn
     image: /img/writing.png
-    description: TBA
+    description: | 
+      Want your scientific papers to be not just clear but also engaging? 
+      Join our scientific writing style crash course at the hackathon! 
+      Learn how to refine your tone, improve flow, and make your writing more compelling — without losing precision.
   - id: hippunfold
     name: HippUnfold Tutorial
     organizer:
