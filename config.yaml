@@ -367,6 +367,7 @@ tutorials:
     image: /img/git-logo.png
     organizer:
       - Ali Tafakkor
+      - Christine Moreau
     description: |
       This tutorial will cover best practices for managing research code with
       the ultimate goal of sharing it. Aspects of Git and GitHub, including
@@ -409,13 +410,24 @@ tutorials:
     organizer:
       - Jessica Grahn
     image: /img/writing.png
-    description: TBA
+    description: | 
+      Want your scientific papers to be not just clear but also engaging? 
+      Join our scientific writing style crash course at the hackathon! 
+      Learn how to refine your tone, improve flow, and make your writing more compelling — without losing precision.
   - id: hippunfold
     name: HippUnfold Tutorial
-    organizer:
-      - Ali Khan
     image: /img/hippunfold.png
-    description: TBA
+    organizer: 
+    - Ali Khan
+    - Jordan DeKraker
+    - Dhananjhay Bansal
+    - Mackenzie Snyder
+    description: |
+      HippUnfold is a toolbox for automatically modeling the topological folding structure of the human hippocampus.
+      This session will introduce its key features, including running HippUnfold, exploring volumetric and surface-based outputs,
+      and integrating results with tools like ITK-SNAP and Connectome Workbench.
+      We will also discuss applications to structural, fMRI, and dMRI data. No prior experience with HippUnfold is required.
+      Links: https://github.com/khanlab/hippunfold
   - id: monai
     name: MONAI Tutorial
     organizer:
