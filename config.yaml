@@ -217,10 +217,10 @@ schedule:
             color: '#1f331e'
             priority: 2
             room: WIRB 3000
-          - tutorial: reprod
+          - tutorial: fnirs
             time: '11:00'
             duration: '1:00'
-            color: '#007c62'
+            color: '#1f331e'
             priority: 2
             room: WIRB 3000
           - name: Lunch
@@ -228,8 +228,8 @@ schedule:
             duration: '1:00'
             room: WIRB 4190 (Lunchroom)
           - name: Hack Time
-            time: '13:00'
-            duration: '3:00'
+            time: '14:00'
+            duration: '2:00'
             room: WIRB 4190 (Lunchroom)
             color: '#222233'
             priority: 1
@@ -239,10 +239,10 @@ schedule:
             color: '#1f331e'
             priority: 2
             room: WIRB 4190 (Lunchroom)
-          - tutorial: fnirs
+          - tutorial: reprod
             time: '14:00'
             duration: '1:00'
-            color: '#1f331e'
+            color: '#007c62'
             priority: 2
             room: WIRB 3000
           - tutorial: monai
@@ -339,7 +339,9 @@ tutorials:
       and for integrating existing EEG-BIDS datasets into your analysis workflow.
   - id: fnirs
     name: Introduction to fNIRS
-    organizer: Matthew Kolisnyk
+    organizer: 
+      - Matthew Kolisnyk
+      - Garima Gupta
     image: /img/fnirs2.png
     description: |
       Participants will learn the basics of functional near-infrared spectroscopy (fNIRS). This includes a demo of the system, the underlying physics and experimental design, as well as some exciting current applications of fNIRS. Participants will also learn about handling and preprocessing fNIRS data -- including some hands on coding!
