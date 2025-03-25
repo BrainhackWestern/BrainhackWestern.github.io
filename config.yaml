@@ -288,21 +288,21 @@ schedule:
             room: WIRB 4190 (Lunchroom)
             color: '#222233'
             priority: 1
-          - tutorial: dataman
-            time: '13:00'
-            duration: '1:00'
-            color: '#007c62'
-            priority: 2
-            room: WIRB 3000
+          # - tutorial: dataman
+          #   time: '13:00'
+          #   duration: '1:00'
+          #   color: '#007c62'
+          #   priority: 2
+          #   room: WIRB 3000
           - tutorial: dti-mri
             time: '14:00'
             duration: '1:00'
             color: '#1f331e'
             priority: 2
-            room: WIRB 3000
+            room: WIRB 4190 (Lunchroom)
           - tutorial: anat
-            time: '14:00'
-            duration: '1:00'
+            time: '13:00'
+            duration: '2:00'
             color: '#1f331e'
             priority: 3
             room: WIRB 3000
@@ -351,7 +351,22 @@ tutorials:
       - Alaa Taha
       - Violet Liu
     image: '/img/afids.png'
-    description: TBA
+    description: |
+      In this tutorial, we will begin with a basic introduction to neuroanatomy
+      then briefly discuss the hippocampus, basal ganglia structures, midbrain,
+      and relatively uncharted zona incerta. Taking on a clinical lens, we will
+      explore how these structures could be crucial targets during functional
+      neurosurgical procedures.
+
+      We end our tutorial with 3 mini-software demo stations:
+
+      1. Learning neuroanatomy using an open and validated anatomical fiducial
+         framework ([AFIDs](https://validator.afids.io/))
+      2. Reviewing introduced anatomy in the context of a surgical case using a
+         virtual reality headset
+      3. Applying our functional neuroanatomy knowledge to plan a surgical case
+         using a fully open-source software
+         ([trajectoryGuide](https://trajectoryguide.greydongilmore.com/)).
   - id: tms
     name: 'Introduction to TMS'
     organizer: 
@@ -374,17 +389,17 @@ tutorials:
       This tutorial will cover best practices for managing research code with
       the ultimate goal of sharing it. Aspects of Git and GitHub, including
       version control, branching, collaborations, etc. will be covered.
-  - id: dataman
-    name: 'Open Science: Research Data Management (DataLad)'
-    image: /img/datalad.png
-    organizer: Ali Tafakkor
-    description: |
-      Handling data can be a challenge, and it's best to think about it before
-      you need to organize it on a deadline. In this tutorial you'll learn best
-      practices for collecting, storing, processing, and sharing your data.
-      We'll go over writing a Data Management Plan, formatting your data with
-      BIDS and other open standards, and version controlling your data with
-      DataLad, and uploading to a public repository.
+  # - id: dataman
+  #   name: 'Open Science: Research Data Management (DataLad)'
+  #   image: /img/datalad.png
+  #   organizer: Ali Tafakkor
+  #   description: |
+  #     Handling data can be a challenge, and it's best to think about it before
+  #     you need to organize it on a deadline. In this tutorial you'll learn best
+  #     practices for collecting, storing, processing, and sharing your data.
+  #     We'll go over writing a Data Management Plan, formatting your data with
+  #     BIDS and other open standards, and version controlling your data with
+  #     DataLad, and uploading to a public repository.
   - id: reprod
     name: 'Open Science: Reproducible Data Analysis (Snakemake)'
     image: /img/snakemake_reproducable.png
