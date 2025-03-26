@@ -71,6 +71,7 @@ const Home = async () => {
                 large
                 alignment="center"
               />
+              <p><a href='https://discord.gg/RAmjjjr6mY'>Join the Discord Server</a></p>
             </div>
             <div className="flex-fill"></div>
             <div className="d-flex flex-column align-items-center justify-content-end">
