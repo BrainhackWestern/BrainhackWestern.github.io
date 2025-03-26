@@ -352,21 +352,12 @@ tutorials:
       - Violet Liu
     image: '/img/afids.png'
     description: |
-      In this tutorial, we will begin with a basic introduction to neuroanatomy
-      then briefly discuss the hippocampus, basal ganglia structures, midbrain,
-      and relatively uncharted zona incerta. Taking on a clinical lens, we will
-      explore how these structures could be crucial targets during functional
-      neurosurgical procedures.
-
-      We end our tutorial with 3 mini-software demo stations:
-
-      1. Learning neuroanatomy using an open and validated anatomical fiducial
-         framework ([AFIDs](https://validator.afids.io/))
-      2. Reviewing introduced anatomy in the context of a surgical case using a
-         virtual reality headset
-      3. Applying our functional neuroanatomy knowledge to plan a surgical case
-         using a fully open-source software
-         ([trajectoryGuide](https://trajectoryguide.greydongilmore.com/)).
+      This tutorial offers an interactive dive into neuroanatomy through a clinical case,
+      with a focus on subcortical regions of interest.
+      Participants will gain hands-on experience with segmentation tools like ITK-SNAP and learn to
+      visualize subcortical structures using ultra-high field MRI.
+      No previous experience with ITK-SNAP is required
+      (http://www.itksnap.org/pmwiki/pmwiki.php?n=Downloads.SNAP4)
   - id: tms
     name: 'Introduction to TMS'
     organizer: 
