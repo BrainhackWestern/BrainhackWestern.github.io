@@ -187,3 +187,17 @@ export const getCurrentProjectURL = async (): Promise<string | undefined> => {
   const year = await getCurrentProjectYear();
   return year ? `/projects/${year}` : undefined;
 };
+
+export const isDuringEvent = async (): Promise<boolean> => {
+  const config = await readConfig();
+  const now = DateTime.now().setZone('America/Toronto');
+  const start = DateTime.fromObject(config.event.startDate, {
+    zone: 'America/Toronto'
+  }).startOf('day');
+  const endExclusive = DateTime.fromObject(config.event.endDate, {
+    zone: 'America/Toronto'
+  })
+    .plus({ days: 1 })
+    .startOf('day');
+  return now >= start && now < endExclusive;
+};
