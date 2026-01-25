@@ -13,26 +13,40 @@ export const backgroundImg = style([
   {
     position: 'absolute',
     overflow: 'hidden',
-    height: '95vh',
+    height: '50vh',
     maxWidth: 1300,
     width: '100%',
-    right: 0,
-    top: '5vh',
+    left: '50%',
+    transform: 'translateX(-50%)',
+    top: '0',
     zIndex: 0
   },
+  media.md({
+    height: '70vh',
+    width: '80%',
+    top: '5vh'
+  }),
+  media.lg({
+    width: '55%',
+    height: '85vh',
+    left: 'auto',
+    right: 0,
+    transform: 'none'
+  }),
   media.xl({
-    width: '65%'
+    width: '65%',
+    height: '95vh'
   })
 ]);
 
 export const eventDates = style({
   textAlign: 'center',
-  background: `linear-gradient(120deg, #9530a2, #96e6ff, #a2ec9f)`,
+  background: 'linear-gradient(90deg, #e20b81 19%, #b72d86 30%, #87569c 40%, #3a84b9 43%, #00aed4 57%, #07b5aa 65%, #69b971 73%, #92c44c 81%, #a4cb39 96%)',
   padding: '0.5em 2em',
   margin: '0.5em 0',
   fontSize: textSize.lg,
   fontWeight: textWeight.bold,
-  color: colors.fontDark
+  color: colors.fontLight
 });
 
 export const titleCol = {
