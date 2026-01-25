@@ -14,7 +14,7 @@ const growthBox = (x: number, y: string | number): StyleRule => {
   };
 };
 // const button_background = `linear-gradient(90deg, rgba(12, 110, 100, 1) 0%, rgba(44, 76, 129, 1) 53%, rgba(132, 10, 171, 1) 100%)`
-const button_background = `linear-gradient(90deg, #8602ff 0%, #344dff 53%, #00b038 100%)`;
+const button_background = 'linear-gradient(90deg, #e20b81 19%, #b72d86 30%, #87569c 40%, #3a84b9 43%, #00aed4 57%, #07b5aa 65%, #69b971 73%, #92c44c 81%, #a4cb39 96%)';
 export const backCard = style([
   {
     marginBottom: '2em'
