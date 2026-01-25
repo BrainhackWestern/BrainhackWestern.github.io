@@ -6,6 +6,7 @@ on:
       - main
   schedule:
     - cron: "24 7 * 8-12 *" # at 3:24 every day from August to December (or 2:24 depending on daylight savings)
+  workflow_dispatch: # Allows manual triggering from GitHub Actions UI
 jobs:
   check-yaml:
     runs-on: ubuntu-latest
