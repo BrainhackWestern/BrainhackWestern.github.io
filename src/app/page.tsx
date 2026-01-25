@@ -4,9 +4,9 @@ import dollar_signs from '../../public/img/dollar_signs.png';
 import global_logo from '../../public/img/global_logo.png';
 import hack from '../../public/img/hack.png';
 import learn_skillz from '../../public/img/learn_skillz_cropped.png';
-import main_logo from '../../public/img/logo-2025-splash.png';
-import painterly from '../../public/img/Brainhack_splash_2025.png';
-import paper from '../../public/img/paper.png';
+import main_logo from '../../public/img/logo-2026-splash.png';
+import painterly from '../../public/img/Brainhack_splash_2026.png';
+import paper from '../../public/img/lcd.jpg';
 import upvote from '../../public/img/upvote.png';
 import { AboutRow } from '../components/about-row';
 import { Button } from '../components/button';
@@ -26,7 +26,8 @@ import {
   getCurrentProjectURL,
   getEventYear,
   getRegistrationStatus,
-  readConfig
+  readConfig,
+  isDuringEvent
 } from '../lib/data';
 import * as styles from './styles.css';
 
@@ -43,6 +44,7 @@ export const generateMetadata = async (): Promise<Metadata> => {
 const Home = async () => {
   const config = await readConfig();
   const registrationStatus = await getRegistrationStatus();
+  const duringEvent = await isDuringEvent();
   return (
     <Page config={config} splash registrationButton>
       <Splash>
@@ -71,7 +73,14 @@ const Home = async () => {
                 large
                 alignment="center"
               />
-              <p><a href='https://discord.gg/RAmjjjr6mY'>Join the Discord Server</a></p>
+              {duringEvent ? (
+                <Button
+                  target="https://discord.gg/RAmjjjr6mY"
+                  className={[styles.titleCol.button, 'large-button'].join(' ')}
+                >
+                  Join us on Discord
+                </Button>
+              ) : null}
             </div>
             <div className="flex-fill"></div>
             <div className="d-flex flex-column align-items-center justify-content-end">
