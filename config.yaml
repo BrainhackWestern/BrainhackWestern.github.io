@@ -1,17 +1,17 @@
 # yaml-language-server: $schema=public/schemas/brainhack-config.json
 event:
-  year: 2025
+  year: 2026
   startDate:
-    day: 26
+    day: 27
     month: 3
-    year: 2025
+    year: 2026
   endDate:
-    day: 28
+    day: 29
     month: 3
-    year: 2025
+    year: 2026
 displaySections:
-  tutorial: true
-  schedule: true
+  tutorial: false
+  schedule: false
   twitterFeed: false
 twitterUrl: https://twitter.com/uwobrainhack
 faq:
@@ -29,7 +29,7 @@ faq:
       encouraged to participate.
   - question: Will the event be in-person or virtual?
     answer: |
-      Brainhack Western 2025 will be in-person.
+      Brainhack Western 2026 will be in-person.
   - question: |
       I am interested in attending a specific tutorial in-person. How do I do
       that?
@@ -45,7 +45,7 @@ faq:
   - question: Do I need to register if I only want to hack?
     answer: |
       Yes! Anyone wishing to participate in any aspect of Brainhack Western
-      2023, even just hacking, needs to register.
+      2026, even just hacking, needs to register.
   - question: How much does it cost?
     answer: The cost of the event is $5 CAD!
   - question: |
@@ -76,13 +76,13 @@ faq:
   - question: What if I can't attend all three days?
     answer: |
       You are welcome to attend as much or as little as your schedule allows.
-      We understand that Brainhack Western 2025 is scheduled during a busy part
+      We understand that Brainhack Western 2026 is scheduled during a busy part
       of the academic year, so we have tried to scheduled breaks each day to
       give attendees time to decompress and attend to their own work.
 forms:
   registration:
     type: cognito
-    title: Brainhack 2025 Registration
+    title: Brainhack 2026 Registration
     shortTitle: Registration
     embedTag: <script src="https://www.cognitoforms.com/f/seamless.js" data-key="dKVrRkF3yk6PnoRpFF7XGg" data-form="6"></script>
     prefillMappings:
@@ -100,13 +100,13 @@ registration:
   # who would have got the registration email blast anyway.
   # emailSignupTarget: https://hook.us1.make.com/hrdtv28jy9i55havi84l6db2xc1ieyol
   openDate:
-    day: 19
-    month: 1
-    year: 2025
+    day: 1
+    month: 2
+    year: 2026
   closeDate:
-    day: 19
+    day: 31
     month: 3
-    year: 2025
+    year: 2026
   projectPitchUrl: https://github.com/BrainhackWestern/BrainhackWestern.github.io/issues/new?assignees=&labels=pitch&projects=&template=project-pitch.yml&title=%5BPitch%5D%3A+
 location:
   name: Western Interdisciplinary Research Building
@@ -118,17 +118,26 @@ location:
 organizers:
   - Ali Tafakkor
   - Peter Van Dyken
-  - Rafaela Platkin
-  - Anthony Cruz
-  - Matthew Suppa Modrusan
+  - Armin Panjehpour
+  - Ali Ghavampour
   - Ricardo Alonso Rios Carrillo
   - Ronak Mohammady
   - Joud Abdulmajeed El-Shawa
-  - Tallulah Grace Nyland
-  - Ali Ghavampour
-  - Kiro Samaan
-  - Hanna Maekebay
-  - Armin Panjehpour
+  - Noran Almomen
+  - Dryden Arseneau
+  - Chelsea-Leigh Marie McKenzie
+  - Abdulhai Aljaabary
+  - Emily Cordeiro
+  - Utkarsh Shukla
+  - Cathryn Dunicliff
+  - Khac Vinh Nguyen
+  - Nya Yazdi
+  - Nima Zargarnezhad
+  - Ada Natalie Borawake
+  - Deanne Wah
+  - Chelsea Bo-Ra Kim
+  - Sara Rostamidarounkola
+  - Abdul Moiz Naqvi
   - Ali Khan
 sponsors:
   - img: '/img/brainscan_logo.png'
@@ -145,7 +154,7 @@ schedule:
     days:
       - day: 26
         month: 3
-        year: 2025
+        year: 2026
         events:
           - name: Welcome & Project Pitches
             time: '9:00'
@@ -199,7 +208,7 @@ schedule:
             room: WIRB 4190 (Lunchroom)
       - day: 27
         month: 3
-        year: 2025
+        year: 2026
         events:
           - name: Breakfast
             time: '9:00'
@@ -254,7 +263,7 @@ schedule:
 
       - day: 28
         month: 3
-        year: 2025
+        year: 2026
         events:
           - name: Breakfast
             time: '9:00'
