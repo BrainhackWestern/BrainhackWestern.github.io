@@ -38,7 +38,7 @@ export const NavBar = ({
     >
       <Container fluid={true}>
         <Link href="/" className="navbar-brand">
-          <Image src={logo} width={58} height={40} alt="Home"></Image>
+          <Image src={logo} width={48} height={48} alt="Home"></Image>
         </Link>
         <Navbar.Toggle
           aria-label="Toggle navigation"
