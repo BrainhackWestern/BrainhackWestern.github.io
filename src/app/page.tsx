@@ -6,7 +6,7 @@ import hack from '../../public/img/hack.png';
 import learn_skillz from '../../public/img/learn_skillz_cropped.png';
 import main_logo from '../../public/img/logo-2026-splash.png';
 import painterly from '../../public/img/Brainhack_splash_2026.png';
-import paper from '../../public/img/lcd.jpg';
+import paper from '../../public/img/back.jpg';
 import upvote from '../../public/img/upvote.png';
 import { AboutRow } from '../components/about-row';
 import { Button } from '../components/button';
@@ -50,8 +50,10 @@ const Home = async () => {
       <Splash>
         <Image
           src={paper}
-          style={{ position: 'absolute', height: '100vh', width: '100vw' }}
           alt=""
+          fill
+          sizes="100vw"
+          style={{ objectFit: 'cover' }}
         />
         <Window>
           <div className={styles.backgroundImg}>

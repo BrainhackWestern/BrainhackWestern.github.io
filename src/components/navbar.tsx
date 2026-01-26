@@ -25,16 +25,17 @@ export const NavBar = ({
 }: NavBarProps) => {
   const scrollPosition = useContext(ScrollPositionContext);
   const [open, setOpen] = useState(false);
+  const showSolidNav = !splashMode || scrollPosition > 0 || open;
 
   return (
     <Navbar
       expand="lg"
-      variant="light"
+      variant={showSolidNav ? 'light' : 'dark'}
       fixed={splashMode ? 'top' : undefined}
       sticky={!splashMode ? 'top' : undefined}
-      className={
-        !splashMode || scrollPosition > 0 || open ? style.navbarWhite : ''
-      }
+      className={`${style.navbar} ${
+        showSolidNav ? style.navbarWhite : style.navbarSplash
+      }`}
     >
       <Container fluid={true}>
         <Link href="/" className="navbar-brand">
@@ -93,9 +94,7 @@ export const NavBar = ({
           </Nav>
           <span
             className={`${style.registerBtn} ${
-              !splashMode || scrollPosition > 0 || open
-                ? ''
-                : style.registerBtnHide
+              showSolidNav ? '' : style.registerBtnHide
             }`}
           >
             {registrationButton ?? null}
