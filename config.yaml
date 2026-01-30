@@ -84,7 +84,7 @@ forms:
     type: cognito
     title: Brainhack 2026 Registration
     shortTitle: Registration
-    embedTag: <script src="https://www.cognitoforms.com/f/seamless.js" data-key="dKVrRkF3yk6PnoRpFF7XGg" data-form="6"></script>
+    embedTag: <script src="https://www.cognitoforms.com/f/seamless.js" data-key="dKVrRkF3yk6PnoRpFF7XGg" data-form="7"></script>
     prefillMappings:
       id: Calculations.VolunteerCode
 registration:
@@ -104,7 +104,7 @@ registration:
     month: 2
     year: 2026
   closeDate:
-    day: 31
+    day: 20
     month: 3
     year: 2026
   projectPitchUrl: https://github.com/BrainhackWestern/BrainhackWestern.github.io/issues/new?assignees=&labels=pitch&projects=&template=project-pitch.yml&title=%5BPitch%5D%3A+
