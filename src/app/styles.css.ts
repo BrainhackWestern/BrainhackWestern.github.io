@@ -19,23 +19,14 @@ export const backgroundImg = style([
     left: '50%',
     transform: 'translateX(-50%)',
     top: '0',
-    zIndex: 0
+    zIndex: 2
   },
-  media.md({
-    height: '70vh',
-    width: '80%',
-    top: '5vh'
-  }),
-  media.lg({
-    width: '55%',
-    height: '85vh',
+  media.xl({
+    width: '65%',
+    height: '95vh',
     left: 'auto',
     right: 0,
     transform: 'none'
-  }),
-  media.xl({
-    width: '65%',
-    height: '95vh'
   })
 ]);
 
@@ -55,17 +46,42 @@ export const titleCol = {
       zIndex: 1
     },
     'col-12',
-    'col-lg-4',
+    'col-xl-4',
     'd-flex',
     'flex-column',
     'justify-content-end',
     'align-items-center'
   ]),
 
-  button: style({
-    alignSelf: 'center',
-    fontSize: textSize.heading.sm
-  })
+  containerInner: style([
+    {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      width: '100%'
+    },
+    media.xl({
+      justifyContent: 'center',
+      minHeight: '80vh'
+    })
+  ]),
+
+  button: style([
+    {
+      alignSelf: 'center',
+      fontSize: textSize.heading.sm,
+      marginBottom: '2rem'
+    },
+    media.xl({
+      marginBottom: '3rem'
+    })
+  ]),
+
+  logo: style([
+    {
+      marginBottom: '1rem'
+    }
+  ])
 };
 
 export const mapFrame = style([
