@@ -65,36 +65,36 @@ const Home = async () => {
             />
           </div>
           <div className={styles.titleCol.container}>
-            <div className="flex-fill"></div>
-            <div className="flex-fill"></div>
-            <div>
-              <RegisterButton
-                settings={config.registration}
-                eventTimespan={config.event.eventTimespan}
-                className={styles.titleCol.button}
-                large
-                alignment="center"
-              />
-              {duringEvent ? (
-                <Button
-                  target="https://discord.gg/RAmjjjr6mY"
-                  className={[styles.titleCol.button, 'large-button'].join(' ')}
-                >
-                  Join us on Discord
-                </Button>
-              ) : null}
-            </div>
-            <div className="flex-fill"></div>
-            <div className="d-flex flex-column align-items-center justify-content-end">
-              <div className="logo">
-                <Image
-                  src={main_logo}
-                  width={406}
-                  height={186}
-                  alt="Western Brainhack 2025"
+            <div className={styles.titleCol.containerInner}>
+              <div className={styles.titleCol.button}>
+                <RegisterButton
+                  settings={config.registration}
+                  eventTimespan={config.event.eventTimespan}
+                  className={styles.titleCol.button}
+                  large
+                  alignment="center"
                 />
-                <div className={styles.eventDates}>
-                  {config.event.eventTimespan}
+                {duringEvent ? (
+                  <Button
+                    target="https://discord.gg/RAmjjjr6mY"
+                    className={[styles.titleCol.button, 'large-button'].join(' ')}
+                  >
+                    Join us on Discord
+                  </Button>
+                ) : null}
+              </div>
+              <div className={styles.titleCol.logo}>
+                <div className="logo">
+                  <Image
+                    src={main_logo}
+                    width={406}
+                    height={186}
+                    alt="Western Brainhack 2025"
+                    style={{ maxWidth: '100%', height: 'auto' }}
+                  />
+                  <div className={styles.eventDates}>
+                    {config.event.eventTimespan}
+                  </div>
                 </div>
               </div>
             </div>
