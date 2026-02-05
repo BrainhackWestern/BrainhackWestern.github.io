@@ -19,7 +19,7 @@ export const backgroundImg = style([
     left: '50%',
     transform: 'translateX(-50%)',
     top: '0',
-    zIndex: 2
+    zIndex: 0
   },
   media.xl({
     width: '65%',
