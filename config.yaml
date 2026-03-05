@@ -41,7 +41,7 @@ faq:
     answer: |
       In-person registration includes access to all in-person tutorials and the
       ability to join an in-person hacking project group. In-person registration
-      also includes breakfast, lunch, and snacks on all three days.
+      also includes meals, and snacks on all three days.
   - question: Do I need to register if I only want to hack?
     answer: |
       Yes! Anyone wishing to participate in any aspect of Brainhack Western
@@ -52,14 +52,13 @@ faq:
       Is it possible to attend if I am not affiliated with Western University?
     answer: |
       We are able to accommodate non-Western University affiliated attendees.
-      Please note that all attendees will need to follow Western University
-      COVID-19 campus rules.  Note that Brainhack Western
+      Note that Brainhack Western
       does not offer travel stipends. Attendees traveling to London, ON are
       wholly responsible for their own travel, lodging, and any meals not
       already included with registration.
   - question: Will there be food?
     answer: |
-      Yes! Breakfast, lunch, snacks, non-alcoholic
+      Yes! Breakfast, lunch, dinner, snacks, non-alcoholic
       beverages, and coffee will be provided throughout the event. Please
       indicate any dietary restrictions when you register. Also, to cut down on
       waste, please bring your own coffee mug and/or water bottle.
@@ -77,7 +76,7 @@ faq:
     answer: |
       You are welcome to attend as much or as little as your schedule allows.
       We understand that Brainhack Western 2026 is scheduled during a busy part
-      of the academic year, so we have tried to scheduled breaks each day to
+      of the academic year, so we have tried to hold the event over weekend and schedule breaks each day to
       give attendees time to decompress and attend to their own work.
 forms:
   registration:
