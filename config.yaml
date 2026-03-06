@@ -746,3 +746,14 @@ projects:
       organizers:
         - name: Ricardo Rios
           github: RicardoRios46
+    - title: 'Triton: An Automated and Reproducible Audio Signal Processing Toolkit for Auditory and Hearing Research'
+      description: |-
+        <img width="2048" height="2048" alt="Image" src="https://github.com/user-attachments/assets/607cd91e-c62a-47c0-b487-f8b9ccf562eb" />
+
+        Triton is a modular audio utility that standardizes stimuli preparation and signal degradation for speech research. It bridges raw signal math with accessible lab tools through three integrated components: a Python engine for RMS-based SNR mixing and vocoding, a CLI for batch processing entire audio directories, and a Streamlit GUI with drag-and-drop degradation and visualization. Built with Pixi for environment reproducibility, Triton ensures consistent audio processing across machines and operating systems—eliminating a major pain point in auditory science research where stimuli preparation often varies between labs or researchers.
+      url: https://github.com/AliTafakkor/triton
+      organizers:
+        - name: Ali Tafakkor
+          github: AliTafakkor
+        - name: Ronak Mohammadi
+          github: Ronakmhd
