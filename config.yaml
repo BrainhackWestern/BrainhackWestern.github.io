@@ -197,7 +197,7 @@ schedule:
             duration: '1:00'
             color: '#1f331e'
             priority: 1
-            room: 
+            room:
               - WIRB 4190 (Lunchroom)
           - tutorial: tms
             time: '15:00'
@@ -259,7 +259,6 @@ schedule:
             color: '#1f331e'
             priority: 2
             room: WIRB 3000
-
       - day: 28
         month: 3
         year: 2026
@@ -341,13 +340,13 @@ tutorials:
     name: Using EEG-BIDS for data management of large EEG datasets
     organizer: Marc Joanisse
     image: /img/eegbids.png
-    description: | 
+    description: |
       EEG-BIDS is a relatively new standard for the orderly storage of raw EEG/iEEG/MEG datasets and derivatives.
       I will demonstrate one possible workflow in which I use the EEGLAB toolbox to convert raw EEG data into BIDS format,
       and for integrating existing EEG-BIDS datasets into your analysis workflow.
   - id: fnirs
     name: Introduction to fNIRS
-    organizer: 
+    organizer:
       - Matthew Kolisnyk
       - Garima Gupta
     image: /img/fnirs2.png
@@ -368,7 +367,7 @@ tutorials:
       (http://www.itksnap.org/pmwiki/pmwiki.php?n=Downloads.SNAP4)
   - id: tms
     name: 'Introduction to TMS'
-    organizer: 
+    organizer:
       - Phivos Phylactou
     image: '/img/tms2.png'
     description: Transcranial Magnetic Stimulation is a safe, non-invasive, tool that enables us to modulate the brain’s regular activity with high spatial and temporal resolution. Forty years since its introduction, TMS has been utilized in a variety of ways; from the labs all the way to the clinics. In this workshop, we will explore how TMS can be employed to causally study the brain’s neural architecture, how it can be used to measure brain activity, and how it can help the maladaptive brain.
@@ -376,7 +375,7 @@ tutorials:
     name: 'Open Science: Pre-registration'
     image: /img/prereg.png
     organizer:
-      - Christine Moreau 
+      - Christine Moreau
     description: In this hands-on workshop, participants will learn the fundamentals of preregistration and how it enhances research transparency and rigor using the Open Science Framework (OSF). Attendees are encouraged to bring their research protocols as there will be the opportunity to receive peer feedback to refine their preregistrations. The session will also cover handling protocol changes post-publication, emphasizing the flexibility of preregistration.
   - id: git
     name: 'Open Science: Research Code Management (Git)'
@@ -426,18 +425,15 @@ tutorials:
     organizer:
       - Jessica Grahn
     image: /img/writing.png
-    description: | 
-      Want your scientific papers to be not just clear but also engaging? 
-      Join our scientific writing style crash course at the hackathon! 
-      Learn how to refine your tone, improve flow, and make your writing more compelling — without losing precision.
+    description: "Want your scientific papers to be not just clear but also engaging? \nJoin our scientific writing style crash course at the hackathon! \nLearn how to refine your tone, improve flow, and make your writing more compelling — without losing precision.\n"
   - id: hippunfold
     name: HippUnfold Tutorial
     image: /img/hippunfold.png
-    organizer: 
-    - Ali Khan
-    - Jordan DeKraker
-    - Dhananjhay Bansal
-    - Mackenzie Snyder
+    organizer:
+      - Ali Khan
+      - Jordan DeKraker
+      - Dhananjhay Bansal
+      - Mackenzie Snyder
     description: |
       HippUnfold is a toolbox for automatically modeling the topological folding structure of the human hippocampus.
       This session will introduce its key features, including running HippUnfold, exploring volumetric and surface-based outputs,
@@ -457,23 +453,20 @@ tutorials:
       - Mehrdad Kashefi
       - Bassel Arafat
     image: /img/3dprint2.png
-    description: | 
+    description: |
       Many experiments require rapid prototyping of experimental setups. While the traditional method of taping random parts together might work in a pinch, 3D printing offers a faster, more precise, and more robust solution. In this workshop, we’ll provide a brief overview of different 3D printing technologies and materials, followed by a hands-on tutorial on free, online 3D design software. As a fun bonus, we’ll show you how to turn your own MRI structural data into a 3D-printable model.
   - id: mystmd
     name: MystMD Tutorial
     organizer:
       - Ricardo Alonso Rios Carrillo
     image: /img/mystmd.png
-    description: |
-      This tutorial will introduce MystMD (https://mystmd.org/). MyST extends Markdown for technical, scientific communication and publication. MyST is an ecosystem of open-source, community-driven tools designed to revolutionize scientific communication.  
-      The tutorial will cover installation and live code-writing of a short scientific article as a starting example. 
+    description: "This tutorial will introduce MystMD (https://mystmd.org/). MyST extends Markdown for technical, scientific communication and publication. MyST is an ecosystem of open-source, community-driven tools designed to revolutionize scientific communication.  \nThe tutorial will cover installation and live code-writing of a short scientific article as a starting example. \n"
   - id: datacol
     name: 'Data Collection: Best Practices'
     organizer:
       - Sarah Hollywood
     image: /img/datacol.png
     description: This workshop centers around the best practices in the approach and conduct of data collection. This will include ethical considerations, how to effectively recruit participants and reduce attrition, improve your communication skills, and how these practices can make you a better researcher.
-
 projects:
   2021:
     - title: BIDS - Creating the events.tsv file
@@ -704,9 +697,8 @@ projects:
         HippUnfold is a world-leading software for analysis of the hippocampus. The hippocampus is a "canary in a coal mine" brain region - a sensitive and early indicator of neurological conditions like dementia, epilepsy, and many others. It is also critical in memory and high-order cognition across all mammals. Some studies are already revealing HippUnfold's potential for translation to the clinic!
 
         Recently, we are creating a major overhaul of HippUnfold to run more lightly, smoothly, and using best-practices including BIDS, snakemake, and git continuous integration (version 2.0). We'd love to get input and/or help with outstanding issues on the new release, and would be especially keen to get feedback on its ease-of-use for new users and its Documentation.
-        
-        Come to the HippUnfold Tutorial at 1PM Wednesday for an introduction!
 
+        Come to the HippUnfold Tutorial at 1PM Wednesday for an introduction!
       url: https://github.com/khanlab/hippunfold
       organizers:
         - name: Jordan DeKraker
@@ -727,3 +719,13 @@ projects:
       organizers:
         - name: Joy Zhao
           github: joy-zhao
+  2026:
+    - title: Signal Conditioned Agents for Lightweight Perception
+      description:
+        - Computer use agents are expensive and unreliable across long context windows due to the vision + language + agentic complexity
+        - and the cost and unreliability of VLM agents compounds across long running steps. This project aims to build on top of Microsoft's OmniParser architecture and explore integration of implicit brain signals as a new source of data to augment and validate computer use agents' actions
+        - and to make computer use agents more reliable and safe across long multi-step scenarios.
+      url: https://github.com/Thomson-Lam/brainhacks-26-proposal/tree/main
+      organizers:
+        - name: Thomson Lam
+          github: Thomson-Lam
