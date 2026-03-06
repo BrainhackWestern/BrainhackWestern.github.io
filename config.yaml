@@ -740,3 +740,9 @@ projects:
       organizers:
         - name: Erfan Zarenia
           github: erfanzarenia
+    - title: Hacking axisymmetric DKI into DIPY
+      description: "Diffusion Weighted MRI (dMRI) is a cool technology that has improved our understanding of brain microstructure and disease. In research, there are multiple approaches to model microstructure from dMRI data. For example, Diffusion Kurtosis Imaging (DKI) calculates quantitative metrics that potentially explain the brain's complex microstructural configuration. Here at Western, members of the CFMM have developed improvements for DKI making it more robust to noise while also reducing their acquisition time in the MRI scanner. However, these implementations were done on a closed platform (Matlab). This project aims to disseminate open science practices and research done here at Western, integrating these developments into the open source DIPY ecosystem (Python). We hope to give back powerful tools to the neuroscience community to tackle complex questions with dMRI. \n\n**Skills for project:** Familiarity with matlab, python, git, dMRI (But not really, everyone is welcome)."
+      url: https://hackmd.io/@RicardoRios/western_brainhack2026
+      organizers:
+        - name: Ricardo Rios
+          github: RicardoRios46
