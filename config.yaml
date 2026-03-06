@@ -729,3 +729,14 @@ projects:
       organizers:
         - name: Thomson Lam
           github: Thomson-Lam
+    - title: 'NeuroMelAnchor: Subject-Specific Neuromelanin-Guided Localization of SN and VTA'
+      description: |-
+        Small midbrain nuclei such as the **substantia nigra (SN) and ventral tegmental area (VTA)** are difficult to localize reliably using template-based atlases alone, particularly across individuals. **Neuromelanin-sensitive MRI (NM-MRI)** provides subject-specific contrast that may help improve localization of these dopaminergic structures.
+
+        In this project, we aim to develop an open and modular workflow that incorporates NM-MRI as a **subject-informed prior** to refine SN and VTA region-of-interest masks in native space. These masks could then be used for applications such as diffusion tractography, connectivity analyses, seed-based fMRI, or quality control of midbrain segmentations.
+
+        During Brainhack, we will prototype the workflow, implement basic QC and evaluation tools, and make the code openly available. We welcome participants interested in neuroimaging, Python, MRI analysis, or open science.
+      url: https://github.com/erfanzarenia/NeuroMelAnchor
+      organizers:
+        - name: Erfan Zarenia
+          github: erfanzarenia
