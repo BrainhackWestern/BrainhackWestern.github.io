@@ -756,3 +756,15 @@ projects:
           github: AliTafakkor
         - name: Ronak Mohammadi
           github: Ronakmhd
+    - title: Adaptive Language Mapping Pipeline
+      description:
+        - This project develops the Automatic Language Mapping Pipeline (ALMP)
+        - a fully automated tool for analyzing functional MRI (fMRI) data used in presurgical language mapping to identifying language-related brain regions . ALMP standardizes preprocessing and first-level analysis using MATLAB and SPM12
+        - while providing a user-friendly graphical interface that guides users through the workflow. The pipeline automatically converts imaging data
+        - performs motion correction
+        - slice-timing correction
+        - coregistration
+        - and model estimation to generate activation maps of language networks.
+      organizers:
+        - name: Xinyue Zhang
+          github: xinazhang1
