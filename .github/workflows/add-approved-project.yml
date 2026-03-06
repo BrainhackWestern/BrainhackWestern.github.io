@@ -1,0 +1,95 @@
+name: Add Approved Project to Config
+on:
+  workflow_dispatch:
+    inputs:
+      issue_number:
+        description: 'GitHub issue number of the approved project'
+        required: true
+        type: number
+
+jobs:
+  add-project:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Parse issue
+        id: parse
+        uses: onmax/issue-form-parser@v1.4
+        with:
+          issue_number: ${{ github.event.inputs.issue_number }}
+      
+      - name: Get year from issue labels
+        id: get_year
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const issue = await github.rest.issues.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: ${{ github.event.inputs.issue_number }}
+            });
+            
+            const yearLabel = issue.data.labels
+              .map(label => typeof label === 'string' ? label : label.name)
+              .find(name => name.startsWith('year/'));
+            
+            if (!yearLabel) {
+              core.setFailed('No year label found on issue');
+            }
+            
+            const year = yearLabel.split('/')[1];
+            return year;
+          result-encoding: string
+      
+      - name: Parse organizers
+        run: >
+          echo "organizers=$(
+            echo "${{ fromJson(steps.parse.outputs.payload)['Project Leads']}}" |
+              sed -E 's/([^(]+)\s\(\s*@?([a-zA-Z0-9\-]+)\s*\)/{"name": "\1", "github": "\2"}/' |
+              paste -d',' -s |
+              sed -E 's/^(.*)$/[\1]/'
+          )" >> "$GITHUB_ENV"
+      
+      - name: Add project to config
+        uses: mikefarah/yq@master
+        env:
+          DESCRIPTION: ${{ toJson(fromJson(steps.parse.outputs.payload)['Description']) }}
+          TITLE: ${{ toJson(fromJson(steps.parse.outputs.payload)['Title']) }}
+          URL: ${{ toJson(fromJson(steps.parse.outputs.payload)['Project url']) }}
+        with:
+          cmd: >
+            yq -i '.projects['${{ steps.get_year.outputs.result }}'] += [
+              {
+                "title": '"$TITLE"',
+                "description": '"$DESCRIPTION"',
+                '"$([[ "$URL" != '"_No response_"' ]] && echo '"url": '"$URL"',')"'
+                "organizers": '"$organizers"'
+              }
+            ]' config.yaml
+      
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add config.yaml
+          git commit -m "Add approved project from issue #${{ github.event.inputs.issue_number }}"
+          git push
+      
+      - name: Add success label to issue
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: ${{ github.event.inputs.issue_number }},
+              labels: ['added-to-config']
+            });
+            
+            github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: ${{ github.event.inputs.issue_number }},
+              body: '✅ Project has been added to config.yaml!'
+            });
