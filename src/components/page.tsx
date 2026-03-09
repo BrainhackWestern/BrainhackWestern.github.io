@@ -27,7 +27,7 @@ const Page = async ({
       splashMode={splash}
       registrationButton={
         registrationButton && registrationStatus === 'open' ? (
-          <RegisterButton settings={config.registration} />
+          <RegisterButton settings={config.registration} discordUrl={config.discordUrl} />
         ) : null
       }
       projectUrl={projectUrl}

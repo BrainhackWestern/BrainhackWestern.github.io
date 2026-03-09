@@ -14,6 +14,7 @@ displaySections:
   schedule: false
   twitterFeed: false
 twitterUrl: https://twitter.com/uwobrainhack
+discordUrl: https://discord.gg/Hb67eActQt
 faq:
   - question: What is a "Brainhack"?
     answer: |

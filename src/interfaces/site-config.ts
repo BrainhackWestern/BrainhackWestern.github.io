@@ -162,6 +162,11 @@ export interface SiteConfig {
    */
   twitterUrl?: string;
 
+  /**
+   * Discord server URL for the event
+   */
+  discordUrl?: string;
+
   registration: Registration;
 
   faq?: FAQ[];

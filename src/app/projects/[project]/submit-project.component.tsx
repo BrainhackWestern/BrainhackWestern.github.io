@@ -7,7 +7,8 @@ import { readConfig } from '../../../lib/data';
 import { textSize } from '../../../styles/variables.css';
 
 const SubmitProject = async ({ noProjectsYet }: { noProjectsYet: boolean }) => {
-  const { registration, event } = await readConfig();
+  const config = await readConfig();
+  const { registration, event, discordUrl } = config;
   const msg = noProjectsYet ? (
     <>
       <h2>No projects yet!</h2>
@@ -43,6 +44,7 @@ const SubmitProject = async ({ noProjectsYet }: { noProjectsYet: boolean }) => {
                 settings={registration}
                 alignment="center"
                 eventTimespan={event.eventTimespan}
+                discordUrl={discordUrl}
               />
             </Col>
             <Col
