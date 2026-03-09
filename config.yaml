@@ -143,6 +143,9 @@ sponsors:
   - img: '/img/brainscan_logo.png'
     name: Brainscan
     url: 'https://brainscan.uwo.ca'
+  - img: '/img/TRIDENT_logo.jpg'
+    name: TRIDENT
+    url: 'https://www.tridentpreclinicaltrials.org/'
 # Can support multiple, named schedules. Each schedule is a separate list item under
 # schedule:
 # For color, you can use "red", "green", and "blue", or any hex color or javascript
