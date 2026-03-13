@@ -165,22 +165,22 @@ schedule:
             time: '16:00'
             duration: '0:30'
             color: '#e20b81'
-            room:
+            room: ""
           - name: Project Pitches
             time: '16:30'
             duration: '0:30'
             color: '#e20b81'
-            room:
+            room: ""
           - speaker: dr-kathryn-manning
             time: '17:00'
             duration: '1:00'
             color: '#00aed4'
-            room: 
+            room: ""
           - speaker: dr-milad-lankarany
             time: '18:15'
             duration: '1:00'
             color: '#00aed4'
-            room:
+            room: ""
           - name: Networking & Dinner
             time: '19:30'
             duration: '1:30'
@@ -190,7 +190,7 @@ schedule:
             time: '21:00'
             duration: '1:00'
             color: '#87569c'
-            room:
+            room: ""
           # - tutorial: prereg
           #   time: '10:00'
           #   duration: '1:00'
@@ -243,7 +243,7 @@ schedule:
           - name: Hack Time
             time: '10:00'
             duration: '2:30'
-            room:
+            room: ""
             color: '#87569c'
             priority: 1
           - tutorial: workshop
@@ -251,13 +251,13 @@ schedule:
             duration: '1:00'
             color: '#007c62'
             priority: 2
-            room:
+            room: ""
           - tutorial: workshop
             time: '11:00'
             duration: '1:00'
             color: '#007c62'
             priority: 2
-            room:
+            room: ""
           # - tutorial: writing
           #   time: '10:00'
           #   duration: '1:00'
@@ -278,7 +278,7 @@ schedule:
           - name: Hack Time
             time: '13:30'
             duration: '5:00'
-            room: 
+            room: ""
             color: '#87569c'
             priority: 1
           - tutorial: workshop
@@ -286,19 +286,19 @@ schedule:
             duration: '1:00'
             color: '#007c62'
             priority: 2
-            room:
+            room: ""
           - tutorial: workshop
             time: '15:00'
             duration: '1:00'
             color: '#007c62'
             priority: 2
-            room:
+            room: ""
           - tutorial: workshop
             time: '16:00'
             duration: '1:00'
             color: '#007c62'
             priority: 2
-            room:
+            room: ""
           - name: Dinner
             time: '18:30'
             duration: '1:00'
@@ -325,7 +325,7 @@ schedule:
           - name: Hack Time
             time: '19:30'
             duration: '2:30'
-            room: 
+            room: ""
             color: '#87569c'
             priority: 1
       - day: 29
@@ -340,7 +340,7 @@ schedule:
           - name: Hack Time
             time: '10:00'
             duration: '2:30'
-            room: 
+            room: ""
             color: '#87569c'
             priority: 1
           - tutorial: workshop
@@ -348,13 +348,13 @@ schedule:
             duration: '1:00'
             color: '#007c62'
             priority: 2
-            room:
+            room: ""
           - tutorial: workshop
             time: '11:00'
             duration: '1:00'
             color: '#007c62'
             priority: 2
-            room:
+            room: ""
           # - tutorial: datacol
           #   time: '11:00'
           #   duration: '1:00'
@@ -369,7 +369,7 @@ schedule:
           - name: Hack Time
             time: '13:30'
             duration: '4:30'
-            room: 
+            room: ""
             color: '#87569c'
             priority: 1
           - tutorial: workshop
@@ -377,13 +377,13 @@ schedule:
             duration: '1:00'
             color: '#007c62'
             priority: 2
-            room:
+            room: ""
           - tutorial: workshop
             time: '15:00'
             duration: '1:00'
             color: '#007c62'
             priority: 2
-            room:
+            room: ""
           # - tutorial: dataman
           #   time: '13:00'
           #   duration: '1:00'
@@ -406,12 +406,12 @@ schedule:
             time: '18:00'
             duration: '1:30'
             color: '#e20b81'
-            room:
+            room: ""
           - name: Wrap up & Closing
             time: '19:30'
             duration: '0:30'
             color: '#e20b81'
-            room: 
+            room: ""
 
 invitedSpeakers:
   - id: dr-kathryn-manning
