@@ -16,9 +16,9 @@ interface EventProps {
 }
 
 const colorLookup = {
-  green: '#1f331e',
-  red: '#440101',
-  blue: '#384C7B'
+  green: '#69b971',
+  red: '#e20b81',
+  blue: '#3a84b9'
 };
 
 export const Event = (props: EventProps) => {
@@ -42,6 +42,11 @@ export const Event = (props: EventProps) => {
   const rightPadding = right ? 1 : 0;
 
   const room_str = props.room ? getRoomStr(props.room) : null;
+  const eventColor = props.color
+    ? props.color in colorLookup
+      ? colorLookup[props.color as keyof typeof colorLookup]
+      : props.color
+    : undefined;
 
   const el = (
     <div
@@ -51,11 +56,12 @@ export const Event = (props: EventProps) => {
         top: top,
         left: `${left + leftPadding}%`,
         right: `${right + rightPadding}%`,
-        ...background
+        ...(eventColor
+          ? { backgroundColor: darkenColor(eventColor, 0.14) }
+          : background)
       }}
     >
       <p className={style.eventName}>{props.name}</p>
-      <p className={style.time}>{to12Hr(props.time)}</p>
       {room_str ? <p className={style.room}>{room_str}</p> : null}
 
       {props.link ? <p className={style.moreInfo}>more info</p> : null}
@@ -82,10 +88,33 @@ const toMin = (time: string) => {
   return hr + min / 60;
 };
 
-const to12Hr = (time: string) => {
-  const hrMin = time.split(':');
-  const hr = ((Number(hrMin[0]) - 1) % 12) + 1;
-  return `${hr}:${hrMin[1]}`;
+const darkenColor = (color: string, amount: number) => {
+  if (!color.startsWith('#')) {
+    return color;
+  }
+
+  const hex = color.slice(1);
+  const normalized =
+    hex.length === 3
+      ? hex
+          .split('')
+          .map((value) => `${value}${value}`)
+          .join('')
+      : hex;
+
+  if (normalized.length !== 6) {
+    return color;
+  }
+
+  const adjusted = [0, 2, 4]
+    .map((index) => {
+      const channel = Number.parseInt(normalized.slice(index, index + 2), 16);
+      const darkened = Math.max(0, Math.round(channel * (1 - amount)));
+      return darkened.toString(16).padStart(2, '0');
+    })
+    .join('');
+
+  return `#${adjusted}`;
 };
 
 const getRoomStr = (room: string | string[]) => {

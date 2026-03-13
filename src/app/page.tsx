@@ -17,6 +17,7 @@ import Row from '../components/layout/row';
 import Page from '../components/page';
 import { RegisterButton } from '../components/register-button';
 import { Schedule } from '../components/schedule/schedule';
+import { SpeakerList } from '../components/speakers/speaker-list';
 import Splash from '../components/splash';
 import { TutorialList } from '../components/tutorials/tutorial-list';
 import { WhiteBox } from '../components/white-box';
@@ -219,12 +220,17 @@ const Home = async () => {
       </Content>
 
       {config.displaySections.schedule ? (
-        <Schedule config={await getCalendar()} lineHeight={120} />
+        <Schedule config={await getCalendar()} lineHeight={110} />
       ) : null}
 
       <TutorialList
         tutorials={config.tutorials}
         show={config.displaySections.tutorial ?? true}
+      />
+
+      <SpeakerList
+        speakers={config.invitedSpeakers ?? []}
+        show={config.displaySections.invitedSpeakers ?? true}
       />
 
       <Content id="location" fluid="lg">

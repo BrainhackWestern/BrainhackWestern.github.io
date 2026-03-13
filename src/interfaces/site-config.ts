@@ -1,6 +1,7 @@
 import { EmbeddedForm } from './form';
 import { BasicDate } from './generic';
 import { AnyEvent, ScheduleConfig } from './schedule';
+import { InvitedSpeakerInfo } from './speaker';
 import { TutorialInfo } from './tutorial';
 
 /**
@@ -61,6 +62,13 @@ export interface DisplaySections {
    * @default true
    */
   tutorial?: boolean;
+
+  /**
+   * Display the list of invited speakers
+   *
+   * @default true
+   */
+  invitedSpeakers?: boolean;
 
   /**
    * Display the schedule
@@ -148,6 +156,7 @@ export interface SiteConfig {
   organizers: string[];
   location: LocationConfig;
   tutorials: TutorialInfo[];
+  invitedSpeakers?: InvitedSpeakerInfo[];
 
   forms?: {
     /**

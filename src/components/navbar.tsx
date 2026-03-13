@@ -12,6 +12,7 @@ import * as style from './navbar.css';
 
 interface NavBarProps {
   displaySections: DisplaySections;
+  hasInvitedSpeakers?: boolean;
   splashMode?: boolean;
   registrationButton?: React.ReactNode | null;
   projectUrl?: string;
@@ -19,6 +20,7 @@ interface NavBarProps {
 
 export const NavBar = ({
   displaySections,
+  hasInvitedSpeakers = false,
   splashMode,
   registrationButton,
   projectUrl
@@ -63,6 +65,13 @@ export const NavBar = ({
               <Nav.Item>
                 <Link href="/#tutorials" className="nav-link">
                   Tutorials
+                </Link>
+              </Nav.Item>
+            ) : null}
+            {hasInvitedSpeakers && (displaySections.invitedSpeakers ?? true) ? (
+              <Nav.Item>
+                <Link href="/#invited-speakers" className="nav-link">
+                  Invited Speakers
                 </Link>
               </Nav.Item>
             ) : null}

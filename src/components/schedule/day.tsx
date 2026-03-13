@@ -24,7 +24,7 @@ export const Day = (props: DayProps) => {
         lineHeight={props.lineHeight}
         widthFactor={event.widthFactor ?? 1}
         position={event.position ?? 0}
-        padding={10}
+        padding={4}
         color={event.color}
         link={event.link}
         room={event.room}

@@ -81,7 +81,18 @@ export interface TutorialEvent extends EventBase {
   tutorial: string;
 }
 
-export type AnyEvent = GenericEvent | TutorialEvent;
+/**
+ * Event that links to an invited speaker definition
+ * @additionalProperties false
+ */
+export interface SpeakerEvent extends EventBase {
+  /**
+   * Id of the invited speaker item
+   */
+  speaker: string;
+}
+
+export type AnyEvent = GenericEvent | TutorialEvent | SpeakerEvent;
 
 /**
  * @additionalProperties false

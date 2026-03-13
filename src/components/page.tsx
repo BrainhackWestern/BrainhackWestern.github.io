@@ -24,6 +24,7 @@ const Page = async ({
   <div className={styles.page}>
     <NavBar
       displaySections={config.displaySections}
+      hasInvitedSpeakers={Boolean(config.invitedSpeakers?.length)}
       splashMode={splash}
       registrationButton={
         registrationButton && registrationStatus === 'open' ? (

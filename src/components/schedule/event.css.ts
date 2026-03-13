@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css';
-import { textSize, textWeight } from '../../styles/variables.css';
+import { colors, textSize, textWeight } from '../../styles/variables.css';
 
 export const link = style({
   color: 'inherit'
@@ -7,25 +7,21 @@ export const link = style({
 
 export const event = style({
   position: 'absolute',
-  backgroundColor: '#2d1e33',
-  padding: '0.5em',
-  boxShadow: '2px 5px 10px rgb(0, 0, 0, 0.8)'
+  backgroundColor: '#3a84b9',
+  borderLeft: `3px solid ${colors.primary}`,
+  padding: '0.4em',
+  boxShadow: `2px 5px 10px ${colors.backgroundTransparent}`
 });
 
 export const eventName = style({
-  fontSize: textSize.sm,
+  fontSize: textSize.md,
   fontWeight: textWeight.bold,
   marginBottom: 0
 });
 
-export const time = style({
-  fontSize: textSize.sm,
-  marginBottom: 0
-});
-
 export const room = style({
-  fontSize: textSize.sm,
-  height: '1.5em'
+  fontSize: '0.9rem',
+  height: '1.3em'
 });
 
 export const moreInfo = style({
@@ -33,6 +29,6 @@ export const moreInfo = style({
   bottom: '0.2rem',
   right: '0.5rem',
   margin: 0,
-  fontSize: textSize.xs,
+  fontSize: textSize.sm,
   fontStyle: 'italic'
 });
