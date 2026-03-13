@@ -82,6 +82,7 @@ const ProjectPage = async (
             settings={config.registration}
             alignment="center"
             eventTimespan={config.event.eventTimespan}
+            discordUrl={config.discordUrl}
           />
         </Col>
       </Row>

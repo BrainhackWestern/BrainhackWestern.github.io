@@ -9,6 +9,7 @@ import { getCurrentYear } from '../lib/data';
 interface FooterProps {
   organizers: string[];
   twitterUrl?: string;
+  discordUrl?: string;
   displayTwitter: boolean;
 }
 
@@ -16,6 +17,7 @@ export const getFooterProps = (config: SiteConfig) => {
   return {
     organizers: config.organizers,
     twitterUrl: config.twitterUrl,
+    discordUrl: config.discordUrl,
     displayTwitter: config.displaySections.twitterFeed ?? true,
   };
 };
@@ -49,6 +51,13 @@ export const Footer = (props: FooterProps) => {
           ) : null}
         </Row>
         <h3 id="contact">Contact</h3>
+        {props.discordUrl && (
+          <p>
+            <Link href={props.discordUrl} target="_blank" rel="noopener noreferrer">
+              Join our Discord server
+            </Link>
+          </p>
+        )}
         <ObfuscateClient email="brainhack.western@gmail.com" />
         <p className={style.copyright}>
           Copyright © {getCurrentYear()} Brainhack Western

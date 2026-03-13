@@ -583,6 +583,10 @@
             },
             "type": "array"
         },
+        "discordUrl": {
+            "description": "Discord server URL for the event",
+            "type": "string"
+        },
         "twitterUrl": {
             "description": "twitter Url link for embedded feed",
             "type": "string"

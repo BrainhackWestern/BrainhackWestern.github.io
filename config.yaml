@@ -14,6 +14,7 @@ displaySections:
   schedule: false
   twitterFeed: false
 twitterUrl: https://twitter.com/uwobrainhack
+discordUrl: https://discord.gg/Hb67eActQt
 faq:
   - question: What is a "Brainhack"?
     answer: |
@@ -41,7 +42,7 @@ faq:
     answer: |
       In-person registration includes access to all in-person tutorials and the
       ability to join an in-person hacking project group. In-person registration
-      also includes breakfast, lunch, and snacks on all three days.
+      also includes meals, and snacks on all three days.
   - question: Do I need to register if I only want to hack?
     answer: |
       Yes! Anyone wishing to participate in any aspect of Brainhack Western
@@ -52,14 +53,13 @@ faq:
       Is it possible to attend if I am not affiliated with Western University?
     answer: |
       We are able to accommodate non-Western University affiliated attendees.
-      Please note that all attendees will need to follow Western University
-      COVID-19 campus rules.  Note that Brainhack Western
+      Note that Brainhack Western
       does not offer travel stipends. Attendees traveling to London, ON are
       wholly responsible for their own travel, lodging, and any meals not
       already included with registration.
   - question: Will there be food?
     answer: |
-      Yes! Breakfast, lunch, snacks, non-alcoholic
+      Yes! Breakfast, lunch, dinner, snacks, non-alcoholic
       beverages, and coffee will be provided throughout the event. Please
       indicate any dietary restrictions when you register. Also, to cut down on
       waste, please bring your own coffee mug and/or water bottle.
@@ -77,7 +77,7 @@ faq:
     answer: |
       You are welcome to attend as much or as little as your schedule allows.
       We understand that Brainhack Western 2026 is scheduled during a busy part
-      of the academic year, so we have tried to scheduled breaks each day to
+      of the academic year, so we have tried to hold the event over weekend and schedule breaks each day to
       give attendees time to decompress and attend to their own work.
 forms:
   registration:
@@ -138,11 +138,15 @@ organizers:
   - Chelsea Bo-Ra Kim
   - Sara Rostamidarounkola
   - Abdul Moiz Naqvi
+  - Thu Ngoc Minh Pham
   - Ali Khan
 sponsors:
   - img: '/img/brainscan_logo.png'
     name: Brainscan
     url: 'https://brainscan.uwo.ca'
+  - img: '/img/TRIDENT_logo.jpg'
+    name: TRIDENT
+    url: 'https://www.tridentpreclinicaltrials.org/'
 # Can support multiple, named schedules. Each schedule is a separate list item under
 # schedule:
 # For color, you can use "red", "green", and "blue", or any hex color or javascript
@@ -198,7 +202,7 @@ schedule:
             duration: '1:00'
             color: '#1f331e'
             priority: 1
-            room: 
+            room:
               - WIRB 4190 (Lunchroom)
           - tutorial: tms
             time: '15:00'
@@ -260,7 +264,6 @@ schedule:
             color: '#1f331e'
             priority: 2
             room: WIRB 3000
-
       - day: 28
         month: 3
         year: 2026
@@ -342,13 +345,13 @@ tutorials:
     name: Using EEG-BIDS for data management of large EEG datasets
     organizer: Marc Joanisse
     image: /img/eegbids.png
-    description: | 
+    description: |
       EEG-BIDS is a relatively new standard for the orderly storage of raw EEG/iEEG/MEG datasets and derivatives.
       I will demonstrate one possible workflow in which I use the EEGLAB toolbox to convert raw EEG data into BIDS format,
       and for integrating existing EEG-BIDS datasets into your analysis workflow.
   - id: fnirs
     name: Introduction to fNIRS
-    organizer: 
+    organizer:
       - Matthew Kolisnyk
       - Garima Gupta
     image: /img/fnirs2.png
@@ -369,7 +372,7 @@ tutorials:
       (http://www.itksnap.org/pmwiki/pmwiki.php?n=Downloads.SNAP4)
   - id: tms
     name: 'Introduction to TMS'
-    organizer: 
+    organizer:
       - Phivos Phylactou
     image: '/img/tms2.png'
     description: Transcranial Magnetic Stimulation is a safe, non-invasive, tool that enables us to modulate the brain’s regular activity with high spatial and temporal resolution. Forty years since its introduction, TMS has been utilized in a variety of ways; from the labs all the way to the clinics. In this workshop, we will explore how TMS can be employed to causally study the brain’s neural architecture, how it can be used to measure brain activity, and how it can help the maladaptive brain.
@@ -377,7 +380,7 @@ tutorials:
     name: 'Open Science: Pre-registration'
     image: /img/prereg.png
     organizer:
-      - Christine Moreau 
+      - Christine Moreau
     description: In this hands-on workshop, participants will learn the fundamentals of preregistration and how it enhances research transparency and rigor using the Open Science Framework (OSF). Attendees are encouraged to bring their research protocols as there will be the opportunity to receive peer feedback to refine their preregistrations. The session will also cover handling protocol changes post-publication, emphasizing the flexibility of preregistration.
   - id: git
     name: 'Open Science: Research Code Management (Git)'
@@ -427,18 +430,15 @@ tutorials:
     organizer:
       - Jessica Grahn
     image: /img/writing.png
-    description: | 
-      Want your scientific papers to be not just clear but also engaging? 
-      Join our scientific writing style crash course at the hackathon! 
-      Learn how to refine your tone, improve flow, and make your writing more compelling — without losing precision.
+    description: "Want your scientific papers to be not just clear but also engaging? \nJoin our scientific writing style crash course at the hackathon! \nLearn how to refine your tone, improve flow, and make your writing more compelling — without losing precision.\n"
   - id: hippunfold
     name: HippUnfold Tutorial
     image: /img/hippunfold.png
-    organizer: 
-    - Ali Khan
-    - Jordan DeKraker
-    - Dhananjhay Bansal
-    - Mackenzie Snyder
+    organizer:
+      - Ali Khan
+      - Jordan DeKraker
+      - Dhananjhay Bansal
+      - Mackenzie Snyder
     description: |
       HippUnfold is a toolbox for automatically modeling the topological folding structure of the human hippocampus.
       This session will introduce its key features, including running HippUnfold, exploring volumetric and surface-based outputs,
@@ -458,23 +458,20 @@ tutorials:
       - Mehrdad Kashefi
       - Bassel Arafat
     image: /img/3dprint2.png
-    description: | 
+    description: |
       Many experiments require rapid prototyping of experimental setups. While the traditional method of taping random parts together might work in a pinch, 3D printing offers a faster, more precise, and more robust solution. In this workshop, we’ll provide a brief overview of different 3D printing technologies and materials, followed by a hands-on tutorial on free, online 3D design software. As a fun bonus, we’ll show you how to turn your own MRI structural data into a 3D-printable model.
   - id: mystmd
     name: MystMD Tutorial
     organizer:
       - Ricardo Alonso Rios Carrillo
     image: /img/mystmd.png
-    description: |
-      This tutorial will introduce MystMD (https://mystmd.org/). MyST extends Markdown for technical, scientific communication and publication. MyST is an ecosystem of open-source, community-driven tools designed to revolutionize scientific communication.  
-      The tutorial will cover installation and live code-writing of a short scientific article as a starting example. 
+    description: "This tutorial will introduce MystMD (https://mystmd.org/). MyST extends Markdown for technical, scientific communication and publication. MyST is an ecosystem of open-source, community-driven tools designed to revolutionize scientific communication.  \nThe tutorial will cover installation and live code-writing of a short scientific article as a starting example. \n"
   - id: datacol
     name: 'Data Collection: Best Practices'
     organizer:
       - Sarah Hollywood
     image: /img/datacol.png
     description: This workshop centers around the best practices in the approach and conduct of data collection. This will include ethical considerations, how to effectively recruit participants and reduce attrition, improve your communication skills, and how these practices can make you a better researcher.
-
 projects:
   2021:
     - title: BIDS - Creating the events.tsv file
@@ -705,9 +702,8 @@ projects:
         HippUnfold is a world-leading software for analysis of the hippocampus. The hippocampus is a "canary in a coal mine" brain region - a sensitive and early indicator of neurological conditions like dementia, epilepsy, and many others. It is also critical in memory and high-order cognition across all mammals. Some studies are already revealing HippUnfold's potential for translation to the clinic!
 
         Recently, we are creating a major overhaul of HippUnfold to run more lightly, smoothly, and using best-practices including BIDS, snakemake, and git continuous integration (version 2.0). We'd love to get input and/or help with outstanding issues on the new release, and would be especially keen to get feedback on its ease-of-use for new users and its Documentation.
-        
-        Come to the HippUnfold Tutorial at 1PM Wednesday for an introduction!
 
+        Come to the HippUnfold Tutorial at 1PM Wednesday for an introduction!
       url: https://github.com/khanlab/hippunfold
       organizers:
         - name: Jordan DeKraker
@@ -728,3 +724,46 @@ projects:
       organizers:
         - name: Joy Zhao
           github: joy-zhao
+  2026:
+    - title: Signal Conditioned Agents for Lightweight Perception
+      description: |
+        Computer use agents are expensive and unreliable across long context windows due to the vision + language + agentic complexity and the cost and unreliability of VLM agents compounds across long running steps. This project aims to build on top of Microsoft's OmniParser architecture and explore integration of implicit brain signals as a new source of data to augment and validate computer use agents' actions and to make computer use agents more reliable and safe across long multi-step scenarios.
+      url: https://github.com/Thomson-Lam/brainhacks-26-proposal/tree/main
+      organizers:
+        - name: Thomson Lam
+          github: Thomson-Lam
+    - title: 'NeuroMelAnchor: Subject-Specific Neuromelanin-Guided Localization of SN and VTA'
+      description: |
+        Small midbrain nuclei such as the **substantia nigra (SN) and ventral tegmental area (VTA)** are difficult to localize reliably using template-based atlases alone, particularly across individuals. **Neuromelanin-sensitive MRI (NM-MRI)** provides subject-specific contrast that may help improve localization of these dopaminergic structures.
+
+        In this project, we aim to develop an open and modular workflow that incorporates NM-MRI as a **subject-informed prior** to refine SN and VTA region-of-interest masks in native space. These masks could then be used for applications such as diffusion tractography, connectivity analyses, seed-based fMRI, or quality control of midbrain segmentations.
+
+        During Brainhack, we will prototype the workflow, implement basic QC and evaluation tools, and make the code openly available. We welcome participants interested in neuroimaging, Python, MRI analysis, or open science.
+      url: https://github.com/erfanzarenia/NeuroMelAnchor
+      organizers:
+        - name: Erfan Zarenia
+          github: erfanzarenia
+    - title: Hacking axisymmetric DKI into DIPY
+      description: |
+        Diffusion Weighted MRI (dMRI) is a cool technology that has improved our understanding of brain microstructure and disease. In research, there are multiple approaches to model microstructure from dMRI data. For example, Diffusion Kurtosis Imaging (DKI) calculates quantitative metrics that potentially explain the brain's complex microstructural configuration. Here at Western, members of the CFMM have developed improvements for DKI making it more robust to noise while also reducing their acquisition time in the MRI scanner. However, these implementations were done on a closed platform (Matlab). This project aims to disseminate open science practices and research done here at Western, integrating these developments into the open source DIPY ecosystem (Python). We hope to give back powerful tools to the neuroscience community to tackle complex questions with dMRI. \n\n**Skills for project:** Familiarity with matlab, python, git, dMRI (But not really, everyone is welcome).
+      url: https://hackmd.io/@RicardoRios/western_brainhack2026
+      organizers:
+        - name: Ricardo Rios
+          github: RicardoRios46
+    - title: 'Triton: An Automated and Reproducible Audio Signal Processing Toolkit for Auditory and Hearing Research'
+      description: |
+        <img width="2048" height="2048" alt="Image" src="https://github.com/user-attachments/assets/607cd91e-c62a-47c0-b487-f8b9ccf562eb" />
+
+        Triton is a modular audio utility that standardizes stimuli preparation and signal degradation for speech research. It bridges raw signal math with accessible lab tools through three integrated components: a Python engine for RMS-based SNR mixing and vocoding, a CLI for batch processing entire audio directories, and a Streamlit GUI with drag-and-drop degradation and visualization. Built with Pixi for environment reproducibility, Triton ensures consistent audio processing across machines and operating systems—eliminating a major pain point in auditory science research where stimuli preparation often varies between labs or researchers.
+      url: https://github.com/AliTafakkor/triton
+      organizers:
+        - name: Ali Tafakkor
+          github: AliTafakkor
+        - name: Ronak Mohammadi
+          github: Ronakmhd
+    - title: Adaptive Language Mapping Pipeline
+      description: |
+        This project develops the Automatic Language Mapping Pipeline (ALMP) a fully automated tool for analyzing functional MRI (fMRI) data used in presurgical language mapping to identifying language-related brain regions . ALMP standardizes preprocessing and first-level analysis using MATLAB and SPM12 while providing a user-friendly graphical interface that guides users through the workflow. The pipeline automatically converts imaging data, performs motion correction, slice-timing correction, coregistration, and model estimation to generate activation maps of language networks.
+      organizers:
+        - name: Xinyue Zhang
+          github: xinazhang1

@@ -73,6 +73,7 @@ const Home = async () => {
                   className={styles.titleCol.button}
                   large
                   alignment="center"
+                  discordUrl={config.discordUrl}
                 />
                 {duringEvent ? (
                   <Button
@@ -200,6 +201,7 @@ const Home = async () => {
               alignment="center"
               eventTimespan={config.event.eventTimespan}
               large
+              discordUrl={config.discordUrl}
             />
           </Col>
           <Col lg="6" className="d-flex justify-content-center">
