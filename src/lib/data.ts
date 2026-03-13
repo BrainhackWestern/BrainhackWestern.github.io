@@ -102,6 +102,20 @@ export const getCalendar = async () => {
                       link: `#${tutorial.id}`
                     };
                   }
+                  if ('speaker' in event) {
+                    const speaker = config.invitedSpeakers?.find(
+                      (speaker) => speaker.id === event.speaker
+                    );
+                    if (!speaker) {
+                      throw Error(
+                        `Could not find invited speaker with id ${event.speaker}`
+                      );
+                    }
+                    return {
+                      name: speaker.name,
+                      link: `#${speaker.id}`
+                    };
+                  }
                   return {};
                 })()
               ) as GenericEvent & EventPosition;

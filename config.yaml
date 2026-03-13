@@ -11,7 +11,8 @@ event:
     year: 2026
 displaySections:
   tutorial: false
-  schedule: false
+  invitedSpeakers: false
+  schedule: true
   twitterFeed: false
 twitterUrl: https://twitter.com/uwobrainhack
 discordUrl: https://discord.gg/Hb67eActQt
@@ -154,25 +155,49 @@ sponsors:
 schedule:
   - name: Tutorials
     startTime: 9
-    endTime: 18
+    endTime: 22
     days:
-      - day: 26
+      - day: 27
         month: 3
         year: 2026
         events:
-          - name: Welcome & Project Pitches
-            time: '9:00'
-            duration: '1:00'
-            color: blue
+          - name: Welcome & Opening
+            time: '16:00'
+            duration: '0:30'
+            color: '#e20b81'
             room:
-              - WIRB 4190 (Lunchroom)
-          - tutorial: prereg
-            time: '10:00'
-            duration: '1:00'
-            color: '#007c62'
+          - name: Project Pitches
+            time: '16:30'
+            duration: '0:30'
+            color: '#e20b81'
             room:
-              - WIRB 4190 (Lunchroom)
-            priority: 1
+          - speaker: dr-kathryn-manning
+            time: '17:00'
+            duration: '1:00'
+            color: '#00aed4'
+            room: 
+          - speaker: dr-milad-lankarany
+            time: '18:15'
+            duration: '1:00'
+            color: '#00aed4'
+            room:
+          - name: Networking & Dinner
+            time: '19:30'
+            duration: '1:30'
+            color: '#a4cb39'
+            room: The Grad Club
+          - name: Hack Time
+            time: '21:00'
+            duration: '1:00'
+            color: '#87569c'
+            room:
+          # - tutorial: prereg
+          #   time: '10:00'
+          #   duration: '1:00'
+          #   color: '#007c62'
+          #   room:
+          #     - WIRB 4190 (Lunchroom)
+          #   priority: 1
           # - tutorial: bayesian
           #   time: '10:00'
           #   duration: '1:00'
@@ -180,90 +205,32 @@ schedule:
           #   room:
           #     - TBD
           #   priority: 1
-          - tutorial: eeg-bids
-            time: '11:00'
-            duration: '1:00'
-            color: green
-            room:
-              - WIRB 4190 (Lunchroom)
-          - name: Lunch
-            time: '12:00'
-            duration: '1:00'
-            room: WIRB 4190 (Lunchroom)
-          - tutorial: hippunfold
-            time: '13:00'
-            duration: '1:00'
-            color: '#1f331e'
-            priority: 1
-            room:
-              - WIRB 4190 (Lunchroom)
-          - tutorial: 3dprint
-            time: '14:00'
-            duration: '1:00'
-            color: '#1f331e'
-            priority: 1
-            room:
-              - WIRB 4190 (Lunchroom)
-          - tutorial: tms
-            time: '15:00'
-            duration: '1:00'
-            color: '#1f331e'
-            priority: 1
-            room: WIRB 4190 (Lunchroom)
-      - day: 27
-        month: 3
-        year: 2026
-        events:
-          - name: Breakfast
-            time: '9:00'
-            duration: '1:00'
-            room: WIRB 4190 (Lunchroom)
-          - name: Hack Time
-            time: '10:00'
-            duration: '2:00'
-            room: WIRB 4190 (Lunchroom)
-            color: '#222233'
-            priority: 1
-          - tutorial: writing
-            time: '10:00'
-            duration: '1:00'
-            color: '#1f331e'
-            priority: 2
-            room: WIRB 3000
-          - tutorial: fnirs
-            time: '11:00'
-            duration: '1:00'
-            color: '#1f331e'
-            priority: 2
-            room: WIRB 3000
-          - name: Lunch
-            time: '12:00'
-            duration: '1:00'
-            room: WIRB 4190 (Lunchroom)
-          - name: Hack Time
-            time: '14:00'
-            duration: '2:00'
-            room: WIRB 4190 (Lunchroom)
-            color: '#222233'
-            priority: 1
-          - tutorial: mystmd
-            time: '13:00'
-            duration: '1:00'
-            color: '#1f331e'
-            priority: 2
-            room: WIRB 4190 (Lunchroom)
-          - tutorial: reprod
-            time: '14:00'
-            duration: '1:00'
-            color: '#007c62'
-            priority: 2
-            room: WIRB 3000
-          - tutorial: monai
-            time: '15:00'
-            duration: '1:00'
-            color: '#1f331e'
-            priority: 2
-            room: WIRB 3000
+          # - tutorial: eeg-bids
+          #   time: '11:00'
+          #   duration: '1:00'
+          #   color: green
+          #   room:
+          #     - WIRB 4190 (Lunchroom)
+          # - tutorial: hippunfold
+          #   time: '13:00'
+          #   duration: '1:00'
+          #   color: '#1f331e'
+          #   priority: 1
+          #   room:
+          #     - WIRB 4190 (Lunchroom)
+          # - tutorial: 3dprint
+          #   time: '14:00'
+          #   duration: '1:00'
+          #   color: '#1f331e'
+          #   priority: 1
+          #   room:
+          #     - WIRB 4190 (Lunchroom)
+          # - tutorial: tms
+          #   time: '15:00'
+          #   duration: '1:00'
+          #   color: '#1f331e'
+          #   priority: 1
+          #   room: WIRB 4190 (Lunchroom)
       - day: 28
         month: 3
         year: 2026
@@ -271,64 +238,218 @@ schedule:
           - name: Breakfast
             time: '9:00'
             duration: '1:00'
+            color: '#a4cb39'
             room: WIRB 4190 (Lunchroom)
           - name: Hack Time
             time: '10:00'
-            duration: '2:00'
-            room: WIRB 4190 (Lunchroom)
-            color: '#222233'
+            duration: '2:30'
+            room:
+            color: '#87569c'
             priority: 1
-          - tutorial: git
+          - tutorial: workshop
             time: '10:00'
             duration: '1:00'
             color: '#007c62'
             priority: 2
-            room: WIRB 3000
-          - tutorial: datacol
+            room:
+          - tutorial: workshop
             time: '11:00'
             duration: '1:00'
-            color: '#1f331e'
+            color: '#007c62'
             priority: 2
-            room: WIRB 3000
+            room:
+          # - tutorial: writing
+          #   time: '10:00'
+          #   duration: '1:00'
+          #   color: '#1f331e'
+          #   priority: 2
+          #   room: WIRB 3000
+          # - tutorial: fnirs
+          #   time: '11:00'
+          #   duration: '1:00'
+          #   color: '#1f331e'
+          #   priority: 2
+          #   room: WIRB 3000
           - name: Lunch
-            time: '12:00'
+            time: '12:30'
             duration: '1:00'
+            color: '#a4cb39'
             room: WIRB 4190 (Lunchroom)
           - name: Hack Time
-            time: '13:00'
-            duration: '1:00'
-            room: WIRB 4190 (Lunchroom)
-            color: '#222233'
+            time: '13:30'
+            duration: '5:00'
+            room: 
+            color: '#87569c'
             priority: 1
+          - tutorial: workshop
+            time: '14:00'
+            duration: '1:00'
+            color: '#007c62'
+            priority: 2
+            room:
+          - tutorial: workshop
+            time: '15:00'
+            duration: '1:00'
+            color: '#007c62'
+            priority: 2
+            room:
+          - tutorial: workshop
+            time: '16:00'
+            duration: '1:00'
+            color: '#007c62'
+            priority: 2
+            room:
+          - name: Dinner
+            time: '18:30'
+            duration: '1:00'
+            color: '#a4cb39'
+            room: WIRB 4190 (Lunchroom)
+          # - tutorial: mystmd
+          #   time: '13:00'
+          #   duration: '1:00'
+          #   color: '#1f331e'
+          #   priority: 2
+          #   room: WIRB 4190 (Lunchroom)
+          # - tutorial: reprod
+          #   time: '14:00'
+          #   duration: '1:00'
+          #   color: '#007c62'
+          #   priority: 2
+          #   room: WIRB 3000
+          # - tutorial: monai
+          #   time: '15:00'
+          #   duration: '1:00'
+          #   color: '#1f331e'
+          #   priority: 2
+          #   room: WIRB 3000
+          - name: Hack Time
+            time: '19:30'
+            duration: '2:30'
+            room: 
+            color: '#87569c'
+            priority: 1
+      - day: 29
+        month: 3
+        year: 2026
+        events:
+          - name: Breakfast
+            time: '9:00'
+            duration: '1:00'
+            color: '#a4cb39'
+            room: WIRB 4190 (Lunchroom)
+          - name: Hack Time
+            time: '10:00'
+            duration: '2:30'
+            room: 
+            color: '#87569c'
+            priority: 1
+          - tutorial: workshop
+            time: '10:00'
+            duration: '1:00'
+            color: '#007c62'
+            priority: 2
+            room:
+          - tutorial: workshop
+            time: '11:00'
+            duration: '1:00'
+            color: '#007c62'
+            priority: 2
+            room:
+          # - tutorial: datacol
+          #   time: '11:00'
+          #   duration: '1:00'
+          #   color: '#1f331e'
+          #   priority: 2
+          #   room: WIRB 3000
+          - name: Lunch
+            time: '12:30'
+            duration: '1:00'
+            color: '#a4cb39'
+            room: WIRB 4190 (Lunchroom)
+          - name: Hack Time
+            time: '13:30'
+            duration: '4:30'
+            room: 
+            color: '#87569c'
+            priority: 1
+          - tutorial: workshop
+            time: '14:00'
+            duration: '1:00'
+            color: '#007c62'
+            priority: 2
+            room:
+          - tutorial: workshop
+            time: '15:00'
+            duration: '1:00'
+            color: '#007c62'
+            priority: 2
+            room:
           # - tutorial: dataman
           #   time: '13:00'
           #   duration: '1:00'
           #   color: '#007c62'
           #   priority: 2
           #   room: WIRB 3000
-          - tutorial: dti-mri
-            time: '14:00'
-            duration: '1:00'
-            color: '#1f331e'
-            priority: 2
-            room: WIRB 4190 (Lunchroom)
-          - tutorial: anat
-            time: '13:00'
-            duration: '2:00'
-            color: '#1f331e'
-            priority: 3
-            room: WIRB 3000
+          # - tutorial: dti-mri
+          #   time: '14:00'
+          #   duration: '1:00'
+          #   color: '#1f331e'
+          #   priority: 2
+          #   room: WIRB 4190 (Lunchroom)
+          # - tutorial: anat
+          #   time: '13:00'
+          #   duration: '2:00'
+          #   color: '#1f331e'
+          #   priority: 3
+          #   room: WIRB 3000
           - name: Project presentations
-            time: '15:00'
-            duration: '1:00'
-            color: blue
-            room: WIRB 3000
-          - name: Grad Club Networking Event
-            time: '16:00'
+            time: '18:00'
             duration: '1:30'
-            color: blue
-            room: Grad Club
+            color: '#e20b81'
+            room:
+          - name: Wrap up & Closing
+            time: '19:30'
+            duration: '0:30'
+            color: '#e20b81'
+            room: 
+
+invitedSpeakers:
+  - id: dr-kathryn-manning
+    name: Invited Talk 1
+    speaker: Dr. Kathryn Manning
+    affiliation: Western University
+    description: Description coming soon!
+  - id: dr-milad-lankarany
+    name: Invited Talk 2
+    speaker: Dr. Milad Lankarany
+    affiliation: Western University
+    description: Description coming soon!
+
 tutorials:
+  - id: workshop
+    name: Workshop (TBA)
+    organizer:
+      - TBA
+    image: /img/dfmri.png
+    description: |
+      This joint tutorial will cover both the basics of diffusion
+      MRI and functional MRI. For diffusion MRI, the basics of processing data
+      from MRI acquisitions to computing diffusion tensors and tracking the
+      structural connectome will be covered. For functional MRI, the basics of
+      what aspect of brain function fMRI measures to considerations for
+      preprocessing fMRI data will be presented.
+  - id: bayesian
+    name: Baysien methods for hackers
+    organizer:
+      - Bruce Morton
+    image: /img/dfmri.png
+    description: |
+      This joint tutorial will cover both the basics of diffusion
+      MRI and functional MRI. For diffusion MRI, the basics of processing data
+      from MRI acquisitions to computing diffusion tensors and tracking the
+      structural connectome will be covered. For functional MRI, the basics of
+      what aspect of brain function fMRI measures to considerations for
+      preprocessing fMRI data will be presented.
   - id: dti-mri
     name: Introduction to DTI and MRI
     organizer:
