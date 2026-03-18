@@ -15,7 +15,9 @@ export const speakerHeader = style({
   padding: '0.5em 1em 0.5em 1em',
   maxWidth: 550,
   width: '100%',
-  margin: 0
+  margin: 0,
+  color: '#fff',
+  textShadow: '0 1px 2px rgba(0, 0, 0, 0.45)'
 });
 
 export const row = style({
@@ -27,8 +29,11 @@ export const img = style([
   'col-lg',
   {
     maxWidth: 200,
+    width: 200,
     padding: 0,
-    margin: '1em'
+    margin: '1em',
+    borderRadius: 12,
+    overflow: 'hidden'
   },
   media.lg({
     marginTop: 0,

@@ -10,8 +10,8 @@ event:
     month: 3
     year: 2026
 displaySections:
-  tutorial: false
-  invitedSpeakers: false
+  tutorial: true
+  invitedSpeakers: true
   schedule: true
   twitterFeed: false
 twitterUrl: https://twitter.com/uwobrainhack
@@ -148,6 +148,15 @@ sponsors:
   - img: '/img/TRIDENT_logo.jpg'
     name: TRIDENT
     url: 'https://www.tridentpreclinicaltrials.org/'
+  - img: '/img/Schulich_logo.webp'
+    name: Schulich School of Medicine & Dentistry
+    url: 'https://www.schulich.uwo.ca/'
+  - img: '/img/Western_Research_logo.png'
+    name: Western Research
+    url: 'https://www.uwo.ca/research/'
+  - img: '/img/sn_logo.png'
+    name: SHARCNET
+    url: 'https://www.sharcnet.ca/my/front/'
 # Can support multiple, named schedules. Each schedule is a separate list item under
 # schedule:
 # For color, you can use "red", "green", and "blue", or any hex color or javascript
@@ -246,13 +255,13 @@ schedule:
             room: ""
             color: '#87569c'
             priority: 1
-          - tutorial: workshop
+          - name: workshop (TBA)
             time: '10:00'
             duration: '1:00'
             color: '#007c62'
             priority: 2
             room: ""
-          - tutorial: workshop
+          - name: workshop (TBA)
             time: '11:00'
             duration: '1:00'
             color: '#007c62'
@@ -281,19 +290,19 @@ schedule:
             room: ""
             color: '#87569c'
             priority: 1
-          - tutorial: workshop
+          - name: workshop (TBA)
             time: '14:00'
             duration: '1:00'
             color: '#007c62'
             priority: 2
             room: ""
-          - tutorial: workshop
+          - name: workshop (TBA)
             time: '15:00'
             duration: '1:00'
             color: '#007c62'
             priority: 2
             room: ""
-          - tutorial: workshop
+          - name: workshop (TBA)
             time: '16:00'
             duration: '1:00'
             color: '#007c62'
@@ -343,13 +352,13 @@ schedule:
             room: ""
             color: '#87569c'
             priority: 1
-          - tutorial: workshop
+          - name: workshop (TBA)
             time: '10:00'
             duration: '1:00'
             color: '#007c62'
             priority: 2
             room: ""
-          - tutorial: workshop
+          - name: workshop (TBA)
             time: '11:00'
             duration: '1:00'
             color: '#007c62'
@@ -372,13 +381,13 @@ schedule:
             room: ""
             color: '#87569c'
             priority: 1
-          - tutorial: workshop
+          - name: workshop (TBA)
             time: '14:00'
             duration: '1:00'
             color: '#007c62'
             priority: 2
             room: ""
-          - tutorial: workshop
+          - name: workshop (TBA)
             time: '15:00'
             duration: '1:00'
             color: '#007c62'
@@ -415,100 +424,92 @@ schedule:
 
 invitedSpeakers:
   - id: dr-kathryn-manning
-    name: Invited Talk 1
+    name: Linking structural and functional brain patterns to quantify how the early environment shapes the developing brain
     speaker: Dr. Kathryn Manning
-    affiliation: Western University
-    description: Description coming soon!
+    affiliation: University of Toronto & Hospital for Sick Children
+    description: |
+      Dr. Kathryn Manning is a Scientist in the Neurosciences & Mental Health and Translational Medicine programs at 
+      the Hospital for Sick Children and an Assistant Professor in the Department of Medical Biophysics. 
+      She uses advanced MRI analyses to understand infant and child brain development, what factors shape trajectories, and how targeted interventions can promote resilience.
   - id: dr-milad-lankarany
     name: Invited Talk 2
     speaker: Dr. Milad Lankarany
-    affiliation: Western University
-    description: Description coming soon!
+    affiliation: University of Toronto & Krembil Research Institute (UHN)
+    description: coming soon!
 
 tutorials:
-  - id: workshop
-    name: Workshop (TBA)
-    organizer:
-      - TBA
-    image: /img/dfmri.png
-    description: |
-      This joint tutorial will cover both the basics of diffusion
-      MRI and functional MRI. For diffusion MRI, the basics of processing data
-      from MRI acquisitions to computing diffusion tensors and tracking the
-      structural connectome will be covered. For functional MRI, the basics of
-      what aspect of brain function fMRI measures to considerations for
-      preprocessing fMRI data will be presented.
   - id: bayesian
-    name: Baysien methods for hackers
+    name: Bayesian Inference in Psychology and Neuroscience
     organizer:
-      - Bruce Morton
-    image: /img/dfmri.png
+      - Dr. Bruce Morton
+    image: /img/bayes.gif
     description: |
-      This joint tutorial will cover both the basics of diffusion
-      MRI and functional MRI. For diffusion MRI, the basics of processing data
-      from MRI acquisitions to computing diffusion tensors and tracking the
-      structural connectome will be covered. For functional MRI, the basics of
-      what aspect of brain function fMRI measures to considerations for
-      preprocessing fMRI data will be presented.
-  - id: dti-mri
-    name: Introduction to DTI and MRI
-    organizer:
-      - Bradley Karat
-    image: /img/dfmri.png
-    description: |
-      This joint tutorial will cover both the basics of diffusion
-      MRI and functional MRI. For diffusion MRI, the basics of processing data
-      from MRI acquisitions to computing diffusion tensors and tracking the
-      structural connectome will be covered. For functional MRI, the basics of
-      what aspect of brain function fMRI measures to considerations for
-      preprocessing fMRI data will be presented.
-  - id: eeg-bids
-    name: Using EEG-BIDS for data management of large EEG datasets
-    organizer: Marc Joanisse
-    image: /img/eegbids.png
-    description: |
-      EEG-BIDS is a relatively new standard for the orderly storage of raw EEG/iEEG/MEG datasets and derivatives.
-      I will demonstrate one possible workflow in which I use the EEGLAB toolbox to convert raw EEG data into BIDS format,
-      and for integrating existing EEG-BIDS datasets into your analysis workflow.
-  - id: fnirs
-    name: Introduction to fNIRS
-    organizer:
-      - Matthew Kolisnyk
-      - Garima Gupta
-    image: /img/fnirs2.png
-    description: |
-      Participants will learn the basics of functional near-infrared spectroscopy (fNIRS). This includes a demo of the system, the underlying physics and experimental design, as well as some exciting current applications of fNIRS. Participants will also learn about handling and preprocessing fNIRS data -- including some hands on coding!
-  - id: anat
-    name: 'Introduction to Neuroanatomy for Researchers'
-    organizer:
-      - Alaa Taha
-      - Violet Liu
-    image: '/img/afids.png'
-    description: |
-      This tutorial offers an interactive dive into neuroanatomy through a clinical case,
-      with a focus on subcortical regions of interest.
-      Participants will gain hands-on experience with segmentation tools like ITK-SNAP and learn to
-      visualize subcortical structures using ultra-high field MRI.
-      No previous experience with ITK-SNAP is required
-      (http://www.itksnap.org/pmwiki/pmwiki.php?n=Downloads.SNAP4)
-  - id: tms
-    name: 'Introduction to TMS'
-    organizer:
-      - Phivos Phylactou
-    image: '/img/tms2.png'
-    description: Transcranial Magnetic Stimulation is a safe, non-invasive, tool that enables us to modulate the brain’s regular activity with high spatial and temporal resolution. Forty years since its introduction, TMS has been utilized in a variety of ways; from the labs all the way to the clinics. In this workshop, we will explore how TMS can be employed to causally study the brain’s neural architecture, how it can be used to measure brain activity, and how it can help the maladaptive brain.
+      The workshop will cover the conceptual foundations of Bayesian estimation and hypothesis testing. 
+      I will step through the application of these methods to basic behavioural and functional neuroimaging data. 
+  # - id: dti-mri
+  #   name: Introduction to DTI and MRI
+  #   organizer:
+  #     - Bradley Karat
+  #   image: /img/dfmri.png
+  #   description: |
+  #     This joint tutorial will cover both the basics of diffusion
+  #     MRI and functional MRI. For diffusion MRI, the basics of processing data
+  #     from MRI acquisitions to computing diffusion tensors and tracking the
+  #     structural connectome will be covered. For functional MRI, the basics of
+  #     what aspect of brain function fMRI measures to considerations for
+  #     preprocessing fMRI data will be presented.
+  # - id: eeg-bids
+  #   name: Using EEG-BIDS for data management of large EEG datasets
+  #   organizer: Marc Joanisse
+  #   image: /img/eegbids.png
+  #   description: |
+  #     EEG-BIDS is a relatively new standard for the orderly storage of raw EEG/iEEG/MEG datasets and derivatives.
+  #     I will demonstrate one possible workflow in which I use the EEGLAB toolbox to convert raw EEG data into BIDS format,
+  #     and for integrating existing EEG-BIDS datasets into your analysis workflow.
+  # - id: fnirs
+  #   name: Introduction to fNIRS
+  #   organizer:
+  #     - Matthew Kolisnyk
+  #     - Garima Gupta
+  #   image: /img/fnirs2.png
+  #   description: |
+  #     Participants will learn the basics of functional near-infrared spectroscopy (fNIRS). 
+  #     This includes a demo of the system, the underlying physics and experimental design, as well as some exciting current applications of fNIRS. 
+  #     Participants will also learn about handling and preprocessing fNIRS data -- including some hands on coding!
+  # - id: anat
+  #   name: 'Introduction to Neuroanatomy for Researchers'
+  #   organizer:
+  #     - Alaa Taha
+  #     - Violet Liu
+  #   image: '/img/afids.png'
+  #   description: |
+  #     This tutorial offers an interactive dive into neuroanatomy through a clinical case,
+  #     with a focus on subcortical regions of interest.
+  #     Participants will gain hands-on experience with segmentation tools like ITK-SNAP and learn to
+  #     visualize subcortical structures using ultra-high field MRI.
+  #     No previous experience with ITK-SNAP is required
+  #     (http://www.itksnap.org/pmwiki/pmwiki.php?n=Downloads.SNAP4)
+  # - id: tms
+  #   name: 'Introduction to TMS'
+  #   organizer:
+  #     - Phivos Phylactou
+  #   image: '/img/tms2.png'
+  #   description: Transcranial Magnetic Stimulation is a safe, non-invasive, tool that enables us to modulate the brain’s regular activity with high spatial and temporal resolution. Forty years since its introduction, TMS has been utilized in a variety of ways; from the labs all the way to the clinics. In this workshop, we will explore how TMS can be employed to causally study the brain’s neural architecture, how it can be used to measure brain activity, and how it can help the maladaptive brain.
   - id: prereg
     name: 'Open Science: Pre-registration'
     image: /img/prereg.png
     organizer:
-      - Christine Moreau
-    description: In this hands-on workshop, participants will learn the fundamentals of preregistration and how it enhances research transparency and rigor using the Open Science Framework (OSF). Attendees are encouraged to bring their research protocols as there will be the opportunity to receive peer feedback to refine their preregistrations. The session will also cover handling protocol changes post-publication, emphasizing the flexibility of preregistration.
+      - Dr. Christine Moreau
+    description: |
+      This hands-on workshop introduces the fundamentals of preregistration, offers guided practice using a customizable OSF template, 
+      and includes opportunities for attendees to bring their own research protocols for peer feedback and refinement. 
+      It also covers how to manage protocol changes after publishing a preregistration, ensuring participants leave confident using this flexible tool to make 
+      their research more transparent and reproducible.
   - id: git
     name: 'Open Science: Research Code Management (Git)'
     image: /img/git-logo.png
     organizer:
       - Ali Tafakkor
-      - Christine Moreau
     description: |
       This tutorial will cover best practices for managing research code with
       the ultimate goal of sharing it. Aspects of Git and GitHub, including
@@ -524,10 +525,10 @@ tutorials:
   #     We'll go over writing a Data Management Plan, formatting your data with
   #     BIDS and other open standards, and version controlling your data with
   #     DataLad, and uploading to a public repository.
-  - id: reprod
+  - id: snakemake
     name: 'Open Science: Reproducible Data Analysis (Snakemake)'
     image: /img/snakemake_reproducable.png
-    organizer: Ali Khan
+    organizer: Dhananjhay Bansal
     description: |
       Using a workflow management tool to run your research analyses can make it
       much easier to remember what you've done with your data, make small
@@ -546,53 +547,71 @@ tutorials:
   #     contrasts, basic pulse sequences for acquiring an image, how to
   #     reconstruct and visualize an image from DICOM to NIFTI, and unique MRI
   #     contrasts such as diffusion or functional imaging.
-  - id: writing
-    name: Scientific Writing
-    organizer:
-      - Jessica Grahn
-    image: /img/writing.png
-    description: "Want your scientific papers to be not just clear but also engaging? \nJoin our scientific writing style crash course at the hackathon! \nLearn how to refine your tone, improve flow, and make your writing more compelling — without losing precision.\n"
-  - id: hippunfold
-    name: HippUnfold Tutorial
-    image: /img/hippunfold.png
-    organizer:
-      - Ali Khan
-      - Jordan DeKraker
-      - Dhananjhay Bansal
-      - Mackenzie Snyder
-    description: |
-      HippUnfold is a toolbox for automatically modeling the topological folding structure of the human hippocampus.
-      This session will introduce its key features, including running HippUnfold, exploring volumetric and surface-based outputs,
-      and integrating results with tools like ITK-SNAP and Connectome Workbench.
-      We will also discuss applications to structural, fMRI, and dMRI data. No prior experience with HippUnfold is required.
-      Links: https://github.com/khanlab/hippunfold
+  # - id: writing
+  #   name: Scientific Writing
+  #   organizer:
+  #     - Dr. Jessica Grahn
+  #   image: /img/writing.png
+  #   description: |
+  #     "Want your scientific papers to be not just clear but also engaging? \nJoin our scientific writing style crash course at the hackathon! \nLearn how to refine your tone, improve flow, and make your writing more compelling — without losing precision.\n"
+  # - id: hippunfold
+  #   name: HippUnfold Tutorial
+  #   image: /img/hippunfold.png
+  #   organizer:
+  #     - Dr. Ali Khan
+  #     - Jordan DeKraker
+  #     - Dhananjhay Bansal
+  #     - Mackenzie Snyder
+  #   description: |
+  #     HippUnfold is a toolbox for automatically modeling the topological folding structure of the human hippocampus.
+  #     This session will introduce its key features, including running HippUnfold, exploring volumetric and surface-based outputs,
+  #     and integrating results with tools like ITK-SNAP and Connectome Workbench.
+  #     We will also discuss applications to structural, fMRI, and dMRI data. No prior experience with HippUnfold is required.
+  #     Links: https://github.com/khanlab/hippunfold
   - id: monai
-    name: MONAI Tutorial
+    name: Deep Learning for Neuroimaging using MONAI
     organizer:
       - Mahmoud Salman
     image: /img/monai.png
     description: |
-      A practical, no-theory guide to training deep learning models on neuroimaging data with zero experience. This tutorial covers MONAI, the leading AI framework for medical imaging, simplifying tasks like segmentation and classification. With pre-trained models, automated pipelines, and MONAI Zoo, you’ll apply deep learning to neuroscience research effortlessly—Python experience is required.
+      A practical, no-theory guide to training deep learning models on neuroimaging data with zero experience. 
+      This tutorial covers MONAI, the leading AI framework for medical imaging, simplifying tasks like segmentation and 
+      classification. With pre-trained models, automated pipelines, and MONAI Zoo, you’ll apply deep learning to 
+      neuroscience research effortlessly—Python experience is required.
+      Requirements: Create an account on Kaggle and validate using your phone number (to be able to access free GPUs).
   - id: 3dprint
-    name: 3D Printing Tutorial
+    name: "Print Your Brain (And Your Lab Setup!): A 3D Printing Workshop"
     organizer:
-      - Mehrdad Kashefi
-      - Bassel Arafat
+      - Dr. Mehrdad Kashefi
+      - Bassel Khaled Arafat
     image: /img/3dprint2.png
     description: |
-      Many experiments require rapid prototyping of experimental setups. While the traditional method of taping random parts together might work in a pinch, 3D printing offers a faster, more precise, and more robust solution. In this workshop, we’ll provide a brief overview of different 3D printing technologies and materials, followed by a hands-on tutorial on free, online 3D design software. As a fun bonus, we’ll show you how to turn your own MRI structural data into a 3D-printable model.
-  - id: mystmd
-    name: MystMD Tutorial
-    organizer:
-      - Ricardo Alonso Rios Carrillo
-    image: /img/mystmd.png
-    description: "This tutorial will introduce MystMD (https://mystmd.org/). MyST extends Markdown for technical, scientific communication and publication. MyST is an ecosystem of open-source, community-driven tools designed to revolutionize scientific communication.  \nThe tutorial will cover installation and live code-writing of a short scientific article as a starting example. \n"
+      Many experiments require rapid prototyping for custom lab setups. 
+      While the classic “tape and spare parts” method works in a pinch,
+      3D printing offers a faster, more precise, and far more robust alternative. 
+      In this workshop, we’ll cover the essentials of 3D printing technologies and materials, 
+      followed by a hands-on tutorial using free, browser-based 3D design software. 
+      As a bonus, you’ll also learn how to transform your own structural MRI data into a custom 3D-printable model!
+  # - id: mystmd
+  #   name: MystMD Tutorial
+  #   organizer:
+  #     - Ricardo Alonso Rios Carrillo
+  #   image: /img/mystmd.png
+  #   description: |
+  #     "This tutorial will introduce MystMD (https://mystmd.org/). 
+  #     MyST extends Markdown for technical, scientific communication and publication. 
+  #     MyST is an ecosystem of open-source, community-driven tools designed to revolutionize 
+  #     scientific communication.  \nThe tutorial will cover installation and live code-writing 
+  #     of a short scientific article as a starting example. \n"
   - id: datacol
     name: 'Data Collection: Best Practices'
     organizer:
       - Sarah Hollywood
     image: /img/datacol.png
-    description: This workshop centers around the best practices in the approach and conduct of data collection. This will include ethical considerations, how to effectively recruit participants and reduce attrition, improve your communication skills, and how these practices can make you a better researcher.
+    description: |
+      This workshop centers around the best practices in the approach and conduct of data collection. 
+      This will include ethical considerations, how to effectively recruit participants and reduce 
+      attrition, improve your communication skills, and how these practices can make you a better researcher.
 projects:
   2021:
     - title: BIDS - Creating the events.tsv file

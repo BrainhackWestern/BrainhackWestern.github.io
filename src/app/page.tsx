@@ -223,14 +223,14 @@ const Home = async () => {
         <Schedule config={await getCalendar()} lineHeight={110} />
       ) : null}
 
-      <TutorialList
-        tutorials={config.tutorials}
-        show={config.displaySections.tutorial ?? true}
-      />
-
       <SpeakerList
         speakers={config.invitedSpeakers ?? []}
         show={config.displaySections.invitedSpeakers ?? true}
+      />
+
+      <TutorialList
+        tutorials={config.tutorials}
+        show={config.displaySections.tutorial ?? true}
       />
 
       <Content id="location" fluid="lg">

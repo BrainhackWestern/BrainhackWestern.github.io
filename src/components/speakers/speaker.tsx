@@ -31,7 +31,7 @@ export const Speaker = (props: SpeakerProps) => {
   const makeHeaderStyle = (reverse: boolean): CSSProperties => {
     const grad = reverse ? props.color.slice().reverse() : props.color;
     return {
-      background: `linear-gradient(100deg, ${grad[0]} , ${grad[1]})`,
+      background: `linear-gradient(100deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.15)), linear-gradient(100deg, ${grad[0]} , ${grad[1]})`,
       textAlign: reverse ? 'left' : 'right'
     };
   };
@@ -52,15 +52,19 @@ export const Speaker = (props: SpeakerProps) => {
           src={props.config.image}
           width={200}
           height={200}
-          style={{ objectFit: 'contain' }}
-          alt=""
+          style={{ objectFit: 'cover' }}
+          alt={props.config.speaker
+            ? Array.isArray(props.config.speaker)
+              ? props.config.speaker.join(', ')
+              : props.config.speaker
+            : props.config.name}
         />
       </div>
     ) : null,
     <Console key="description" className={style.description}>
-      <Markdown>{description}</Markdown>
       {renderLine('Invited Speaker', props.config.speaker)}
       {renderLine('Affiliation', props.config.affiliation)}
+      <Markdown>{description}</Markdown>
     </Console>
   ];
 
