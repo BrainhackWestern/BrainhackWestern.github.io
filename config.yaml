@@ -427,15 +427,27 @@ invitedSpeakers:
     name: Linking structural and functional brain patterns to quantify how the early environment shapes the developing brain
     speaker: Dr. Kathryn Manning
     affiliation: University of Toronto & Hospital for Sick Children
+    image: /img/manning.png
     description: |
       Dr. Kathryn Manning is a Scientist in the Neurosciences & Mental Health and Translational Medicine programs at 
       the Hospital for Sick Children and an Assistant Professor in the Department of Medical Biophysics. 
       She uses advanced MRI analyses to understand infant and child brain development, what factors shape trajectories, and how targeted interventions can promote resilience.
   - id: dr-milad-lankarany
-    name: Invited Talk 2
+    name: Developing neuro-technology using computational neuroscience methods
     speaker: Dr. Milad Lankarany
-    affiliation: University of Toronto & Krembil Research Institute (UHN)
-    description: coming soon!
+    affiliation: University of Toronto & Krembil Research Institute
+    image: /img/lankarany.png
+    description: |
+      Dr. Lankarany is a Senior Scientist at the Krembil Brain Institute, working in the fields of computational 
+      neuroscience, artificial intelligence, and deep brain stimulation. His research focuses on two main areas: 
+      (1) understanding the biophysical and computational mechanisms of neural information processing at cellular and network 
+      levels, and (2) developing neurotechnology to better understand, monitor, and treat diseases caused by abnormal information 
+      processing. His work has the potential to advance treatments for common neurological conditions such as Parkinson's disease 
+      and epilepsy. He has extensive experience developing biologically realistic neuronal models for different brain regions. 
+      Dr. Lankarany received his PhD in Electrical and Computer Engineering and completed three years of postdoctoral studies 
+      in theoretical and computational neuroscience at the Hospital for Sick Children in Toronto. Before joining 
+      the Krembil Brain Institute and the University of Toronto in 2019, he worked as a Data Scientist at Myant Inc, 
+      a wearable-tech company in Toronto.
 
 tutorials:
   - id: bayesian
