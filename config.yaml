@@ -295,7 +295,7 @@ schedule:
             priority: 2
             room: WIRB 1170
           - tutorial: datacol
-            time: '11:30'
+            time: '11:00'
             duration: '1:00'
             color: '#007c62'
             priority: 2
@@ -359,7 +359,10 @@ tutorials:
       - TBA
     image: /img/rsa.png
     description: |
-      TBA
+      Representational similarity analysis uses the relationship of brain activation patterns to learn something about the representations in 
+      different brain regions. In this workshop, we will provide a overview of the critical choices you have to make in this analysis, 
+      highlight some common pitfalls and present some state of the art approaches with examples from the RSA toolbox 
+      (https://rsatoolbox.readthedocs.io/en/stable/). 
   - id: bayesian
     name: Bayesian Inference in Psychology and Neuroscience
     organizer:
@@ -393,10 +396,9 @@ tutorials:
       - Jack De Jeu
     image: /img/fnirs2.png
     description: |
-      TBA
-    # Participants will learn the basics of functional near-infrared spectroscopy (fNIRS). 
-    # This includes a demo of the system, the underlying physics and experimental design, as well as some exciting current applications of fNIRS. 
-    # Participants will also learn about handling and preprocessing fNIRS data -- including some hands on coding!
+      Participants will gain a practical understanding of functional near-infrared spectroscopy (fNIRS),
+      including system setup and live demonstration, core principles, key considerations in experimental design, 
+      data handling and preprocessing, and an overview of current applications.
   - id: anat
     name: 'Introduction to Neuroanatomy for Researchers'
     organizer:
@@ -404,13 +406,12 @@ tutorials:
       - Eugenio Tannikas
     image: '/img/afids.png'
     description: |
-      TBA
-    # This tutorial offers an interactive dive into neuroanatomy through a clinical case,
-    # with a focus on subcortical regions of interest.
-    # Participants will gain hands-on experience with segmentation tools like ITK-SNAP and learn to
-    # visualize subcortical structures using ultra-high field MRI.
-    # No previous experience with ITK-SNAP is required
-    # (http://www.itksnap.org/pmwiki/pmwiki.php?n=Downloads.SNAP4)
+      This tutorial offers an interactive dive into neuroanatomy through a clinical case,
+      with a focus on subcortical regions of interest.
+      Participants will gain hands-on experience with segmentation tools like ITK-SNAP and learn to
+      visualize subcortical structures using ultra-high field MRI.
+      No previous experience with ITK-SNAP is required
+      (http://www.itksnap.org/pmwiki/pmwiki.php?n=Downloads.SNAP4)
   # - id: tms
   #   name: 'Introduction to TMS'
   #   organizer:
