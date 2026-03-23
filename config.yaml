@@ -174,22 +174,22 @@ schedule:
             time: '16:00'
             duration: '0:30'
             color: '#e20b81'
-            room: ""
+            room: WIRB 1170
           - name: Project Pitches
             time: '16:30'
             duration: '0:30'
             color: '#e20b81'
-            room: ""
+            room: WIRB 1170
           - speaker: dr-kathryn-manning
             time: '17:00'
             duration: '1:00'
             color: '#00aed4'
-            room: ""
+            room: WIRB 1170
           - speaker: dr-milad-lankarany
             time: '18:15'
             duration: '1:00'
             color: '#00aed4'
-            room: ""
+            room: WIRB 1170
           - name: Networking & Dinner
             time: '19:30'
             duration: '1:30'
@@ -199,47 +199,7 @@ schedule:
             time: '21:00'
             duration: '1:00'
             color: '#87569c'
-            room: ""
-          # - tutorial: prereg
-          #   time: '10:00'
-          #   duration: '1:00'
-          #   color: '#007c62'
-          #   room:
-          #     - WIRB 4190 (Lunchroom)
-          #   priority: 1
-          # - tutorial: bayesian
-          #   time: '10:00'
-          #   duration: '1:00'
-          #   color: green
-          #   room:
-          #     - TBD
-          #   priority: 1
-          # - tutorial: eeg-bids
-          #   time: '11:00'
-          #   duration: '1:00'
-          #   color: green
-          #   room:
-          #     - WIRB 4190 (Lunchroom)
-          # - tutorial: hippunfold
-          #   time: '13:00'
-          #   duration: '1:00'
-          #   color: '#1f331e'
-          #   priority: 1
-          #   room:
-          #     - WIRB 4190 (Lunchroom)
-          # - tutorial: 3dprint
-          #   time: '14:00'
-          #   duration: '1:00'
-          #   color: '#1f331e'
-          #   priority: 1
-          #   room:
-          #     - WIRB 4190 (Lunchroom)
-          # - tutorial: tms
-          #   time: '15:00'
-          #   duration: '1:00'
-          #   color: '#1f331e'
-          #   priority: 1
-          #   room: WIRB 4190 (Lunchroom)
+            room: Hacking Spaces
       - day: 28
         month: 3
         year: 2026
@@ -252,33 +212,21 @@ schedule:
           - name: Hack Time
             time: '10:00'
             duration: '2:30'
-            room: ""
+            room: Hacking Spaces
             color: '#87569c'
             priority: 1
-          - name: workshop (TBA)
+          - tutorial: fnirs
             time: '10:00'
             duration: '1:00'
             color: '#007c62'
             priority: 2
-            room: ""
-          - name: workshop (TBA)
+            room: WIRB 1160
+          - tutorial: prereg
             time: '11:00'
             duration: '1:00'
             color: '#007c62'
             priority: 2
-            room: ""
-          # - tutorial: writing
-          #   time: '10:00'
-          #   duration: '1:00'
-          #   color: '#1f331e'
-          #   priority: 2
-          #   room: WIRB 3000
-          # - tutorial: fnirs
-          #   time: '11:00'
-          #   duration: '1:00'
-          #   color: '#1f331e'
-          #   priority: 2
-          #   room: WIRB 3000
+            room: WIRB 4190 (Lunchroom)
           - name: Lunch
             time: '12:30'
             duration: '1:00'
@@ -287,54 +235,42 @@ schedule:
           - name: Hack Time
             time: '13:30'
             duration: '5:00'
-            room: ""
+            room: Hacking Spaces
             color: '#87569c'
             priority: 1
-          - name: workshop (TBA)
+          - tutorial: anat
             time: '14:00'
             duration: '1:00'
             color: '#007c62'
             priority: 2
-            room: ""
-          - name: workshop (TBA)
+            room: WIRB 4190 (Lunchroom)
+          - tutorial: rsa
             time: '15:00'
             duration: '1:00'
             color: '#007c62'
             priority: 2
-            room: ""
-          - name: workshop (TBA)
+            room: WIRB 4190 (Lunchroom)
+          - tutorial: hippunfold
             time: '16:00'
             duration: '1:00'
             color: '#007c62'
             priority: 2
-            room: ""
+            room: WIRB 1130
+          - tutorial: git
+            time: '17:00'
+            duration: '1:00'
+            color: '#007c62'
+            priority: 2
+            room: WIRB 1170
           - name: Dinner
             time: '18:30'
             duration: '1:00'
             color: '#a4cb39'
             room: WIRB 4190 (Lunchroom)
-          # - tutorial: mystmd
-          #   time: '13:00'
-          #   duration: '1:00'
-          #   color: '#1f331e'
-          #   priority: 2
-          #   room: WIRB 4190 (Lunchroom)
-          # - tutorial: reprod
-          #   time: '14:00'
-          #   duration: '1:00'
-          #   color: '#007c62'
-          #   priority: 2
-          #   room: WIRB 3000
-          # - tutorial: monai
-          #   time: '15:00'
-          #   duration: '1:00'
-          #   color: '#1f331e'
-          #   priority: 2
-          #   room: WIRB 3000
           - name: Hack Time
             time: '19:30'
             duration: '2:30'
-            room: ""
+            room: Hacking Spaces
             color: '#87569c'
             priority: 1
       - day: 29
@@ -349,27 +285,21 @@ schedule:
           - name: Hack Time
             time: '10:00'
             duration: '2:30'
-            room: ""
+            room: Hacking Spaces
             color: '#87569c'
             priority: 1
-          - name: workshop (TBA)
+          - tutorial: bayesian
             time: '10:00'
             duration: '1:00'
             color: '#007c62'
             priority: 2
-            room: ""
-          - name: workshop (TBA)
-            time: '11:00'
+            room: WIRB 1170
+          - tutorial: datacol
+            time: '11:30'
             duration: '1:00'
             color: '#007c62'
             priority: 2
-            room: ""
-          # - tutorial: datacol
-          #   time: '11:00'
-          #   duration: '1:00'
-          #   color: '#1f331e'
-          #   priority: 2
-          #   room: WIRB 3000
+            room: WIRB 1170
           - name: Lunch
             time: '12:30'
             duration: '1:00'
@@ -378,49 +308,37 @@ schedule:
           - name: Hack Time
             time: '13:30'
             duration: '4:30'
-            room: ""
+            room: Hacking Spaces
             color: '#87569c'
             priority: 1
-          - name: workshop (TBA)
+          - tutorial: monai
             time: '14:00'
             duration: '1:00'
             color: '#007c62'
             priority: 2
-            room: ""
-          - name: workshop (TBA)
+            room: WIRB 1170
+          - tutorial: 3dprint
             time: '15:00'
             duration: '1:00'
             color: '#007c62'
             priority: 2
-            room: ""
-          # - tutorial: dataman
-          #   time: '13:00'
-          #   duration: '1:00'
-          #   color: '#007c62'
-          #   priority: 2
-          #   room: WIRB 3000
-          # - tutorial: dti-mri
-          #   time: '14:00'
-          #   duration: '1:00'
-          #   color: '#1f331e'
-          #   priority: 2
-          #   room: WIRB 4190 (Lunchroom)
-          # - tutorial: anat
-          #   time: '13:00'
-          #   duration: '2:00'
-          #   color: '#1f331e'
-          #   priority: 3
-          #   room: WIRB 3000
+            room: WIRB 1170
+          - tutorial: snakemake
+            time: '16:00'
+            duration: '1:00'
+            color: '#007c62'
+            priority: 2
+            room: WIRB 1170
           - name: Project presentations
             time: '18:00'
             duration: '1:30'
             color: '#e20b81'
-            room: ""
+            room: WIRB 1170
           - name: Wrap up & Closing
             time: '19:30'
             duration: '0:30'
             color: '#e20b81'
-            room: ""
+            room: WIRB 1170
 
 invitedSpeakers:
   - id: dr-kathryn-manning
@@ -450,6 +368,13 @@ invitedSpeakers:
       a wearable-tech company in Toronto.
 
 tutorials:
+  - id: rsa
+    name: Respresentational Similarity Analysis (RSA)
+    organizer:
+      - TBA
+    image: /img/rsa.png
+    description: |
+      TBA
   - id: bayesian
     name: Bayesian Inference in Psychology and Neuroscience
     organizer:
@@ -478,29 +403,31 @@ tutorials:
   #     EEG-BIDS is a relatively new standard for the orderly storage of raw EEG/iEEG/MEG datasets and derivatives.
   #     I will demonstrate one possible workflow in which I use the EEGLAB toolbox to convert raw EEG data into BIDS format,
   #     and for integrating existing EEG-BIDS datasets into your analysis workflow.
-  # - id: fnirs
-  #   name: Introduction to fNIRS
-  #   organizer:
-  #     - Matthew Kolisnyk
-  #     - Garima Gupta
-  #   image: /img/fnirs2.png
-  #   description: |
-  #     Participants will learn the basics of functional near-infrared spectroscopy (fNIRS). 
-  #     This includes a demo of the system, the underlying physics and experimental design, as well as some exciting current applications of fNIRS. 
-  #     Participants will also learn about handling and preprocessing fNIRS data -- including some hands on coding!
-  # - id: anat
-  #   name: 'Introduction to Neuroanatomy for Researchers'
-  #   organizer:
-  #     - Alaa Taha
-  #     - Violet Liu
-  #   image: '/img/afids.png'
-  #   description: |
-  #     This tutorial offers an interactive dive into neuroanatomy through a clinical case,
-  #     with a focus on subcortical regions of interest.
-  #     Participants will gain hands-on experience with segmentation tools like ITK-SNAP and learn to
-  #     visualize subcortical structures using ultra-high field MRI.
-  #     No previous experience with ITK-SNAP is required
-  #     (http://www.itksnap.org/pmwiki/pmwiki.php?n=Downloads.SNAP4)
+  - id: fnirs
+    name: Introduction to fNIRS
+    organizer:
+      - Garima Gupta
+      - Jack De Jeu
+    image: /img/fnirs2.png
+    description: |
+      TBA
+    # Participants will learn the basics of functional near-infrared spectroscopy (fNIRS). 
+    # This includes a demo of the system, the underlying physics and experimental design, as well as some exciting current applications of fNIRS. 
+    # Participants will also learn about handling and preprocessing fNIRS data -- including some hands on coding!
+  - id: anat
+    name: 'Introduction to Neuroanatomy for Researchers'
+    organizer:
+      - Luke Smolders
+      - Eugenio Tannikas
+    image: '/img/afids.png'
+    description: |
+      TBA
+    # This tutorial offers an interactive dive into neuroanatomy through a clinical case,
+    # with a focus on subcortical regions of interest.
+    # Participants will gain hands-on experience with segmentation tools like ITK-SNAP and learn to
+    # visualize subcortical structures using ultra-high field MRI.
+    # No previous experience with ITK-SNAP is required
+    # (http://www.itksnap.org/pmwiki/pmwiki.php?n=Downloads.SNAP4)
   # - id: tms
   #   name: 'Introduction to TMS'
   #   organizer:
@@ -566,20 +493,17 @@ tutorials:
   #   image: /img/writing.png
   #   description: |
   #     "Want your scientific papers to be not just clear but also engaging? \nJoin our scientific writing style crash course at the hackathon! \nLearn how to refine your tone, improve flow, and make your writing more compelling — without losing precision.\n"
-  # - id: hippunfold
-  #   name: HippUnfold Tutorial
-  #   image: /img/hippunfold.png
-  #   organizer:
-  #     - Dr. Ali Khan
-  #     - Jordan DeKraker
-  #     - Dhananjhay Bansal
-  #     - Mackenzie Snyder
-  #   description: |
-  #     HippUnfold is a toolbox for automatically modeling the topological folding structure of the human hippocampus.
-  #     This session will introduce its key features, including running HippUnfold, exploring volumetric and surface-based outputs,
-  #     and integrating results with tools like ITK-SNAP and Connectome Workbench.
-  #     We will also discuss applications to structural, fMRI, and dMRI data. No prior experience with HippUnfold is required.
-  #     Links: https://github.com/khanlab/hippunfold
+  - id: hippunfold
+    name: HippUnfold Tutorial
+    image: /img/hippunfold.png
+    organizer:
+      - Arshya Pooladi-Darvish
+    description: |
+      HippUnfold is a toolbox for automatically modeling the topological folding structure of the human hippocampus.
+      This session will introduce its key features, including running HippUnfold, exploring volumetric and surface-based outputs,
+      and integrating results with tools like ITK-SNAP and Connectome Workbench.
+      We will also discuss applications to structural, fMRI, and dMRI data. No prior experience with HippUnfold is required.
+      Links: https://github.com/khanlab/hippunfold
   - id: monai
     name: Deep Learning for Neuroimaging using MONAI
     organizer:
@@ -592,7 +516,7 @@ tutorials:
       neuroscience research effortlessly—Python experience is required.
       Requirements: Create an account on Kaggle and validate using your phone number (to be able to access free GPUs).
   - id: 3dprint
-    name: "Print Your Brain (And Your Lab Setup!): A 3D Printing Workshop"
+    name: "Print Your Brain (And Lab Setup!): A 3D Printing Workshop"
     organizer:
       - Dr. Mehrdad Kashefi
       - Bassel Khaled Arafat
