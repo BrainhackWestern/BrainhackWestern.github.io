@@ -148,6 +148,11 @@ const parseEventDates = async <T extends Event>(
 export const getRegistrationStatus = async (): Promise<RegistrationStatus> => {
   const config = await readConfig();
 
+  // Allow explicit status overrides from config.yaml.
+  if (config.registration.status) {
+    return config.registration.status;
+  }
+
   const open = config.registration.openDate;
   const close = config.registration.closeDate;
   // Use right now as openDate if not specified
