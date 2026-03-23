@@ -10,18 +10,25 @@ export const event = style({
   backgroundColor: '#3a84b9',
   borderLeft: `3px solid ${colors.primary}`,
   padding: '0.4em',
-  boxShadow: `2px 5px 10px ${colors.backgroundTransparent}`
+  boxShadow: `2px 5px 10px ${colors.backgroundTransparent}`,
+  overflow: 'hidden'
 });
 
 export const eventName = style({
   fontSize: textSize.md,
   fontWeight: textWeight.bold,
-  marginBottom: 0
+  marginBottom: 0,
+  lineHeight: 1.2,
+  overflowWrap: 'anywhere'
 });
 
 export const room = style({
   fontSize: '0.9rem',
-  height: '1.3em'
+  marginBottom: 0,
+  lineHeight: 1.2,
+  overflow: 'hidden',
+  textOverflow: 'ellipsis',
+  whiteSpace: 'nowrap'
 });
 
 export const moreInfo = style({

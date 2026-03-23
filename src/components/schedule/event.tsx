@@ -24,6 +24,8 @@ const colorLookup = {
 export const Event = (props: EventProps) => {
   const height = props.lineHeight * toMin(props.duration) - props.padding;
   const top = props.lineHeight * (toMin(props.time) - props.dayStartTime);
+  const showRoom = height >= 30;
+  const showMoreInfo = Boolean(props.link) && height >= 56;
   const background = props.color
     ? {
         backgroundColor:
@@ -56,15 +58,16 @@ export const Event = (props: EventProps) => {
         top: top,
         left: `${left + leftPadding}%`,
         right: `${right + rightPadding}%`,
+        padding: showMoreInfo ? '0.4em 0.4em 1.4em' : '0.4em',
         ...(eventColor
           ? { backgroundColor: darkenColor(eventColor, 0.14) }
           : background)
       }}
     >
       <p className={style.eventName}>{props.name}</p>
-      {room_str ? <p className={style.room}>{room_str}</p> : null}
+      {room_str && showRoom ? <p className={style.room}>{room_str}</p> : null}
 
-      {props.link ? <p className={style.moreInfo}>more info</p> : null}
+      {showMoreInfo ? <p className={style.moreInfo}>more info</p> : null}
     </div>
   );
 
@@ -119,23 +122,7 @@ const darkenColor = (color: string, amount: number) => {
 
 const getRoomStr = (room: string | string[]) => {
   if (room instanceof Array) {
-    return join_br(room);
+    return room.join(' / ');
   }
-  return <>{room}</>;
-};
-
-const join_br = (items: string[]) => {
-  const firstline = items[0];
-  const rest = items.slice(1);
-  return (
-    <>
-      {firstline}
-      {rest.map((line) => (
-        <>
-          <br />
-          {line}
-        </>
-      ))}
-    </>
-  );
+  return room;
 };
