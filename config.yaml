@@ -356,7 +356,7 @@ tutorials:
   - id: rsa
     name: Respresentational Similarity Analysis (RSA)
     organizer:
-      - TBA
+      - Dr. Jörn Diedrichsen
     image: /img/rsa.png
     description: |
       Representational similarity analysis uses the relationship of brain activation patterns to learn something about the representations in 
