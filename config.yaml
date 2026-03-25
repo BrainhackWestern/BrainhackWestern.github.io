@@ -354,7 +354,7 @@ invitedSpeakers:
     description: "Dr. Lankarany is a Senior Scientist at the Krembil Brain Institute, working in the fields of computational \nneuroscience, artificial intelligence, and deep brain stimulation. His research focuses on two main areas: \n(1) understanding the biophysical and computational mechanisms of neural information processing at cellular and network \nlevels, and (2) developing neurotechnology to better understand, monitor, and treat diseases caused by abnormal information \nprocessing. His work has the potential to advance treatments for common neurological conditions such as Parkinson's disease \nand epilepsy. He has extensive experience developing biologically realistic neuronal models for different brain regions. \nDr. Lankarany received his PhD in Electrical and Computer Engineering and completed three years of postdoctoral studies \nin theoretical and computational neuroscience at the Hospital for Sick Children in Toronto. Before joining \nthe Krembil Brain Institute and the University of Toronto in 2019, he worked as a Data Scientist at Myant Inc, \na wearable-tech company in Toronto.\n"
 tutorials:
   - id: rsa
-    name: Respresentational Similarity Analysis (RSA)
+    name: Representational Similarity Analysis (RSA)
     organizer:
       - Dr. Jörn Diedrichsen
     image: /img/rsa.png
