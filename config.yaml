@@ -127,7 +127,7 @@ organizers:
   - Chelsea-Leigh Marie McKenzie
   - Emily Cordeiro
   - Utkarsh Shukla
-  - Tim V. Nguyen
+  - 'Tim V. Nguyen'
   - Nya Yazdi
   - Nima Zargarnezhad
   - Ada Natalie Borawake
@@ -819,7 +819,7 @@ projects:
       organizers:
         - name: Celine Yang
           github: Jiaxin-Yang1
-        - name: 'Arnold Yuxuan Xie  '
+        - name: 'Arnold Yuxuan Xie'
           github: ArnoldYXie
     - title: Dealing with motion and artifacts in child functional MRI data
       description:
@@ -828,7 +828,7 @@ projects:
         - we acquired child (age 3-7) functional neuroimaging data in a subset of children. We have noticed some reconstruction artifacts at the top and bottom of the head in some fMRI data that had motion
         - and these slices need to be realigned for standard motion processing pipelines to work well.
       organizers:
-        - name: Kathryn Manning
+        - name: 'Kathryn Manning'
           github: katymanning
         - name: Grace Burns
           github: gb
