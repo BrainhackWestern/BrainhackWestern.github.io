@@ -808,13 +808,13 @@ projects:
         - name: Sam Laxer
           github: JS650
     - title: Knowledge-Anchored Contrastive Alignment for Multimodal Patient Similarity
-      description:
-        - Traditional neuroimaging analyses focus on visual features
-        - which makes it difficult to portrait continuous clinicopathological changes. To facilitate the synergetic analyses of similar records
-        - we attempt to use constrative learning
-        - a cutting edge self-supervised deep learning framework
-        - to map the individual MRI features into a high-dimensional manifold with reference to the topology correlations in their pathology records. Specifically
-        - it requires a specialized similarity metric incooperating both imaginery and graphical informations. The expected outcome is an interactive web interface tool to visualize the disease's evolutionary trajectory and pinpoint pathogenic brain regions.
+      description: |
+        Traditional neuroimaging analyses focus on visual features, which makes it difficult to portrait continuous clinicopathological changes.
+        To facilitate the synergetic analyses of similar records, we attempt to use constrative learning, a cutting edge self-supervised
+        deep learning framework, to map the individual MRI features into a high-dimensional manifold with reference to the topology
+        correlations in their pathology records. Specifically, it requires a specialized similarity metric incooperating both imaginery
+        and graphical informations. The expected outcome is an interactive web interface tool to visualize the disease's evolutionary
+        trajectory and pinpoint pathogenic brain regions.
       url: https://github.com/Jiaxin-Yang1/brainIRC_KG_CL/
       organizers:
         - name: Celine Yang
@@ -822,11 +822,12 @@ projects:
         - name: 'Arnold Yuxuan Xie'
           github: ArnoldYXie
     - title: Dealing with motion and artifacts in child functional MRI data
-      description:
-        - Functional MRI is a fascinating approach to study how brain networks develop in early childhood
-        - and what factors in the early environment shape child developmental trajectories. In a randomized controlled trial of an intervention for mothers with postpartum depression
-        - we acquired child (age 3-7) functional neuroimaging data in a subset of children. We have noticed some reconstruction artifacts at the top and bottom of the head in some fMRI data that had motion
-        - and these slices need to be realigned for standard motion processing pipelines to work well.
+      description: |
+        Functional MRI is a fascinating approach to study how brain networks develop in early childhood and what factors in the early
+        environment shape child developmental trajectories. In a randomized controlled trial of an intervention for mothers with postpartum
+        depression, we acquired child (age 3-7) functional neuroimaging data in a subset of children. We have noticed some reconstruction
+        artifacts at the top and bottom of the head in some fMRI data that had motion, and these slices need to be realigned for standard
+        motion processing pipelines to work well.
       organizers:
         - name: 'Kathryn Manning'
           github: katymanning
