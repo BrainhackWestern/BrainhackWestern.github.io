@@ -827,3 +827,14 @@ projects:
           github: Jiaxin-Yang1
         - name: 'Arnold Yuxuan Xie  '
           github: ArnoldYXie
+    - title: Dealing with motion and artifacts in child functional MRI data
+      description:
+        - Functional MRI is a fascinating approach to study how brain networks develop in early childhood
+        - and what factors in the early environment shape child developmental trajectories. In a randomized controlled trial of an intervention for mothers with postpartum depression
+        - we acquired child (age 3-7) functional neuroimaging data in a subset of children. We have noticed some reconstruction artifacts at the top and bottom of the head in some fMRI data that had motion
+        - and these slices need to be realigned for standard motion processing pipelines to work well.
+      organizers:
+        - name: Kathryn Manning
+          github: katymanning
+        - name: Grace Burns
+          github: gb
