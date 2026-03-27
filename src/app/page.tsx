@@ -27,8 +27,7 @@ import {
   getCurrentProjectURL,
   getEventYear,
   getRegistrationStatus,
-  readConfig,
-  isDuringEvent
+  readConfig
 } from '../lib/data';
 import * as styles from './styles.css';
 
@@ -45,7 +44,6 @@ export const generateMetadata = async (): Promise<Metadata> => {
 const Home = async () => {
   const config = await readConfig();
   const registrationStatus = await getRegistrationStatus();
-  const duringEvent = await isDuringEvent();
   return (
     <Page config={config} splash registrationButton>
       <Splash>
@@ -76,14 +74,6 @@ const Home = async () => {
                   alignment="center"
                   discordUrl={config.discordUrl}
                 />
-                {duringEvent ? (
-                  <Button
-                    target="https://discord.gg/RAmjjjr6mY"
-                    className={[styles.titleCol.button, 'large-button'].join(' ')}
-                  >
-                    Join us on Discord
-                  </Button>
-                ) : null}
               </div>
               <div className={styles.titleCol.logo}>
                 <div className="logo">
