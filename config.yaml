@@ -358,11 +358,7 @@ tutorials:
     organizer:
       - Dr. Jörn Diedrichsen
     image: /img/rsa.png
-    description: |
-      Representational similarity analysis uses the relationship of brain activation patterns to learn something about the representations in 
-      different brain regions. In this workshop, we will provide a overview of the critical choices you have to make in this analysis, 
-      highlight some common pitfalls and present some state of the art approaches with examples from the RSA toolbox 
-      (https://rsatoolbox.readthedocs.io/en/stable/). 
+    description: "Representational similarity analysis uses the relationship of brain activation patterns to learn something about the representations in \ndifferent brain regions. In this workshop, we will provide a overview of the critical choices you have to make in this analysis, \nhighlight some common pitfalls and present some state of the art approaches with examples from the RSA toolbox \n(https://rsatoolbox.readthedocs.io/en/stable/). \n"
   - id: bayesian
     name: Bayesian Inference in Psychology and Neuroscience
     organizer:
@@ -395,10 +391,7 @@ tutorials:
       - Garima Gupta
       - Jack De Jeu
     image: /img/fnirs2.png
-    description: |
-      Participants will gain a practical understanding of functional near-infrared spectroscopy (fNIRS),
-      including system setup and live demonstration, core principles, key considerations in experimental design, 
-      data handling and preprocessing, and an overview of current applications.
+    description: "Participants will gain a practical understanding of functional near-infrared spectroscopy (fNIRS),\nincluding system setup and live demonstration, core principles, key considerations in experimental design, \ndata handling and preprocessing, and an overview of current applications.\n"
   - id: anat
     name: 'Introduction to Neuroanatomy for Researchers'
     organizer:
@@ -820,3 +813,17 @@ projects:
           github: fledo-dev
         - name: Sam Laxer
           github: JS650
+    - title: Knowledge-Anchored Contrastive Alignment for Multimodal Patient Similarity
+      description:
+        - Traditional neuroimaging analyses focus on visual features
+        - which makes it difficult to portrait continuous clinicopathological changes. To facilitate the synergetic analyses of similar records
+        - we attempt to use constrative learning
+        - a cutting edge self-supervised deep learning framework
+        - to map the individual MRI features into a high-dimensional manifold with reference to the topology correlations in their pathology records. Specifically
+        - it requires a specialized similarity metric incooperating both imaginery and graphical informations. The expected outcome is an interactive web interface tool to visualize the disease's evolutionary trajectory and pinpoint pathogenic brain regions.
+      url: https://github.com/Jiaxin-Yang1/brainIRC_KG_CL/
+      organizers:
+        - name: Celine Yang
+          github: Jiaxin-Yang1
+        - name: 'Arnold Yuxuan Xie  '
+          github: ArnoldYXie
