@@ -833,3 +833,17 @@ projects:
           github: katymanning
         - name: Grace Burns
           github: gb
+    - title: 'SPIMDash: SynthSeg-Style Deep Learning Segmentation for Lightsheet (SPIM) Brain Data'
+      description: |-
+        SPIMquant's registration pipeline (affine + deformable via greedy) takes minutes per subject and is prone to failure modes. We replace stages 1–6 with a single 3D U-Net that directly predicts atlas labels from downsampled SPIM images in seconds.
+        Inspired by [SynthSeg](https://github.com/BBillot/SynthSeg) (Billot et al.), we train on purely synthetic images generated on-the-fly from 52 existing SPIMquant-derived label maps — randomizing intensity, deformation, bias field, noise, and blur so the network generalizes across contrasts and acquisitions without ever seeing a real training image.
+        Skills: Python, PyTorch/MONAI, neuroimaging (NIfTI/nibabel), deep learning, git
+        Repo: [github.com/Arshya-Guru/SPIMDash](https://github.com/Arshya-Guru/SPIMDash)
+      url: https://github.com/Arshya-Guru/SPIMDash
+      organizers:
+        - name: Arshya Pooladi-Darvish
+          github: Arshya-Guru
+        - name: Luke Smolders
+          github: lsmolder
+        - name: Ihras Deol
+          github: ihr20
